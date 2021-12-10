@@ -59,7 +59,7 @@ class MainController extends Controller
             $BlogList = $Blog::where('deleted_at_int', '!=', 0)->where('status', 1)->get()->load('blogCategory')->toArray();
 
             $Review = new Review();
-            $ReviewList = $Review::where('deleted_at_int', '!=', 0)->get()->toArray();
+            $ReviewList = $Review::where('deleted_at_int', '!=', 0)->where('approve', '!=', 0)->get()->toArray();
 
             $data = [
                 'car_list' => $CarArray,
