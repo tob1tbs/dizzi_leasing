@@ -464,6 +464,7 @@
                       confirmButtonText: '{{ trans('site.close') }}',
                       timer: 2000
                     });
+                    $("#ReviewModal").modal('hide');
                 } else {
                    
                 }
