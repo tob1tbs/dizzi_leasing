@@ -23,7 +23,7 @@ class MainAjaxController extends Controller
         ], $messages);
 
         if ($validator->fails()) {
-
+            return response()->json(['status' => true, 'errors' => true, 'message' => $validator->getMessageBag()->toArray()], 200);
         } else {
             $Review = new Review();
             $Review->name = $Request->review_name;

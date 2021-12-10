@@ -53,7 +53,7 @@ class MainController extends Controller
             }
 
             $Faq = new Faq();
-            $FaqList = $Faq::where('status', 1)->where('deleted_at_int', '!=', 0)->get()->toArray();
+            $FaqList = $Faq::where('status', 1)->where('deleted_at_int', '!=', 0)->limit(5)->get()->toArray();
 
             $Blog = new Blog();
             $BlogList = $Blog::where('deleted_at_int', '!=', 0)->where('status', 1)->get()->load('blogCategory')->toArray();
