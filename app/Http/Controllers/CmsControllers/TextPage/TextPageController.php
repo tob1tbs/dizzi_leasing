@@ -30,7 +30,7 @@ class TextPageController extends Controller
             $TextPageData = $TextPage::where('id', $Request->id)->firstOrFail();
 
             $data = [
-                'text_page_data' => $TextPageData;
+                'text_page_data' => $TextPageData,
             ];
 
             return view('cms.sections.text.text_edit', $data);
