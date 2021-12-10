@@ -104,7 +104,7 @@
 			                        </div>
 			                        @endforeach
 		                        </div>
-		                        <input type="submit" name="">
+		                        <input type="submit" value="{{ trans('site.search') }}" style="width: 100%; height: 40px; background: #f0c019; border-radius: 5px; margin-top: 20px; border: none; color: #ffffff; font-family: 'HelveticaRegular';">
 	                        </form>
 	                    </div>
                     </div>
@@ -128,8 +128,8 @@
                                                 <img src="{{ url('assets/web/img/blog/user-profile.svg') }}" alt="user profile">
                                                 <span>თვეში 550  ₾ - დან</span>
                                             </div>
-                                            <div class="post-date">
-                                                <a href="{{ route('actionCarsView', $car_item['car_id']) }}" class="theme-btn neue">{{ trans('site.more') }}</a>
+                                            <div class="post-date"> 
+                                               <a href="{{ route('actionCarsView', $car_item['car_id']) }}" class="theme-btn neue">{{ trans('site.more') }}</a>
                                             </div>
                                         </div>
                                     </div>

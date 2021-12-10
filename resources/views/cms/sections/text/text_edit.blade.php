@@ -45,13 +45,13 @@
                             <div class="col-6">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="photo_main">გვერდის ტექსტი (ქართულად)</label>
-                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                    <textarea class="form-control"></textarea>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="photo_main">გვერდის ტექსტი (ინგლისურად)</label>
-                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                    <textarea class="form-control"></textarea>
                                 </div>
                             </div>
                         </div>

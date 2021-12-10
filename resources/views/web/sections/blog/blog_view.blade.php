@@ -28,46 +28,9 @@
 	                    {!! json_decode($blog_data['text'], true)[app()->getLocale()] !!}
 	                </div>
                 </div>
-
                 <div class="col-lg-4 ps-xl-5">
                     <div class="blog-sidebar-widget ps-lg-2">
-                        <div class="widget-subscribe">
-                            <h4 class="widget-title mb-15">Subscribe to our blog</h4>
-                            <p>Get the latest posts in your email</p>
 
-                            <form action="#" class="mt-15">
-                                <input class="form-control" type="text" placeholder="Enter your email">
-                                <button class="theme-btn w-100 mt-30" type="submit">Subscribe</button>
-                            </form>
-
-
-                        </div>
-
-                        <div class="widget-social mt-40">
-                            <div class="row text-center gx-3 gy-3 gy-md-0">
-                                <div class="col-md-4">
-                                    <a href="#">
-                                        <img src="img/social/facebook-logo.svg" alt="faceebook">
-                                        <h6>815.5K</h6>
-                                        <span>Fans</span>
-                                    </a>
-                                </div>
-                                <div class="col-md-4">
-                                    <a href="#">
-                                        <img src="img/social/twitter.svg" alt="twitter">
-                                        <h6>107.2K</h6>
-                                        <span>Followers</span>
-                                    </a>
-                                </div>
-                                <div class="col-md-4">
-                                    <a href="#">
-                                        <img src="img/social/youtube.svg" alt="youtube">
-                                        <h6>90.6K</h6>
-                                        <span>Subscribers</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
