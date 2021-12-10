@@ -233,7 +233,7 @@
             </div>
         </div>
     </section>
-    <section class="client-area pt-50 pb-50">
+    <section class="client-area pt-50 pb-100">
         <div class="container">
             <div class="section-title">
                 <h2 class="neue mb-3 mb-sm-0 wow fadeInRight">{{ trans('site.reviews') }}</h2>
