@@ -118,9 +118,9 @@
 		                <a href="https://g.page/gorgia-saburtalo?share" target="_blank">
 		                <path class="fil6" d="M404.05 292.84l-226.02 0c-3.63,0 -6.57,-2.94 -6.57,-6.57l0 -74.93c0,-3.63 2.94,-6.57 6.57,-6.57l196.02 0c3.63,0 6.57,2.94 6.57,6.57l0 74.93c0,3.63 -2.94,6.57 -6.57,6.57z"></path>
 		                <path class="fil2 str1" d="M404.05 292.84l-226.02 0c-3.63,0 -6.57,-2.94 -6.57,-6.57l0 -74.93c0,-3.63 2.94,-6.57 6.57,-6.57l196.02 0c3.63,0 6.57,2.94 6.57,6.57l0 74.93c0,3.63 -2.94,6.57 -6.57,6.57z"></path>
-		                <text x="183" y="229.37" class="fil7 fnt0" style>{{ trans.('site_tbilisi') }}</text>
+		                <text x="183" y="229.37" class="fil7 fnt0" style>{{ trans('site_tbilisi') }}</text>
 		                <text x="223" y="258.13" class="fil7 fnt3" text-decoration="underline" style="fill: #007dbe;">{{ $parameterItems['address_ge'][0] }}</text>
-		                <text x="183" y="280.75" class="fil7 fnt2">{{ trans.('site_tbilisi') }}: {{ $parameterItems['phone_number'][0] }}</text>
+		                <text x="183" y="280.75" class="fil7 fnt2">{{ trans('site_tbilisi') }}: {{ $parameterItems['phone_number'][0] }}</text>
 		                </a>
 	                </g>    
                 </g>
