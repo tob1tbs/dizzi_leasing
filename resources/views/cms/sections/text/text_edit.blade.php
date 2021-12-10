@@ -5,12 +5,61 @@
 @endsection
 
 @section('content')
-<div class="nk-block-head">
-    <div class="nk-block-between">
-        <div class="nk-block-head-content">
-            <h4 class="nk-block-title font-neue">ტექსტური გვერდის რედაქტირება</h4>
-        </div>  
-    </div>
+<div class="nk-block nk-block-lg">
+    <form id="cars_form">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-preview">
+                    <div class="card-inner">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="photo_main">გვერდის დასახელება (ქართულად)</label>
+                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="photo_main">გვერდის დასახელება (ინგლისურად)</label>
+                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="photo_main">გვერდის SLUG (უნიკალური)</label>
+                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="photo_main">Meta Description</label>
+                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="photo_main">Meta Keywords</label>
+                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="photo_main">გვერდის ტექსტი (ქართულად)</label>
+                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="photo_main">გვერდის ტექსტი (ინგლისურად)</label>
+                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 @endsection
 
