@@ -1,9 +1,5 @@
 @extends('web.layout.layout')
 
-@section('css')
-<link rel="stylesheet" href="{{ url('assets/web/css/sweetalert2.min.css') }}">
-@endsection
-
 @section('content')
 <main>
     <section class="banner-area-2 loan-banner pt-145"></section>
@@ -271,7 +267,6 @@
 @endsection
 
 @section('js')
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
     function BackLeasingFormSubmit() {
         var form = $('#leasing_form')[0];

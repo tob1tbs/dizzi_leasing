@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url('assets/web/css/responsive.css') }}" media="all" />
     <link rel="stylesheet" type="text/css" href="{{ url('assets/web/css/custom.css') }}" media="all" />
     <link rel="stylesheet" type="text/css" href="{{ url('assets/web/css/custom_edit.css') }}" media="all" />
+    <link rel="stylesheet" href="{{ url('assets/web/css/sweetalert2.min.css') }}">
     @yield('css')
 
 </head>
@@ -98,6 +99,7 @@
     <script type="text/javascript" src="{{ url('assets/web/js/intlTelInput-jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ url('assets/web/js/wow.min.js') }}"></script>
     <script type="text/javascript" src="{{ url('assets/web/js/custom.js') }}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- <script src="//code.tidio.co/bclrzjv4kehofovksdqucovshaofwf6s.js" async></script> -->
     @yield('js')
 </body>
