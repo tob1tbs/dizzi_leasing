@@ -457,7 +457,13 @@
             },
             success: function(data) {
                 if(data['status'] == true) {
-                    
+                    Swal.fire({
+                      title: '{{ trans('site.success') }}',
+                      text: '{{ trans('site.review_success') }}',
+                      icon: 'success',
+                      confirmButtonText: '{{ trans('site.close') }}',
+                      timer: 2000
+                    });
                 } else {
                    
                 }
