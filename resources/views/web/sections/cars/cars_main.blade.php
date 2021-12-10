@@ -86,6 +86,7 @@
 			                        <div class="col-lg-12">
 			                            <h4 class="widget-title mb-15 pt-20 pb-0 helvetica-regular" style="font-size: 15px;">{{ $option_item['name']->{app()->getLocale()} }}</h4>
 					                        @switch($option_item['type'])
+					                        @dd($option_item)
 						                        @case('input')
 			                                    <input type="text" class="market font-neue" name="option[{{ $option_item['key'] }}]" id="{{ $option_item['key'] }}" value="{{ request()->option[$option_item['key']] }}">
 			                                    @break
