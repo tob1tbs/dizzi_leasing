@@ -88,6 +88,11 @@ Route::group(['prefix' => '/cms'], function() {
             Route::get('/', [App\Http\Controllers\CmsControllers\TextPage\TextPageController::class, 'actionTextPages'])->name('actionTextPages');
             Route::get('/edit/{id}', [App\Http\Controllers\CmsControllers\TextPage\TextPageController::class, 'actionTextPagesEdit'])->name('actionTextPagesEdit');
         });
+
+        // TEXT PAGES
+        Route::group(['prefix' => '/leasing'], function() {
+            Route::get('/parameters', [App\Http\Controllers\CmsControllers\Leasing\LasingController::class, 'actionLeasingParameters'])->name('actionLeasingParameters');
+        });
     });
 
     // AJAX
