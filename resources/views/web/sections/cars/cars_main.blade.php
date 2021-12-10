@@ -86,11 +86,21 @@
 			                        <div class="col-lg-12">
 			                            <h4 class="widget-title mb-15 pt-20 pb-0 helvetica-regular" style="font-size: 15px;">{{ $option_item['name']->{app()->getLocale()} }}</h4>
 					                        @switch($option_item['type'])
-					                        @dd($option_item)
-						                        @case('input')
-			                                    <input type="text" class="market font-neue" name="option[{{ $option_item['key'] }}]" id="{{ $option_item['key'] }}" value="{{ request()->option[$option_item['key']] }}">
-			                                    @break
-					                        @endswitch
+					                        @case('input')
+		                                    <input type="text" class="market font-neue" name="option[{{ $option_item['key'] }}]" id="{{ $option_item['key'] }}" value="">
+		                                    @break
+					                        @case('select')
+		                                    <select class="market font-neue" name="option[{{ $option_item['key'] }}]" id="{{ $option_item['key'] }}" style="font-size: 13px;">
+		                                    	<option value="0"></option>
+			                                    @foreach($option_item['option'] as $item)
+		                                        <option value="{{ $item['id'] }}">{{ json_decode($item['value'])->{app()->getLocale()} }}</option>
+			                                    @endforeach
+		                                    </select>
+					                        @break
+					                        @case('date')
+		                                    <input type="text" class="market font-neue date-picker-alt" name="option[{{ $option_item['key'] }}]" id="{{ $option_item['key'] }}" data-date-format="yyyy">
+		                                    @break
+			                        @endswitch
 			                        </div>
 			                        @endforeach
 		                        </div>
