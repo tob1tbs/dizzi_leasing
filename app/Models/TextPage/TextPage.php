@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class TextPage extends Model
 {
     use HasFactory;
+
+    protected $table = "cms_text_pages";
 }
