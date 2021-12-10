@@ -397,7 +397,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{ trans('site.add_review') }}</h5>
+        <h5 class="modal-title neue" id="exampleModalLabel">{{ trans('site.add_review') }}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -406,27 +406,27 @@
         <form class="row" id="add_review">
             <div class="col-lg-6 col-sm-12">
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">{{ trans('site.name') }}:</label>
+                <label for="recipient-name" class="col-form-label helvetica-regular">{{ trans('site.name') }}:</label>
                 <input type="text" class="form-control" name="review_name" id="review_name">
               </div>
             </div>
             <div class="col-lg-6 col-sm-12">
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">{{ trans('site.phone') }}:</label>
+                <label for="recipient-name" class="col-form-label helvetica-regular">{{ trans('site.phone') }}:</label>
                 <input type="text" class="form-control" name="review_phone" id="review_phone">
               </div>
             </div>
             <div class="col-12">
               <div class="form-group">
-                <label for="message-text" class="col-form-label">{{ trans('site.message') }}:</label>
+                <label for="message-text" class="col-form-label helvetica-regular">{{ trans('site.message') }}:</label>
                 <textarea class="form-control" name="review_message" id="review_message"></textarea>
               </div>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ trans('site.close') }}</button>
-        <button type="button" class="btn btn-primary" onclick="SaveReview()">{{ trans('site.save_review') }}</button>
+        <button type="button" class="btn btn-secondary helvetica-regular" data-dismiss="modal">{{ trans('site.close') }}</button>
+        <button type="button" class="btn btn-primary helvetica-regular" onclick="SaveReview()">{{ trans('site.save_review') }}</button>
       </div>
     </div>
   </div>
