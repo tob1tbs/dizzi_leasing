@@ -13,11 +13,11 @@ class ReviewsController extends Controller
     }
 
     public function actionReviews(Request $Request) {
-        if (view()->exists('web.sections.review.review_main')) {
+        if (view()->exists('cms.sections.review.review_main')) {
 
             $data = [];
 
-            return view('web.sections.review.review_main', $data);
+            return view('cms.sections.review.review_main', $data);
         } else {
             abort('404');
         }
