@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-    <title>@if(!empty($seo_data['title_ge']) @else {{ $parameterItems['title_ge'][0] }} @endif)</title>
+    <title>@if(!empty($seo_data['title_ge'])) @else {{ $parameterItems['title_ge'][0] }} @endif</title>
     
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
