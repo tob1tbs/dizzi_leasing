@@ -35,7 +35,7 @@
         <script src="{{ url('assets/cms/js/bundle.js') }}"></script>
         <script src="{{ url('assets/cms/js/scripts.js') }}"></script>
         <script src="{{ url('assets/cms/js/image-uploader.min.js') }}"></script>
-        <script src="{{ url('assets/cms/js/custom/GeneralScripts.js') }}"></script>
+        <script src="{{ url('assets/cms/js/Custom/GeneralScripts.js') }}"></script>
         @yield('js')
     </body>
 </html>

@@ -4,7 +4,7 @@
 <div class="nk-block-head">
     <div class="nk-block-between">
         <div class="nk-block-head-content">
-            <h4 class="nk-block-title font-neue">ავტომობილების ჩამონათვალი</h4>
+            <h4 class="nk-block-title font-neue">მომხმარებელთა შეფასებები</h4>
         </div>   
     </div>
 </div>
@@ -73,7 +73,39 @@
 	}
 
 	function ReviewDelete(review_id) {
-
+		Swal.fire({
+        title: 'ნამდვილად გსურთ შეფასების წაშლა?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'წაშლა',
+        cancelButtonText: 'გათიშვა',
+    }).then((result) => {
+      if (result.isConfirmed) {
+      	$.ajax({
+            dataType: 'json',
+            url: "/cms/ajax/ajaxReviewDelete",
+            type: "POST",
+            data: {
+                review_id: review_id,
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data) {
+                if(data['status'] == true) {
+                	
+                } else {
+                    Swal.fire({
+                      icon: 'error',
+                      text: data['message'],
+                    })
+                }
+            }
+        });
+      }
+    })
 	}
 </script>
 @endsection
