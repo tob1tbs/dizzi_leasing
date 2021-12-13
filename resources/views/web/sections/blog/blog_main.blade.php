@@ -14,9 +14,9 @@
                                     <div class="blog-widget-2 wow fadeInUp" data-wow-delay="0.3s">
                                         <div class="blog-img">
                                             <img src="{{ url('assets/web/img/blog/blog-10.png') }}" alt="blog-img">
-                                            <div class="catagory yellow-bg">
-                                                {{ json_decode($blog_item->blogCategory->value)->{app()->getLocale()} }}
-                                            </div>
+                                            <!-- <div class="catagory yellow-bg"> -->
+                                                <!-- {{ json_decode($blog_item->blogCategory->value)->{app()->getLocale()} }} -->
+                                            <!-- </div> -->
                                         </div>
                                         <div class="blog-content">
                                             <h4 class="helvetica-regular" style="font-size: 18px;"><a href="{{ route('actionWebBlogView', $blog_item->id) }}">{{ json_decode($blog_item->title)->{app()->getLocale()} }}</a>
