@@ -89,6 +89,7 @@ class CarsController extends Controller
             }
 
             $CarList = $CarList->get()
+                                ->orderBy('id', 'DESC')
                                 ->load('carMake')
                                 ->load('carModel')
                                 ->load('carParameter')
