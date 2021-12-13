@@ -157,7 +157,7 @@
                     <div class="col-lg-4 ps-xl-5 mt-5 mt-lg-0">
                         <div class="blog-sidebar-widget ps-lg-2">
                             <div class="widget-subscribe" style="padding: 30px 20px 40px 20px;">
-                                <h4 class="widget-title mb-15">{{ trans('site.loan_data') }} <img src="{{ url('assets/web/img\icon\pen.png') }}" id="pen" style="width: 20px; cursor: pointer;"></h4>
+                                <h4 class="widget-title mb-15 neue">{{ trans('site.loan_data') }} <img src="{{ url('assets/web/img\icon\pen.png') }}" id="pen" style="width: 20px 0px 15px 0; cursor: pointer;"></h4>
                                 <hr>
                                 <div class="col-lg-12" id="loanwidgetdata">
                                     <div class="col-lg-6">
