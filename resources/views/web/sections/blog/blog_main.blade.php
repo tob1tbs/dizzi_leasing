@@ -13,7 +13,7 @@
                                 <div class="col-md-6">
                                     <div class="blog-widget-2 wow fadeInUp" data-wow-delay="0.3s">
                                         <div class="blog-img">
-                                            <img src="{{ url('assets/web/img/blog/blog-10.png') }}" alt="blog-img">
+                                            <img src="{{ url('uploads/blog/'.$blog_item->photo) }}" alt="blog-img">
                                             <!-- <div class="catagory yellow-bg"> -->
                                                 <!-- {{ json_decode($blog_item->blogCategory->value)->{app()->getLocale()} }} -->
                                             <!-- </div> -->
