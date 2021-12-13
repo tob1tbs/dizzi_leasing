@@ -34,7 +34,7 @@
                     <span>{{ $review_item->id }}</span>
                 </div>
                 <div class="nk-tb-col">
-                    <span class="tb-sub tb-amount">{{ $review_item->name }</span>
+                    <span class="tb-sub tb-amount">{{ $review_item->name }}</span>
                 </div>
                 <div class="nk-tb-col">
                     <span class="tb-sub tb-amount">{{ $review_item->message }}</span>
