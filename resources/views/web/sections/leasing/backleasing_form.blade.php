@@ -274,7 +274,7 @@
             <p>ყოველთვიური გადასახადი</p>
         </div>
         <div class="col-lg-6" id="ppayment">
-            <p>3.44% ყოველთვიური ან 41.28% ყოველწლიური</p>
+            <p>{{ $parameterLeasing['leasing_month_percent'][0] }}% ყოველთვიური ან {{ $parameterLeasing['leasing_month_percent'][0] * 12}}% ყოველწლიური</p>
         </div>
     </div>
     <p>* საკომისიო არის 0 ₾ და ის გადაიხდება თანაბარ ნაწილად სესხის მთლიანი პერიოდის განმავლობაში.</p>
