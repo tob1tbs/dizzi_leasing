@@ -11,6 +11,8 @@ class Blog extends Model
 
     protected $table = "cms_blogs";
 
+    protected $fillable = ['id'];
+
     public function blogCategory() {
         return $this->hasOne('App\Models\Blogs\BlogCategory', 'id', 'category_id');
     }
