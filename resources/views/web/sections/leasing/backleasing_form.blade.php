@@ -248,7 +248,7 @@
             </div>
     </section>
 </main>
-<div class="popup">
+<div class="popup" style="z-index: 500000;">
     <button name="close" id="popupclose">X</button>
     <h2>დაანგარიშების საფუძველი</h2>
     <p>კალკულაციის მონაცემები არის მხოლოდ ინფორმაციისთვის. ის გაძლევს ინფორმაციას ყოველთვიური გადასახადის შესახებ</p><br>
@@ -658,6 +658,6 @@
         $("[data-js=open]").on("click", function() {
             popupOpenClose($(".popup"));
         });
-});
+    });
 </script>
 @endsection
