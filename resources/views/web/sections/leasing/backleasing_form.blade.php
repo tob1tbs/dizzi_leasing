@@ -228,7 +228,7 @@
                                     </div>
                                 </div>
                                 <img src="{{ url('assets/web/img\icon\next.png') }}">
-                                <button data-js="open" class="popupbutton">კალკულაციის მაგალითი / სტანდარტული ინფორმაცია</button>
+                                <button data-js="open" type="button" class="popupbutton">კალკულაციის მაგალითი / სტანდარტული ინფორმაცია</button>
                             </div>
                             <div class="widget-subscribe" id="promocodewidget">
                                 <h4 class="widget-title mb-15 neue" style="font-size: 16px">{{ trans('site.promo') }}</h4>
