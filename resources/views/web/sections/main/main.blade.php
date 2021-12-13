@@ -404,7 +404,7 @@
             <div class="col-lg-6 col-sm-12">
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label helvetica-regular">{{ trans('site.name') }}:</label>
-                <input type="text" class="form-control" name="review_name" id="review_name">
+                <input type="text" class="form-control" name="review_name" id="review_name" required>
               </div>
             </div>
             <div class="col-lg-6 col-sm-12">
@@ -416,7 +416,7 @@
             <div class="col-12">
               <div class="form-group">
                 <label for="message-text" class="col-form-label helvetica-regular">{{ trans('site.message') }}:</label>
-                <textarea class="form-control" name="review_message" id="review_message"></textarea>
+                <textarea class="form-control" name="review_message" id="review_message" required></textarea>
               </div>
           </div>
         </form>
