@@ -9,11 +9,11 @@ $(document).ready(function() {
     prefix: '$'
   });
   noUiSlider.create(rangeSlider, {
-    start: [500000, 1000000],
+    start: [1000, 100000],
     step: 1,
     range: {
-      'min': [100000],
-      'max': [1000000]
+      'min': [1],
+      'max': [100000]
     },
     format: moneyFormat,
     connect: true
@@ -21,12 +21,8 @@ $(document).ready(function() {
   
   // Set visual min and max values and also update value hidden form inputs
   rangeSlider.noUiSlider.on('update', function(values, handle) {
-    document.getElementById('slider-range-value1').innerHTML = values[0];
-    document.getElementById('slider-range-value2').innerHTML = values[1];
-    document.getElementsByName('min-value').value = moneyFormat.from(
-      values[0]);
-    document.getElementsByName('max-value').value = moneyFormat.from(
-      values[1]);
+  	$("#slider-range-value1").val(values[0]);
+  	$("#slider-range-value2").val(values[1]);
   });
 });
 
