@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="blog-sidebar-widget ps-lg-2 blog-share-widget" style="margin-bottom: 40px;">
+                    <div class="blog-sidebar-widget ps-lg-2 blog-share-widget" style="margin-bottom: 40px; position: relative;">
 	                    <div class="marketbg">
 	                        <form action="#" class="mt-15">
 	                        	<div class="row price-slider">
