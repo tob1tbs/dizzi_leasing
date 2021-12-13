@@ -22,14 +22,13 @@ function BlogAddSubmit() {
                         text: data['message'],
                         timer: 1500,
                     });
-	               window.location.replace("/cms/blog/");
                 } else {
                     Swal.fire({
                         icon: 'success',
                         text: data['message'],
                         timer: 1500,
                     });
-                    location.reload();
+                    window.location.replace("/cms/blog/");
                 }
             } else {
                 Swal.fire({
