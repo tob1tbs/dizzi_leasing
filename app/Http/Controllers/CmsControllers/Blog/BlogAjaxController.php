@@ -56,6 +56,8 @@ class BlogAjaxController extends Controller
                         'photo' => $MainPhotoName,
                     ]
                 );
+
+                return response()->json(['status' => true, 'message' => 'ბლოგი შეინახა']);
             }
         } else {
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
