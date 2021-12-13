@@ -23,9 +23,9 @@ $(document).ready(function() {
   rangeSlider.noUiSlider.on('update', function(values, handle) {
     // document.getElementById('slider-range-value1').innerHTML = values[0];
     // document.getElementById('slider-range-value2').innerHTML = values[1];
-    document.getElementsByName('price_from').value = moneyFormat.from(
+    document.getElementById('price_from').value = moneyFormat.from(
       values[0]);
-    document.getElementsByName('price_to').value = moneyFormat.from(
+    document.getElementById('price_to').value = moneyFormat.from(
       values[1]);
   });
 });

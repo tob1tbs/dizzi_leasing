@@ -29,22 +29,14 @@
 		                         	<h4 class="widget-title mb-15 pt-20 pb-0 helvetica-regular" style="font-size: 15px; ">{{ trans('site.price') }}</h4>
                                    	<div class="col-lg-6 col-12">
                                 		<h4 style="font-size: 14px;" class="helvetica-regular">{{ trans('site.from') }}</h4>
-                                        <input type="number" class="market" name="price_from" value="{{ request()->price_from }}" min="0" max="" style="margin-top: 10px;">	
+                                        <input type="number" class="market" name="price_from" id="price_from" value="{{ request()->price_from }}" min="0" max="" style="margin-top: 10px;">	
                                     </div>
                                     <div class="col-lg-6 col-12">
                                     	<h4 style="font-size: 14px;" class="helvetica-regular">{{ trans('site.to') }}</h4>
-                                        <input type="number" class="market" name="price_to" value="{{ request()->price_to }}" min="0" max="" style="margin-top: 10px;">
+                                        <input type="number" class="market" name="price_to" id="price_to" value="{{ request()->price_to }}" min="0" max="" style="margin-top: 10px;">
                                     </div>
                                     <div class="col-sm-12" style="margin-top: 15px">
                                       <div id="slider-range"></div>
-                                    </div>
-                                  </div>
-                                  <div class="row slider-labels">
-                                    <div class="col-xs-6 caption">
-                                      <strong>Min:</strong> <!-- <span id="slider-range-value1"></span> -->
-                                    </div>
-                                    <div class="col-xs-6 text-right caption">
-                                      <strong>Max:</strong> <!-- <span id="slider-range-value2"></span> -->
                                     </div>
                                   </div>
                                   <div class="row">
