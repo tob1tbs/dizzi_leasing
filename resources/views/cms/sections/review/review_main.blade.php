@@ -34,15 +34,15 @@
                     <span>{{ $review_item->id }}</span>
                 </div>
                 <div class="nk-tb-col">
-                    <span class="tb-sub tb-amount">{{ $review_item->name }}<span>$</span></span>
+                    <span class="tb-sub tb-amount">{{ $review_item->name }</span>
                 </div>
                 <div class="nk-tb-col">
-                    <span class="tb-sub tb-amount">{{ $review_item->message }}<span>$</span></span>
+                    <span class="tb-sub tb-amount">{{ $review_item->message }}</span>
                 </div>
                 <div class="nk-tb-col tb-col-sm">
                     <div class="form-group">
                         <div class="custom-control custom-switch checked">
-                            <input type="checkbox" class="custom-control-input" name="reg-public" id="site-off" value="1" @if($review_item->approve == 1) checked @endif onclick="ChangeReviewStatusChange()">
+                            <input type="checkbox" class="custom-control-input" name="reg-public" id="site-off" value="1" @if($review_item->approve == 1) checked @endif onclick="ChangeReviewStatusChange({{ $review_item->id }}, this)">
                             <label class="custom-control-label" for="site-off"></label>
                         </div>
                     </div>
@@ -64,4 +64,16 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('js')
+<script type="text/javascript">
+	function ChangeReviewStatusChange() {
+	
+	}
+
+	function ReviewDelete(review_id) {
+
+	}
+</script>
 @endsection
