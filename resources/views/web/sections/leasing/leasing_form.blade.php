@@ -598,6 +598,7 @@
                             $("#leasing_price").val($("#SetRange").val());
                             $("#leasing_month").val($("#SetMonthRange").val());
                             $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
+                            $(".loan-complicity").html($("#PercetSetRangeAmount").val()+' {{ trans('site.gel') }}');
                         }
                     }
                 });
