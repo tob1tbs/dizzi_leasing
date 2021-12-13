@@ -7,7 +7,7 @@
                         <div class="language-list">
                             
                         </div>
-                        <div class="timestamp"> <i class="icon_clock_alt"></i> Mon - Fri 10:00-18:00
+                        <div class="timestamp"> <i class="icon_clock_alt"></i> Mon - Fri {{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}
                         </div>
                     </div>
                 </div>

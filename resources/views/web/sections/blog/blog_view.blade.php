@@ -10,7 +10,7 @@
                     <div class="blog-share-widget d-flex d-lg-block align-items-center">
                         <p>Share Now</p>
                         <div class="social-link">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="javascript:;" onclick="share()"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -37,6 +37,7 @@
         </div>
     </section>
 </main>
+<script> share = function(){ url = 'https://work.workplace.com/sharer.php?display=popup&u=' + window.location.href; options = 'toolbar=0,status=0,resizable=1,width=626,height=436'; window.open(url,'sharer',options); } </script>
 <style type="text/css">
 	.blog-text > p {
 		margin-bottom: 20px;
