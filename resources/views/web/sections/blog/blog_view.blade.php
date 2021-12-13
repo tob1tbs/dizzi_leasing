@@ -37,7 +37,7 @@
         </div>
     </section>
 </main>
-<script> share = function(){ url = 'https://work.workplace.com/sharer.php?display=popup&u=' + window.location.href; options = 'toolbar=0,status=0,resizable=1,width=626,height=436'; window.open(url,'sharer',options); } </script>
+<script> share = function(){ url = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.href; options = 'toolbar=0,status=0,resizable=1,width=626,height=436'; window.open(url,'sharer',options); } </script>
 <style type="text/css">
 	.blog-text > p {
 		margin-bottom: 20px;
