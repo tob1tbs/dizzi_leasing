@@ -18,4 +18,27 @@
         </div>
     </div>
 </div>
+<div class="nk-body">
+    <div class="card card-bordered card-full">
+        <div class="nk-tb-list">
+            <div class="nk-tb-item nk-tb-head font-helvetica-regular">
+                <div class="nk-tb-col">
+                    <span>ID</span>
+                </div>
+                <div class="nk-tb-col">
+                    <span>სურათი</span>
+                </div>
+                <div class="nk-tb-col">
+                    <span>დასახელება</span>
+                </div>
+                <div class="nk-tb-col tb-col-sm">
+                    <span>სტატუსი</span>
+                </div>
+                <div class="nk-tb-col">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
