@@ -8,12 +8,12 @@
             <div class="row gy-lg-0 gy-4">
                 <div class="col-lg-1 position-relative">
                     <div class="blog-share-widget d-flex d-lg-block align-items-center">
-                        <p>Share Now</p>
+                        <p>{{ trans('site.share') }}</p>
                         <div class="social-link">
                             <a href="javascript:;" onclick="share()"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a> -->
                         </div>
                     </div>
                 </div>
