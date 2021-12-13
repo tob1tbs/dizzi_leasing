@@ -60,7 +60,7 @@
                             <div>
                                 <h4 for="inputPhoneNumber" class="neue" style="margin-bottom: 1rem;">{{ trans('site.phone') }} *</h4>
                                 <i class="helvetica-regular" style="font-size: 12px; float: left; width: 100%; margin-bottom: 10px;">{{ trans('site.exmpl') }}: 595111111</i>
-                                <input id="inputPhoneNumber" class="form-control" type="number" name="phone_number">
+                                <input id="inputPhoneNumber" class="form-control" type="tel" pattern="[0-9]{9}" name="phone_number" maxlength="9">
                                 <span class="error-message text-danger helvetica-regular" style="float: left; width: 100%; margin-top: 10px;"></span>
                             </div>
                             <div id="terms" style="margin-top: 15px; width: 100%; float: left;">
