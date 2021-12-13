@@ -100,7 +100,7 @@
     <script type="text/javascript" src="{{ url('assets/web/js/wow.min.js') }}"></script>
     <script type="text/javascript" src="{{ url('assets/web/js/custom.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script src="//code.tidio.co/bclrzjv4kehofovksdqucovshaofwf6s.js" async></script> -->
+    <script src="//code.tidio.co/bclrzjv4kehofovksdqucovshaofwf6s.js" async></script>
     @yield('js')
 </body>
 </html>
