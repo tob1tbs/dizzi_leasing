@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Blogs\Blog;
 
 use Validator;
+use Str;
 
 class BlogAjaxController extends Controller
 {
