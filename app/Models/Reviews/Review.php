@@ -11,5 +11,5 @@ class Review extends Model
 
     protected $table = "cms_reviews";
 
-    protected $fillable = ['status', 'deleted_at_int', 'deleted_at'];
+    protected $fillable = ['approve', 'deleted_at_int', 'deleted_at'];
 }

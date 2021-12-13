@@ -19,7 +19,7 @@ class ReviewAjaxController extends Controller
             $Review::find($Request->review_id)->update([
                 'deleted_at' => Carbon::now(),
                 'deleted_at_int' => 0,
-                'status' => 0,
+                'approve' => 0,
             ]);
             return response()->json(['status' => true, 'message' => 'შეფასება წარმატებით წაიშალა']);
         } else {
