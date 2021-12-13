@@ -50,11 +50,6 @@
                             <span class="nk-menu-text">თარგმნები</span>
                         </a>
                     </li>
-                    <li class="nk-menu-item">
-                        <a href="{{ route('actionParametersSeo') }}" class="nk-menu-link" data-original-title="" title="">
-                            <span class="nk-menu-text">SEO</span>
-                        </a>
-                    </li>
                 </ul>
             </li>
             <li class="nk-menu-item has-sub">

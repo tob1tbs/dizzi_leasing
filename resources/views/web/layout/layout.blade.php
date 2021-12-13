@@ -55,9 +55,16 @@
                                 <a href=""><img src="{{ url('assets/web/img/logo/Logo_2.svg') }}" alt="logo" id="footerlogo" style="position: relative; left: -35px;"></a>
                             </div>
                             <div class="col-md-4">
+                                @if(!empty($parameterItems['facebook_url'][0]))
                                 <div class="social-button text-center">
-                                    <a class="ms-0" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="ms-0" href="{{ $parameterItems['facebook_url'][0] }}"><i class="fab fa-facebook-f"></i></a>
                                 </div>
+                                @endif
+                                @if(!empty($parameterItems['instagram_url'][0]))
+                                <div class="social-button text-center">
+                                    <a class="ms-0" href="{{ $parameterItems['instagram_url'][0] }}"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                @endif
                             </div>
                         </div>
                         <div class="row">
