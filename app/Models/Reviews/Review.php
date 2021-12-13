@@ -10,4 +10,6 @@ class Review extends Model
     use HasFactory;
 
     protected $table = "cms_reviews";
+
+    protected $fillable = ['status', 'deleted_at_int', 'deleted_at'];
 }
