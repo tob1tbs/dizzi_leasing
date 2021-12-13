@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-    <title>Izzi Leasing</title>
+    <title>Dizzi Leasing</title>
     
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url('assets/web/favicon.png') }}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{ url('assets/web/css/bootstrap.min.css') }}" media="all" />
     <link rel="stylesheet" type="text/css" href="{{ url('assets/web/css/elegant-icons.min.css') }}" media="all" />
     <link rel="stylesheet" type="text/css" href="{{ url('assets/web/css/all.min.css') }}" media="all" />
@@ -37,7 +37,7 @@
                     <img src="{{ url('/assets/web/img/logo/logo.svg') }}" alt="">
                 </div>
             </div>
-            <h2 class="head">IZZI LEASING</h2>
+            <h2 class="head">DIZZI LEASING</h2>
         </div>
     </div>
     @include('web.include.header_1')
