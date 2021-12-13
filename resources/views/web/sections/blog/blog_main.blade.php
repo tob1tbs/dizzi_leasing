@@ -15,7 +15,7 @@
                                         <div class="blog-img">
                                             <img src="{{ url('uploads/blog/'.$blog_item->photo) }}" alt="blog-img">
                                             <!-- <div class="catagory yellow-bg"> -->
-                                                <!-- {{ json_decode($blog_item->blogCategory->value)->{app()->getLocale()} }} -->
+                                                
                                             <!-- </div> -->
                                         </div>
                                         <div class="blog-content">
