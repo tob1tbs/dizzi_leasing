@@ -40,13 +40,13 @@
                             <div class="col-6">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="photo_main">ბლოგის ტექსტი (ქართულად)</label>
-                                    <input type="text" class="form-control font-neue" name="text_ge" id="text_ge">
+                                    <textarea class="summernote" name="text_ge"></textarea>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="photo_main">ბლოგის ტექსტი (ინგლისურად)</label>
-                                    <input type="text" class="form-control font-neue" name="text_en" id="text_en">
+                                    <textarea class="summernote" name="text_en"></textarea>
                                 </div>
                             </div>
                             <div class="col-6">
@@ -63,7 +63,7 @@
 </div>
 @endsection
 @section('js')
-<script src="{{ url('assets/cms/js/Custom/BlogsScripts.js') }}"></script>
+<script src="{{ url('assets/cms/js/Custom/BlogScripts.js') }}"></script>
 <script src="{{ url('assets/cms/js/summernote.js') }}"></script>
 <script src="{{ url('assets/cms/js/editors.js') }}"></script>
 <script type="text/javascript">
