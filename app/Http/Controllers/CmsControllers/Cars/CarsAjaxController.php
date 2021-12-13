@@ -197,11 +197,10 @@ class CarsAjaxController extends Controller
             }
 
             foreach ($Request->option as $Key => $Value) {
-                
                 $CarOptionValue = new CarOptionValue();
                 $CarOptionData = $CarOptionValue::where('key', $Key)->first();
 
-                if(!empty($Value)) {
+                if(!empty($CarOptionData)) {
                     $CarParameter = new CarParameter();
                     $CarParameter->key = $Key;
                     $CarParameter->value = $Value;
