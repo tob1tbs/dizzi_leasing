@@ -12,8 +12,8 @@ $(document).ready(function() {
     start: [1000, 100000],
     step: 1,
     range: {
-      'min': [100000],
-      'max': [1000000]
+      'min': [1000],
+      'max': [100000]
     },
     format: moneyFormat,
     connect: true
