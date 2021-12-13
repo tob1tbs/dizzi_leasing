@@ -17,7 +17,12 @@ function BlogAddSubmit() {
         success: function(data) {
             if(data['status'] == true) {
             	if(data['errors'] == true) {
-	               
+	               Swal.fire({
+                        icon: 'success',
+                        text: data['message'],
+                        timer: 1500,
+                    });
+	               window.location.replace("/cms/blog/");
                 } else {
                     Swal.fire({
                         icon: 'success',
