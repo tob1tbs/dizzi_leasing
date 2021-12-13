@@ -398,7 +398,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title neue" id="exampleModalLabel">{{ trans('site.add_review') }}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="CloseModal()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -425,7 +425,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary helvetica-regular" data-dismiss="modal">{{ trans('site.close') }}</button>
+        <button type="button" class="btn btn-secondary helvetica-regular" onclick="CloseModal()" data-dismiss="modal">{{ trans('site.close') }}</button>
         <button type="button" class="btn btn-primary helvetica-regular" onclick="SaveReview()">{{ trans('site.save_review') }}</button>
       </div>
     </div>
@@ -470,6 +470,10 @@
                 }
             }
         });
+    }
+
+    function CloseModal() {
+        $("#ReviewModal").modal('hide');
     }
 </script>
 @endsection
