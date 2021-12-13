@@ -54,6 +54,7 @@
                                     <button class="btn btn-success font-neue" type="button" onclick="BlogAddSubmit()">შენახვა</button>
                                 </div>
                             </div>
+                            <input type="hidden" name="id">
                         </div>
                     </div>
                 </div>
