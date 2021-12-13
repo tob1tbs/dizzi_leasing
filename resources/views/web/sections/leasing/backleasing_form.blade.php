@@ -524,10 +524,11 @@
                             $(".calc-duration, .calc-amount").html('');
                             $(".calc-duration").html($("#SetMonthRange").val());
                             $(".calc-amount").html($("#SetRange").val());
+                            $(".pprice").html($("#SetRange").val());
+                            $(".pmonth").html($("#SetMonthRange").val());
                             $("#leasing_price").val($("#SetRange").val());
                             $("#leasing_month").val($("#SetMonthRange").val());
                             $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
-                            faj
                         }
                     }
                 });
