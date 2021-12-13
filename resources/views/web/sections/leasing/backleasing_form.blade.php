@@ -258,7 +258,7 @@
             <p>ლიზინგის თანხა</p>
         </div>
         <div class="col-lg-6" id="pprice">
-            <p>8000 ₾</p>
+            <p>{{ request()->amount - request()->advance_payment }} ₾</p>
         </div>
     </div>
     <div class="col-lg-12" id="loanwidgetdata2">
@@ -266,7 +266,7 @@
             <p>ლიზინგის პირობები</p>
         </div>
         <div class="col-lg-6" id="pmonth">
-            <p>84 თვეში</p>
+            <p>{{ request()->duration }} თვე</p>
         </div>
     </div>
     <div class="col-lg-12" id="loanwidgetdata3">
