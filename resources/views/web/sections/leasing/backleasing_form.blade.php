@@ -227,8 +227,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img src="{{ url('assets/web/img\icon\next.png') }}"><button data-js="open">კალკულაციის მაგალითი</button>
-                                <img src="{{ url('assets/web/img\icon\next.png') }}"><button data-js="open2">სტანდარტული ინფორმაცია</button>
+                                <img src="{{ url('assets/web/img\icon\next.png') }}">
+                                <button data-js="open" class="popupbutton">კალკულაციის მაგალითი / სტანდარტული ინფორმაცია</button>
                             </div>
                             <div class="widget-subscribe" id="promocodewidget">
                                 <h4 class="widget-title mb-15 neue" style="font-size: 16px">{{ trans('site.promo') }}</h4>
@@ -248,6 +248,40 @@
             </div>
     </section>
 </main>
+<div class="popup">
+    <button name="close" id="popupclose">X</button>
+    <h2>დაანგარიშების საფუძველი</h2>
+    <p>კალკულაციის მონაცემები არის მხოლოდ ინფორმაციისთვის. ის გაძლევს ინფორმაციას ყოველთვიური გადასახადის შესახებ</p><br>
+    <p>ყოველთვიური გადასახადი დაანგარიშებულია შემდეგი გარემოებებით:</p><br>
+    <div class="col-lg-12" id="loanwidgetdata">
+        <div class="col-lg-6">
+            <p>ლიზინგის თანხა</p>
+        </div>
+        <div class="col-lg-6" id="pprice">
+            <p>8000 ₾</p>
+        </div>
+    </div>
+    <div class="col-lg-12" id="loanwidgetdata2">
+        <div class="col-lg-6">
+            <p>ლიზინგის პირობები</p>
+        </div>
+        <div class="col-lg-6" id="pmonth">
+            <p>84 თვეში</p>
+        </div>
+    </div>
+    <div class="col-lg-12" id="loanwidgetdata3">
+        <div class="col-lg-6">
+            <p>ყოველთვიური გადასახადი</p>
+        </div>
+        <div class="col-lg-6" id="ppayment">
+            <p>3.44% ყოველთვიური ან 41.28% ყოველწლიური</p>
+        </div>
+    </div>
+    <p>* საკომისიო არის 0 ₾ და ის გადაიხდება თანაბარ ნაწილად სესხის მთლიანი პერიოდის განმავლობაში.</p>
+    <hr>
+    <h2>სტანდარტული ინფორმაცია</h2>
+    <a href="#0" id="readmore">წაიკითხე მეტი</a>
+</div>
 <style type="text/css">
     .nav-tabs .nav-link {
         margin-bottom: 6px;
@@ -591,5 +625,39 @@
           }
     }
     Calculate();
+
+        function popupOpenClose(popup) {
+        
+        /* Add div inside popup for layout if one doesn't exist */
+        if ($(".wrapper").length == 0){
+            $(popup).wrapInner("<div class='wrapper'></div>");
+        }
+        
+        /* Open popup */
+        $(popup).show();
+
+        /* Close popup if user clicks on background */
+        $(popup).click(function(e) {
+            if ( e.target == this ) {
+                if ($(popup).is(':visible')) {
+                    $(popup).hide();
+                }
+            }
+        });
+
+        /* Close popup and remove errors if user clicks on cancel or close buttons */
+        $(popup).find("button[name=close]").on("click", function() {
+            if ($(".formElementError").is(':visible')) {
+                $(".formElementError").remove();
+            }
+            $(popup).hide();
+        });
+    }
+
+    $(document).ready(function () {
+        $("[data-js=open]").on("click", function() {
+            popupOpenClose($(".popup"));
+        });
+});
 </script>
 @endsection
