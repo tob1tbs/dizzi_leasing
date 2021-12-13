@@ -250,7 +250,7 @@
                                                     </div>
                                                     <div class="range-header mb-25">
                                                         <h6 class="helvetica-regular" style="width: 100%;">{{ trans('site.advance_payment') }} %</h6>
-                                                        <input type="text" id="PercetSetRange" value="@if(!empty(request()->advance_payment)) {{ request()->advance_payment }} @else {{ $parameterLeasing['leasing_avanse_percent_default'][0] }} @endif" style="width: 100%;">
+                                                        <input type="text" id="PercetSetRange" value="{{ $parameterLeasing['leasing_avanse_percent_default'][0] }}" style="width: 100%;">
                                                     </div>
                                                     <div id="PercetRangeSlider"></div>
                                                 </div>
@@ -413,7 +413,7 @@
         success: function(data) {
             if(data['status'] == true) {
                 $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
-                $(".loan-complicity").html($("#PercetSetRangeAmount").val()+' {{ trans('site.gel') }}');
+                $(".loan-complicity").html($("#leasing_advance_payment").val() +' {{ trans('site.gel') }}');
             }
         }
     });
@@ -598,7 +598,7 @@
                             $("#leasing_price").val($("#SetRange").val());
                             $("#leasing_month").val($("#SetMonthRange").val());
                             $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
-                            $(".loan-complicity").html($("#PercetSetRangeAmount").val()+' {{ trans('site.gel') }}');
+                            $(".loan-complicity").html($("#leasing_advance_payment").val() +' {{ trans('site.gel') }}');
                         }
                     }
                 });
