@@ -42,8 +42,8 @@
                 <div class="nk-tb-col tb-col-sm">
                     <div class="form-group">
                         <div class="custom-control custom-switch checked">
-                            <input type="checkbox" class="custom-control-input" name="reg-public" id="site-off" value="1" @if($review_item->approve == 1) checked @endif onclick="ReviewStatusChange({{ $review_item->id }}, this)">
-                            <label class="custom-control-label" for="site-off"></label>
+                            <input type="checkbox" class="custom-control-input" name="reg-public" value="1" @if($review_item->approve == 1) checked @endif onclick="ReviewStatusChange({{ $review_item->id }}, this)">
+                            <label class="custom-control-label"></label>
                         </div>
                     </div>
                 </div>
