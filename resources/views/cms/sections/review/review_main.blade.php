@@ -31,7 +31,7 @@
             @foreach($review_list as $review_item)
             <div class="nk-tb-item">
                 <div class="nk-tb-col">
-                    <span>{{ $review_item-> }}</span>
+                    <span>{{ $review_item->id }}</span>
                 </div>
                 <div class="nk-tb-col">
                     <span class="tb-sub tb-amount">{{ $review_item->name }}<span>$</span></span>
