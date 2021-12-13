@@ -157,7 +157,7 @@
                     <div class="col-lg-4 ps-xl-5 mt-5 mt-lg-0">
                         <div class="blog-sidebar-widget ps-lg-2">
                             <div class="widget-subscribe" style="padding: 30px 20px 40px 20px;">
-                                <h4 class="widget-title mb-15">{{ trans('site.loan_data') }} <img src="{{ url('assets/web/img\icon\pen.png') }}" id="pen" style="width: 20px;"></h4>
+                                <h4 class="widget-title mb-15">{{ trans('site.loan_data') }} <img src="{{ url('assets/web/img\icon\pen.png') }}" id="pen" style="width: 20px; cursor: pointer;"></h4>
                                 <hr>
                                 <div class="col-lg-12" id="loanwidgetdata">
                                     <div class="col-lg-6">
@@ -192,7 +192,7 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="calculator-widget calc-sidebar">
+                                <div class="calculator-widget">
                                     <div class="row  gy-lg-0 gy-3">
                                         <div class="col-lg-12">
                                             <div class="single-calculator-widget calc-sidebar" style="padding: 20px; display: none;">
@@ -234,7 +234,7 @@
                                 <h4 class="widget-title mb-15 neue" style="font-size: 16px">{{ trans('site.promo') }}</h4>
                                 <form action="#" class="mt-15">
                                     <input class="form-control" id="promo_code" name="promo_code" type="text" placeholder="">
-                                    <button type="button" onclick="CheckPromoCode()" style="width: 100%; height: 35px; border-radius: 5px; margin-top: 10px; background: #f0c019;">{{ trans('site.check_promo') }}<</button>
+                                    <button type="button" onclick="CheckPromoCode()" style="width: 100%; height: 35px; border-radius: 5px; margin-top: 10px; background: #f0c019;">{{ trans('site.check_promo') }}</button>
                                     <p style="font-size: 14px; margin-top: 5px; width: 100%;" class="promo-text helvetica-regular"></p>
                                     <p style="font-size: 14px; margin-top: 5px; width: 100%;">{{ trans('site.promo_text') }}</p>
                             </div>  
