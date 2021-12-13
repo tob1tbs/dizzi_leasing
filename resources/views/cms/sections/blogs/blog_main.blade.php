@@ -56,8 +56,8 @@
                 <div class="nk-tb-col tb-col-sm">
                     <div class="form-group">
                         <div class="custom-control custom-switch checked">
-                            <input type="checkbox" class="custom-control-input" name="reg-public" id="site-off-{{ blog_item->id }}" value="1" @if($blog_item->status == 1) checked @endif onclick="BlogStatusChange({{ $blog_item->id }}, this)">
-                            <label class="custom-control-label" for="site-off-{{ blog_item->id }}"></label>
+                            <input type="checkbox" class="custom-control-input" name="reg-public" id="site-off_{{ blog_item->id }}" value="1" @if($blog_item->status == 1) checked @endif onclick="BlogStatusChange({{ $blog_item->id }}, this)">
+                            <label class="custom-control-label" for="site-off_{{ blog_item->id }}"></label>
                         </div>
                     </div>
                 </div>
