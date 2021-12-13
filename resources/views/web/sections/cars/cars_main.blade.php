@@ -41,10 +41,10 @@
                                   </div>
                                   <div class="row slider-labels">
                                     <div class="col-xs-6 caption">
-                                      <strong>Min:</strong> <span id="slider-range-value1"></span>
+                                      <strong>Min:</strong> <!-- <span id="slider-range-value1"></span> -->
                                     </div>
                                     <div class="col-xs-6 text-right caption">
-                                      <strong>Max:</strong> <span id="slider-range-value2"></span>
+                                      <strong>Max:</strong> <!-- <span id="slider-range-value2"></span> -->
                                     </div>
                                   </div>
                                   <div class="row">
