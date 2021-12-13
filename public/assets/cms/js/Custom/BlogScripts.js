@@ -1,4 +1,4 @@
-function OptionSubmit() {
+function BlogAddSubmit() {
 	var form = $('#blog_form')[0];
     var data = new FormData(form);
 
