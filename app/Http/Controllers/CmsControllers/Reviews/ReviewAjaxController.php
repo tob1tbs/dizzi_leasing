@@ -26,4 +26,17 @@ class ReviewAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
         }
     }
+
+    public function ajaxReviewStatusChange(Request $Request) {
+        if($Request->isMethod('POST') && !empty($Request->review_id)) {
+            $Review = new Review();
+            $Review::find($Request->review_id)->update([
+                'approve' => $Request->review_status,
+            ]);
+            return response()->json(['status' => true, 'message' => 'შეფასება წარმატებით შეიცვალა']);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
+        }
+    }
+
 }

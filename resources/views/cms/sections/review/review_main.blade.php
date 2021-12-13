@@ -42,7 +42,7 @@
                 <div class="nk-tb-col tb-col-sm">
                     <div class="form-group">
                         <div class="custom-control custom-switch checked">
-                            <input type="checkbox" class="custom-control-input" name="reg-public" id="site-off" value="1" @if($review_item->approve == 1) checked @endif onclick="ChangeReviewStatusChange({{ $review_item->id }}, this)">
+                            <input type="checkbox" class="custom-control-input" name="reg-public" id="site-off" value="1" @if($review_item->approve == 1) checked @endif onclick="ReviewStatusChange({{ $review_item->id }}, this)">
                             <label class="custom-control-label" for="site-off"></label>
                         </div>
                     </div>
@@ -68,8 +68,28 @@
 
 @section('js')
 <script type="text/javascript">
-	function ChangeReviewStatusChange() {
-	
+	function ReviewStatusChange(review_id, elem) {
+		if($(elem).is(":checked")) {
+	        review_status = 1;
+	    } else {
+	        review_status = 0
+	    }
+
+	    $.ajax({
+	        dataType: 'json',
+	        url: "/cms/ajax/ajaxReviewStatusChange",
+	        type: "POST",
+	        data: {
+	            review_id: review_id,
+	            review_status: review_status,
+	        },
+	        headers: {
+	            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	        },
+	        success: function(data) {
+	            return;
+	        }
+	    });
 	}
 
 	function ReviewDelete(review_id) {

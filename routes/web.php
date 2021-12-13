@@ -141,5 +141,6 @@ Route::group(['prefix' => '/cms'], function() {
 
         // REVIEWS
         Route::post('/ajaxReviewDelete/', [App\Http\Controllers\CmsControllers\Reviews\ReviewAjaxController::class, 'ajaxReviewDelete'])->name('ajaxReviewDelete');
+        Route::post('/ajaxReviewStatusChange/', [App\Http\Controllers\CmsControllers\Reviews\ReviewAjaxController::class, 'ajaxReviewStatusChange'])->name('ajaxReviewStatusChange');
     });
 });
