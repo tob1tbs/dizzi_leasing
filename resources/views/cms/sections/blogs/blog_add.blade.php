@@ -13,7 +13,7 @@
     </div>
 </div>
 <div class="nk-block nk-block-lg">
-    <form id="cars_form">
+    <form id="blog_form">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card card-preview">

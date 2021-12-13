@@ -139,6 +139,9 @@ Route::group(['prefix' => '/cms'], function() {
         // BASIC PARAMETER 
         Route::post('/ajaxBasicParameterSubmit/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxBasicParameterSubmit'])->name('ajaxBasicParameterSubmit');
 
+        // BLOG
+        Route::post('/ajaxBlogSubmit/', [App\Http\Controllers\CmsControllers\Blog\BlogAjaxController::class, 'ajaxBlogSubmit'])->name('ajaxBlogSubmit');
+
         // REVIEWS
         Route::post('/ajaxReviewDelete/', [App\Http\Controllers\CmsControllers\Reviews\ReviewAjaxController::class, 'ajaxReviewDelete'])->name('ajaxReviewDelete');
         Route::post('/ajaxReviewStatusChange/', [App\Http\Controllers\CmsControllers\Reviews\ReviewAjaxController::class, 'ajaxReviewStatusChange'])->name('ajaxReviewStatusChange');
