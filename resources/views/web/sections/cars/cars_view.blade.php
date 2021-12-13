@@ -187,13 +187,13 @@
 	    position: fixed;
 	    top: 0;
 	    left: 0;
-	    width: 80%;
-	    height: 80%;
+	    width: 100%;
+	    height: 100%;
 	    background-color: rgba(17, 17, 17, 0.884);
 	    display: flex;
 	    justify-content: center;
 	    align-items: center;
-	    z-index: 150;
+	    z-index: 500000;
 	    visibility: hidden;
 	    opacity: 0;
 	    transition: .5s;
