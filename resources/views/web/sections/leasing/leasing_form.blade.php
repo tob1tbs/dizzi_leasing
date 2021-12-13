@@ -279,6 +279,40 @@
             </div>
     </section>
 </main>
+<div class="popup" style="z-index: 500000;">
+    <button name="close" id="popupclose">X</button>
+    <h2>დაანგარიშების საფუძველი</h2>
+    <p>კალკულაციის მონაცემები არის მხოლოდ ინფორმაციისთვის. ის გაძლევს ინფორმაციას ყოველთვიური გადასახადის შესახებ</p><br>
+    <p>ყოველთვიური გადასახადი დაანგარიშებულია შემდეგი გარემოებებით:</p><br>
+    <div class="col-lg-12" id="loanwidgetdata">
+        <div class="col-lg-6">
+            <p>ლიზინგის თანხა</p>
+        </div>
+        <div class="col-lg-6" id="pprice">
+            <p class="pprice">{{ request()->amount - request()->advance_payment }} ₾</p>
+        </div>
+    </div>
+    <div class="col-lg-12" id="loanwidgetdata2">
+        <div class="col-lg-6">
+            <p>ლიზინგის პირობები</p>
+        </div>
+        <div class="col-lg-6" id="pmonth">
+            <p class="pmonth">{{ request()->duration }} თვე</p>
+        </div>
+    </div>
+    <div class="col-lg-12" id="loanwidgetdata3">
+        <div class="col-lg-6">
+            <p>ყოველთვიური გადასახადი</p>
+        </div>
+        <div class="col-lg-6" id="ppayment">
+            <p>{{ $parameterLeasing['leasing_month_percent'][0] }}% ყოველთვიური ან {{ $parameterLeasing['leasing_month_percent'][0] * 12}}% ყოველწლიური</p>
+        </div>
+    </div>
+    <p>* საკომისიო არის 0 ₾ და ის გადაიხდება თანაბარ ნაწილად სესხის მთლიანი პერიოდის განმავლობაში.</p>
+    <hr>
+    <h2>სტანდარტული ინფორმაცია</h2>
+    <a href="#0" id="readmore">წაიკითხე მეტი</a>
+</div>
 <style type="text/css">
     .nav-tabs .nav-link {
         margin-bottom: 6px;
@@ -559,6 +593,8 @@
                             $(".calc-duration, .calc-amount").html('');
                             $(".calc-duration").html($("#SetMonthRange").val());
                             $(".calc-amount").html($("#SetRange").val());
+                            $(".pprice").html($("#SetRange").val()+' ₾');
+                            $(".pmonth").html($("#SetMonthRange").val()+ ' {{ trans('site.month') }}');
                             $("#leasing_price").val($("#SetRange").val());
                             $("#leasing_month").val($("#SetMonthRange").val());
                             $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
