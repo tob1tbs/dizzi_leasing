@@ -32,14 +32,7 @@
                             </div>
                             <div class="row mt-55">
                                 <div class="col-12">
-                                    <div class="pagination-widget">
-                                        <ul>
-                                            <li><a class="active" href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#"> <i class="arrow_carrot-right "></i> </a></li>
-                                        </ul>
-                                    </div>
+                                    {{ $blog_list->links() }}
                                 </div>
                             </div>
                         </div>
