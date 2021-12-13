@@ -41,10 +41,8 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-sm-12">
-                                      <form>
-                                        <input type="hidden" name="min-value" value="">
+                                    	<input type="hidden" name="min-value" value="">
                                         <input type="hidden" name="max-value" value="">
-                                      </form>
                                     </div>
 		                         	<h4 class="widget-title mb-15 pt-20 pb-0 helvetica-regular" style="font-size: 15px; ">{{ trans('site.car_year') }}</h4>
                                    	<div class="col-lg-6 col-12">
