@@ -52,7 +52,7 @@ class BlogAjaxController extends Controller
                     [
                         'id' => $Request->id,
                         'title' => json_encode($title),
-                        'title' => json_encode($text),
+                        'text' => json_encode($text),
                         'photo' => $MainPhoto,
                     ]
                 );
