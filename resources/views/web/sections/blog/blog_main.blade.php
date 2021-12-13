@@ -2,7 +2,7 @@
 
 @section('content')
 <main>
-	<section class="banner-area-2 loan-banner pt-145"></section>
+    <section class="banner-area-2 loan-banner pt-145"></section>
     <section class="pb-40 bg_white" style="padding: 100px 0 50px 0;">
         <div class="container">
                 <div class="row">
@@ -10,7 +10,26 @@
                         <div class="blog-post-widget">
                             <div class="row gy-4 ">
                                 @foreach($blog_list as $blog_item)
-                                
+                                <div class="col-md-6">
+                                    <div class="blog-widget-2 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="blog-img">
+                                            <img src="{{ url('assets/web/img/blog/blog-10.png') }}" alt="blog-img">
+                                            <div class="catagory yellow-bg">
+                                                {{ json_decode($blog_item->blogCategory->value)->{app()->getLocale()} }}
+                                            </div>
+                                        </div>
+                                        <div class="blog-content">
+                                            <h4 class="helvetica-regular" style="font-size: 18px;"><a href="{{ route('actionWebBlogView', $blog_item->id) }}">{{ json_decode($blog_item->title)->{app()->getLocale()} }}</a>
+                                            </h4>
+                                            <div class="post-info">
+                                                <div class="post-date">
+                                                    <img src="{{ url('assets/web/img/blog/calendar-outline.svg') }}" alt="calendar">
+                                                    <span>{{ Carbon\Carbon::parse($blog_item->created_at)->format('D-M-Y') }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 @endforeach
                             </div>
                             <div class="row mt-55">
