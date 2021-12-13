@@ -23,7 +23,7 @@ class BlogController extends Controller
                 $BlogList->whereJsonContains('title', [Session::get('locale') => $Request->search_query]);
             }
 
-            $BlogList = $BlogList->paginate(4)->load('blogCategory')->toArray();
+            $BlogList = $BlogList->paginate(3)->load('blogCategory')->toArray();
 
             $data = [
                 'blog_list' => $BlogList
