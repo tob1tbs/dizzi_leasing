@@ -15,7 +15,7 @@
                             </div>
                             <div class="row mt-55">
                                 <div class="col-12">
-                                    {{ $blog_list->links('vendor.pagination.bootstrap.blade') }}
+                                    {{ $blog_list->links('vendor.pagination.bootstrap-4') }}
                             </div>
                         </div>
                     </div>
