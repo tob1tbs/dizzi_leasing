@@ -88,8 +88,8 @@ class CarsController extends Controller
                 // $CarList = $CarList->where('millage', '<=', $Request->millage_to);
             }
 
-            $CarList = $CarList->get()
-                                ->orderBy('id', 'DESC')
+            $CarList = $CarList->orderBy('id', 'DESC')
+                                ->get()
                                 ->load('carMake')
                                 ->load('carModel')
                                 ->load('carParameter')
