@@ -47,7 +47,7 @@ class BlogAjaxController extends Controller
                 }
 
                 $Blog = new Blog();
-                $Blog::updateOrCreate([
+                $Blog::updateOrCreate(
                     ['id' => $Request->id],
                     [
                         'id' => $Request->id,
@@ -55,7 +55,7 @@ class BlogAjaxController extends Controller
                         'title' => json_encode($text),
                         'photo' => $MainPhoto,
                     ]
-                ]);
+                );
             }
         } else {
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
