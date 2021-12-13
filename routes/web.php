@@ -81,6 +81,7 @@ Route::group(['prefix' => '/cms'], function() {
         Route::group(['prefix' => '/blog'], function() {
             Route::get('/', [App\Http\Controllers\CmsControllers\Blog\BlogController::class, 'actionBlog'])->name('actionBlog');
             Route::get('/add', [App\Http\Controllers\CmsControllers\Blog\BlogController::class, 'actionBlogAdd'])->name('actionBlogAdd');
+            Route::get('/edit/{id}', [App\Http\Controllers\CmsControllers\Blog\BlogController::class, 'actionBlogEdit'])->name('actionBlogEdit');
         });
 
         // TEXT PAGES
