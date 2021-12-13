@@ -58,5 +58,16 @@
     ::placeholder {
         font-family: 'HelveticaRegular';
     }
+
+    .page-item.active .page-link {
+        z-index: 3;
+        color: #fff;
+        background-color: #f0c019;
+        border-color: #dee2e6;
+    }
+
+    .page-link {
+        color: #000;
+    }
 </style>
 @endsection
