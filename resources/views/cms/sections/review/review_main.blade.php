@@ -29,7 +29,7 @@
                 </div>
             </div>
             @foreach($review_list as $review_item)
-            <div class="nk-tb-item">
+            <div class="nk-tb-item review-{{ $review_item->id }}">
                 <div class="nk-tb-col">
                     <span>{{ $review_item->id }}</span>
                 </div>
@@ -95,7 +95,7 @@
             },
             success: function(data) {
                 if(data['status'] == true) {
-                	
+                	$(".review-"+review_id).remove();
                 } else {
                     Swal.fire({
                       icon: 'error',
