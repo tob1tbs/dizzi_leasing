@@ -67,7 +67,7 @@
                         </div>
                         <div class="row">
                             <div class="copyright-text text-md-start text-center">
-                                <p>&copy; Izzi 2021.<br class="d-sm-none"> <a class="ms-3" href="#">Privecy</a> | <a class="ms-0" href="#">Term of Use</a> </p>
+                                <p>&copy; Dizi 2021.<br class="d-sm-none"> <!-- <a class="ms-3" href="#">Privecy</a> | <a class="ms-0" href="#">Term of Use</a> --> </p>
                             </div>
                         </div>
                     </div>
