@@ -14,12 +14,7 @@ class LeasingController extends Controller
     //
     public function actionWebSeccess(Request $Request) {
         if (view()->exists('web.sections.leasing.success')) {
-
-            $data = [
-                'leasing_data' => $LeasingArray,
-                'car_list' => $CarList,
-            ];
-
+            $data = [ ];
             return view('web.sections.leasing.success', $data);
         } else {
             abort('404');
