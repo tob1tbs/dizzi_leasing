@@ -169,7 +169,7 @@
                             <br>
                             მოგვწერე აქ
                             <br>
-                            ან დაგვირეკე: +995 {{ $parameterItems['phone_number'][0] }}
+                            ან დაგვირეკე: <a href="tel:+995{{ $parameterItems['phone_number'][0] }}">+995 {{ $parameterItems['phone_number'][0] }}</a>
                         </p>
 					</div>
 				</div>
