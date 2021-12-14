@@ -400,7 +400,11 @@
             success: function(data) {
                 if(data['status'] == true) {
                     if(data['errors'] == true) {
-                        $(".promo-text").html(`<span class="text-danger">`+data['message']+`</span>`);
+                        if(data['validate'] == false) {
+                            $(".promo-text").html(`<span class="text-danger">`+data['message']['promo_code']['0']+`</span>`);
+                        } else {
+                            $(".promo-text").html(`<span class="text-danger">`+data['message']+`</span>`);
+                        }
                     } else {
                         $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
                         $(".loan-month-percent").html(data['loan_data']['loan_month_percent']+' %');
