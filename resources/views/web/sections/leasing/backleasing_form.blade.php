@@ -288,8 +288,6 @@
             <h2>სტანდარტული ინფორმაცია</h2>
             <hr>
             <a href="#0" id="readmore">წაიკითხე მეტი</a>
-            
-            <!-- modal close button -->
             <a href="" class="modal__close demo-close">
                 <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
             </a>
@@ -549,27 +547,6 @@
             mySlider.noUiSlider.on("update", function (values, handle) {
               inputFormat.value = values[handle];
               SelectedAmount = AmountFormat.from(values[handle]);
-              mySliderPercent.noUiSlider.updateOptions({
-                start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
-                range: {
-                    'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
-                    'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
-                },
-                pips: {
-                    mode: "values",
-                    density: 100,
-                    values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100],
-                    stepped: true,
-                    format: wNumb({
-                      encoder: function (a) {
-                        return a / 1;
-                      },
-                      decimals: 0,
-                      thousand: ",",
-                      prefix: "₾",
-                    }),
-                },
-            });
             });
 
             mySlider.noUiSlider.on("change", function (values, handle) {
@@ -658,9 +635,10 @@
             });
           }
     }
+    
     Calculate();
 
-        function popupOpenClose(popup) {
+    function popupOpenClose(popup) {
         
         /* Add div inside popup for layout if one doesn't exist */
         if ($(".wrapper").length == 0){
