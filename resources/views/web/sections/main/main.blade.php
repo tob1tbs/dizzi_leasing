@@ -99,7 +99,7 @@
 			                            <hr>
 			                            <li>{{ trans('site.initial_deposit') }}</li>
 			                            <hr>
-			                            <li>{{ trans('site.minimum') }}: {{ $parameterItems['leasing_avanse_max_percent'][0] }}%</li>
+			                            <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_max_percent'][0] }}%</li>
 			                            <hr>
 			                            <li>{{ trans('site.max_market_price') }}</li>
 			                            <hr>
