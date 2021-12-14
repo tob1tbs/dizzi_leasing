@@ -4,6 +4,7 @@
 @php
     $vissible = 0;
 @endphp
+{{ $vissible }}
 <main>
     <section class="banner-area-3 pt-90" id="banner_animation2">
         <div class="bg-slides">
