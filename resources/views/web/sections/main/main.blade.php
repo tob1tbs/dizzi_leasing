@@ -167,7 +167,7 @@
                             <br><br>
                             დაგრჩა შეკითხვები? 
                             <br>
-                            მოგვწერე აქ
+                            <a href="javascript:void(Tawk_API.toggle())"> მოგვწერე აქ</a>
                             <br>
                             ან დაგვირეკე: <a href="tel:+995{{ $parameterItems['phone_number'][0] }}" class="underline-text">+995 {{ $parameterItems['phone_number'][0] }}</a>
                         </p>
