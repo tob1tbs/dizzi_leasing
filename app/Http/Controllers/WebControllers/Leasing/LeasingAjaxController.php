@@ -141,12 +141,12 @@ class LeasingAjaxController extends Controller
                 'required' => 'გთხოვთ შეავსოთ ყველა აუცილებელი ველი',
             );
             $validator = Validator::make($Request->all(), [
-                // 'user_name' => 'required|max:255',
-                // 'user_lastname' => 'required|max:255',
-                // 'user_bday' => 'required|max:255',
-                // 'user_personal_number' => 'required|max:255',
-                // 'user_phone' => 'required|max:255',
-                // 'user_email' => 'required|max:255',
+                'user_name' => 'required|max:255',
+                'user_lastname' => 'required|max:255',
+                'user_bday' => 'required|max:255',
+                'user_personal_number' => 'required|max:255',
+                'user_phone' => 'required|max:255',
+                'user_email' => 'required|max:255',
             ], $messages);
 
             if ($validator->fails()) {
@@ -224,8 +224,8 @@ class LeasingAjaxController extends Controller
                 $CrmResponse = json_decode($CrmResponse);
                 if($CrmResponse->success == 'true') {
                     $CrmController->serviceCrmSaveLog($SendData, 'send_to_crm', $CrmResponse);
-                    $RedirectUrl = route('actionWebLeasingForm', 'phone='.$Request->phone.'&amount='.$Request->amount.'&duration='.$Request->duration.'&advance_payment='.$Request->advance_payment);
-                    return response()->json(['status' => true, 'errors' => false, 'message' => $validator->getMessageBag()->toArray(), 'RedirectUrl' => $RedirectUrl], 200);
+                    $RedirectUrl = route('actionWebSeccess');
+                    // return response()->json(['status' => true, 'errors' => false, 'message' => $validator->getMessageBag()->toArray(), 'RedirectUrl' => $RedirectUrl], 200);
                 } else {
                     return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
                 }
