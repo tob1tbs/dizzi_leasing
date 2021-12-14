@@ -337,7 +337,7 @@ function LesingFormSubmit() {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
         beforeSend: function() {
-	        $("#preloader").css("display","block");
+	        $("#preloader").css("display","flex");
 	    },
         success: function(data) {
 	        $("#preloader").css("display","none");
