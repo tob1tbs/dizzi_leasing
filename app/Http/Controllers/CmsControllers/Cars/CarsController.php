@@ -18,7 +18,7 @@ class CarsController extends Controller
     //
 
     public function __construct() {
-        
+
     }
 
     public function actionCars() {

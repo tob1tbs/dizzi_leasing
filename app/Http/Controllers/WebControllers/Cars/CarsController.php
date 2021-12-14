@@ -15,10 +15,6 @@ use App\Models\Cars\CarGallery;
 class CarsController extends Controller
 {
     //
-    
-    public function __construct() {
-        abort('404');
-    }
 
     public function actionWebCars(Request $Request) {
         if (view()->exists('web.sections.cars.cars_main')) {
