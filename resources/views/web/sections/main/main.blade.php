@@ -372,15 +372,9 @@
                             <div class="circle-shape"></div>
                         </div>
                         <img class="main-img" src="{{ url('assets/web/img/faq/advisor.png') }}" alt="advisor">
-                        <div id="video">
-                            <a class="play-btn" data-fancybox
-                                href="https://www.youtube.com/watch?v=xcJtL7QggTI">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
                         <div class="work-time">
                             <div class="circle-shape"></div>
-                            All weekdays <span>10.00 - 18.00</span>
+                            <span>{{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}</span>
                         </div>
                     </div>
                     <div class="row mt-4 gy-md-0 gy-3 wow fadeInUp" data-wow-delay="0.4s">
