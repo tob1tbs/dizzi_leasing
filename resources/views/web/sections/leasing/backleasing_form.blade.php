@@ -545,6 +545,27 @@
             mySlider.noUiSlider.on("update", function (values, handle) {
               inputFormat.value = values[handle];
               SelectedAmount = AmountFormat.from(values[handle]);
+              mySliderPercent.noUiSlider.updateOptions({
+                start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
+                range: {
+                    'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
+                    'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
+                },
+                pips: {
+                    mode: "values",
+                    density: 100,
+                    values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100],
+                    stepped: true,
+                    format: wNumb({
+                      encoder: function (a) {
+                        return a / 1;
+                      },
+                      decimals: 0,
+                      thousand: ",",
+                      prefix: "₾",
+                    }),
+                },
+            });
             });
 
             mySlider.noUiSlider.on("change", function (values, handle) {
