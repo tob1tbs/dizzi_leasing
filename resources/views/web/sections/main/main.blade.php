@@ -372,7 +372,7 @@
                             <div class="circle-shape"></div>
                         </div>
                         <img class="main-img" src="{{ url('assets/web/img/faq/advisor.png') }}" alt="advisor">
-                        <div class="work-time">
+                        <div class="work-time" style="right: 50%; transform: translate(50%);">
                             <div class="circle-shape"></div>
                             <span>{{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}</span>
                         </div>
