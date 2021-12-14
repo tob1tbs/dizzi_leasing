@@ -67,9 +67,9 @@
 										<h4 class="neue" style="font-size: 16px; margin-bottom: 0; background-color: #ffffff;">&nbsp;</h4>
 									</div>
 									<ul class="service helvetica-regular" style="text-align: left; padding-left: 15px;">
-			                            <li>{{ trans('site.max_price') }}</li>
-			                            <hr>
                                         <li>{{ trans('site.min_price') }}</li>
+			                            <hr>
+			                            <li>{{ trans('site.max_price') }}</li>
                                         <hr>
 			                            <li>{{ trans('site.max_month') }}</li>
 			                            <hr>
@@ -91,7 +91,29 @@
 										<h4 class="neue" style="font-size: 16px; margin-bottom: 0;">{{ trans('site.leasing') }}</h4>
 									</div>
 									<ul class="service helvetica-regular">
-										
+                                        @if(Session::get('locale') == 'ge')
+                                        <li>{{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @else
+                                        <li>From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @endif
+                                        <hr>
+										@if(Session::get('locale') == 'ge')
+			                            <li>{{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+			                            @else
+			                            <li>To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+			                            @endif
+			                            <hr>
+			                            <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
+			                            <hr>
+			                            <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_max_percent'][0] }}%</li>
+			                            <hr>
+			                            <li>{{ trans('site.credit_hostory_value') }}</li>
+			                            <hr>
+                                        <li>{{ trans('site.insurance_value') }}</li>
+			                            <hr>
+                                        <li>{{ trans('site.income_verification_value') }}</li>
+			                            <hr>
+			                            <li>{{ trans('site.documents_value') }}</li>
 			                        </ul>
 			                        <a href="{{ route('actionWebLeasing') }}" class="theme-btn theme-btn-rounded neue" style="width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
 								</div>
@@ -102,7 +124,29 @@
 										<h4 class="neue" style="font-size: 16px; margin-bottom: 0;">{{ trans('site.backleasing') }}</h4>
 									</div>
 			                        <ul class="service helvetica-regular">
-			                            
+                                        @if(Session::get('locale') == 'ge')
+                                        <li>{{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @else
+                                        <li>From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @endif
+                                        <hr>
+                                        @if(Session::get('locale') == 'ge')
+                                        <li>{{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @else
+                                        <li>To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @endif
+                                        <hr>
+                                        <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
+                                        <hr>
+                                        <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_max_percent'][0] }}%</li>
+                                        <hr>
+                                        <li>{{ trans('site.credit_hostory_value') }}</li>
+                                        <hr>
+                                        <li>{{ trans('site.insurance_value') }}</li>
+                                        <hr>
+                                        <li>{{ trans('site.income_verification_value') }}</li>
+                                        <hr>
+                                        <li>{{ trans('site.documents_value') }}</li>
 			                        </ul>
 			                        <a href="{{ route('actionWebBackLeasing') }}" class="theme-btn theme-btn-rounded neue" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
 								</div>
