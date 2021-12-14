@@ -13,10 +13,6 @@ class BlogController extends Controller
 {
     //
 
-    public function __construct() {
-        abort('404');
-    }
-
     public function actionWebBlog(Request $Request) {
         if (view()->exists('web.sections.blog.blog_main')) {
 
