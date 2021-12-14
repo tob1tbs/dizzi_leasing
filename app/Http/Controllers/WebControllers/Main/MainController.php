@@ -87,7 +87,7 @@ class MainController extends Controller
                 $RequsitesList->orWhere('key', 'address_en')->orWhere('key', 'company_name_en');
             }
 
-            $RequsitesList = $RequsitesList->get();
+            $RequsitesList = $RequsitesList->where('deleted_at_int', '!=', 0)->get();
 
             $data = [
                 'requsites' => $RequsitesList,
