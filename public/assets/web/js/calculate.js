@@ -152,7 +152,7 @@ function Calculate(data) {
 	      inputFormat.value = values[handle];
 	      SelectedAmount = AmountFormat.from(values[handle]);
 	      mySliderPercent.noUiSlider.updateOptions({
-	      		start: [$("#PercetSetRangeAmount").val()],
+	      		start: [$("#SetRange").val() / 100 * $("#PercetSetRange")],
 			    range: {
 			        'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
 			        'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
