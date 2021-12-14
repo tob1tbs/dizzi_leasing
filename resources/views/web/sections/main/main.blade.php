@@ -122,7 +122,7 @@
 			                            <hr>
 			                            <li>{{ trans('site.individual') }}</li>
 			                            <hr>
-			                            <li>{{ $parameterItems['leasing_avanse_max_percent'][0] }}%-{{ trans('site.to') }}</li>
+			                            <li>{{ $parameterLeasing['leasing_avanse_max_percent'][0] }}%-{{ trans('site.to') }}</li>
 			                            <hr>
 			                            <li>{{ trans('site.max_market_price') }}</li>
 			                            <hr>
