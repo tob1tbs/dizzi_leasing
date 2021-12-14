@@ -64,12 +64,6 @@
                             <a href="{{ route('actionWebFaq') }}" class="nav-link">{{ trans('site.faq') }}</a>
                         </li>
                         <li class="nav-item dropdown submenu ">
-                            <a href="{{ route('actionWebBlog') }}" class="nav-link">{{ trans('site.blog') }}</a>
-                        </li>
-                        <li class="nav-item dropdown submenu ">
-                            <a href="{{ route('actionWebCars') }}" class="nav-link">{{ trans('site.cars') }}</a>
-                        </li>
-                        <li class="nav-item dropdown submenu ">
                             <a href="{{ route('actionWebAboutUs') }}" class="nav-link">{{ trans('site.about_us') }}</a>
                         </li>
                         <li class="nav-item dropdown submenu">
