@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+@php
+    $vissible = 0;
+@endphp
 <main>
     <section class="banner-area-2 loan-banner pt-145"></section>
     <section class="pb-20 bg_white" style="padding: 80px 0 0 0">
@@ -58,7 +61,7 @@
                     <div class="col-lg-5 pl-lg-35">
                         <div class="calculator-result-widget bg_disable wow fadeInUp" data-wow-delay="0.3s">
                             <div>
-                                <h4 for="inputPhoneNumber" class="neue" style="margin-bottom: 1rem;">{{ trans('site.phone') }} *</h4>
+                                <h4 for="inputPhoneNumber" class="neue" style="margin-bottom: 1rem;">{{ trans('site.make_order') }} *</h4>
                                 <i class="helvetica-regular" style="font-size: 12px; float: left; width: 100%; margin-bottom: 10px;">{{ trans('site.exmpl') }}: 595111111</i>
                                 <input id="inputPhoneNumber" class="form-control" type="tel" pattern="[0-9]{9}" name="phone_number" maxlength="9">
                                 <span class="error-message text-danger helvetica-regular" style="float: left; width: 100%; margin-top: 10px;"></span>
@@ -78,6 +81,7 @@
             </div>
         </div>
     </section>
+    @if($vissible != 0)
     <section class="testimonial-area pt-60 pb-60 bg_white">
         <div class="container">
             <div class="section-title d-md-none mb-4">
@@ -122,6 +126,7 @@
             </div>
         </div>
     </section>
+    @endif
 </main>
 @endsection
 

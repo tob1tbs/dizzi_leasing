@@ -268,7 +268,7 @@
                         <div class="col-lg-5 pl-lg-35">
                             <div class="calculator-result-widget bg_disable wow fadeInUp" data-wow-delay="0.3s">
                                 <div>
-                                    <h4 for="inputPhoneNumber" class="neue" style="margin-bottom: 1rem;">{{ trans('site.phone') }} *</h4>
+                                    <h4 for="inputPhoneNumber" class="neue" style="margin-bottom: 1rem;">{{ trans('site.make_order') }} *</h4>
                                     <i class="helvetica-regular" style="font-size: 12px; float: left; width: 100%; margin-bottom: 10px;">{{ trans('site.exmpl') }}: 595111111</i>
                                     <input id="inputPhoneNumber" class="form-control" type="number" name="phone_number">
                                     <span class="error-message text-danger helvetica-regular" style="float: left; width: 100%; margin-top: 10px;"></span>
