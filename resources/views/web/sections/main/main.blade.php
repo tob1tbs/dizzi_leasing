@@ -1,6 +1,9 @@
 @extends('web.layout.layout')
 
 @section('content')
+@php
+    $vissible = 0;
+@endphp
 <main>
     <section class="banner-area-3 pt-90" id="banner_animation2">
         <div class="bg-slides">
@@ -233,6 +236,7 @@
             </div>
         </div>
     </section>
+    @if($vissible != 1)
     <section class="client-area pt-50 pb-100">
         <div class="container">
             <div class="section-title">
@@ -263,6 +267,8 @@
             </div>
             <a class="theme-btn theme-btn-rounded-2 theme-btn-alt neue" href="javascript:;" onclick="OpenReviewModal()" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin: 20px auto 0; position: absolute; left: 50%; transform: translate(-50%, 0); background: #5651a1; color: #ffffff;">{{ trans('site.add_review') }}</a>
     </section>
+    @endif
+    @if($vissible != 1)
     <section class="testimonial-area pt-60 pb-60 bg_disable">
         <div class="container">
             <div class="section-title d-md-none mb-4">
@@ -309,6 +315,8 @@
             </div>
         </div>
     </section>
+    @endif
+    @if($vissible != 1)
     <section class="news-area pb-60">
         <div class="container ">
             <div class="section-title pt-30">
@@ -328,6 +336,7 @@
             </div>
         </div>
     </section>
+    @endif
     <section class="advisor-area pt-50  pb-70 overflow-hidden" id="MouseMoveAnimation">
         <div class="container">
             <div class="row gy-4 gy-lg-0">
@@ -393,7 +402,7 @@
         </div>
     </section>
 </main>
-<div class="modal fade" id="ReviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 5000000;">
+<!-- <div class="modal fade" id="ReviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 5000000;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -427,7 +436,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 @endsection
 
 @section('js')

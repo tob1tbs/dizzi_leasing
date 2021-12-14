@@ -40,7 +40,7 @@
                     <img src="{{ url('/assets/web/img/logo/logo.svg') }}" alt="">
                 </div>
             </div>
-            <h2 class="head">DIZZI LEASING</h2>
+            <h2 class="head">DIZI LEASING</h2>
         </div>
     </div>
     @include('web.include.header_1')
