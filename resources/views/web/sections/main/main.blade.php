@@ -97,13 +97,9 @@
 			                            <hr>
 			                            <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
 			                            <hr>
-			                            <li>{{ trans('site.individual') }}</li>
+			                            <li>{{ trans('site.initial_deposit') }}</li>
 			                            <hr>
-			                            @if(Session::get('locale') == 'ge')
-			                            <li>100%-{{ trans('site.to') }}</li>
-			                            @else
-			                            <li>{{ trans('site.to') }} 100%</li>
-			                            @endif
+			                            <li>{{ trans('site.minimum') }}: {{ $parameterItems['leasing_avanse_max_percent'][0] }}%</li>
 			                            <hr>
 			                            <li>{{ trans('site.max_market_price') }}</li>
 			                            <hr>
@@ -126,7 +122,7 @@
 			                            <hr>
 			                            <li>{{ trans('site.individual') }}</li>
 			                            <hr>
-			                            <li>100%-{{ trans('site.to') }}</li>
+			                            <li>{{ $parameterItems['leasing_avanse_max_percent'][0] }}%-{{ trans('site.to') }}</li>
 			                            <hr>
 			                            <li>{{ trans('site.max_market_price') }}</li>
 			                            <hr>
