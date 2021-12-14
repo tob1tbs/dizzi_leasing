@@ -144,14 +144,14 @@
                                             </div>
                                         </div>
                                         <div id="terms">
-                                            <input type="checkbox" id="fast_review" name="fast_review" value="yes">
+                                            <input type="checkbox" id="fast_review" name="fast_review" value="yes" checked>
                                             <label for="terms" class="helvetica-regular" style="font-size: 14px;"> მსურს ვისარგებლო სწრაფი განხილვის სერვისით <br>
                                             <a href="#0" id="readmore">{{ trans('site.read_more') }}</a>
                                             </label>
                                         </div>
                                         <div id="terms">
                                                 <input type="checkbox" id="accept_terms" name="accept_terms" required>
-                                                <label for="terms" class="helvetica-regular" style="font-size: 14px;"> ამით ვადასტურებ, რომ წავიკითხე და მესმის შ.პ.ს "mogo" - ს კონფიდენციალურობის დებულება ნებართვა ასეთი პირადი მონაცემების მიწოდებაზე და რომ შ.პ.ს "mogo" უფლებამოსილია დაამუშაოს ჩემი მონაცემები, , მიიღეთ ჩემი მონაცემები და სხვა ინფორმაცია სესხის ისტორიის მონაცემთა ბაზებიდან<br>
+                                                <label for="terms" class="helvetica-regular" style="font-size: 14px;"> ამით ვადასტურებ, რომ წავიკითხე და მესმის შ.პ.ს "ფინრივა" - ს კონფიდენციალურობის დებულება ნებართვა ასეთი პირადი მონაცემების მიწოდებაზე და რომ შ.პ.ს "ფინრივა" უფლებამოსილია დაამუშაოს ჩემი მონაცემები, , მიიღეთ ჩემი მონაცემები და სხვა ინფორმაცია სესხის ისტორიის მონაცემთა ბაზებიდან<br>
                                             </label>
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@
                     <div class="col-lg-4 ps-xl-5 mt-5 mt-lg-0">
                         <div class="blog-sidebar-widget ps-lg-2">
                             <div class="widget-subscribe" style="padding: 30px 20px 40px 20px;">
-                                <h4 class="widget-title mb-15 neue">{{ trans('site.loan_data') }} <img src="{{ url('assets/web/img\icon\pen.png') }}" id="pen" style="width: 20px 0px 15px 0; cursor: pointer;"></h4>
+                                <h4 class="widget-title mb-15 neue" style="font-size: 18px">{{ trans('site.loan_data') }} <img src="{{ url('assets/web/img\icon\pen.png') }}" id="pen" style="width: 20px 0px 15px 0; cursor: pointer;"></h4>
                                 <hr>
                                 <div class="col-lg-12" id="loanwidgetdata">
                                     <div class="col-lg-6">

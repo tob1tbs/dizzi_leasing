@@ -15,7 +15,7 @@
             <div class="row ">
                 <div class="col-lg-6 mx-auto">
                     <div class="section-title">
-                        <h2 class="wow fadeInUp neue">{{ trans('site.leasing') }}</h2>
+                        <h2 class="wow fadeInUp neue">{{ trans('site.backleasing') }}</h2>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                                 <span class="error-message text-danger helvetica-regular" style="float: left; width: 100%; margin-top: 10px;"></span>
                             </div>
                             <div id="terms" style="margin-top: 15px; width: 100%; float: left;">
-                                <input type="checkbox" style="float: left; margin-top: 10px;" name="terms" id="terms">
+                                <input type="checkbox" style="float: left; margin-top: 10px;" name="terms" id="terms" checked>
 	                            <label for="terms" class="helvetica-regular" style="font-size: 14px; float: left; width: 100%; margin-left: 15px;"> {{ trans('site.accept_marketing') }}
 	                            	<br>
 	                                <a href="#0" style="font-size: 16px; text-decoration: underline; color: #f0c019;">{{ trans('site.read_more') }}</a>
