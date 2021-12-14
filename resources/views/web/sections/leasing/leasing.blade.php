@@ -64,11 +64,11 @@
                             </div>
                             <div class="row mt-lg-20 mt-25 text-center">
                                 <div class="col-6">
-                                    <h4 class="mb-1 neue">{{ trans('site.month_price') }}</h4>
+                                    <h4 class="mb-1 neue" style="font-size: 22px;">{{ trans('site.month_price') }}</h4>
                                     <h1 class="m-0" id="emiAmount"></h1>
                                 </div>
                                 <div class="col-6">
-                                    <h4 class="mb-1 neue">{{ trans('site.advance_payment') }}</h4>
+                                    <h4 class="mb-1 neue" style="font-size: 22px;">{{ trans('site.advance_payment') }}</h4>
                                     <h1 class="m-0" id="emiAmount2"></h1>
                                 </div>
                             </div>
