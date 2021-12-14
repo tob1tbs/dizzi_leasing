@@ -336,7 +336,11 @@ function LesingFormSubmit() {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
+        beforeSend: function() {
+	        $("#preloader").css("display","block");
+	    },
         success: function(data) {
+	        $("#preloader").css("display","none");
             if(data['status'] == true) {
             	$("#inputPhoneNumber").removeClass('border-danger')
 
