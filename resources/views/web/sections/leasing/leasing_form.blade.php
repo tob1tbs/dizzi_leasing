@@ -353,14 +353,7 @@
                     if(data['errors'] == true) {
 
                     } else {
-                        Swal.fire({
-                          title: '{{ trans('site.success_loan_title') }}',
-                          text: '{{ trans('site.success_loan_title') }}',
-                          icon: 'success',
-                          confirmButtonText: '{{ trans('site.success_loan_title') }}',
-                          timer: 1500
-                        });
-                        window.location.replace("{{ route('actionWebMain') }}");
+                        window.location.replace(data['RedirectUrl']);
                     }
                 }
             }
@@ -608,7 +601,7 @@
               inputFormat.value = values[handle];
               SelectedAmount = AmountFormat.from(values[handle]);
               mySliderPercent.noUiSlider.updateOptions({
-                    start: [$("#PercetSetRangeAmount").val()],
+                    start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
                     range: {
                         'min': $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100,
                         'max': $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100,

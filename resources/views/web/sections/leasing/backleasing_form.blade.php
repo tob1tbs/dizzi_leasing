@@ -322,14 +322,7 @@
                     if(data['errors'] == true) {
 
                     } else {
-                        Swal.fire({
-                          title: '{{ trans('site.success_loan_title') }}',
-                          text: '{{ trans('site.success_loan_title') }}',
-                          icon: 'success',
-                          confirmButtonText: '{{ trans('site.success_loan_title') }}',
-                          timer: 1500
-                        });
-                        window.location.replace("{{ route('actionWebMain') }}");
+                        window.location.replace(data['RedirectUrl']);
                     }
                 }
             }

@@ -13,6 +13,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['we
     Route::get('/backleasing', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebBackLeasing'])->name('actionWebBackLeasing');
     Route::get('/leasing/form', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebLeasingForm'])->name('actionWebLeasingForm');
     Route::get('/backleasing/form', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebBackLeasingForm'])->name('actionWebBackLeasingForm');
+    Route::get('/success', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebSeccess'])->name('actionWebSeccess');
     //CARS
     Route::get('/cars', [App\Http\Controllers\WebControllers\Cars\CarsController::class, 'actionWebCars'])->name('actionWebCars');
     Route::get('/cars/{id}', [App\Http\Controllers\WebControllers\Cars\CarsController::class, 'actionCarsView'])->name('actionCarsView');

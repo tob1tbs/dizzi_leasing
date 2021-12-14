@@ -74,6 +74,9 @@ button:focus {
 .text{
   width: 100%;
 }
+.banner-content h3{
+  color:white
+}
 #bankdetailbg{
   background-color: white;
   border: 2px solid #dee2e6;
@@ -82,6 +85,7 @@ button:focus {
   padding-bottom: 0px;
   padding: 13px 17px 17px 16px;
 }
+
 #bankdetailbg .card-img{
   top: 5px;
 }
@@ -131,11 +135,170 @@ label[for=terms]{
   display: contents;
 }
 #readmore{
-  color:red;
+  color:#f0c019;
   font-weight: bold;
   font-size: 1rem;
   margin-top: .5rem;
 }
+#success{
+  margin: auto;
+  text-align: center;
+}
+#success img{
+  margin-bottom: 2rem;
+}
+#success h2{
+  color:#5650a1;
+  font-weight: bold;
+}
+#success p{
+  margin-top: 1.5rem;
+  font-size: 20px;
+}
+.successnum{
+  display: inline-flex;
+  margin: auto;
+  text-align: center;
+  margin-top: 2rem;
+}
+.successnum img{
+  padding-right: .3rem;
+}
+/**
+ * Material Modal CSS
+ */
+ .modal {
+  will-change: visibility, opacity;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition-delay: $modal-delay;
+}
+
+.modal--active {
+  visibility: visible;
+  opacity: 1;
+}
+.modal--align-top {
+  align-items: flex-start;
+}
+.modal__bg {
+  background: transparent;
+}
+.modal__dialog {
+  max-width: 600px;
+  padding: 1.2rem;
+}
+.modal__content {
+  will-change: transform, opacity;
+  position: relative;
+  padding: 2.4rem;
+  background: #f3f3f3;
+  background-clip: padding-box;
+  box-shadow: 0 12px 15px 0 rgba(0,0,0,0.25);
+  opacity: 0;
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.modal__content--active {
+  opacity: 1;
+}
+.modal__close {
+  z-index: 1100;
+  cursor: pointer;
+}
+.modal__trigger {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.modal__trigger--active {
+  z-index: 10;
+}
+#modal__temp {
+  will-change: transform, opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  transform: none;
+  opacity: 1;
+  transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+/**
+ * Demo specific CSS
+ */
+
+.demo-btns header {
+  padding: 7vh 10vw;
+  background: #fcfcfc;
+  display: flex;
+  align-items: center;
+}
+.demo-btns header h1 {
+  margin: 0;
+  color: rgba(0,0,0,0.54);
+  font-weight: 300;
+}
+.demo-btns .info {
+  background: #f44336;
+  padding: 3vh 10vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+.demo-btns p {
+  text-align: center;
+  color: #fff;
+}
+.demo-btns .link {
+  font-size: 20px;
+}
+.demo-btns .modal__trigger {
+  margin-right: 3px;
+}
+@media (max-width: 640px) {
+  .demo-btns .modal__trigger {
+    margin-bottom: 0.8rem;
+  }
+}
+.demo-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1.2rem;
+  padding: 0.6rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.demo-close svg {
+  width: 24px;
+  fill: #fff;
+  pointer-events: none;
+  vertical-align: top;
+}
+.demo-close:hover {
+  background: rgba(0,0,0,0.6);
+}
+
 #pen{
   width: 32px;
   margin-left: 0rem;
@@ -244,11 +407,11 @@ label[for=terms]{
   font-size: 1.5rem;
 }
 #width{
-	width: 600px;
+  width: 600px;
 }
 .str1{
-	stroke: #5651a1 !important;
-	stroke-width: 2 !important;
+  stroke: #5651a1 !important;
+  stroke-width: 2 !important;
   fill: white;
 }
 .fil8{
@@ -1694,7 +1857,8 @@ header {
     .banner-area-3 .bg-slides .slide:nth-child(3) {
       left: 52%; }
   .banner-area-3 .banner-content h1 {
-    font-size: 50px;
+    font-size: 60px;
+    margin-bottom: 2rem;
     color: #fff;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
@@ -4268,7 +4432,7 @@ header {
     align-items: center;
     position: absolute;
     bottom: 25px;
-    right: 30px;
+    right: 125px;
     border-radius: 20px;
     background-color: rgba(13, 27, 43, 0.6);
     font-size: 14px;
@@ -5008,17 +5172,21 @@ header {
     .customize-card-area .card-img div {
       position: absolute; }
     .customize-card-area .card-img .shape-1 {
-      top: 125px;
+      top: -52px;
       z-index: 3;
-      left: 0; }
+      left: 0px; }
     .customize-card-area .card-img .shape-2 {
       top: 120px;
-      left: 57px;
+      left: 100px;
       z-index: 2; }
     .customize-card-area .card-img .shape-3 {
-      top: 0px;
-      left: 100px;
+      top: 240px;
+      left: 0px;
       z-index: 1; }
+      .customize-card-area .card-img .shape-4 {
+        top: 400px;
+        left: 100px;
+        z-index: 0; }
 
 /*----------------------------------------*/
 /*  Why Choose Us Area CSS
