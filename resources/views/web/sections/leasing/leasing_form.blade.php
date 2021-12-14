@@ -305,10 +305,10 @@
     </div>
     <div class="col-lg-12" id="loanwidgetdata3">
         <div class="col-lg-6">
-            <p>სტანდარტული ინფორმაცია</p>
+            <p>საპროცენტო განაკვეთი</p>
         </div>
         <div class="col-lg-6" id="ppayment">
-            <p></p>
+            <p>{{ $parameterLeasing['leasing_month_percent'][0] }} %</p>
         </div>
     </div>
     <p>* საკომისიო არის 0 ₾ და ის გადაიხდება თანაბარ ნაწილად სესხის მთლიანი პერიოდის განმავლობაში.</p>
@@ -747,7 +747,7 @@
 
     Calculate();
 
-    
+
         var Modal = (function() {
 
   var trigger = $qsa('.modal__trigger'); // what you click to activate the modal
