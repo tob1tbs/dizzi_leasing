@@ -149,10 +149,11 @@ function Calculate(data) {
 	    }
 
 	    mySlider.noUiSlider.on("update", function (values, handle) {
+	    	console.log(2);
 	      inputFormat.value = values[handle];
 	      SelectedAmount = AmountFormat.from(values[handle]);
 	      mySliderPercent.noUiSlider.updateOptions({
-	      		start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val() / 100],
+	      		start: [$("#PercetSetRangeAmount").val()],
 			    range: {
 			        'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
 			        'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
@@ -175,6 +176,7 @@ function Calculate(data) {
 	    });
 
 	    mySlider.noUiSlider.on("change", function (values, handle) {
+	    	console.log(1);
 	      	inputFormat.value = values[handle];
 	      	SelectedAmount = AmountFormat.from(values[handle]);
 	      	calc();
