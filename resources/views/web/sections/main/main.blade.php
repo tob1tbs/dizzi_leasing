@@ -23,7 +23,7 @@
             <div class="row align-items-end">
                 <div class="col-lg-7 pt-100 pt-lg-200 pb-lg-200 pb-100">
                     <div class="banner-content pb-20 pt-20">
-                        <h1 class="wow fadeInUp" data-wow-delay="0.1s">{{ trans('site.slider_text_1') }}
+                        <h1 class="wow fadeInUp" data-wow-delay="0.1s">{{ trans('site.slider_text_1') }}<br>
                             <span style="font-size: 18px;">{{ trans('site.slider_text_2') }}</span></h1>
                         <div>
                             <a href="{{ route('actionWebLeasing') }}" class="wow fadeInUp mt-30 theme-btn theme-btn-rounded-2 theme-btn-lg theme-btn-alt neue"
