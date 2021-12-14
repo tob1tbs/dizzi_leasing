@@ -97,8 +97,8 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="#0"><img src="{{ url('assets/web/img/top/viber.png') }}"></a>
-                        <a href="#0"><img src="{{ url('assets/web/img/top/whatsapp.png') }}"></a>
+                        <a href="viber://contact?number=%2B995{{ $parameterItems['viber_number'][0] }}"><img src="{{ url('assets/web/img/top/viber.png') }}"></a>
+                        <a href="https://wa.me/995{{ $parameterItems['whatsapp_number'][0] }}"><img src="{{ url('assets/web/img/top/whatsapp.png') }}"></a>
                         <a href="#0"><img src="{{ url('assets/web/img/top/telegram.png') }}"></a>
                     </div>
                 </div>

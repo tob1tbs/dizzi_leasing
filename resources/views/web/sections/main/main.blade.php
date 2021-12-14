@@ -134,7 +134,7 @@
 			                            <hr>
 			                            <li>{{ trans('site.customer') }}</li>
 			                        </ul>
-			                        <a href="loan-details.html" class="theme-btn theme-btn-rounded neue" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
+			                        <a href="{{ route('actionWebBackLeasing') }}" class="theme-btn theme-btn-rounded neue" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
 								</div>
 							</div>
 						</div>
