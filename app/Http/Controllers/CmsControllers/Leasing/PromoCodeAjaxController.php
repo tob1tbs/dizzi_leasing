@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Leasing\PromoCode;
 
 use Validator;
+use Carbon\Carbon;
 
 class PromoCodeAjaxController extends Controller
 {
