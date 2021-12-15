@@ -14,7 +14,7 @@
                         <img src="{{ url('assets/web/img/banner/about.png') }}">
                     </div>
                     <div class="col-md-8">
-                        <div class="desc-text pl-lg-10">
+                        <div class="desc-text pl-lg-10 helvetica-regular">
                             <h4 class="neue">ჩვენ შესახებ</h4>
                             <p class="mt-35">კომპანია „დიზი“ დაარსებულია და იმართება საერთაშორისო ავტო სალიზინგო ბაზარზე მრავალწლიანი გამოცდილების მქონე პროფესიონალთა გუნდის მიერ.
                             </p>
