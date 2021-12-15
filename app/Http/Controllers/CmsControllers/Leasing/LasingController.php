@@ -26,4 +26,16 @@ class LasingController extends Controller
             abort('404');
         }
     }
+
+    public function actionLeasingPromo(Request $Request) {
+        if (view()->exists('cms.sections.leasing.leasing_promo')) {
+
+            $data = [
+            ];
+
+            return view('cms.sections.leasing.leasing_promo', $data);
+        } else {
+            abort('404');
+        }
+    }
 }
