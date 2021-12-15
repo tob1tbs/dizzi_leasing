@@ -30,7 +30,7 @@
                                     <div class="faq-header" id="headingOne">
 
                                         <h4 class="mb-0 collapsed helvetica-regular" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            {{ trans('site.tbilisi') }} - 
+                                            {{ trans('site.tbilisi') }}
                                             <i class="icon_plus"></i>
                                             <i class="icon_minus-06"></i>
                                         </h4>
@@ -39,9 +39,7 @@
                                         data-bs-parent="#accordionExample">
                                         <div class="faq-body">
                                             <p>{{ $parameterItems['address_ge'][0] }}
-                                                <ul>
-                                                    <li> ორშაბათი-შაბათი {{ $parameterItems['work_start'][0] }} - {{ $parameterItems['work_end'][0] }}</li>
-                                                </ul>
+                                                <!--  -->
                                             </p>
                                         </div>
                                     </div>
@@ -96,11 +94,11 @@
                                 </div>
                                 <div class="row mt-lg-20 mt-25 text-center">
                                     <div class="col-6">
-                                        <h4 class="mb-1 neue">{{ trans('site.month_price') }}</h4>
+                                        <h4 class="mb-1 neue" style="font-size: 23px;">{{ trans('site.month_price') }}</h4>
                                         <h1 class="m-0" id="emiAmount"></h1>
                                     </div>
                                     <div class="col-6">
-                                        <h4 class="mb-1 neue">{{ trans('site.advance_payment') }}</h4>
+                                        <h4 class="mb-1 neue" style="font-size: 23px;">{{ trans('site.advance_payment') }}</h4>
                                         <h1 class="m-0" id="emiAmount2"></h1>
                                     </div>
                                 </div>
