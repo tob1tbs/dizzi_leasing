@@ -74,6 +74,36 @@ button:focus {
 .text{
   width: 100%;
 }
+input[type=checkbox] {
+  position: relative;
+  cursor: pointer;
+}
+input[type=checkbox]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid #5650a1;
+  border-radius: 3px;
+  background-color: white;
+}
+input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid #f0c019;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
 .banner-content h3{
   color:white
 }
@@ -5172,20 +5202,20 @@ header {
     .customize-card-area .card-img div {
       position: absolute; }
     .customize-card-area .card-img .shape-1 {
-      top: -52px;
+      top: 0px;
       z-index: 3;
       left: 0px; }
     .customize-card-area .card-img .shape-2 {
-      top: 120px;
-      left: 100px;
+      top: 170px;
+      left: 0px;
       z-index: 2; }
     .customize-card-area .card-img .shape-3 {
-      top: 240px;
+      top: 340px;
       left: 0px;
       z-index: 1; }
       .customize-card-area .card-img .shape-4 {
-        top: 400px;
-        left: 100px;
+        top: 515px;
+        left: 0px;
         z-index: 0; }
 
 /*----------------------------------------*/
@@ -6435,34 +6465,3 @@ blockquote {
 /*----------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */
-
-input[type=checkbox] {
-  position: relative;
-  cursor: pointer;
-}
-input[type=checkbox]:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  left: 0;
-  border: 2px solid #5650a1;
-  border-radius: 3px;
-  background-color: white;
-}
-input[type=checkbox]:checked:after {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 10px;
-  border: solid #f0c019;
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  top: 2px;
-  left: 6px;
-}
