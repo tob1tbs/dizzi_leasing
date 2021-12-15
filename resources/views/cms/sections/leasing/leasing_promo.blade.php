@@ -41,8 +41,21 @@
                         </div>
                     </td>
                     <td class="nk-tb-col tb-col-lg"><span>{{ $code_item->code }}</span></td>
-                    <td class="nk-tb-col tb-col-lg"><span>{{ $code_item->multiple }}</span></td>
-                    <td class="nk-tb-col tb-col-lg"><span>{{ $code_item->status }}</span></td>
+                    <td class="nk-tb-col tb-col-lg"><span>
+                    	@if($code_item->multiple == 1)
+                    		კი
+                    	@else 
+                    		არა
+                    	@endif
+                    </span></td>
+                    <td class="nk-tb-col tb-col-md">
+                    	<div class="form-group">
+                			<div class="custom-control custom-switch">
+                				<input type="checkbox" class="custom-control-input" name="reg-public" id="site-off" value="1" @if($code_item->status == 1) checked @endif onclick="PromoStatusChange({{ $code_item->id}}, this)">
+                				<label class="custom-control-label" for="site-off"></label>
+                			</div>
+                		</div>
+                    </td>
                     <td class="nk-tb-col nk-tb-col-tools">
                         <ul class="nk-tb-actions gx-1">
                             <li>
