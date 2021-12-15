@@ -78,7 +78,8 @@ class MainController extends Controller
 
             $BasicParameter = new BasicParameter();
             $RequsitesList = $BasicParameter::where('key', 'company_code')
-            ->orWhere('key', 'tbc_account_number');
+            ->orWhere('key', 'tbc_account_number')
+            ->orWhere('key', 'bog_account_number');
 
             if(Session::get('locale') == 'ge') {
                 $RequsitesList->orWhere('key', 'address_ge')->orWhere('key', 'company_name_ge');
