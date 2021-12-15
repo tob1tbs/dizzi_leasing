@@ -363,11 +363,11 @@
                     <div class="advisor-img mt-45 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="shape ">
                             <div class="box">
-                                <img class="layer layer2" data-depth="0.5" src="{{ url('assets/web/img/banner/faq.png') }}" alt="shape">
+                                <img class="layer layer2" data-depth="0.5" src="{{ url('assets/web/img/faq/Shape.png') }}" alt="shape">
                             </div>
                             <div class="circle-shape"></div>
                         </div>
-                        <img class="main-img" src="{{ url('assets/web/img/faq/advisor.png') }}" alt="advisor">
+                        <img class="main-img" src="{{ url('assets/web/img/banner/faq.png') }}" alt="advisor">
                         <div class="work-time" style="right: 50%; transform: translate(50%);">
                             <div class="circle-shape"></div>
                             <span>{{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}</span>
