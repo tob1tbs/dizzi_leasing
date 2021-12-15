@@ -251,8 +251,8 @@ class LeasingAjaxController extends Controller
     public function ajaxCheckPromoCode(Request $Request) {
         if($Request->isMethod('GET')) {
             $messages = array(
-                'required.promo_code' => 'გთხოვთ შეიყვანოთ პრომოკოდი',
-                'required.user_phone' => 'გთხოვთ შეიყვანოთ თქვენი ტელეფონის ნომერი',
+                'promo_code.required' => 'გთხოვთ შეიყვანოთ პრომოკოდი',
+                'user_phone.required' => 'გთხოვთ შეიყვანოთ თქვენი ტელეფონის ნომერი',
             );
             $validator = Validator::make($Request->all(), [
                 'promo_code' => 'required|max:255',

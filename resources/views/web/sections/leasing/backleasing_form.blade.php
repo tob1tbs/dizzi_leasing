@@ -397,7 +397,10 @@
                 if(data['status'] == true) {
                     if(data['errors'] == true) {
                         if(data['validate'] == false) {
-                            $(".promo-text").html(`<span class="text-danger">`+data['message']['promo_code']['0']+`</span>`);
+                            $(".promo-text").html('');
+                            $.each(data['message'], function(key, value) {
+                                $(".promo-text").append(`<span class="text-danger">`+value+`</span>`);
+                            })
                         } else {
                             $(".promo-text").html(`<span class="text-danger">`+data['message']+`</span>`);
                         }
