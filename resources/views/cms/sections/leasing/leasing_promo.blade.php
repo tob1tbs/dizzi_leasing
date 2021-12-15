@@ -213,7 +213,27 @@
 	}
 
 	function PromoStatusChange(promo_id, elem) {
+		if($(elem).is(":checked")) {
+	        promo_status = 1;
+	    } else {
+	        promo_status = 0
+	    }
 
+		$.ajax({
+	        dataType: 'json',
+	        url: "/cms/ajax/ajaxPromoStatusChange",
+	        type: "POST",
+	        data: {
+	        	promo_id: promo_id,
+	        	promo_status: promo_status,
+	        },
+	        headers: {
+	            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	        },
+	        success: function(data) {
+	            return;
+	        }
+	    });
 	}
 </script>
 @endsection

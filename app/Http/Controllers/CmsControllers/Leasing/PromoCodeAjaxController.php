@@ -52,4 +52,16 @@ class PromoCodeAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
         }
     }
+
+    public function ajaxPromoStatusChange(Request $Request) {
+        if($Request->isMethod('POST') && !empty($Request->user_id)) {
+            $PromoCode = new PromoCode();
+            $PromoCode::find($Request->promo_id)->update([
+                'status' => $Request->promo_status,
+            ]);
+            return response()->json(['status' => true]);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
+        }
+    }
 }
