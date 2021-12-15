@@ -51,8 +51,8 @@
                     <td class="nk-tb-col tb-col-md">
                     	<div class="form-group">
                 			<div class="custom-control custom-switch">
-                				<input type="checkbox" class="custom-control-input" name="reg-public" id="site-off" value="1" @if($code_item->status == 1) checked @endif onclick="PromoStatusChange({{ $code_item->id}}, this)">
-                				<label class="custom-control-label" for="site-off"></label>
+                				<input type="checkbox" class="custom-control-input" name="reg-public" id="site-off_{{ $code_item->id}}" value="1" @if($code_item->status == 1) checked @endif onclick="PromoStatusChange({{ $code_item->id}}, this)">
+                				<label class="custom-control-label" for="site-off_{{ $code_item->id}}"></label>
                 			</div>
                 		</div>
                     </td>
