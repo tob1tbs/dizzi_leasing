@@ -5,6 +5,8 @@ namespace App\Http\Controllers\CmsControllers\Leasing;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Leasing\PromoCode;
+
 use Validator;
 
 class PromoCodeAjaxController extends Controller
@@ -24,7 +26,12 @@ class PromoCodeAjaxController extends Controller
             if ($validator->fails()) {
                 return response()->json(['status' => true, 'errors' => true, 'message' => $validator->getMessageBag()->toArray()], 200);
             } else {
+                $PromoCode = new PromoCode();
+                $PromoCode->code = $Request->promo_code;
+                $PromoCode->multiple = $Request->promo_multiple;
+                $PromoCode->save();
 
+                return response()->json(['status' => true, 'errors' => false, 'message' => 'პრომოკოდი წარმატებით დაემატა'], 200);
             }
         } else {
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);

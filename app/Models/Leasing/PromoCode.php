@@ -11,5 +11,5 @@ class PromoCode extends Model
 
     protected $table = "cms_promo_codes";
 
-    protected $fillable = ['used'];
+    protected $fillable = ['used', 'multiple', 'status', 'deleted_at_int', 'deleted_at'];
 }
