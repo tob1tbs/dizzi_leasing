@@ -33,7 +33,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="dob-d">{{ trans('site.phone') }}</label>
-                                            <input type="text" name="user_phone" class="form-control" value="@if(!empty(request()->phone)){{ request()->phone }}@endif">
+                                            <input type="text" name="user_phone" id="user_phone" class="form-control" value="@if(!empty(request()->phone)){{ request()->phone }}@endif">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="dob-d">{{ trans('site.email') }}</label>
