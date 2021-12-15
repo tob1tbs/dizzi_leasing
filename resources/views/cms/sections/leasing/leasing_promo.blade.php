@@ -50,7 +50,7 @@
                                     <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <ul class="link-list-opt no-bdr" style="width: 300px;">
-                                            <li><a href="javascript:;" class="text-danger" onclick="PromoDelete({{ $user_item->id }})"><em class="icon ni ni-trash"></em><span>წაშლა</span></a></li>
+                                            <li><a href="javascript:;" class="text-danger" onclick="PromoDelete({{ $code_item->id }})"><em class="icon ni ni-trash"></em><span>წაშლა</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
