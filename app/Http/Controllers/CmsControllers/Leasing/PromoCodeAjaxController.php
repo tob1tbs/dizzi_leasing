@@ -54,7 +54,7 @@ class PromoCodeAjaxController extends Controller
     }
 
     public function ajaxPromoStatusChange(Request $Request) {
-        if($Request->isMethod('POST') && !empty($Request->user_id)) {
+        if($Request->isMethod('POST') && !empty($Request->promo_id)) {
             $PromoCode = new PromoCode();
             $PromoCode::find($Request->promo_id)->update([
                 'status' => $Request->promo_status,
