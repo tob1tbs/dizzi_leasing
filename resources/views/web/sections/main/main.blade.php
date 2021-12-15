@@ -229,26 +229,29 @@
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 pl-lg-50">
-                    <div class="card-img mb-5 mb-sm-0">
-                        <img class="img-fluid" src="{{ url('assets/web/img/card/card-img-bg.png') }}" alt="bg image">
-                        <div class="shape-1">
+                        <div class="card-img mb-5 mb-sm-0">
+                            <div class="shape-1">
 
-                            <img class="layer wow rotateInUpRight" data-wow-delay="1.2s" data-depth="0.2" src="{{ url('assets/web/img/blog/news-1.png') }}" alt="card" style="position: relative; display: block; left: 0px; top: 0px; transform: translate3d(-38.001px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; visibility: visible; animation-delay: 1.2s; animation-name: rotateInUpRight;">
-                        </div>
-                        <div class="shape-2">
+                                <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2"
+                                    src="{{ url('assets/web/img/blog/step.png') }}" alt="card">
+                            </div>
+                            <div class="shape-2">
 
-                            <img class="layer wow rotateInUpRight" data-wow-delay="0.6s" data-depth="0.15" src="{{ url('assets/web/img/blog/news-1.png') }}" alt="card" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(-28.5008px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; visibility: visible; animation-delay: 0.6s; animation-name: rotateInUpRight;">
-                        </div>
-                        <div class="shape-3">
+                                <img class="wow fadeInRight" data-wow-delay="1s" data-depth="0.3"
+                                    src="{{ url('assets/web/img/blog/step.png') }}" alt="card">
+                            </div>
+                            <div class="shape-3">
 
-                            <img class="layer wow rotateInUpRight" data-depth="0.3" src="{{ url('assets/web/img/blog/news-1.png') }}" alt="card" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(-57.0016px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; visibility: visible; animation-name: rotateInUpRight;">
-                        </div>
-                        <div class="shape-4">
+                                <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2" src="{{ url('assets/web/img/blog/step.png') }}"
+                                    alt="card">
+                            </div>
+                            <div class="shape-4">
 
-                            <img class="layer wow rotateInUpRight" data-depth="0.3" src="{{ url('assets/web/img/blog/news-1.png') }}" alt="card" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(-57.0016px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; visibility: visible; animation-name: rotateInUpRight;">
+                                <img class="wow fadeInRight" data-wow-delay="1s" data-depth="0.3" src="{{ url('assets/web/img/blog/step.png') }}"
+                                    alt="card">
+                            </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
