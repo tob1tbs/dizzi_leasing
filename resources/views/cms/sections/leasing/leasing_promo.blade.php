@@ -18,7 +18,23 @@
         </div>
     </div>
 </div>
-
+<div class="card card-preview">
+    <div class="card-inner">
+        <table class="datatable-init-export nk-tb-list nk-tb-ulist font-helvetica-regular" data-auto-responsive="false" data-export-title="EXPORT">
+            <thead>
+                <tr class="nk-tb-item nk-tb-head font-helvetica-regular">
+                    <th class="nk-tb-col"><span class="sub-text">ID</span></th>
+                    <th class="nk-tb-col tb-col-md"><span class="sub-text">პრომოკოდი</span></th>
+                    <th class="nk-tb-col tb-col-md"><span class="sub-text">მრავალჯერადი</span></th>
+                    <th class="nk-tb-col tb-col-md"><span class="sub-text">სტატუსი</span></th>
+                    <th class="nk-tb-col nk-tb-col-tools text-right"></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
 <div class="modal fade" id="PromoModal" style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-dialog-top modal-xl" role="document">
         <div class="modal-content">
