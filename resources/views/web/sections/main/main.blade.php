@@ -189,7 +189,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center">
+            <div class="row">
                 <div class="col-lg-6 order-lg-1 order-2">
                     <div class="feature-card-widget-6 wow fadeInUp mt-sm-0 mt-5" data-wow-delay="0.1s">
                         <div class="icon mr-20">
@@ -229,29 +229,28 @@
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 pl-lg-50">
-                        <div class="card-img mb-5 mb-sm-0">
-                            <div class="shape-1">
+                    <div class="card-img mb-5 mb-sm-0">
+                        <div class="shape-1">
+                            <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2"
+                                src="{{ url('assets/web/img/blog/step.png') }}" alt="card">
+                        </div>
+                        <div class="shape-2">
 
-                                <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2"
-                                    src="{{ url('assets/web/img/blog/step.png') }}" alt="card">
-                            </div>
-                            <div class="shape-2">
+                            <img class="wow fadeInRight" data-wow-delay="1s" data-depth="0.3"
+                                src="{{ url('assets/web/img/blog/step.png') }}" alt="card">
+                        </div>
+                        <div class="shape-3">
 
-                                <img class="wow fadeInRight" data-wow-delay="1s" data-depth="0.3"
-                                    src="{{ url('assets/web/img/blog/step.png') }}" alt="card">
-                            </div>
-                            <div class="shape-3">
+                            <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2" src="{{ url('assets/web/img/blog/step.png') }}"
+                                alt="card">
+                        </div>
+                        <div class="shape-4">
 
-                                <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2" src="{{ url('assets/web/img/blog/step.png') }}"
-                                    alt="card">
-                            </div>
-                            <div class="shape-4">
-
-                                <img class="wow fadeInRight" data-wow-delay="1s" data-depth="0.3" src="{{ url('assets/web/img/blog/step.png') }}"
-                                    alt="card">
-                            </div>
+                            <img class="wow fadeInRight" data-wow-delay="1s" data-depth="0.3" src="{{ url('assets/web/img/blog/step.png') }}"
+                                alt="card">
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </section>
