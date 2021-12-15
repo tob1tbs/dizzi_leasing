@@ -55,10 +55,14 @@
             <li class="nk-menu-item has-sub">
                 <a href="javascript:;" class="nk-menu-link nk-menu-toggle"><span class="nk-menu-text">ლიზინგი</span></a>
                 <ul class="nk-menu-sub" style="min-width: 300px;">
-                    </li>
                     <li class="nk-menu-item">
                         <a href="{{ route('actionLeasingParameters') }}" class="nk-menu-link" data-original-title="" title="">
                             <span class="nk-menu-text">ლიზინგის პარამეტრები</span>
+                        </a>
+                    </li>
+                    <li class="nk-menu-item">
+                        <a href="{{ route('actionLeasingPromo') }}" class="nk-menu-link" data-original-title="" title="">
+                            <span class="nk-menu-text">პრომო</span>
                         </a>
                     </li>
                 </ul>

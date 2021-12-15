@@ -94,6 +94,7 @@ Route::group(['prefix' => '/cms'], function() {
         // TEXT PAGES
         Route::group(['prefix' => '/leasing'], function() {
             Route::get('/parameters', [App\Http\Controllers\CmsControllers\Leasing\LasingController::class, 'actionLeasingParameters'])->name('actionLeasingParameters');
+            Route::get('/promo', [App\Http\Controllers\CmsControllers\Leasing\LasingController::class, 'actionLeasingPromo'])->name('actionLeasingPromo');
         });
     });
 
