@@ -196,7 +196,6 @@ class LeasingAjaxController extends Controller
                         } else {
                             $SendData['promo_status'] = 'Validate';
                             $SendData['promo_code'] = $Request->promo_code;
-                            $SendData['loan_percent'] = $PromoCodeData->loan_percent;
 
                             if($PromoCodeData->multiple != 1) {
                                 $PromoCodeData->update(['used' => 1]);
@@ -252,31 +251,13 @@ class LeasingAjaxController extends Controller
     public function ajaxCheckPromoCode(Request $Request) {
         if($Request->isMethod('GET')) {
             $messages = array(
-                'required' => 'გთხოვთ შეავსოთ ყველა აუცილებელი ველი',
+                'required.promo_code' => 'გთხოვთ შეიყვანოთ პრომოკოდი',
+                'required.user_phone' => 'გთხოვთ შეიყვანოთ თქვენი ტელეფონის ნომერი',
             );
             $validator = Validator::make($Request->all(), [
                 'promo_code' => 'required|max:255',
-                'leasing_month' => 'required|max:255',
-                'leasing_price' => 'required|max:255',
+                'user_phone' => 'required|max:255',
             ], $messages);
-
-            $LeasingParameter = new LeasingParameter();
-            $LeasingParametersList = $LeasingParameter::where('deleted_at_int', '!=', 0)->get()->toArray();
-
-            $LeasingParametersArray = [];
-
-            foreach($LeasingParametersList as $ParameterItem) {
-                $LeasingParametersArray[$ParameterItem['key']] = $ParameterItem['value'];
-            }
-
-            $month_percent = ($LeasingParametersArray['leasing_month_percent'] * 12) / 1200;
-                        
-            $loan_month_price = round($month_percent * -$Request->leasing_price * pow((1 + $month_percent), $Request->leasing_month) / (1 - pow((1 + $month_percent), $Request->leasing_month)), 2);
-
-            $loan_array = [
-                'loan_month_price' => $loan_month_price,
-                'loan_month_percent' => $month_percent * 100,
-            ];
 
             if ($validator->fails()) {
                 return response()->json(['status' => true, 'errors' => true, 'validate' => false, 'message' => $validator->getMessageBag()->toArray(), 'loan_data' => $loan_array], 200);
@@ -296,20 +277,11 @@ class LeasingAjaxController extends Controller
                         } else if($PromoCodeData->status == 0) {
                             return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
                         } else {
-                            $month_percent = ($PromoCodeData->loan_percent * 12) / 1200;
-
-                            $loan_month_price = round($month_percent * -$Request->leasing_price * pow((1 + $month_percent), $Request->leasing_month) / (1 - pow((1 + $month_percent), $Request->leasing_month)), 2);
-
-                            $loan_array = [
-                                'loan_month_price' => $loan_month_price,
-                                'loan_month_percent' => $month_percent * 100,
-                            ];
-
                             return response()->json(['status' => true, 'loan_data' => $loan_array, 'message' => 'პრომო კოდი დადასტურებრებულია']);
                         }
                     }
                 } else {
-                    return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური', 'loan_data' => $loan_array], 200);
+                    return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
                 }
             }
         } else {

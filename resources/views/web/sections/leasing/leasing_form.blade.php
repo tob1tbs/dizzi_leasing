@@ -433,8 +433,6 @@
             type: "GET",
             data: {
                 promo_code: $("#promo_code").val(),
-                leasing_month: $("#leasing_month").val(),
-                leasing_price: $("#leasing_price").val(),
                 user_phone: $("#user_phone").val(),
             },
             success: function(data) {
@@ -446,8 +444,6 @@
                             $(".promo-text").html(`<span class="text-danger">`+data['message']+`</span>`);
                         }
                     } else {
-                        $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
-                        $(".loan-month-percent").html(data['loan_data']['loan_month_percent']+' %');
                         $(".promo-text").html(`<span class="text-success">`+data['message']+`</span>`);
                     }
                 }
