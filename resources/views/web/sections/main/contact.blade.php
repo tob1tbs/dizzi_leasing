@@ -16,7 +16,7 @@
             <div class="col-lg-12">  
                 <div class="span4 " id="width" style="width: 100%;">
                     <div style="width: 100%; overflow: hidden; height: 440px;">
-                        <iframe src="https://www.google.com/maps/d/embed?mid=146Pr_Z6g0jdIVLCEVQa3krPMXUbAtYNW&ehbc=2E312F" width="100%" height="480" style="margin-top: -52px;"></iframe>
+                        <iframe src="https://www.google.com/maps/d/embed?mid=146Pr_Z6g0jdIVLCEVQa3krPMXUbAtYNW&ehbc=2E312F" width="100%" height="480" style="margin-top: -54px;"></iframe>
                     </div>
                 </div>
             </div>
