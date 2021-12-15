@@ -15,7 +15,9 @@
     	<div class="row">
             <div class="col-lg-12">  
                 <div class="span4 " id="width" style="width: 100%;">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=146Pr_Z6g0jdIVLCEVQa3krPMXUbAtYNW&ehbc=2E312F" width="100%" height="480"></iframe>
+                    <div style="width: 100%; overflow: hidden; height: 300px;">
+                        <iframe src="https://www.google.com/maps/d/embed?mid=146Pr_Z6g0jdIVLCEVQa3krPMXUbAtYNW&ehbc=2E312F" width="100%" height="480" style="margin-top: -150px;"></iframe>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-12">
