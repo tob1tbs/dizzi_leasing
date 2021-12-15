@@ -37,4 +37,18 @@ class PromoCodeAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
         }
     }
+
+    public function ajaxPromoDelete(Request $Request) {
+        if($Request->isMethod('POST') && !empty($Request->promo_id)) {
+            $PromoCode = new PromoCode();
+            $PromoCode::find($Request->promo_id)->update([
+                'deleted_at' => Carbon::now(),
+                'deleted_at_int' => 0,
+                'status' => 0,
+            ]);
+            return response()->json(['status' => true, 'message' => 'კოდი წარმატებით წაიშალა']);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
+        }
+    }
 }

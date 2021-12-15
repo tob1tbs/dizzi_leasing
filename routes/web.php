@@ -121,6 +121,7 @@ Route::group(['prefix' => '/cms'], function() {
         // LEASING
         Route::post('/ajaxLeasingParametersSubmit/', [App\Http\Controllers\CmsControllers\Leasing\LasingAjaxController::class, 'ajaxLeasingParametersSubmit'])->name('ajaxLeasingParametersSubmit');
         Route::post('/ajaxPromoSubmit/', [App\Http\Controllers\CmsControllers\Leasing\PromoCodeAjaxController::class, 'ajaxPromoSubmit'])->name('ajaxPromoSubmit');
+        Route::post('/ajaxPromoDelete/', [App\Http\Controllers\CmsControllers\Leasing\PromoCodeAjaxController::class, 'ajaxPromoDelete'])->name('ajaxPromoDelete');
 
         // PARAMETERS
         Route::post('/ajaxTranslateSubmit/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxTranslateSubmit'])->name('ajaxTranslateSubmit');

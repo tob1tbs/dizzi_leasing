@@ -32,7 +32,7 @@
             </thead>
             <tbody>
             	@foreach($promo_code_list as $code_item)
-                <tr class="nk-tb-item">
+                <tr class="nk-tb-item promo-item-{{ $code_item->id }}">
                     <td class="nk-tb-col">
                         <div class="user-card">
                             <div class="user-info">
@@ -169,6 +169,51 @@
 	            }
 	        }
 	    });
+	}
+
+	function PromoDelete(promo_id) {
+		Swal.fire({
+        title: 'ნამდვილად გსურთ პრომოკოდის წაშლა?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'წაშლა',
+        cancelButtonText: 'გათიშვა',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        $.ajax({
+            dataType: 'json',
+            url: "/cms/ajax/ajaxPromoDelete",
+            type: "POST",
+            data: {
+                promo_id: promo_id,
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data) {
+                if(data['status'] == true) {
+                    $(".promo-item-"+promo_id).remove();
+                    Swal.fire({
+                        icon: 'success',
+                        text: data['message'],
+                        timer: 1500,
+                    });    
+                } else {
+                    Swal.fire({
+                      icon: 'error',
+                      text: data['message'],
+                    })
+                }
+            }
+        });
+      }
+    })
+	}
+
+	function PromoDelete(promo_id, elem) {
+
 	}
 </script>
 @endsection
