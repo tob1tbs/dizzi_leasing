@@ -260,7 +260,7 @@ class LeasingAjaxController extends Controller
             ], $messages);
 
             if ($validator->fails()) {
-                return response()->json(['status' => true, 'errors' => true, 'validate' => false, 'message' => $validator->getMessageBag()->toArray(), 'loan_data' => $loan_array], 200);
+                return response()->json(['status' => true, 'errors' => true, 'validate' => false, 'message' => $validator->getMessageBag()->toArray()], 200);
             } else {
                 $PromoCode = new PromoCode();
                 $PromoCodeData = $PromoCode::where('code', $Request->promo_code)->first();
@@ -277,7 +277,7 @@ class LeasingAjaxController extends Controller
                         } else if($PromoCodeData->status == 0) {
                             return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
                         } else {
-                            return response()->json(['status' => true, 'loan_data' => $loan_array, 'message' => 'პრომო კოდი დადასტურებრებულია']);
+                            return response()->json(['status' => true, 'message' => 'პრომო კოდი დადასტურებრებულია']);
                         }
                     }
                 } else {
