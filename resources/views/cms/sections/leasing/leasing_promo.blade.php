@@ -212,7 +212,7 @@
     })
 	}
 
-	function PromoDelete(promo_id, elem) {
+	function PromoStatusChange(promo_id, elem) {
 
 	}
 </script>
