@@ -31,6 +31,34 @@
                 </tr>
             </thead>
             <tbody>
+            	@foreach($promo_code_list as $code_item)
+                <tr class="nk-tb-item">
+                    <td class="nk-tb-col">
+                        <div class="user-card">
+                            <div class="user-avatar bg-dim-primary d-none d-sm-flex"><span>{{ $code_item->id }}</span></div>
+                            <div class="user-info">
+                                <span class="tb-lead">{{ $code_item->code }}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="nk-tb-col tb-col-lg"><span>{{ $code_item->last_login }}</span></td>
+                    <td class="nk-tb-col tb-col-lg"><span>{{ $code_item->last_login }}</span></td>
+                    <td class="nk-tb-col nk-tb-col-tools">
+                        <ul class="nk-tb-actions gx-1">
+                            <li>
+                                <div class="drodown">
+                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <ul class="link-list-opt no-bdr" style="width: 300px;">
+                                            <li><a href="javascript:;" class="text-danger" onclick="PromoDelete({{ $user_item->id }})"><em class="icon ni ni-trash"></em><span>წაშლა</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
