@@ -263,7 +263,7 @@ class LeasingAjaxController extends Controller
                 return response()->json(['status' => true, 'errors' => true, 'validate' => false, 'message' => $validator->getMessageBag()->toArray()], 200);
             } else {
                 $PromoCode = new PromoCode();
-                $PromoCodeData = $PromoCode::where('code', $Request->promo_code)->first();
+                $PromoCodeData = $PromoCode::where('code', $Request->promo_code)->where('status', 1)->first();
 
                 if(!empty($PromoCodeData)) {
                     $PromoCodeUsed = new PromoCodeUsed();

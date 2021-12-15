@@ -399,7 +399,7 @@
                         if(data['validate'] == false) {
                             $(".promo-text").html('');
                             $.each(data['message'], function(key, value) {
-                                $(".promo-text").append(`<span class="text-danger">`+value+`</span>`);
+                                $(".promo-text").append(`<span class="text-danger">`+value+`</span><br>`);
                             })
                         } else {
                             $(".promo-text").html(`<span class="text-danger">`+data['message']+`</span>`);
