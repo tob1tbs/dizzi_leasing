@@ -35,14 +35,14 @@
                 <tr class="nk-tb-item">
                     <td class="nk-tb-col">
                         <div class="user-card">
-                            <div class="user-avatar bg-dim-primary d-none d-sm-flex"><span>{{ $code_item->id }}</span></div>
                             <div class="user-info">
-                                <span class="tb-lead">{{ $code_item->code }}</span>
+                                <span class="tb-lead">{{ $code_item->id }}</span>
                             </div>
                         </div>
                     </td>
-                    <td class="nk-tb-col tb-col-lg"><span>{{ $code_item->last_login }}</span></td>
-                    <td class="nk-tb-col tb-col-lg"><span>{{ $code_item->last_login }}</span></td>
+                    <td class="nk-tb-col tb-col-lg"><span>{{ $code_item->code }}</span></td>
+                    <td class="nk-tb-col tb-col-lg"><span>{{ $code_item->multiple }}</span></td>
+                    <td class="nk-tb-col tb-col-lg"><span>{{ $code_item->status }}</span></td>
                     <td class="nk-tb-col nk-tb-col-tools">
                         <ul class="nk-tb-actions gx-1">
                             <li>
