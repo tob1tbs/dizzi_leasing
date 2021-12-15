@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 d-none d-lg-block position-relative">
-                    <img class="person-img " src="{{ url('assets/web/img/banner/person-2.png') }}" alt="">
+                    <img class="person-img " src="{{ url('assets/web/img/banner/car.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -363,7 +363,7 @@
                     <div class="advisor-img mt-45 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="shape ">
                             <div class="box">
-                                <img class="layer layer2" data-depth="0.5" src="{{ url('assets/web/img/faq/Shape.png') }}" alt="shape">
+                                <img class="layer layer2" data-depth="0.5" src="{{ url('assets/web/img/banner/faq.png') }}" alt="shape">
                             </div>
                             <div class="circle-shape"></div>
                         </div>
