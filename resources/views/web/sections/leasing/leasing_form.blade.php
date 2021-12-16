@@ -250,7 +250,7 @@
                                                     </div>
                                                     <div class="range-header mb-25">
                                                         <h6 class="helvetica-regular" style="width: 100%;">{{ trans('site.advance_payment') }} %</h6>
-                                                        <input type="text" id="PercetSetRange" value="@if(!empty(request()->advance_payment)) {{ request()->advance_payment / request()->amount }} @else $parameterLeasing['leasing_avanse_percent_default'][0] @endif" style="width: 100%;">
+                                                        <input type="text" id="PercetSetRange" value="@if(!empty(request()->advance_payment)) {{ number_format(request()->advance_payment / request()->amount * 100, 0) }} @else $parameterLeasing['leasing_avanse_percent_default'][0] @endif" style="width: 100%;">
                                                     </div>
                                                     <div id="PercetRangeSlider"></div>
                                                 </div>
