@@ -909,7 +909,7 @@
 
 @media (max-width: 375px) {
   .sticky_logo { width: 70%; }
-  .toptext { font-size: 16px; }
+  .toptext { font-size: 16px !important; }
 
   .banner-area-3 .banner-content h1 {
     line-height: 40px;
