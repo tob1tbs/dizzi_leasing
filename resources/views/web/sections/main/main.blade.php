@@ -197,7 +197,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 order-lg-1 order-2">
-                    <div class="feature-card-widget-6 wow fadeInUp mt-sm-0 mt-5" data-wow-delay="0.1s">
+                    <div class="feature-card-widget-6 wow fadeInUp mt-sm-0 mt-5" data-wow-delay="0.1s" style="max-height: 140px;">
                         <div class="icon mr-20">
                             <img src="{{ url('assets/web/img/icon/1.png') }}" alt="icon">
                         </div>
@@ -206,7 +206,7 @@
                             <p class="helvetica-regular">{{ trans('site.step_1_body') }}</p>
                         </div>
                     </div>
-                    <div class="feature-card-widget-6 wow fadeInUp mt-30" data-wow-delay="0.3s">
+                    <div class="feature-card-widget-6 wow fadeInUp mt-30" data-wow-delay="0.3s" style="max-height: 140px;">
                         <div class="icon mr-20">
                             <img src="{{ url('assets/web/img/icon/2.png') }}" alt="icon">
                         </div>
@@ -215,7 +215,7 @@
                             <p class="helvetica-regular">{{ trans('site.step_2_body') }}</p>
                         </div>
                     </div>
-                    <div class="feature-card-widget-6 wow fadeInUp mt-30" data-wow-delay="0.5s">
+                    <div class="feature-card-widget-6 wow fadeInUp mt-30" data-wow-delay="0.5s" style="max-height: 140px;">
                         <div class="icon mr-20">
                             <img src="{{ url('assets/web/img/icon/3.png') }}" alt="icon">
                         </div>
@@ -224,7 +224,7 @@
                             <p class="helvetica-regular">{{ trans('site.step_3_body') }}</p>
                         </div>
                     </div>
-                    <div class="feature-card-widget-6 wow fadeInUp mt-30" data-wow-delay="0.5s">
+                    <div class="feature-card-widget-6 wow fadeInUp mt-30" data-wow-delay="0.5s" style="max-height: 140px;">
                         <div class="icon mr-20">
                             <img src="{{ url('assets/web/img/icon/4.png') }}" alt="icon">
                         </div>
