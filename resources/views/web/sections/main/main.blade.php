@@ -50,10 +50,6 @@
 				<div class="col-lg-6 mx-auto pt-50 pt-lg-50 pb-30">
 					<div class="section-title">
 						<h2 class="wow fadeInUp neue">{{ trans('site.terms_and_conditions') }}</h2>
-						<!-- <p class="wow fadeInUp" data-wow-delay="0.3s">
-							You may want top security so that you can rest
-							assured that your accounts will not be
-							compromised while you're using the app.</p> -->
 					</div>
 				</div>
 			</div>
@@ -61,7 +57,7 @@
 				<div class="col-xl-12 col-md-12">
 					<div class="feature-card-widget" style="padding: 20px;">
 						<div class="row">
-							<div class="col-lg-4">
+							<div class="col-lg-3">
 								<div class="wow fadeInUp" data-wow-delay="0.3s" style="border-radius: 6px; padding-bottom: 4px;">
 									<div class="card-img" id="cardbg" style="background-color: #ffffff;">
 										<h4 class="neue" style="font-size: 16px; margin-bottom: 0; background-color: #ffffff;">&nbsp;</h4>
@@ -85,7 +81,7 @@
 			                        </ul>
 								</div>
 							</div>
-							<div class="col-lg-4">
+							<div class="col-lg-3">
 								<div class="wow fadeInUp" data-wow-delay="0.3s" style="border-radius: 6px; padding-bottom: 4px;">
 									<div class="card-img" id="cardbg">
 										<h4 class="neue" style="font-size: 16px; margin-bottom: 0;">{{ trans('site.leasing') }}</h4>
@@ -124,7 +120,7 @@
                                     /*background-color: #f0c019;*/
                                 }
                             </style>
-							<div class="col-lg-4">
+							<div class="col-lg-3">
 								<div class="wow fadeInUp" data-wow-delay="0.3s" style="border-radius: 6px; padding-bottom: 4px;">
 									<div class="card-img" id="cardbg">
 										<h4 class="neue" style="font-size: 16px; margin-bottom: 0;">{{ trans('site.backleasing') }}</h4>
@@ -157,6 +153,39 @@
 			                        <a href="{{ route('actionWebBackLeasing') }}" class="theme-btn theme-btn-rounded neue" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
 								</div>
 							</div>
+                            <div class="col-lg-3">
+                                <div class="wow fadeInUp" data-wow-delay="0.3s" style="border-radius: 6px; padding-bottom: 4px;">
+                                    <div class="card-img" id="cardbg">
+                                        <h4 class="neue" style="font-size: 16px; margin-bottom: 0;">{{ trans('site.backleasing') }}</h4>
+                                    </div>
+                                    <ul class="service helvetica-regular">
+                                        @if(Session::get('locale') == 'ge')
+                                        <li>{{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @else
+                                        <li>From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @endif
+                                        <hr>
+                                        @if(Session::get('locale') == 'ge')
+                                        <li>{{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @else
+                                        <li>To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @endif
+                                        <hr>
+                                        <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
+                                        <hr>
+                                        <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_max_percent'][0] }}%</li>
+                                        <hr>
+                                        <li>{{ trans('site.credit_hostory_value') }}</li>
+                                        <hr>
+                                        <li>{{ trans('site.insurance_value') }}</li>
+                                        <hr>
+                                        <li>{{ trans('site.income_verification_value') }}</li>
+                                        <hr>
+                                        <li>{{ trans('site.documents_value') }}</li>
+                                    </ul>
+                                    <a href="{{ route('actionWebTaxiLeasing') }}" class="theme-btn theme-btn-rounded neue" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
+                                </div>
+                            </div>
 						</div>
 					</div>
 					<div class="feature-card-widget wow fadeInUp" data-wow-delay="0.6s" id="about" style="margin-top: 35px; padding: 30px;">

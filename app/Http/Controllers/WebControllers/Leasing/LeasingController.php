@@ -148,4 +148,12 @@ class LeasingController extends Controller
             abort('404');
         }
     }
+
+    public function actionWebTaxiLeasing(Request $Request) {
+        
+    }
+
+    public function actionWebTaxiLeasingForm(Request $Request) {
+        
+    }
 }

@@ -81,6 +81,8 @@
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('actionWebBackLeasing') }}">{{ trans('site.backleasing') }}</a>
                                 </li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('actionWebTaxiLeasing') }}">{{ trans('site.taxileasing') }}</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -96,6 +98,7 @@
                             <div class="helvetica-regular">
                                 <a href="{{ route('actionWebLeasing') }}"  class="toptext">{{ trans('site.leasing') }}</a>
                                 <a href="{{ route('actionWebBackLeasing') }}"  class="toptext">{{ trans('site.backleasing') }}</a>
+                                <a href="{{ route('actionWebTaxiLeasing') }}"  class="toptext">{{ trans('site.taxileasing') }}</a>
                             </div>
                         </ul>
                     </div>
