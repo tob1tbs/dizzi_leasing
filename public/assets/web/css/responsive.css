@@ -531,6 +531,9 @@
   .ragaca { display: none; }
 }
 @media (max-width: 575px) {
+  header .header-top2 {
+      overflow: hidden;
+  }
   .navbar .navbar-brand {
     margin-left: 20px;
   }
