@@ -676,12 +676,14 @@
                 $("#PercetSetRangeAmount").val(values[handle]);
                 $("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
                 $(".loan-complicity").html(values[handle] +' {{ trans('site.gel') }}');
+                $("#leasing_advance_payment").val(values[handle]);
             });
 
             mySliderPercent.noUiSlider.on("update", function (values, handle) {
                 $("#PercetSetRangeAmount").val(values[handle]);
                 $("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
                 $(".loan-complicity").html(values[handle] +' {{ trans('site.gel') }}');
+                $("#leasing_advance_payment").val(values[handle]);
             });
 
             inputFormat.addEventListener("change", function () {
