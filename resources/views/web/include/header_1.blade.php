@@ -1,3 +1,6 @@
+<style type="text/css">
+    .custom-button-color:hover; { background-color: #f0c019; }
+</style>
 <header class="header">
     <div class="header-top py-2">
         <div class="container">
@@ -67,7 +70,7 @@
                             <a href="{{ route('actionWebAboutUs') }}" class="nav-link">{{ trans('site.about_us') }}</a>
                         </li>
                         <li class="nav-item dropdown submenu">
-                            <a class="theme-btn theme-btn-rounded-2 theme-btn-alt neue" href="#0" role="button"
+                            <a class="theme-btn theme-btn-rounded-2 theme-btn-alt neue custom-button-color" href="#0" role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0 25px; font-size: 15px; position: relative; left: 15px;">
                                 {{ trans('site.get_loan') }}
                             </a>

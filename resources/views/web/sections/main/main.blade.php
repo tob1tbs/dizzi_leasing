@@ -115,9 +115,14 @@
 			                            <hr>
 			                            <li>{{ trans('site.documents_value') }}</li>
 			                        </ul>
-			                        <a href="{{ route('actionWebLeasing') }}" class="theme-btn theme-btn-rounded neue" style="width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
+			                        <a href="{{ route('actionWebLeasing') }}" class="theme-btn theme-btn-rounded neue custom-button-color" style="width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
 								</div>
 							</div>
+                            <style type="text/css">
+                                .theme-btn.theme-btn-rounded::before {
+    border-radius: 6px;
+}
+                            </style>
 							<div class="col-lg-4">
 								<div class="wow fadeInUp" data-wow-delay="0.3s" style="border-radius: 6px; padding-bottom: 4px;">
 									<div class="card-img" id="cardbg">
@@ -148,7 +153,7 @@
                                         <hr>
                                         <li>{{ trans('site.documents_value') }}</li>
 			                        </ul>
-			                        <a href="{{ route('actionWebBackLeasing') }}" class="theme-btn theme-btn-rounded neue" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
+			                        <a href="{{ route('actionWebBackLeasing') }}" class="theme-btn theme-btn-rounded neue custom-button-color" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
 								</div>
 							</div>
 						</div>
