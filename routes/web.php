@@ -33,6 +33,7 @@ Route::group(['prefix' => '/ajax'], function() {
     Route::post('/ajaxLeasingFormSubmit', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxLeasingFormSubmit'])->name('ajaxLeasingFormSubmit');
     Route::post('/ajaxLeasingSubmit', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxLeasingSubmit'])->name('ajaxLeasingSubmit');
     Route::post('/ajaxBackLesingFormSubmit', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxBackLesingFormSubmit'])->name('ajaxBackLesingFormSubmit');
+    Route::post('/ajaxTaxiLesingFormSubmit', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxTaxiLesingFormSubmit'])->name('ajaxTaxiLesingFormSubmit');
     Route::get('/ajaxGetCarModel', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxGetCarModel'])->name('ajaxGetCarModel');
     Route::get('/ajaxCheckPromoCode', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxCheckPromoCode'])->name('ajaxCheckPromoCode');
     Route::get('/ajaxCarMake', [App\Http\Controllers\WebControllers\Cars\CarsAjaxController::class, 'ajaxCarMake'])->name('ajaxCarMake');
