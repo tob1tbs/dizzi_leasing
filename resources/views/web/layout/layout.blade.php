@@ -87,6 +87,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright-text" style="text-align: center;">
+                            <p><br class="d-sm-none"> Crafted By <a href="https://www.linkedin.com/in/mito-chikhladze-7554b4174/" target="_blank" style="margin-left: 1px;">Mito Chikhladze</a> | Designed <a
+                                    href="https://shotazhvania.dev/" target="_blank" style="margin-left: 1px;">ShotaZhvania.dev</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
