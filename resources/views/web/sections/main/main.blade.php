@@ -238,11 +238,11 @@
                     <div class="card-img mb-5 mb-sm-0">
                         <div class="shape-1">
                             <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2"
-                                src="{{ url('assets/web/img/banner/step_1.png') }}" alt="card" style="border-radius: 10px;">
+                                src="{{ url('assets/web/img/banner/step_2.png') }}" alt="card" style="border-radius: 10px;">
                         </div>
                         <div class="shape-2">
                             <img class="wow fadeInRight" data-wow-delay="1s" data-depth="0.3"
-                                src="{{ url('assets/web/img/banner/step_2.png') }}" alt="card" style="border-radius: 10px;">
+                                src="{{ url('assets/web/img/banner/step_1.png') }}" alt="card" style="border-radius: 10px;">
                         </div>
                         <div class="shape-3">
                             <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2" src="{{ url('assets/web/img/blog/step.png') }}"
