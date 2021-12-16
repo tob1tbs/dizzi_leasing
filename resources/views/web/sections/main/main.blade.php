@@ -121,7 +121,7 @@
                             <style type="text/css">
                                 .theme-btn.theme-btn-rounded::before {
                                     border-radius: 6px;
-                                    background-color: #f0c019;
+                                    /*background-color: #f0c019;*/
                                 }
                             </style>
 							<div class="col-lg-4">
