@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 d-none d-lg-block position-relative">
-                    <img class="person-img " src="{{ url('assets/web/img/banner/car.png') }}" alt="">
+                    <img class="person-img " src="{{ url('assets/web/img/banner/car.png') }}" alt="" style="top: -550px;">
                 </div>
             </div>
         </div>
