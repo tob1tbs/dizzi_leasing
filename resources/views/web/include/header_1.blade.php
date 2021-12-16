@@ -91,8 +91,8 @@
                     <div>
                         <ul>
                             <div class="helvetica-regular">
-                                <a href="{{ route('actionWebLeasing') }}"  class="toptext" style="font-size: 20px !important;">{{ trans('site.leasing') }}</a>
-                                <a href="{{ route('actionWebBackLeasing') }}"  class="toptext" style="font-size: 20px !important;">{{ trans('site.backleasing') }}</a>
+                                <a href="{{ route('actionWebLeasing') }}"  class="toptext">{{ trans('site.leasing') }}</a>
+                                <a href="{{ route('actionWebBackLeasing') }}"  class="toptext">{{ trans('site.backleasing') }}</a>
                             </div>
                         </ul>
                     </div>
