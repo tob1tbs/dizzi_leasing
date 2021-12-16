@@ -529,40 +529,7 @@
 }
 @media (max-width: 575px) {
   .navbar .navbar-brand {
-    margin-left: 40px;
-    width: 50%;
-    height: 65px;
-    padding-top: 5px !important;
-  }
-  .popup > div{
-    max-width: 400px;
-    width: 100%;
-    padding: 10px 15px 10px 15px;
-  }
-  #pprice p{
-    margin-left: 1rem;
-  }
-  #pmonth p{
-    margin-left: 1rem;
-  }
-  #ppayment p{
-    margin-left: 1rem;
-  }
-  .banner-content{
-    margin-top: 3rem;
-  }
-  .main {
-    width: 100%;
-    margin-top: 0rem;
-}
-  #footerlogo{
-    left: 0px !important;
-  }
-  .col-md-4 ul li{
-    margin-left: 5rem;
-  }
-  .sticky{
-    left: 0px !important;
+    margin-left: 20px;
   }
   .navbar-toggler {
     margin-right: 20px;
@@ -576,12 +543,6 @@
   #mobile-menu-overlay .menu-close {
     right: 25px;
     top: 20px;
-  }
-  .neue{
-    font-size: 17px !important;
-  }
-  #emiAmount2, #emiAmount{
-    font-size: 30px !important;
   }
   header .header-top .header-info-right ul li {
     margin: 0;
@@ -599,7 +560,7 @@
   .banner-area .banner-content h1,
   .banner-area-3 .banner-content h1,
   .banner-area-4 .banner-content h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .banner-area-2 .banner-content h1 {
     font-size: 35px;
@@ -751,11 +712,11 @@
     padding: 25px 25px;
   }
   .feature-card-widget-6 {
-    padding: 25px 30px;
-    flex-direction: column;
+    padding: 15px;
+    flex-direction: row;
   }
   .feature-card-widget-6 .card-content {
-    margin-top: 10px;
+    margin-top: 0px;
   }
   .feature-job-description {
     padding: 30px;
@@ -894,10 +855,13 @@
     right: -1%;
   }
   /* ------------- */
+  .order-2 > div:first-child { margin-top: 0 !important; }
   .customize-card-area .card-img .shape-1 {
     left: -9px;
     top: -10px;
+    display: none;
   }
+  .order-1 { display: none; }
 
   .customize-card-area .card-img .shape-2 {
     display: none;
@@ -944,5 +908,19 @@
   }
   .error_dot.three {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-content { margin-top: 50px; }
+}
+
+@media (max-width: 375px) {
+  .sticky_logo { width: 70%; }
+  .toptext { font-size: 16px !important; }
+
+  .banner-area-3 .banner-content h1 {
+    line-height: 40px;
+    margin-top: 50px;
   }
 }
