@@ -245,7 +245,7 @@
                                 src="{{ url('assets/web/img/banner/step_1.png') }}" alt="card" style="border-radius: 10px;">
                         </div>
                         <div class="shape-3">
-                            <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2" src="{{ url('assets/web/img/blog/step.png') }}"
+                            <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2" src="{{ url('assets/web/img/banner/step_3.png') }}"
                                 alt="card" style="border-radius: 10px;">
                         </div>
                         <div class="shape-4">
