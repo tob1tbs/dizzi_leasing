@@ -246,7 +246,7 @@
                                                 <div class="single-range mb-25">
                                                     <div class="range-header mb-25" style="display: none;">
                                                         <h6 class="helvetica-regular" style="width: 100%;">{{ trans('site.advance_payment') }} {{ trans('site.gel') }}</h6>
-                                                        <input type="text" id="PercetSetRangeAmount" value="@if(!empty(request()->advance_payment)) {{ request()->advance_payment }}} @else {{ $parameterLeasing['leasing_price_default'][0] / 100 * $parameterLeasing['leasing_avanse_percent_default'][0] }} @endif" style="width: 100%;">
+                                                        <input type="text" id="PercetSetRangeAmount" value="@if(!empty(request()->advance_payment)) {{ request()->advance_payment }} @else {{ $parameterLeasing['leasing_price_default'][0] / 100 * $parameterLeasing['leasing_avanse_percent_default'][0] }} @endif" style="width: 100%;">
                                                     </div>
                                                     <div class="range-header mb-25">
                                                         <h6 class="helvetica-regular" style="width: 100%;">{{ trans('site.advance_payment') }} %</h6>
