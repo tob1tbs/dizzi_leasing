@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
                                 <div class="single-range mb-95">
-                                    <div class="range-header d-flex justify-content-between align-items-center mb-25">
+                                    <div class="range-header d-none justify-content-between align-items-center mb-25">
                                         <h6 class="helvetica-regular">{{ trans('site.advance_payment') }} {{ trans('site.gel') }}</h6>
                                         <input type="text" id="PercetSetRangeAmount" value="{{ $parameterLeasing['leasing_price_default'][0] / 100 * $parameterLeasing['leasing_avanse_percent_default'][0] }}">
                                     </div>
