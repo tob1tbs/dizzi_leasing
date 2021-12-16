@@ -528,6 +528,9 @@
   }
 }
 @media (max-width: 575px) {
+  .ragaca { display: none; }
+}
+@media (max-width: 575px) {
   .navbar .navbar-brand {
     margin-left: 20px;
   }
