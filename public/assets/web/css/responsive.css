@@ -907,7 +907,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .banner-content { margin-top: 50px; }
 }
 
