@@ -34,6 +34,11 @@
                             class="leas-btn wow fadeInUp mt-30 theme-btn theme-btn-rounded-2 theme-btn-lg theme-btn-alt neue"
                             data-wow-delay="0.3s" style="font-size: 16px; padding: 0 25px;">{{ trans('site.backleasing') }}
                             <i class="arrow_right"></i></a>
+
+                            <a href="{{ route('actionWebTaxiLeasing') }}""
+                            class="leas-btn wow fadeInUp mt-30 theme-btn theme-btn-rounded-2 theme-btn-lg theme-btn-alt neue"
+                            data-wow-delay="0.3s" style="font-size: 16px; padding: 0 25px;">{{ trans('site.taxileasing') }}
+                            <i class="arrow_right"></i></a>
                         </div>
        
                     </div>
@@ -101,7 +106,7 @@
 			                            <hr>
 			                            <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
 			                            <hr>
-			                            <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_max_percent'][0] }}%</li>
+			                            <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent'][0] }}%</li>
 			                            <hr>
 			                            <li>{{ trans('site.credit_hostory_value') }}</li>
 			                            <hr>
@@ -140,7 +145,7 @@
                                         <hr>
                                         <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
                                         <hr>
-                                        <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_max_percent'][0] }}%</li>
+                                        <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent'][0] }}%</li>
                                         <hr>
                                         <li>{{ trans('site.credit_hostory_value') }}</li>
                                         <hr>
@@ -156,7 +161,7 @@
                             <div class="col-lg-3">
                                 <div class="wow fadeInUp" data-wow-delay="0.3s" style="border-radius: 6px; padding-bottom: 4px;">
                                     <div class="card-img" id="cardbg">
-                                        <h4 class="neue" style="font-size: 16px; margin-bottom: 0;">{{ trans('site.backleasing') }}</h4>
+                                        <h4 class="neue" style="font-size: 16px; margin-bottom: 0;">{{ trans('site.taxileasing') }}</h4>
                                     </div>
                                     <ul class="service helvetica-regular">
                                         @if(Session::get('locale') == 'ge')
@@ -173,7 +178,7 @@
                                         <hr>
                                         <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
                                         <hr>
-                                        <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_max_percent'][0] }}%</li>
+                                        <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent'][0] }}%</li>
                                         <hr>
                                         <li>{{ trans('site.credit_hostory_value') }}</li>
                                         <hr>
