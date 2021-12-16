@@ -1,7 +1,6 @@
 function Calculate(data) {
 	var SelectedAmount, selectedTime = {}, RateOfInterestTime, RateOfInterestAmount;
 
-
 	if (typeof wNumb !== "undefined") {
 		var AmountFormat = wNumb({
 	  		decimals: 0,
