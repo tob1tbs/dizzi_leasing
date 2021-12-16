@@ -855,11 +855,14 @@
     right: -1%;
   }
   /* ------------- */
+  .order-2 > div:first-child { margin-top: 0; }
   .customize-card-area .card-img .shape-1 {
     left: -9px;
     top: -10px;
     display: none;
   }
+  .order-1 { display: none; }
+
   .customize-card-area .card-img .shape-2 {
     display: none;
   }
