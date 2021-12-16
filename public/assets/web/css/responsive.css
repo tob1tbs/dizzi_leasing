@@ -527,7 +527,7 @@
     padding: 30px 40px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   .ragaca { display: none; }
 }
 @media (max-width: 575px) {
