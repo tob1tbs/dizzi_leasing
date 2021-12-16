@@ -908,6 +908,10 @@
 }
 
 @media (max-width: 375px) {
+  .banner-content { margin-top: 50px; }
+}
+
+@media (max-width: 375px) {
   .sticky_logo { width: 70%; }
   .toptext { font-size: 16px !important; }
 

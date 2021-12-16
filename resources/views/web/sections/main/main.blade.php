@@ -26,12 +26,12 @@
                         <h1 class="wow fadeInUp neue" data-wow-delay="0.1s">{{ trans('site.slider_text_1') }}<br>
                             <span style="font-size: 26px;">{{ trans('site.slider_text_2') }}</span></h1>
                         <div>
-                            <a href="{{ route('actionWebLeasing') }}" class="wow fadeInUp mt-30 theme-btn theme-btn-rounded-2 theme-btn-lg theme-btn-alt neue"
+                            <a href="{{ route('actionWebLeasing') }}" class="leas-btn wow fadeInUp mt-30 theme-btn theme-btn-rounded-2 theme-btn-lg theme-btn-alt neue"
                             data-wow-delay="0.3s" style="font-size: 16px; padding: 0 25px;">{{ trans('site.leasing') }}
                             <i class="arrow_right"></i></a>
 
                             <a href="{{ route('actionWebBackLeasing') }}""
-                            class="wow fadeInUp mt-30 theme-btn theme-btn-rounded-2 theme-btn-lg theme-btn-alt neue"
+                            class="leas-btn wow fadeInUp mt-30 theme-btn theme-btn-rounded-2 theme-btn-lg theme-btn-alt neue"
                             data-wow-delay="0.3s" style="font-size: 16px; padding: 0 25px;">{{ trans('site.backleasing') }}
                             <i class="arrow_right"></i></a>
                         </div>
