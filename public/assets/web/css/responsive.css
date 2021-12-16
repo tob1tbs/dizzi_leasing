@@ -906,3 +906,13 @@
     display: none;
   }
 }
+
+@media (max-width: 375px) {
+  .sticky_logo { width: 70%; }
+  .toptext { font-size: 16px; }
+
+  .banner-area-3 .banner-content h1 {
+    line-height: 40px;
+    margin-top: 50px;
+  }
+}
