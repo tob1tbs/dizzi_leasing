@@ -858,6 +858,7 @@
   .customize-card-area .card-img .shape-1 {
     left: -9px;
     top: -10px;
+    display: none;
   }
   .customize-card-area .card-img .shape-2 {
     display: none;
