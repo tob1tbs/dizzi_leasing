@@ -1,5 +1,5 @@
 <style type="text/css">
-    .custom-button-color:hover; { background-color: #f0c019 !important; }
+    .custom-button-color:hover { background-color: #f0c019 !important; }
 </style>
 <header class="header">
     <div class="header-top py-2">
