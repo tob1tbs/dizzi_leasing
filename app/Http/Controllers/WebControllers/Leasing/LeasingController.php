@@ -178,7 +178,7 @@ class LeasingController extends Controller
                 'car_list' => $CarList,
             ];
 
-            return view('web.sections.leasing.leasing', $data);
+            return view('web.sections.leasing.taxileasing', $data);
         } else {
             abort('404');
         }

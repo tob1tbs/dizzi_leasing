@@ -2,7 +2,6 @@ function Calculate(data) {
 	var SelectedAmount, selectedTime = {}, RateOfInterestTime, RateOfInterestAmount;
 
 
-		console.log(data['LeasingArray']);
 	if (typeof wNumb !== "undefined") {
 		var AmountFormat = wNumb({
 	  		decimals: 0,
