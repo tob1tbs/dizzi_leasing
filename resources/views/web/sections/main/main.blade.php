@@ -230,7 +230,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 order-lg-1 order-2">
+                <div class="col-lg-6 col-sm-12 col-md-12 order-lg-1 order-2">
                     <div class="feature-card-widget-6 wow fadeInUp mt-sm-0 mt-5" data-wow-delay="0.1s" style="max-height: 140px;">
                         <div class="icon mr-20">
                             <img src="{{ url('assets/web/img/icon/1.png') }}" alt="icon">
@@ -268,7 +268,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 order-lg-2 order-1 pl-lg-50">
+                <div class="col-lg-6 order-lg-2 order-1 pl-lg-50 d-md-none d-sm-none d-lg-block">
                     <div class="card-img mb-5 mb-sm-0">
                         <div class="shape-1">
                             <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2"
