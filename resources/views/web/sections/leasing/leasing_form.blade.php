@@ -675,7 +675,7 @@
             mySliderPercent.noUiSlider.on("change", function (values, handle) {
                 $("#PercetSetRangeAmount").val(values[handle]);
                 $("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
-                calc();
+                $(".loan-complicity").html((values[handle] * 100).toFixed(0) +' {{ trans('site.gel') }}');
             });
 
             mySliderPercent.noUiSlider.on("update", function (values, handle) {
