@@ -437,11 +437,11 @@ label[for=terms]{
   font-size: 1.5rem;
 }
 #width{
-  width: 600px;
+	width: 600px;
 }
 .str1{
-  stroke: #5651a1 !important;
-  stroke-width: 2 !important;
+	stroke: #5651a1 !important;
+	stroke-width: 2 !important;
   fill: white;
 }
 .fil8{
