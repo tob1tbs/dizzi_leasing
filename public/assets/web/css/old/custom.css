@@ -1,0 +1,53 @@
+
+@font-face {
+    font-family: 'HelveticaRegular';
+        src: url('../fonts/Linotype-HelveticaNeueLTGEO55Roman.ttf');
+}
+
+@font-face {
+    font-family: 'HelveticaBold';
+        src: url('../fonts/Linotype-HelveticaNeueLTGEO75Bold.ttf');
+}
+
+@font-face {
+    font-family: 'fire-regular';
+    src: url('../fonts/FiraGO-Regular.ttf');
+}
+@font-face {
+    font-family: 'fire-heavy';
+    src: url('../fonts/FiraGO-Heavy.ttf');
+}
+@font-face {
+    font-family: 'fire-bold';
+    src: url('../fonts/FiraGO-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neue-geo-caps';
+    src: url('../fonts/helvetica-neue-lt-geo-55-roman-caps.ttf');
+}
+
+.neue {
+  font-family: 'neue-geo-caps' !important;
+}
+
+.btn-cart {
+  font-family: 'HelveticaRegular';
+}
+
+.bpg-nino {
+  font-family: 'BPGNinoMtavruli' !important;
+}
+
+.helvetica-regular {
+	font-family: 'HelveticaRegular' !important;
+}
+
+.nav-link {
+	font-family: 'neue-geo-caps' !important;
+	font-size: 14px !important;
+	position: relative;
+	top: 6px;
+}
