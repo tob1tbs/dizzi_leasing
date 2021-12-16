@@ -715,6 +715,12 @@
     padding: 15px;
     flex-direction: row;
   }
+  .feature-card-widget-6 h6 {
+    font-size: 15px;
+  }
+  .feature-card-widget-6 p {
+    font-size: 14px;
+  }
   .feature-card-widget-6 .card-content {
     margin-top: 0px;
   }
