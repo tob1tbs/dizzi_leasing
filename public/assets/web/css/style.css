@@ -234,7 +234,7 @@ label[for=terms]{
   will-change: transform, opacity;
   position: relative;
   padding: 2.4rem;
-  background: #f3f3f3;
+  background: #ffffff;
   background-clip: padding-box;
   box-shadow: 0 12px 15px 0 rgba(0,0,0,0.25);
   opacity: 0;
@@ -825,7 +825,7 @@ input::-webkit-inner-spin-button {
   font-family: "Roboto", sans-serif;
   font-weight: 500; }
   .theme-btn::before {
-    background-color: #171d24;
+    background-color: #5651a1;
     position: absolute;
     left: -1px;
     top: -1px;
@@ -890,7 +890,7 @@ input::-webkit-inner-spin-button {
     .theme-btn.theme-btn-primary_alt::before {
       display: none; }
     .theme-btn.theme-btn-primary_alt:hover {
-      background-color: #5651a1;
+      background-color: #f0c019 !important;
       color: #fff; }
       .theme-btn.theme-btn-primary_alt:hover i {
         transform: translate(0); }
@@ -932,7 +932,7 @@ input::-webkit-inner-spin-button {
     .theme-btn.theme-btn-rounded-2::before {
       display: none; }
     .theme-btn.theme-btn-rounded-2:hover {
-      background-color: var(--theme-title-color);
+      background-color: #f0c019 !important;
       color: #fff;
       box-shadow: 2px 5px 20px rgba(51, 77, 114, 0.2); }
 
@@ -1266,7 +1266,7 @@ header {
 
 .header-menu {
   z-index: 1;
-  background-color: transparent;
+  background-color: #5650a1;
   transition: all 0.2s linear; }
   .header-menu.navbar_fixed {
     background: #fff;
@@ -1576,7 +1576,7 @@ header {
       transition-delay: 0.2s; }
 
 .menu_toggle {
-  width: 22px;
+  width: 30px;
   height: 22px;
   position: relative;
   cursor: pointer;
@@ -1894,7 +1894,7 @@ header {
     font-weight: 700;
     line-height: 56px; }
   .banner-area-3 .banner-content .theme-btn {
-    border-radius: 30px;letter-spacing: 0.1rem; }
+    border-radius: 30px; }
   .banner-area-3 .person-img {
     position: absolute;
     bottom: -70px;
@@ -3186,7 +3186,7 @@ header {
 /*   Calculaor widget CSS
   /*----------------------------------------*/
 .calculator-widget .single-calculator-widget {
-  padding: 42px 50px;
+  padding: 20px 50px;
   border: 1px solid #dcdee0;
   border-radius: 10px; }
   .calculator-widget .single-calculator-widget .single-range .range-header h6 {
@@ -6419,7 +6419,7 @@ blockquote {
   .footer.footer-1 {
     background-image: url("../img/footer/footer-bg.png"); }
   .footer.footer-2 {
-    background-color: #171d24; }
+    background-color: #171d24;padding:30px 0px; }
     .footer.footer-2 .footer-text {
       color: #fff;
       font-size: 16px;
