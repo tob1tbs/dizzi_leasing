@@ -62,7 +62,7 @@
 				<div class="col-xl-12 col-md-12">
 					<div class="feature-card-widget" style="padding: 20px;">
 						<div class="row">
-							<div class="col-lg-3 d-md-none d-sm-none d-lg-block">
+							<div class="col-lg-3 d-block d-sm-none">
 								<div class="wow fadeInUp" data-wow-delay="0.3s" style="border-radius: 6px; padding-bottom: 4px;">
 									<div class="card-img" id="cardbg" style="background-color: #ffffff;">
 										<h4 class="neue" style="font-size: 16px; margin-bottom: 0; background-color: #ffffff;">&nbsp;</h4>
@@ -268,7 +268,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 order-lg-2 order-1 pl-lg-50 d-md-none d-sm-none d-lg-block">
+                <div class="col-lg-6 order-lg-2 order-1 pl-lg-50 d-block d-sm-none">
                     <div class="card-img mb-5 mb-sm-0">
                         <div class="shape-1">
                             <img class="wow fadeInLeft" data-wow-delay="1.2s" data-depth="0.2"
