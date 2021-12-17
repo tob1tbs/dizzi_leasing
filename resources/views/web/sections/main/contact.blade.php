@@ -31,7 +31,21 @@
                                 <div class="w-100">
                                     <div class="faq-header" id="headingOne">
                                         <h4 class="mb-0 collapsed helvetica-regular" aria-expanded="true">
-                                            {{ trans('site.tbilisi') }} - {{ $parameterItems['address_ge'][0] }}
+                                            თბილისი, გაგარინის ქ. 3/2
+                                            <i class="icon_plus"></i>
+                                            <i class="icon_minus-06"></i>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-widget-one wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="widget-icon">
+                                    <img src="{{ url('assets/web/img/cta/google-maps.png') }}">
+                                </div>
+                                <div class="w-100">
+                                    <div class="faq-header" id="headingOne">
+                                        <h4 class="mb-0 collapsed helvetica-regular" aria-expanded="true">
+                                            რუსთავი, ავტობაზრობის შესასვლელი, შენობა N8/2
                                             <i class="icon_plus"></i>
                                             <i class="icon_minus-06"></i>
                                         </h4>
