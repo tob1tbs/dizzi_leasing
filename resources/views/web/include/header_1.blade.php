@@ -7,7 +7,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="header-info-left">
-                        <div class="timestamp"> <i class="icon_clock_alt"></i> ორშაბათი - პარასკევი {{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}
+                        <div class="timestamp helvetica-regular"> <i class="icon_clock_alt"></i> ორშაბათი - პარასკევი {{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}
                         </div>
                     </div>
                 </div>
@@ -96,11 +96,6 @@
                             <a href="{{ route('actionWebBackLeasing') }}"  class="toptext">{{ trans('site.backleasing') }}</a>
                             <a href="{{ route('actionWebTaxiLeasing') }}"  class="toptext">{{ trans('site.taxileasing') }}</a>
                         </div>
-                    </div>
-                    <div>
-                        <a href="viber://contact?number=%2B995{{ $parameterItems['viber_number'][0] }}" target="_blank"><img src="{{ url('assets/web/img/top/viber.svg') }}"></a>
-                        <a href="https://wa.me/995{{ $parameterItems['whatsapp_number'][0] }}" target="_blank"><img src="{{ url('assets/web/img/top/whatsapp.svg') }}"></a>
-                        <a href="https://t.me/{{ $parameterItems['telegram_user'][0] }}"><img src="{{ url('assets/web/img/top/telegram.svg') }}" target="_blank"></a>
                     </div>
                 </div>
             </div>
