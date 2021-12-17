@@ -94,13 +94,11 @@
         <div class="container">
                 <div class="d-flex justify-content-between">
                     <div>
-                        <ul>
-                            <div class="helvetica-regular">
-                                <a href="{{ route('actionWebLeasing') }}"  class="toptext">{{ trans('site.leasing') }}</a>
-                                <a href="{{ route('actionWebBackLeasing') }}"  class="toptext">{{ trans('site.backleasing') }}</a>
-                                <a href="{{ route('actionWebTaxiLeasing') }}"  class="toptext">{{ trans('site.taxileasing') }}</a>
-                            </div>
-                        </ul>
+                        <div class="helvetica-regular">
+                            <a href="{{ route('actionWebLeasing') }}"  class="toptext">{{ trans('site.leasing') }}</a>
+                            <a href="{{ route('actionWebBackLeasing') }}"  class="toptext">{{ trans('site.backleasing') }}</a>
+                            <a href="{{ route('actionWebTaxiLeasing') }}"  class="toptext">{{ trans('site.taxileasing') }}</a>
+                        </div>
                     </div>
                     <div>
                         <a href="viber://contact?number=%2B995{{ $parameterItems['viber_number'][0] }}" target="_blank"><img src="{{ url('assets/web/img/top/viber.svg') }}"></a>
