@@ -135,6 +135,43 @@ class LeasingAjaxController extends Controller
         }
     }
 
+    public function ajaxTaxiLesingFormSubmit(Request $Request) {
+        if($Request->isMethod('POST')) {
+            $messages = array(
+                'required' => 'გთხოვთ შეავსოთ ყველა აუცილებელი ველი',
+                'min' => 'ტელეფონის ნომერი უნდა იყოს 9 ნიშნა',
+            );
+            $validator = Validator::make($Request->all(), [
+                'phone' => 'required|min:9|max:9|regex:/^\S*$/u',
+            ], $messages);
+
+            if ($validator->fails()) {
+                return response()->json(['status' => true, 'errors' => true, 'message' => $validator->getMessageBag()->toArray()], 200);
+            } else {
+                if (!in_array(substr($Request->phone, 0, 3), $this->getPhoneIndex())) {
+                    return response()->json(['status' => true, 'errors' => true, 'message' => 'მოცემული ტელეფონის ინდექსი არასწორია']);
+                }
+                $SendData = [
+                    'phone' => $Request->phone,
+                ];
+
+                $CrmController = new CrmController();
+                $CrmResponse = $CrmController->serviceCrmSend($SendData);
+                $CrmResponse = json_decode($CrmResponse);
+                if($CrmResponse->success == 'true') {
+                    $CrmController->serviceCrmSaveLog($SendData, 'send_to_crm', $CrmResponse);
+                    $RedirectUrl = route('actionWebBackLeasingForm', 'phone='.$Request->phone.'&amount='.$Request->amount.'&duration='.$Request->duration.'&advance_payment='.$Request->advance_payment);
+                    return response()->json(['status' => true, 'errors' => false, 'message' => $validator->getMessageBag()->toArray(), 'RedirectUrl' => $RedirectUrl], 200);
+                } else {
+                    return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
+                }
+            }
+        }
+        else {
+            return response()->json(['status' => false]);
+        }
+    }
+
     public function ajaxLeasingSubmit(Request $Request) {
         if($Request->isMethod('POST')) {
             $messages = array(
@@ -177,6 +214,7 @@ class LeasingAjaxController extends Controller
                     'loan_percent' => $month_percent * 100,
                     'fast_review' => $Request->fast_review,
                     'accept_terms' => $Request->accept_terms,
+                    'leasing_type' => $Request->leasing_type,
                     'advance_payment' => $Request->leasing_advance_payment,
                 ];
 
