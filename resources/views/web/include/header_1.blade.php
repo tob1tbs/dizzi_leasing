@@ -70,6 +70,11 @@
 
     .custom-bg-light .navbar-nav .nav-link {
         color:  #ffffff;
-        font-size: 18px;
+        font-size: 20px;
+    }
+
+    .custom-bg-light .navbar-nav .nav-link:hover {
+        color:  #f0c019;
+        font-size: 20px;
     }
 </style>
