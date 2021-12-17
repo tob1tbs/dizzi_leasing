@@ -237,8 +237,6 @@
                                 <h4 class="widget-title mb-15 neue" style="font-size: 16px">{{ trans('site.promo') }}</h4>
                                 <form action="#" class="mt-15">
                                     <input class="form-control" id="promo_code" name="promo_code" type="text" placeholder="">
-                                    <button type="button" onclick="CheckPromoCode()" style="width: 100%; height: 35px; border-radius: 5px; margin-top: 10px; background: #f0c019;">{{ trans('site.check_promo') }}</button>
-                                    <p style="font-size: 14px; margin-top: 5px; width: 100%;" class="promo-text helvetica-regular"></p>
                                     <p style="font-size: 14px; margin-top: 5px; width: 100%;">{{ trans('site.promo_text') }}</p>
                             </div>  
                         </div>
