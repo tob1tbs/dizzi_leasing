@@ -489,4 +489,46 @@
 @endsection
 
 @section('js')
+<script type="text/javascript">
+    function OpenReviewModal() {
+        $("#ReviewModal").modal('show');
+    }
+
+    function SaveReview() {
+        var form = $('#add_review')[0];
+        var data = new FormData(form);
+
+        $.ajax({
+            dataType: 'json',
+            url: "/ajax/ajaxSaveReview",
+            type: "POST",
+            data: data,
+            enctype: 'multipart/form-data',
+            processData: false,
+            contentType: false,
+            cache: false,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data) {
+                if(data['status'] == true) {
+                    Swal.fire({
+                      title: '{{ trans('site.success') }}',
+                      text: '{{ trans('site.review_success') }}',
+                      icon: 'success',
+                      confirmButtonText: '{{ trans('site.close') }}',
+                      timer: 2000
+                    });
+                    $("#ReviewModal").modal('hide');
+                } else {
+                   
+                }
+            }
+        });
+    }
+
+    function CloseModal() {
+        $("#ReviewModal").modal('hide');
+    }
+</script>
 @endsection
