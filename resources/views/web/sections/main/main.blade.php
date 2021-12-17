@@ -92,23 +92,32 @@
 										<h4 class="neue" style="font-size: 16px; margin-bottom: 0;">{{ trans('site.leasing') }}</h4>
 									</div>
 									<ul class="service helvetica-regular">
+                                        @if(Session::get('locale') == 'ge')
                                         <li><span class="d-block d-sm-none">{{ trans('site.min_price') }}</span> {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @else
+                                        <li>From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        @endif
                                         <hr>
-			                            <li><span>{{ trans('site.min_price') }}</span> {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+										@if(Session::get('locale') == 'ge')
+			                            <li>{{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+			                            @else
+			                            <li>To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+			                            @endif
 			                            <hr>
-			                            <li><span>{{ trans('site.min_price') }}</span> {{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
+			                            <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
 			                            <hr>
-			                            <li><span>{{ trans('site.min_price') }}</span> {{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent'][0] }}%</li>
+			                            <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent'][0] }}%</li>
 			                            <hr>
-			                            <li><span>{{ trans('site.min_price') }}</span> {{ trans('site.credit_hostory_value') }}</li>
+			                            <li>{{ trans('site.credit_hostory_value') }}</li>
 			                            <hr>
-                                        <li><span>{{ trans('site.min_price') }}</span> {{ trans('site.insurance_value') }}</li>
+                                        <li>{{ trans('site.insurance_value') }}</li>
 			                            <hr>
-                                        <li><span>{{ trans('site.min_price') }}</span> {{ trans('site.income_verification_value') }}</li>
+                                        <li>{{ trans('site.income_verification_value') }}</li>
 			                            <hr>
-			                            <li><span>{{ trans('site.min_price') }}</span> {{ trans('site.documents_value') }}</li>
+			                            <li>{{ trans('site.documents_value') }}</li>
 			                        </ul>
 			                        <a href="{{ route('actionWebLeasing') }}" class="theme-btn theme-btn-rounded neue" style="width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
+								</div>
 							</div>
                             <style type="text/css">
                                 .theme-btn.theme-btn-rounded::before {
