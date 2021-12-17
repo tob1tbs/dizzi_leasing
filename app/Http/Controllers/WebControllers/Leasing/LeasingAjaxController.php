@@ -160,7 +160,7 @@ class LeasingAjaxController extends Controller
                 $CrmResponse = json_decode($CrmResponse);
                 if($CrmResponse->success == 'true') {
                     $CrmController->serviceCrmSaveLog($SendData, 'send_to_crm', $CrmResponse);
-                    $RedirectUrl = route('actionWebBackLeasingForm', 'phone='.$Request->phone.'&amount='.$Request->amount.'&duration='.$Request->duration.'&advance_payment='.$Request->advance_payment);
+                    $RedirectUrl = route('actionWebTaxiLeasingForm', 'phone='.$Request->phone.'&amount='.$Request->amount.'&duration='.$Request->duration.'&advance_payment='.$Request->advance_payment);
                     return response()->json(['status' => true, 'errors' => false, 'message' => $validator->getMessageBag()->toArray(), 'RedirectUrl' => $RedirectUrl], 200);
                 } else {
                     return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
