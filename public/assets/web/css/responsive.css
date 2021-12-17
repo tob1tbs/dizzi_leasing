@@ -144,7 +144,7 @@
     max-height: none !important;
   }
   .navbar-collapse {
-    max-height: 400px;
+    max-height: 800px;
     overflow-y: scroll;
   }
   .doc_mobile_menu .open_icon {
