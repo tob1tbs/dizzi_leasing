@@ -95,26 +95,26 @@
                                         @if(Session::get('locale') == 'ge')
                                         <li><span class="d-block d-sm-none">{{ trans('site.min_price') }}</span> {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @else
-                                        <li>From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.min_price') }}</span> From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @endif
                                         <hr>
 										@if(Session::get('locale') == 'ge')
-			                            <li>{{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+			                            <li><span class="d-block d-sm-none">{{ trans('site.max_price') }}</span> {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
 			                            @else
-			                            <li>To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+			                            <li><span class="d-block d-sm-none">{{ trans('site.max_price') }}</span> To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
 			                            @endif
 			                            <hr>
-			                            <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
+			                            <li><span class="d-block d-sm-none">{{ trans('site.max_month') }}</span> {{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
 			                            <hr>
-			                            <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent'][0] }}%</li>
+			                            <li><span class="d-block d-sm-none">{{ trans('site.initial_deposit') }}</span> {{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent'][0] }}%</li>
 			                            <hr>
-			                            <li>{{ trans('site.credit_hostory_value') }}</li>
+			                            <li><span class="d-block d-sm-none">{{ trans('site.credit_history') }}</span> {{ trans('site.credit_hostory_value') }}</li>
 			                            <hr>
-                                        <li>{{ trans('site.insurance_value') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.insurance') }}</span> {{ trans('site.insurance_value') }}</li>
 			                            <hr>
-                                        <li>{{ trans('site.income_verification_value') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.income_verification') }}</span> {{ trans('site.income_verification_value') }}</li>
 			                            <hr>
-			                            <li>{{ trans('site.documents_value') }}</li>
+			                            <li><span class="d-block d-sm-none">{{ trans('site.documents') }}</span> {{ trans('site.documents_value') }}</li>
 			                        </ul>
 			                        <a href="{{ route('actionWebLeasing') }}" class="theme-btn theme-btn-rounded neue" style="width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
 								</div>
@@ -132,29 +132,29 @@
 									</div>
 			                        <ul class="service helvetica-regular">
                                         @if(Session::get('locale') == 'ge')
-                                        <li>{{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.min_price') }}</span> {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @else
-                                        <li>From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.min_price') }}</span> From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @endif
                                         <hr>
                                         @if(Session::get('locale') == 'ge')
-                                        <li>{{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.max_price') }}</span> {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @else
-                                        <li>To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.max_price') }}</span> To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @endif
                                         <hr>
-                                        <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.max_month') }}</span> {{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
                                         <hr>
-                                        <li>-</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.initial_deposit') }}</span> -</li>
                                         <hr>
-                                        <li>{{ trans('site.credit_hostory_value') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.credit_history') }}</span> {{ trans('site.credit_hostory_value') }}</li>
                                         <hr>
-                                        <li>{{ trans('site.insurance_value') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.insurance') }}</span> {{ trans('site.insurance_value') }}</li>
                                         <hr>
-                                        <li>{{ trans('site.income_verification_value') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.income_verification') }}</span> {{ trans('site.income_verification_value') }}</li>
                                         <hr>
-                                        <li>{{ trans('site.documents_value') }}</li>
-			                        </ul>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.documents') }}</span> {{ trans('site.documents_value') }}</li>
+                                    </ul>
 			                        <a href="{{ route('actionWebBackLeasing') }}" class="theme-btn theme-btn-rounded neue" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
 								</div>
 							</div>
@@ -165,28 +165,28 @@
                                     </div>
                                     <ul class="service helvetica-regular">
                                         @if(Session::get('locale') == 'ge')
-                                        <li>{{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.min_price') }}</span> {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @else
-                                        <li>From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.min_price') }}</span> From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @endif
                                         <hr>
                                         @if(Session::get('locale') == 'ge')
-                                        <li>{{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.max_price') }}</span> {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @else
-                                        <li>To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.max_price') }}</span> To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @endif
                                         <hr>
-                                        <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.max_month') }}</span> {{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
                                         <hr>
-                                        <li>{{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent_taxi'][0] }}%</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.initial_deposit') }}</span> {{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent_taxi'][0] }}%</li>
                                         <hr>
-                                        <li>{{ trans('site.credit_hostory_value') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.credit_history') }}</span> {{ trans('site.credit_hostory_value') }}</li>
                                         <hr>
-                                        <li>{{ trans('site.insurance_value') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.insurance') }}</span> {{ trans('site.insurance_value') }}</li>
                                         <hr>
-                                        <li>{{ trans('site.income_verification_value') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.income_verification') }}</span> {{ trans('site.income_verification_value') }}</li>
                                         <hr>
-                                        <li>{{ trans('site.documents_value') }}</li>
+                                        <li><span class="d-block d-sm-none">{{ trans('site.documents') }}</span> {{ trans('site.documents_value') }}</li>
                                     </ul>
                                     <a href="{{ route('actionWebTaxiLeasing') }}" class="theme-btn theme-btn-rounded neue" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
                                 </div>
