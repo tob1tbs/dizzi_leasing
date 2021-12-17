@@ -41,6 +41,22 @@
                 <li class="nav-item"><a href="{{ route('actionWebRequsites') }}" class="nav-link">{{ trans('site.requisites') }}</a></li>
                 <li class="nav-item"><a href="{{ route('actionWebFaq') }}" class="nav-link">{{ trans('site.faq') }}</a></li>
                 <li class="nav-item"><a href="{{ route('actionWebAboutUs') }}" class="nav-link">{{ trans('site.about_us') }}</a></li>
+                <li class="nav-item dropdown submenu">
+                    <a class="theme-btn theme-btn-rounded-2 theme-btn-alt neue custom-button-color" href="#0" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0 25px; font-size: 15px; position: relative; left: 15px;">
+                        {{ trans('site.get_loan') }}
+                    </a>
+                    <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
+                        data-bs-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="nav-link" href="{{ route('actionWebLeasing') }}">{{ trans('site.leasing') }}</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('actionWebBackLeasing') }}">{{ trans('site.backleasing') }}</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('actionWebTaxiLeasing') }}">{{ trans('site.taxileasing') }}</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
