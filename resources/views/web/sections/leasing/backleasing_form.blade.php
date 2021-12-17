@@ -459,6 +459,7 @@
             noUiSlider.create(mySlider, {
               start: [parseInt({{ request()->amount }})],
               connect: "lower",
+              step: 100,
               range: {
                 min: parseInt([{{ $parameterLeasing['leasing_min_price'][0] }}]),
                 max: parseInt([{{ $parameterLeasing['leasing_max_price'][0] }}]),
