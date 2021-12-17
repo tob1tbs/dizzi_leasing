@@ -28,7 +28,7 @@
 <nav class="navbar navbar-expand-lg navbar-light custom-bg-light" id="sticky">
     <div class="container">
         <a class="navbar-brand sticky_logo" href="{{ route('actionWebMain') }}">
-            <img class="main" src="{{ url('assets/web/img/logo/Logo_2.svg') }}" srcset="{{ url('assets/web/img/logo/Logo_2.svg') }} 2x" alt="logo" style="position: relative; left: -55px;">
+            <img class="main" src="{{ url('assets/web/img/logo/Logo_2.svg') }}" srcset="{{ url('assets/web/img/logo/Logo_2.svg') }} 2x" alt="logo" style="max-width: 200px; width: 100%;position: relative; left: -55px;">
             <!-- <img class="sticky" src="{{ url('assets/web/img/logo/logo.svg') }}" srcset="{{ url('assets/web/img/logo/logo.svg') }} 2x" alt="logo" style="position: relative; left: -55px;"> -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
