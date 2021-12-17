@@ -11,7 +11,7 @@
                             <div class="row gy-4 ">
                                 <div class="loan-details-widget bg_white">
                                     <div id="formtitle">
-                                        <h3 class="neue" style="font-size: 18px; font-weight: bold;">{{ trans('site.user_data') }}</h3>
+                                        <h3 class="neue">{{ trans('site.user_data') }}</h3>
                                     </div>
                                     <div class="row gy-4">
                                         <div class="col-md-6">
@@ -40,12 +40,24 @@
                                             <input type="text" name="user_email" class="form-control">
                                         </div>
                                         <div class="col-md-12">
+                                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                <li><span class="active_bar"></span></li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link active month-tab helvetica-regular tab-click-1" id="monthTab" data-bs-toggle="tab" href="#sa" role="tab" aria-controls="monthTabId"  aria-selected="true">{{ trans('site.i_need_car') }}</a>
+                                                </li>
+                                                <li class="nav-item " role="presentation">
+                                                    <a class="nav-link year-tab helvetica-regular tab-click-2" id="yearTab" data-bs-toggle="tab" href="#as" role="tab" aria-controls="yearTabId" aria-selected="false">{{ trans('site.i_found_car') }}</a>
+                                                </li>
+                                            </ul>
                                             <div class="tab-content">
                                                 <input type="hidden" name="car_status" id="car_status" value="1">
-                                                <div class="tab-pane fade  show active" id="as" role="tabpanel" aria-labelledby="yearTab">
+                                                <div class="tab-pane fade show active" id="sa" role="tabpanel"
+                                                    aria-labelledby="monthTab">            
+                                                </div>
+                                                <div class="tab-pane fade" id="as" role="tabpanel" aria-labelledby="yearTab">
                                                     <div class="row gy-4" id="autoneed">
                                                         <div id="formtitle" style="margin-bottom: 0;">
-                                                            <h3 class="neue" style="font-size: 18px; font-weight: bold;">{{ trans('site.car_info') }}</h3>
+                                                            <h3>{{ trans('site.car_info') }}</h3>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label class="label helvetica-regular" for="aurl">{{ trans('site.car_url') }}</label>
@@ -146,7 +158,7 @@
                                     <div class="row mt-60">
                                         <div class="col-md-12">
                                             <div class="nav-btn d-flex flex-wrap justify-content-between">
-                                                <button type="button" onclick="BackLeasingFormSubmit()" class=" next-btn theme-btn-primary_alt theme-btn ">{{ trans('site.submit_now') }}<i class="arrow_right"></i></button>
+                                                <button type="button" onclick="LeasingFormSubmit()" class=" next-btn theme-btn-primary_alt theme-btn ">{{ trans('site.submit_now') }}<i class="arrow_right"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -161,15 +173,15 @@
                                 <hr>
                                 <div class="col-lg-12" id="loanwidgetdata">
                                     <div class="col-lg-6">
-                                        <p style="font-size: 15px">{{ trans('site.leasing_amount') }}</p>
+                                        <p style="font-size: 15px" class="helvetica-regular">{{ trans('site.leasing_amount') }}</p>
                                     </div>
                                     <div class="col-lg-6" id="price">
-                                        <p style="font-size: 15px"><span class="calc-amount">{{ request()->amount - request()->advance_payment }}</span> {{ trans('site.gel') }}</p>
+                                        <p style="font-size: 15px" class="helvetica-regular"><span class="calc-amount">{{ request()->amount - request()->advance_payment }}</span> {{ trans('site.gel') }}</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-12" id="loanwidgetdata2">
                                     <div class="col-lg-6">
-                                        <p style="font-size: 15px">{{ trans('site.leasing_month') }}</p>
+                                        <p style="font-size: 15px" class="helvetica-regular">{{ trans('site.leasing_month') }}</p>
                                     </div>
                                     <div class="col-lg-6" id="month">
                                         <p style="font-size: 15px"><span class="calc-duration">{{ request()->duration }}</span> {{ trans('site.month') }}</p>
@@ -177,18 +189,26 @@
                                 </div>
                                 <div class="col-lg-12" id="loanwidgetdata3">
                                     <div class="col-lg-6">
-                                        <p style="font-size: 15px">{{ trans('site.month_percent') }}</p>
+                                        <p style="font-size: 15px" class="helvetica-regular">{{ trans('site.month_percent') }}</p>
                                     </div>
                                     <div class="col-lg-6" id="payment">
-                                        <p style="font-size: 15px" class="loan-month-percent">{{ $parameterLeasing['leasing_month_percent'][0] }} %</p>
+                                        <p style="font-size: 15px" class="loan-month-percent helvetica-regular">{{ $parameterLeasing['leasing_month_percent'][0] }} %</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-12" id="loanwidgetdata3">
                                     <div class="col-lg-6">
-                                        <p style="font-size: 15px">{{ trans('site.month_price') }}</p>
+                                        <p style="font-size: 15px" class="helvetica-regular">{{ trans('site.month_price') }}</p>
                                     </div>
                                     <div class="col-lg-6">
-                                        <p style="font-size: 15px" class="loan-month-amount">{{ trans('site.gel') }}</p>
+                                        <p style="font-size: 15px" class="loan-month-amount helvetica-regular">{{ trans('site.gel') }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12" id="loanwidgetdata3">
+                                    <div class="col-lg-6">
+                                        <p style="font-size: 15px" class="helvetica-regular">{{ trans('site.complicity') }}</p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p style="font-size: 15px" class="loan-complicity helvetica-regular">{{ trans('site.gel') }}</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -223,6 +243,17 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="single-range mb-25">
+                                                    <div class="range-header mb-25" style="display: none;">
+                                                        <h6 class="helvetica-regular" style="width: 100%;">{{ trans('site.advance_payment') }} {{ trans('site.gel') }}</h6>
+                                                        <input type="text" id="PercetSetRangeAmount" value="@if(!empty(request()->advance_payment)) {{ request()->advance_payment }} @else {{ $parameterLeasing['leasing_price_default'][0] / 100 * $parameterLeasing['leasing_avanse_percent_default'][0] }} @endif" style="width: 100%;">
+                                                    </div>
+                                                    <div class="range-header mb-25">
+                                                        <h6 class="helvetica-regular" style="width: 100%;">{{ trans('site.advance_payment') }} %</h6>
+                                                        <input type="text" id="PercetSetRange" value="@if(!empty(request()->advance_payment)) {{ number_format(request()->advance_payment / request()->amount * 100, 0) }} @else $parameterLeasing['leasing_avanse_percent_default'][0] @endif" style="width: 100%;">
+                                                    </div>
+                                                    <div id="PercetRangeSlider"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -243,7 +274,7 @@
                             </div>  
                         </div>
                     </div>
-                    <input type="hidden" id="leasing_type" name="leasing_type" value="backleasing">
+                    <input type="hidden" id="leasing_type" name="leasing_type" value="leasing">
                     <input type="hidden" id="leasing_price" name="leasing_price" value="@if(!empty(request()->amount)) {{ request()->amount }} @else 0 @endif">
                     <input type="hidden" id="leasing_month" name="leasing_month" value="@if(!empty(request()->duration)) {{ request()->duration }} @else 0 @endif">
                     <input type="hidden" id="leasing_advance_payment" name="leasing_advance_payment" value="@if(!empty(request()->advance_payment)) {{ request()->advance_payment }} @else 0 @endif">
@@ -288,6 +319,8 @@
             <h2>სტანდარტული ინფორმაცია</h2>
             <hr>
             <a href="#0" id="readmore">წაიკითხე მეტი</a>
+            
+            <!-- modal close button -->
             <a href="" class="modal__close demo-close">
                 <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
             </a>
@@ -315,7 +348,7 @@
 
 @section('js')
 <script type="text/javascript">
-    function BackLeasingFormSubmit() {
+    function LeasingFormSubmit() {
         var form = $('#leasing_form')[0];
         var data = new FormData(form);
 
@@ -341,6 +374,15 @@
             }
         });
     }
+
+    $(".tab-click-1").click(function() {
+        $("#car_status").val(1);
+    });
+
+    $(".tab-click-2").click(function() {
+        $("#car_status").val(2);
+    });
+
     function GetCarModel() {
         $.ajax({
             dataType: 'json',
@@ -379,7 +421,7 @@
         success: function(data) {
             if(data['status'] == true) {
                 $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
-                $(".loan-complicity").html($("#PercetSetRangeAmount").val()+' {{ trans('site.gel') }}');
+                $(".loan-complicity").html($("#leasing_advance_payment").val() +' {{ trans('site.gel') }}');
             }
         }
     });
@@ -438,6 +480,7 @@
           var mySlider = document.getElementById("RangeSlider");
           var mySliderMonth = document.getElementById("MonthRangeSlider");
           var mySliderYear = document.getElementById("YearRangeSlider");
+          var mySliderPercent = document.getElementById("PercetRangeSlider");
           var SliderAmount = document.getElementById("SliderAmount");
           var SliderPeriod = document.getElementById("SliderPeriod");
 
@@ -455,7 +498,7 @@
             }
           }
 
-          if (mySlider && mySliderMonth && mySliderYear) {
+          if (mySlider && mySliderMonth && mySliderYear && mySliderPercent) {
             noUiSlider.create(mySlider, {
               start: [parseInt({{ request()->amount }})],
               connect: "lower",
@@ -504,11 +547,38 @@
                 }),
               },
             });
+            noUiSlider.create(mySliderPercent, {
+              start: [$("#PercetSetRangeAmount").val()],
+              connect: "lower",
+              range: {
+                min: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100),
+                max: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100),
+              },
+              format: wNumb({
+                decimals: 0,
+                suffix: "",
+              }),
+              pips: {
+                mode: "values",
+                density: 100,
+                values: [$("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100, $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100],
+                stepped: true,
+                format: wNumb({
+                  encoder: function (a) {
+                    return a / 1;
+                  },
+                  decimals: 0,
+                  thousand: ",",
+                  prefix: "₾",
+                }),
+              },
+            });
 
             //Slider Pips
             var pips = mySlider.querySelectorAll(".noUi-value");
             var pipsMonth = mySliderMonth.querySelectorAll(".noUi-value");
             var pipsYear = mySliderYear.querySelectorAll(".noUi-value");
+            var pipsPercent = mySliderPercent.querySelectorAll(".noUi-value");
 
             //Slider Input Element
             var inputMonthFormat = document.getElementById("SetMonthRange");
@@ -517,6 +587,7 @@
             SetPipsOnSlider(pips, mySlider);
             SetPipsOnSlider(pipsMonth, mySliderMonth);
             SetPipsOnSlider(pipsYear, mySliderYear);
+            SetPipsOnSlider(pipsYear, mySliderPercent);
 
             function calc() {
                 $.ajax({
@@ -538,6 +609,7 @@
                             $("#leasing_price").val($("#SetRange").val());
                             $("#leasing_month").val($("#SetMonthRange").val());
                             $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
+                            $(".loan-complicity").html($("#leasing_advance_payment").val() +' {{ trans('site.gel') }}');
                         }
                     }
                 });
@@ -546,16 +618,72 @@
             mySlider.noUiSlider.on("update", function (values, handle) {
               inputFormat.value = values[handle];
               SelectedAmount = AmountFormat.from(values[handle]);
+              mySliderPercent.noUiSlider.updateOptions({
+                    start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
+                    range: {
+                        'min': $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100,
+                        'max': $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100,
+                    },
+                    pips: {
+                        mode: "values",
+                        density: 100,
+                        values: [$("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100, $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100],
+                        stepped: true,
+                        format: wNumb({
+                          encoder: function (a) {
+                            return a / 1;
+                          },
+                          decimals: 0,
+                          thousand: ",",
+                          prefix: "₾",
+                        }),
+                    },
+                });
             });
 
             mySlider.noUiSlider.on("change", function (values, handle) {
                 inputFormat.value = values[handle];
                 SelectedAmount = AmountFormat.from(values[handle]);
                 calc();
+                mySliderPercent.noUiSlider.updateOptions({
+                    start: [$("#PercetSetRangeAmount").val()],
+                    range: {
+                        min: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100),
+                        max: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100),
+                    },
+                    pips: {
+                        mode: "values",
+                        density: 100,
+                        values: [$("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100, $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100],
+                        stepped: true,
+                        format: wNumb({
+                          encoder: function (a) {
+                            return a / 1;
+                          },
+                          decimals: 0,
+                          thousand: ",",
+                          prefix: "₾",
+                        }),
+                    },
+                });
             });
 
             mySliderMonth.noUiSlider.on("change", function (values, handle) {
                 calc();
+            });
+
+            mySliderPercent.noUiSlider.on("change", function (values, handle) {
+                $("#PercetSetRangeAmount").val(values[handle]);
+                $("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
+                $(".loan-complicity").html(values[handle] +' {{ trans('site.gel') }}');
+                $("#leasing_advance_payment").val(values[handle]);
+            });
+
+            mySliderPercent.noUiSlider.on("update", function (values, handle) {
+                $("#PercetSetRangeAmount").val(values[handle]);
+                $("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
+                $(".loan-complicity").html(values[handle] +' {{ trans('site.gel') }}');
+                $("#leasing_advance_payment").val(values[handle]);
             });
 
             inputFormat.addEventListener("change", function () {
@@ -615,60 +743,13 @@
                 };
               });
             });
-            $("#monthTab").on("click", function () {
-              mySliderYear.noUiSlider.off("update", function (values, handle) {
-                inputMonthFormat.value = values[handle];
-                selectedTime = {
-                  type: "year",
-                  value: TimeFormatYears.from(values[handle]),
-                };
-                
-              });
-              mySliderMonth.noUiSlider.on("update", function (values, handle) {
-                inputMonthFormat.value = values[handle];
-                selectedTime = {
-                  type: "month",
-                  value: TimeFormatMonths.from(values[handle]),
-                };
-              });
-            });
+            
           }
     }
 
+
     Calculate();
 
-    function popupOpenClose(popup) {
-        
-        /* Add div inside popup for layout if one doesn't exist */
-        if ($(".wrapper").length == 0){
-            $(popup).wrapInner("<div class='wrapper'></div>");
-        }
-        
-        /* Open popup */
-        $(popup).show();
-
-        /* Close popup if user clicks on background */
-        $(popup).click(function(e) {
-            if ( e.target == this ) {
-                if ($(popup).is(':visible')) {
-                    $(popup).hide();
-                }
-            }
-        });
-
-        /* Close popup and remove errors if user clicks on cancel or close buttons */
-        $(popup).find("button[name=close]").on("click", function() {
-            if ($(".formElementError").is(':visible')) {
-                $(".formElementError").remove();
-            }
-            $(popup).hide();
-        });
-    }
-
-    $(document).ready(function () {
-        $("[data-js=open]").on("click", function() {
-            popupOpenClose($(".popup"));
-        });
 
         var Modal = (function() {
 
@@ -861,6 +942,6 @@
 }());
 
 Modal.init();
-    });
+
 </script>
 @endsection
