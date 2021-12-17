@@ -67,4 +67,9 @@
         background-color: #5650a1;
         transition: all 0.2s linear;
     }
+
+    .custom-bg-light .navbar-nav .nav-link {
+        color:  #ffffff;
+        font-size: 18px;
+    }
 </style>
