@@ -41,7 +41,7 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="tab-content">
-                                                <input type="hidden" name="car_status" id="car_status" value="1">
+                                                <input type="hidden" name="car_status" id="car_status" value="2">
                                                 <div class="tab-pane fade  show active" id="as" role="tabpanel" aria-labelledby="yearTab">
                                                     <div class="row gy-4" id="autoneed">
                                                         <div id="formtitle" style="margin-bottom: 0;">
