@@ -42,6 +42,7 @@ function Calculate(data) {
 	    noUiSlider.create(mySlider, {
 	      start: parseInt(data['LeasingArray']['leasing_price_default']),
 	      connect: "lower",
+	      step: 100,
 	      range: {
 	        min: parseInt(data['LeasingArray']['leasing_min_price']),
 	        max: parseInt(data['LeasingArray']['leasing_max_price']),

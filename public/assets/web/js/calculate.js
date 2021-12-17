@@ -41,6 +41,7 @@ function Calculate(data) {
 	  if (mySlider && mySliderMonth && mySliderYear && mySliderPercent) {
 	    noUiSlider.create(mySlider, {
 	      start: parseInt(data['LeasingArray']['leasing_price_default']),
+	      step: 100,
 	      connect: "lower",
 	      range: {
 	        min: parseInt(data['LeasingArray']['leasing_min_price']),
