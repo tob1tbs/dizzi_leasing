@@ -21,8 +21,8 @@
         </div>
         <div class="container">
             <div class="row align-items-end">
-                <div class="col-lg-7 pt-100 pt-lg-200 pb-lg-200 pb-100">
-                    <div class="banner-content pb-20 pt-20">
+                <div class="col-lg-7 pb-lg-200 pb-100">
+                    <div class="banner-content pb-20">
                         <h1 class="wow fadeInUp neue" data-wow-delay="0.1s">{{ trans('site.slider_text_1') }}<br>
                             <span style="font-size: 26px;">{{ trans('site.slider_text_2') }}</span></h1>
                         <div>

@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" style="position: relative;">
     <div class="header-top py-2">
         <div class="container">
             <div class="row align-items-center">
