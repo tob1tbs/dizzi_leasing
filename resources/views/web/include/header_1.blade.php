@@ -25,7 +25,7 @@
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="sticky">
     <div class="container">
         <a class="navbar-brand sticky_logo" href="{{ route('actionWebMain') }}">
             <img class="main" src="{{ url('assets/web/img/logo/Logo_2.svg') }}" srcset="{{ url('assets/web/img/logo/Logo_2.svg') }} 2x" alt="logo" style="position: relative; left: -55px;">
@@ -39,7 +39,7 @@
 
 
 
-        
+
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
