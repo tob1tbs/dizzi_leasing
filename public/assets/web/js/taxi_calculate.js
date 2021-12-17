@@ -287,6 +287,7 @@ $.ajax({
     data: {},
     success: function(data) {
         if(data['status'] == true) {
+        	console.log(data);
             Calculate(data);
             $.ajax({
 			    dataType: 'json',
