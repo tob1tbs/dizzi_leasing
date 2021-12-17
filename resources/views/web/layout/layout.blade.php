@@ -128,9 +128,6 @@
     s0.parentNode.insertBefore(s1,s0);
     })();
     </script> -->
-    <script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "27394abb13cbc8fcd098eb0dbc1a936c"]); _ba.push(["host", "izzi.vilkadev1.tmweb.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
-
-
     <script>(function(a,m,o,c,r,m){a[m]={id:"100501",hash:"079e443732e2ba2422d0535c84f98fd51aa7c392e74aa6bf8bb095036f5a68cb",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1639649730';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));</script>
 
     <!--End of Tawk.to Script-->
