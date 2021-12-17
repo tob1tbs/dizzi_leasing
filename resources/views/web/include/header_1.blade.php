@@ -92,7 +92,7 @@
     </div>
     <div class="header-top2">
         <div class="container">
-                <div class="d-flex justify-content-between">
+                <div class="d-xl-flex d-lg-flex d-md-flex justify-content-between">
                     <div>
                         <div class="helvetica-regular">
                             <a href="{{ route('actionWebLeasing') }}"  class="toptext">{{ trans('site.leasing') }}</a>
