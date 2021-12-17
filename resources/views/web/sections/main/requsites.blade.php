@@ -2,7 +2,7 @@
 
 @section('content')
 <main>
-	<section class="banner-area-2 loan-banner pt-145"></section>
+	<section class="banner-area-2 loan-banner"></section>
     <section class="pb-20 bg_white" style="padding: 80px 0 0 0">
 		<div class="container">
 			<div class="row">

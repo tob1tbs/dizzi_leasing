@@ -2,7 +2,7 @@
 
 @section('content')
 <main>
-    <section class="banner-area-2 loan-banner pt-145"></section>
+    <section class="banner-area-2 loan-banner"></section>
     <section class="pb-40 bg_white" style="padding: 100px 0 30px 0;">
         <div class="container">
                 <form id="leasing_form" class="row">
@@ -502,8 +502,8 @@
             noUiSlider.create(mySlider, {
               start: [parseInt({{ request()->amount }})],
               connect: "lower",
-              step: 100,
-              range: {
+              step: 100
+,fa              range: {
                 min: parseInt([{{ $parameterLeasing['leasing_min_price'][0] }}]),
                 max: parseInt([{{ $parameterLeasing['leasing_max_price'][0] }}]),
               },
