@@ -551,8 +551,8 @@
               start: [$("#PercetSetRangeAmount").val()],
               connect: "lower",
               range: {
-                min: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100),
-                max: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100),
+                min: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent_taxi'][0] }} / 100),
+                max: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent_taxi'][0] }} / 100),
               },
               format: wNumb({
                 decimals: 0,
@@ -561,7 +561,7 @@
               pips: {
                 mode: "values",
                 density: 100,
-                values: [$("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100, $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100],
+                values: [$("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent_taxi'][0] }} / 100, $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent_taxi'][0] }} / 100],
                 stepped: true,
                 format: wNumb({
                   encoder: function (a) {
@@ -621,13 +621,13 @@
               mySliderPercent.noUiSlider.updateOptions({
                     start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
                     range: {
-                        'min': $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100,
-                        'max': $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100,
+                        'min': $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent_taxi'][0] }} / 100,
+                        'max': $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent_taxi'][0] }} / 100,
                     },
                     pips: {
                         mode: "values",
                         density: 100,
-                        values: [$("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100, $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100],
+                        values: [$("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent_taxi'][0] }} / 100, $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent_taxi'][0] }} / 100],
                         stepped: true,
                         format: wNumb({
                           encoder: function (a) {
@@ -648,13 +648,13 @@
                 mySliderPercent.noUiSlider.updateOptions({
                     start: [$("#PercetSetRangeAmount").val()],
                     range: {
-                        min: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100),
-                        max: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100),
+                        min: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent_taxi'][0] }} / 100),
+                        max: parseInt($("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent_taxi'][0] }} / 100),
                     },
                     pips: {
                         mode: "values",
                         density: 100,
-                        values: [$("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent'][0] }} / 100, $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent'][0] }} / 100],
+                        values: [$("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_min_percent_taxi'][0] }} / 100, $("#SetRange").val() * {{ $parameterLeasing['leasing_avanse_max_percent_taxi'][0] }} / 100],
                         stepped: true,
                         format: wNumb({
                           encoder: function (a) {
