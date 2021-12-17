@@ -5,7 +5,7 @@
     $vissible = 0;
 @endphp
 <main>
-    <section class="banner-area-3 pt-90" id="banner_animation2" style="background-color: #5650a1 !important;">
+    <section class="banner-area-3" id="banner_animation2" style="background-color: #5650a1 !important;">
         <div class="bg-slides">
             <div class="slide" data-parallax='{"x": 220, "y": 0, "rotateZ":0}'>
                 <img class="wow slideInRight" data-wow-delay='0.2s' src="{{ url('assets/web/img/banner/slide-shape-1.png') }}" alt="img">
@@ -21,7 +21,7 @@
         </div>
         <div class="container">
             <div class="row align-items-end">
-                <div class="col-lg-7 pb-lg-200 pb-100">
+                <div class="col-lg-7 pb-50">
                     <div class="banner-content pb-20">
                         <h1 class="wow fadeInUp neue" data-wow-delay="0.1s">{{ trans('site.slider_text_1') }}<br>
                             <span style="font-size: 26px;">{{ trans('site.slider_text_2') }}</span></h1>
