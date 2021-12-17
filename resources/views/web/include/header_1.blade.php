@@ -26,11 +26,11 @@
     </div>
 </div>
 <div class="header-menu header-menu-4" id="sticky">
-<nav class="navbar navbar-expand-lg navbar-light custom-bg-light" >
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand sticky_logo" href="{{ route('actionWebMain') }}">
             <img class="main" src="{{ url('assets/web/img/logo/Logo_2.svg') }}" srcset="{{ url('assets/web/img/logo/Logo_2.svg') }} 2x" alt="logo" style="max-width: 200px; width: 100%;position: relative; left: -55px;">
-            <!-- <img class="sticky" src="{{ url('assets/web/img/logo/logo.svg') }}" srcset="{{ url('assets/web/img/logo/logo.svg') }} 2x" alt="logo" style="position: relative; left: -55px;"> -->
+            <img class="sticky" src="{{ url('assets/web/img/logo/logo.svg') }}" srcset="{{ url('assets/web/img/logo/logo.svg') }} 2x" alt="logo" style="max-width: 200px; width: 100%;position: relative; left: -55px;">
         </a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="menu_toggle">
@@ -80,19 +80,5 @@
     </div>
 </div>
 <style type="text/css">
-    .custom-bg-light {
-        z-index: 1;
-        background-color: #5650a1;
-        transition: all 0.2s linear;
-    }
-
-    .custom-bg-light .navbar-nav .nav-link {
-        color:  #ffffff;
-        font-size: 20px;
-    }
-
-    .custom-bg-light .navbar-nav .nav-link:hover {
-        color:  #f0c019;
-        font-size: 20px;
-    }
+    
 </style>
