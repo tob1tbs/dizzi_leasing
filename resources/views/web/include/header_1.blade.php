@@ -25,7 +25,7 @@
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="sticky">
+<nav class="navbar navbar-expand-lg navbar-light custom-bg-light" id="sticky">
     <div class="container">
         <a class="navbar-brand sticky_logo" href="{{ route('actionWebMain') }}">
             <img class="main" src="{{ url('assets/web/img/logo/Logo_2.svg') }}" srcset="{{ url('assets/web/img/logo/Logo_2.svg') }} 2x" alt="logo" style="position: relative; left: -55px;">
@@ -61,3 +61,10 @@
         </div>
     </div>
 </nav>
+<style type="text/css">
+    .custom-bg-light {
+        z-index: 1;
+        background-color: #5650a1;
+        transition: all 0.2s linear;
+    }
+</style>
