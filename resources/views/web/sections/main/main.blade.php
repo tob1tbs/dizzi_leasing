@@ -145,7 +145,7 @@
                                         <hr>
                                         <li>{{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
                                         <hr>
-                                        <li>{{ trans('site.minimum') }}: -</li>
+                                        <li>-</li>
                                         <hr>
                                         <li>{{ trans('site.credit_hostory_value') }}</li>
                                         <hr>
