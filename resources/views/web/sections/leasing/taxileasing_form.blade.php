@@ -158,7 +158,7 @@
                                     <div class="row mt-60">
                                         <div class="col-md-12">
                                             <div class="nav-btn d-flex flex-wrap justify-content-between">
-                                                <button type="button" onclick="LeasingFormSubmit()" class=" next-btn theme-btn-primary_alt theme-btn ">{{ trans('site.submit_now') }}<i class="arrow_right"></i></button>
+                                                <button type="button" onclick="TaxiLeasingFormSubmit()" class=" next-btn theme-btn-primary_alt theme-btn ">{{ trans('site.submit_now') }}<i class="arrow_right"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -348,7 +348,7 @@
 
 @section('js')
 <script type="text/javascript">
-    function LeasingFormSubmit() {
+    function TaxiLeasingFormSubmit() {
         var form = $('#leasing_form')[0];
         var data = new FormData(form);
 
