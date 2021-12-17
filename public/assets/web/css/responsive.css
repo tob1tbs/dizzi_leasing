@@ -925,11 +925,13 @@
 
 @media (max-width: 767px) {
   .banner-content { margin-top: 50px; }
+  .sm-content-center { text-align: center; }
 }
 
 @media (max-width: 375px) {
   .sticky_logo { width: 70%; }
-  .toptext { font-size: 16px !important; }
+  .toptext { font-size: 15px !important; }
+  .sm-content-center { text-align: center; }
 
   .banner-area-3 .banner-content h1 {
     line-height: 40px;

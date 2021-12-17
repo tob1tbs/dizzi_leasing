@@ -91,7 +91,7 @@
         <div class="container">
                 <div class="d-xl-flex d-lg-flex d-md-flex justify-content-between">
                     <div>
-                        <div class="helvetica-regular">
+                        <div class="helvetica-regular sm-content-center">
                             <a href="{{ route('actionWebLeasing') }}"  class="toptext">{{ trans('site.leasing') }}</a>
                             <a href="{{ route('actionWebBackLeasing') }}"  class="toptext">{{ trans('site.backleasing') }}</a>
                             <a href="{{ route('actionWebTaxiLeasing') }}"  class="toptext">{{ trans('site.taxileasing') }}</a>
