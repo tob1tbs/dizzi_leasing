@@ -7,10 +7,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="header-info-left">
-                        <div class="language-list">
-                            
-                        </div>
-                        <div class="timestamp"> <i class="icon_clock_alt"></i> Mon - Fri {{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}
+                        <div class="timestamp"> <i class="icon_clock_alt"></i> ორშაბათი - პარასკევი {{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}
                         </div>
                     </div>
                 </div>
