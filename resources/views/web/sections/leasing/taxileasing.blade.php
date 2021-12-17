@@ -16,7 +16,7 @@
             <div class="row ">
                 <div class="col-lg-6 mx-auto">
                     <div class="section-title">
-                        <h2 class="wow fadeInUp neue">{{ trans('site.leasing') }}</h2>
+                        <h2 class="wow fadeInUp neue">{{ trans('site.taxileasing') }}</h2>
                     </div>
                 </div>
             </div>

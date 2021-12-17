@@ -324,7 +324,7 @@ $.ajax({
 function TaxiLesingFormSubmit() {
     $.ajax({
         dataType: 'json',
-        url: "/ajax/ajaxLeasingFormSubmit",
+        url: "/ajax/ajaxTaxiLesingFormSubmit",
         type: "POST",
         data: {
         	amount: $("#SetRange").val(),
