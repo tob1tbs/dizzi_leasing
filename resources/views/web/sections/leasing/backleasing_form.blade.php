@@ -330,7 +330,9 @@
             success: function(data) {
                 if(data['status'] == true) {
                     if(data['errors'] == true) {
-
+                        $.each(data['message'], function(key, value) {
+                            console.log(value);
+                        });
                     } else {
                         window.location.replace(data['RedirectUrl']);
                     }
