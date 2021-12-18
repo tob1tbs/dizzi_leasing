@@ -330,7 +330,7 @@
             success: function(data) {
                 if(data['status'] == true) {
                     if(data['errors'] == true) {
-                        $(".error-border").removeClss('border-danger');
+                        $(".error-border").removeClass('border-danger');
 
                         $.each(data['message'], function(key, value) {
                             $("#"+key).addClass('border-danger');
