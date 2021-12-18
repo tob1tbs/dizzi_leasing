@@ -16,20 +16,20 @@
                                     <div class="row gy-4">
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="fName">{{ trans('site.name') }}</label>
-                                            <input id='fName' class="form-control" type="text" name="user_name">
+                                            <input id='user_name' class="form-control" type="text" name="user_name">
                                         </div>
     
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="lName">{{ trans('site.last_name') }}</label>
-                                            <input id='lName' class="form-control" type="text" name="user_lastname">
+                                            <input id='user_lastname' class="form-control" type="text" name="user_lastname">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="pName">{{ trans('site.personal_number') }}</label>
-                                            <input id='lName' class="form-control" name="user_personal_number" type="tel" pattern="[0-9]{9}" maxlength="11">
+                                            <input id='user_personal_number' class="form-control" name="user_personal_number" type="tel" pattern="[0-9]{9}" maxlength="11">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="dob-d">{{ trans('site.bdate') }}</label>
-                                            <input type="date" name="user_bdate" class="form-control">
+                                            <input type="date" id="user_bdate" name="user_bdate" class="form-control">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="dob-d">{{ trans('site.phone') }}</label>
@@ -37,7 +37,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="dob-d">{{ trans('site.email') }}</label>
-                                            <input type="text" name="user_email" class="form-control">
+                                            <input type="text" name="user_email" id="user_email" class="form-control">
                                         </div>
                                         <div class="col-md-12">
                                             <div class="tab-content">
