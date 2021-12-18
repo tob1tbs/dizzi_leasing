@@ -25,7 +25,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="pName">{{ trans('site.personal_number') }}</label>
-                                            <input id='lName' class="form-control" type="text" name="user_personal_number">
+                                            <input id='lName' class="form-control" name="user_personal_number" type="tel" pattern="[0-9]{9}" maxlength="11">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="dob-d">{{ trans('site.bdate') }}</label>
