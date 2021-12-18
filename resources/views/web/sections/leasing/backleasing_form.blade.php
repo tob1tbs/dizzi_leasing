@@ -16,24 +16,24 @@
                                     <div class="row gy-4">
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="fName">{{ trans('site.name') }}</label>
-                                            <input id='user_name' class="form-control" type="text" name="user_name">
+                                            <input id='user_name' class="form-control error-border" type="text" name="user_name">
                                         </div>
     
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="lName">{{ trans('site.last_name') }}</label>
-                                            <input id='user_lastname' class="form-control" type="text" name="user_lastname">
+                                            <input id='user_lastname' class="form-control error-border" type="text" name="user_lastname">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="pName">{{ trans('site.personal_number') }}</label>
-                                            <input id='user_personal_number' class="form-control" name="user_personal_number" type="tel" pattern="[0-9]{9}" maxlength="11">
+                                            <input id='user_personal_number' class="form-control error-border" name="user_personal_number" type="tel" pattern="[0-9]{9}" maxlength="11">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="dob-d">{{ trans('site.bdate') }}</label>
-                                            <input type="date" id="user_bdate" name="user_bdate" class="form-control">
+                                            <input type="date" id="user_bdate" name="user_bdate error-border" class="form-control">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="dob-d">{{ trans('site.phone') }}</label>
-                                            <input type="text" name="user_phone" id="user_phone" class="form-control" value="@if(!empty(request()->phone)){{ request()->phone }}@endif">
+                                            <input type="text" name="user_phone" id="user_phone error-border" class="form-control" value="@if(!empty(request()->phone)){{ request()->phone }}@endif">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label helvetica-regular" for="dob-d">{{ trans('site.email') }}</label>
@@ -330,8 +330,10 @@
             success: function(data) {
                 if(data['status'] == true) {
                     if(data['errors'] == true) {
+                        $(".error-border").removeClss('border-danger');
+
                         $.each(data['message'], function(key, value) {
-                            console.log(value);
+                            $("#"+key).addClass('border-danger');
                         });
                     } else {
                         window.location.replace(data['RedirectUrl']);
