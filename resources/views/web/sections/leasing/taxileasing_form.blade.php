@@ -363,8 +363,10 @@
             success: function(data) {
                 if(data['status'] == true) {
                     if(data['errors'] == true) {
+                        $(".error-border").removeClass('border-danger');
+
                         $.each(data['message'], function(key, value) {
-                            console.log(value);
+                            $("#"+key).addClass('border-danger');
                         });
                     } else {
                         window.location.replace(data['RedirectUrl']);
