@@ -221,40 +221,42 @@ class LeasingAjaxController extends Controller
                     $SendData['car_data'] = $Request->car_data;
                 }
 
-                if($Request->has('promo_code') && !empty($Request->promo_code)) {
-                    // $PromoCode = new PromoCode();
-                    // $PromoCodeData = $PromoCode::where('code', $Request->promo_code)->first();
+                exit();
 
-                    // if(!empty($PromoCodeData)) {
-                    //     if($PromoCodeData->used == 1) {
-                    //         return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
-                    //     } else if($PromoCodeData->status == 0) {
-                    //         return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
-                    //     } else {
-                    //         $SendData['promo_status'] = 'Validate';
-                    //         $SendData['promo_code'] = $Request->promo_code;
+                // if($Request->has('promo_code') && !empty($Request->promo_code)) {
+                //     // $PromoCode = new PromoCode();
+                //     // $PromoCodeData = $PromoCode::where('code', $Request->promo_code)->first();
 
-                    //         if($PromoCodeData->multiple != 1) {
-                    //             $PromoCodeData->update(['used' => 1]);
-                    //         }
+                //     // if(!empty($PromoCodeData)) {
+                //     //     if($PromoCodeData->used == 1) {
+                //     //         return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
+                //     //     } else if($PromoCodeData->status == 0) {
+                //     //         return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
+                //     //     } else {
+                //     //         $SendData['promo_status'] = 'Validate';
+                //     //         $SendData['promo_code'] = $Request->promo_code;
 
-                    //         $PromoCodeUsed = new PromoCodeUsed();
-                    //         $PromoCodeUsedData  = $PromoCodeUsed::where('phone', $Request->user_phone)->where('code_id', $PromoCodeData->id)->first();
+                //     //         if($PromoCodeData->multiple != 1) {
+                //     //             $PromoCodeData->update(['used' => 1]);
+                //     //         }
 
-                    //         if(!empty($PromoCodeUsedData)) {
-                    //             return response()->json(['status' => true, 'errors' => true, 'message' => 'თქვენ უკვე გამოყენებული მოცემული გაქვთ პრომოკოდი'], 200);
-                    //         } else {
-                    //             $PromoCodeUsed = new PromoCodeUsed();
-                    //             $PromoCodeUsed->phone = $Request->user_phone;
-                    //             $PromoCodeUsed->code_id = $PromoCodeData->id;
-                    //             $PromoCodeUsed->save();
-                    //         }
-                    //     }
-                    // } else {
-                    //     return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
-                    // }
-                    $SendData['promo_code'] = $Request->promo_code;
-                }
+                //     //         $PromoCodeUsed = new PromoCodeUsed();
+                //     //         $PromoCodeUsedData  = $PromoCodeUsed::where('phone', $Request->user_phone)->where('code_id', $PromoCodeData->id)->first();
+
+                //     //         if(!empty($PromoCodeUsedData)) {
+                //     //             return response()->json(['status' => true, 'errors' => true, 'message' => 'თქვენ უკვე გამოყენებული მოცემული გაქვთ პრომოკოდი'], 200);
+                //     //         } else {
+                //     //             $PromoCodeUsed = new PromoCodeUsed();
+                //     //             $PromoCodeUsed->phone = $Request->user_phone;
+                //     //             $PromoCodeUsed->code_id = $PromoCodeData->id;
+                //     //             $PromoCodeUsed->save();
+                //     //         }
+                //     //     }
+                //     // } else {
+                //     //     return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
+                //     // }
+                //     $SendData['promo_code'] = $Request->promo_code;
+                // }
                 // dd($SendData)
                 $CrmController = new CrmController();
                 $CrmResponse = $CrmController->serviceCrmSend($SendData);
