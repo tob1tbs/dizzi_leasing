@@ -271,7 +271,7 @@
                             </div>  
                         </div>
                     </div>
-                    <input type="hidden" id="leasing_type" name="leasing_type" value="leasing">
+                    <input type="hidden" id="leasing_type" name="leasing_type" value="taxileasing">
                     <input type="hidden" id="leasing_price" name="leasing_price" value="@if(!empty(request()->amount)) {{ request()->amount }} @else 0 @endif">
                     <input type="hidden" id="leasing_month" name="leasing_month" value="@if(!empty(request()->duration)) {{ request()->duration }} @else 0 @endif">
                     <input type="hidden" id="leasing_advance_payment" name="leasing_advance_payment" value="@if(!empty(request()->advance_payment)) {{ request()->advance_payment }} @else 0 @endif">
