@@ -215,6 +215,8 @@ class LeasingAjaxController extends Controller
                     'accept_terms' => $Request->accept_terms,
                     'leasing_type' => $Request->leasing_type,
                     'advance_payment' => $Request->leasing_advance_payment,
+                    'car_data' => [],
+                    'promo_code' => '',
                 ];
 
 
