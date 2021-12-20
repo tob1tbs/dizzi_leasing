@@ -227,19 +227,10 @@ function Calculate(data) {
 	    });
 
 	    inputPercentFormat.addEventListener("change", function () {
+	    	console.log(this.value);
 		  calc();
 		  mySliderPercent.noUiSlider.set($("#SetRange").val() / 100 * this.value);
 		});
-
-	    inputMonthFormat.addEventListener("change", function () {
-	      if ($("#monthTab.active").length > 0) {
-	        mySliderMonth.noUiSlider.set(this.value);
-	        calc();
-	      } else if ($("#yearTab.active").length > 0) {
-	        mySliderYear.noUiSlider.set(this.value);
-	        calc();
-	      }
-	    });
 	}
 }
 
