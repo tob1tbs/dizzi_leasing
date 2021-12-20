@@ -31,7 +31,6 @@ class LeasingAjaxController extends Controller
             }
 
             $month_percent = ($LeasingParametersArray['leasing_month_percent'] * 12) / 1200;
-            dd($month_percent);
             $loan_month_price = round($month_percent * -$leasing_price * pow((1 + $month_percent), $month_count) / (1 - pow((1 + $month_percent), $month_count)), 2);
 
             $loan_array = [
