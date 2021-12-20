@@ -191,8 +191,8 @@ function Calculate(data) {
 			        mode: "values",
 			        density: 100,
 			        values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100],
-			        stepped: true,
-    		        format: wNumb({
+			        stepped: true
+	,		        format: wNumb({
 			          encoder: function (a) {
 			            return a / 1;
 			          },
@@ -295,39 +295,11 @@ function Calculate(data) {
 	      });
 	    });
 	  }
-
-	  $("#SetRange, #SetMonthRange, #PercetSetRange").keyup(function(event) {
-	$.ajax({
-	    dataType: 'json',
-	    url: "/ajax/ajaxGetLeasingParameters",
-	    type: "GET",
-	    data: {},
-	    success: function(data) {
-	        if(data['status'] == true) {
-	            calc();
-	            $.ajax({
-				    dataType: 'json',
-				    url: "/ajax/ajaxGetLoanData",
-				    type: "GET",
-				    data: {
-				    	leasing_month: data['LeasingArray']['leasing_month_default'],
-				    	leasing_price: data['LeasingArray']['leasing_price_default'],
-	    				leasing_advance_payment: $("#PercetSetRangeAmount").val(),
-				    },
-				    success: function(data) {
-				        if(data['status'] == true) {
-				        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
-				        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
-				        }
-				    }
-				});
-	        }
-	    }
-	});
-});
 }
 
-
+$("#SetRange").keyup(function(event) {
+	$("#SetRange").submit();
+});
 
 
 $.ajax({
