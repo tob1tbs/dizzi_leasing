@@ -221,8 +221,6 @@ class LeasingAjaxController extends Controller
                     $SendData['car_data'] = $Request->car_data;
                 }
 
-                exit();
-
                 // if($Request->has('promo_code') && !empty($Request->promo_code)) {
                 //     // $PromoCode = new PromoCode();
                 //     // $PromoCodeData = $PromoCode::where('code', $Request->promo_code)->first();
@@ -257,7 +255,7 @@ class LeasingAjaxController extends Controller
                 //     // }
                 //     $SendData['promo_code'] = $Request->promo_code;
                 // }
-                // dd($SendData)
+                dd($SendData)
                 $CrmController = new CrmController();
                 $CrmResponse = $CrmController->serviceCrmSend($SendData);
                 $CrmResponse = json_decode($CrmResponse);
