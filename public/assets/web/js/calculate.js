@@ -145,6 +145,7 @@ function Calculate(data) {
 			        if(data['status'] == true) {
 			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
 			        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
+			        	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 			        }
 			    }
 			});
@@ -317,6 +318,7 @@ $.ajax({
 			        if(data['status'] == true) {
 			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
 			        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
+			        	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 			        }
 			    }
 			});
