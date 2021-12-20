@@ -107,7 +107,6 @@ function Calculate(data) {
 	        stepped: false,
 	        format: wNumb({
 	          encoder: function (a) {
-	          	console.log(a);
 	            return a / 1;
 	          },
 	          decimals: 0,
@@ -168,6 +167,7 @@ function Calculate(data) {
 			        stepped: false,
 			        format: wNumb({
 			          encoder: function (a) {
+	          			console.log(a);
 			            return a / 1;
 			          },
 			          decimals: 0,
