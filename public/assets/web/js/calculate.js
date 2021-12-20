@@ -107,6 +107,7 @@ function Calculate(data) {
 	        stepped: false,
 	        format: wNumb({
 	          encoder: function (a) {
+	          	console.log(a);
 	            return a / 1;
 	          },
 	          decimals: 0,
@@ -209,9 +210,6 @@ function Calculate(data) {
 	    });
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
-	    	console.log(values);
-	    	console.log(values[handle]);
-	    	console.log(parseInt(values[handle] / SelectedAmount * 100));
 	      	$("#PercetSetRangeAmount").val(values[handle]);
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	      	calc();
