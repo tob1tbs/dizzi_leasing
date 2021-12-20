@@ -145,7 +145,6 @@ function Calculate(data) {
 			        if(data['status'] == true) {
 			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
 			        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
-			        	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 			        }
 			    }
 			});
@@ -210,13 +209,13 @@ function Calculate(data) {
 	    });
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
-	      	$("#PercetSetRangeAmount").val(values[handle]);
+	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	      	calc();
 	    });
 
 	    mySliderPercent.noUiSlider.on("update", function (values, handle) {
-	      	$("#PercetSetRangeAmount").val(values[handle]);
+	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
@@ -318,7 +317,6 @@ $.ajax({
 			        if(data['status'] == true) {
 			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
 			        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
-			        	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 			        }
 			    }
 			});
