@@ -89,7 +89,7 @@ function Calculate(data) {
 	      },
 	    });
 		noUiSlider.create(mySliderPercent, {
-	      start: parseInt([$("#PercetSetRangeAmount").val()]),
+	      start: [parseInt($("#PercetSetRangeAmount").val())],
 	      connect: "lower",
 	      step: 1,
 	      range: {
@@ -103,7 +103,7 @@ function Calculate(data) {
 	      pips: {
 	        mode: "values",
 	        density: 100,
-	        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100]),
+	        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100)],
 	        stepped: true,
 	        format: wNumb({
 	          encoder: function (a) {
@@ -158,13 +158,13 @@ function Calculate(data) {
 	      		start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
 	      		step: 1,
 			    range: {
-			        min: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
-	        		max: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100)
+			        'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
+			        'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
 			    },
 			    pips: {
 			        mode: "values",
 			        density: 100,
-	        		values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100]),
+			        values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100],
 			        stepped: true,
 			        format: wNumb({
 			          encoder: function (a) {
