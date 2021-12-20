@@ -217,6 +217,8 @@ class LeasingAjaxController extends Controller
                     'advance_payment' => $Request->leasing_advance_payment,
                 ];
 
+                dd($SendData);
+
                 if($Request->car_status == 2) {
                     $SendData['car_data'] = $Request->car_data;
                 }
