@@ -298,7 +298,7 @@ function Calculate(data) {
 }
 
 $("#SetRange").keyup(function(event) {
-	$("#SetRange").submit();
+	$("#RangeSlider").destroy();
 });
 
 
