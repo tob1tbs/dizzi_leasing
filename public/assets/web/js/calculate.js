@@ -221,7 +221,7 @@ function Calculate(data) {
 	    });
 
 	    inputPercentFormat.addEventListener("change", function () {
-	    	console.log(this.value);
+	    	console.log($("#SetRange") / 100 * this.value);
 	      calc();
 	      mySliderPercent.noUiSlider.set(this.value);
 	    });
