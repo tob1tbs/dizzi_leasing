@@ -211,13 +211,13 @@ function Calculate(data) {
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
 	      	$("#PercetSetRangeAmount").val(values[handle]);
-	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
+	      	$("#PercetSetRange").val((values[handle] / AmountFormat.from(values[handle]) * 100).toFixed(0));
 	      	calc();
 	    });
 
 	    mySliderPercent.noUiSlider.on("update", function (values, handle) {
 	      	$("#PercetSetRangeAmount").val(values[handle]);
-	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
+	      	$("#PercetSetRange").val((values[handle] / AmountFormat.from(values[handle]) * 100).toFixed(0));
 	    });
 
 	    inputFormat.addEventListener("change", function () {
