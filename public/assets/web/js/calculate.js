@@ -226,6 +226,11 @@ function Calculate(data) {
 	      calc();
 	    });
 
+	    inputMonthFormat.addEventListener("change", function () {
+	      mySliderMonth.noUiSlider.set(this.value);
+	      calc();
+	    });
+
 	    inputPercentFormat.addEventListener("change", function () {
 		  $("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * this.value);
 		  mySliderPercent.noUiSlider.set($("#SetRange").val() / 100 * this.value);
