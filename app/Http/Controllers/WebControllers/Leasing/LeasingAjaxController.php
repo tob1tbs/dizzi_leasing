@@ -30,12 +30,13 @@ class LeasingAjaxController extends Controller
                 $LeasingParametersArray[$ParameterItem['key']] = $ParameterItem['value'];
             }
 
-            $month_percent = round(($LeasingParametersArray['leasing_month_percent'] * 12) / 1200, 2);
+            $month_percent = ($LeasingParametersArray['leasing_month_percent'] * 12) / 1200;
+            $month_percent = round($month_percent, 2);
             $loan_month_price = round($month_percent * -$leasing_price * pow((1 + $month_percent), $month_count) / (1 - pow((1 + $month_percent), $month_count)), 2);
 
             $loan_array = [
                 'loan_month_price' => $loan_month_price,
-                'loan_month_percent' => ($month_percent * 100,
+                'loan_month_percent' => ($month_percent * 100, 2),
             ];
 
             return response()->json(['status' => true, 'loan_data' => $loan_array]);
