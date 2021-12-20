@@ -180,7 +180,7 @@ class LeasingAjaxController extends Controller
             $validator = Validator::make($Request->all(), [
                 'user_name' => 'required|max:255',
                 'user_lastname' => 'required|max:255',
-                'user_bdate' => 'required|max:255',
+                // 'user_bdate' => 'required|max:255',
                 'user_personal_number' => 'required|min:11|max:11',
                 'user_phone' => 'required|max:255',
             ], $messages);
