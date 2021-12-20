@@ -298,7 +298,7 @@ function Calculate(data) {
 }
 
 $("#SetRange").keyup(function( event ) {
-	console.log(123)''
+	console.log(123);
 });
 
 
