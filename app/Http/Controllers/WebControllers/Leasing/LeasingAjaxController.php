@@ -36,7 +36,7 @@ class LeasingAjaxController extends Controller
 
             $loan_array = [
                 'loan_month_price' => $loan_month_price,
-                'loan_month_percent' => ($month_percent * 100, 2),
+                'loan_month_percent' => $month_percent * 100,
             ];
 
             return response()->json(['status' => true, 'loan_data' => $loan_array]);
