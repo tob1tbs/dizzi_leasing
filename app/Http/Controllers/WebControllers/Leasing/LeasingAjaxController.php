@@ -197,6 +197,8 @@ class LeasingAjaxController extends Controller
                     $LeasingParametersArray[$ParameterItem['key']] = $ParameterItem['value'];
                 }
 
+                $month_percent = ($LeasingParametersArray['leasing_month_percent'] * 12) / 1200;
+
                 $SendData = [];
 
                 $SendData = [
@@ -206,13 +208,13 @@ class LeasingAjaxController extends Controller
                     'email' => $Request->user_email,
                     'bday' => $Request->user_bdate,
                     'personal_number' => $Request->user_personal_number,
-                    'loan_month' => intval($Request->leasing_month),
+                    'loan_month' => $Request->leasing_month,
                     'loan_price' => $Request->leasing_price - $Request->leasing_advance_payment,
                     'loan_percent' => $LeasingParametersArray['leasing_month_percent'],
                     'fast_review' => $Request->fast_review,
                     'accept_terms' => $Request->accept_terms,
                     'leasing_type' => $Request->leasing_type,
-                    'advance_payment' => intval($Request->leasing_advance_payment),
+                    'advance_payment' => $Request->leasing_advance_payment,
                 ];
 
                 if($Request->car_status == 2) {
@@ -220,14 +222,43 @@ class LeasingAjaxController extends Controller
                 }
 
                 if($Request->has('promo_code') && !empty($Request->promo_code)) {
-                    $SendData['promo_code'] = $Request->promo_code;
-                }
+                //     // $PromoCode = new PromoCode();
+                //     // $PromoCodeData = $PromoCode::where('code', $Request->promo_code)->first();
 
+                //     // if(!empty($PromoCodeData)) {
+                //     //     if($PromoCodeData->used == 1) {
+                //     //         return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
+                //     //     } else if($PromoCodeData->status == 0) {
+                //     //         return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
+                //     //     } else {
+                //     //         $SendData['promo_status'] = 'Validate';
+                //     //         $SendData['promo_code'] = $Request->promo_code;
+
+                //     //         if($PromoCodeData->multiple != 1) {
+                //     //             $PromoCodeData->update(['used' => 1]);
+                //     //         }
+
+                //     //         $PromoCodeUsed = new PromoCodeUsed();
+                //     //         $PromoCodeUsedData  = $PromoCodeUsed::where('phone', $Request->user_phone)->where('code_id', $PromoCodeData->id)->first();
+
+                //     //         if(!empty($PromoCodeUsedData)) {
+                //     //             return response()->json(['status' => true, 'errors' => true, 'message' => 'თქვენ უკვე გამოყენებული მოცემული გაქვთ პრომოკოდი'], 200);
+                //     //         } else {
+                //     //             $PromoCodeUsed = new PromoCodeUsed();
+                //     //             $PromoCodeUsed->phone = $Request->user_phone;
+                //     //             $PromoCodeUsed->code_id = $PromoCodeData->id;
+                //     //             $PromoCodeUsed->save();
+                //     //         }
+                //     //     }
+                //     // } else {
+                //     //     return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
+                //     // }
+                //     $SendData['promo_code'] = $Request->promo_code;
+                }
+                // dd($SendData)
                 $CrmController = new CrmController();
-                $CrmController->serviceCrmSaveLog($SendData, 'save_log', '0');
                 $CrmResponse = $CrmController->serviceCrmSend($SendData);
                 $CrmResponse = json_decode($CrmResponse);
-                dd($CrmResponse);
                 if($CrmResponse->success == 'true') {
                     $CrmController->serviceCrmSaveLog($SendData, 'send_to_crm', $CrmResponse);
                     $RedirectUrl = route('actionWebSeccess');
