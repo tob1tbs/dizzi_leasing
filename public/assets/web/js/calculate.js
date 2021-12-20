@@ -295,9 +295,8 @@ function Calculate(data) {
 	      });
 	    });
 	  }
-}
 
-$("#SetRange, #SetMonthRange, #PercetSetRange").keyup(function(event) {
+	  $("#SetRange, #SetMonthRange, #PercetSetRange").keyup(function(event) {
 	$.ajax({
 	    dataType: 'json',
 	    url: "/ajax/ajaxGetLeasingParameters",
@@ -326,6 +325,9 @@ $("#SetRange, #SetMonthRange, #PercetSetRange").keyup(function(event) {
 	    }
 	});
 });
+}
+
+
 
 
 $.ajax({
