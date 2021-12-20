@@ -211,7 +211,7 @@ function Calculate(data) {
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
 	    	console.log(values);
 	    	console.log(values[handle]);
-	    	parseInt(values[handle] / SelectedAmount * 100);
+	    	console.log(parseInt(values[handle] / SelectedAmount * 100));
 	      	$("#PercetSetRangeAmount").val(values[handle]);
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	      	calc();
