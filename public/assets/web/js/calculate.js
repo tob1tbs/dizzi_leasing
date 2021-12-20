@@ -209,19 +209,19 @@ function Calculate(data) {
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
 	    	inputPercentFormat.value = values[handle];
+	      	calc();
 	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
 	    mySliderPercent.noUiSlider.on("update", function (values, handle) {
 	    	inputPercentFormat.value = values[handle];
-	      	calc();
 	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
 	    inputPercentFormat.addEventListener("change", function () {
-	    	console.log($("#SetRange") / 100 * this.value);
+	    	console.log($("#SetRange").val() / 100 * this.value);
 	      calc();
 	      mySliderPercent.noUiSlider.set(this.value);
 	    });
