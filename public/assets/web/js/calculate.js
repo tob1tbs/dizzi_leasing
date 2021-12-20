@@ -220,6 +220,11 @@ function Calculate(data) {
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
+	    inputPercentFormat.addEventListener("change", function () {
+	      mySliderPercent.noUiSlider.set(this.value);
+	      calc();
+	    });
+
 	    inputFormat.addEventListener("change", function () {
 	      mySlider.noUiSlider.set(this.value);
 	      calc();
