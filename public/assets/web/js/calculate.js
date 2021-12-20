@@ -209,14 +209,16 @@ function Calculate(data) {
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
 	      	$("#PercetSetRangeAmount").val(values[handle]);
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
-	      	console.log(1);
 	      	calc();
 	    });
 
 	    mySliderPercent.noUiSlider.on("update", function (values, handle) {
 	      	$("#PercetSetRangeAmount").val(values[handle]);
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
-	      	console.log(2);
+	    });
+
+	    mySliderPercent.noUiSlider.on("keydown", function (values, handle) {
+	    	console.log(123);
 	    });
 
 	    inputFormat.addEventListener("change", function () {
