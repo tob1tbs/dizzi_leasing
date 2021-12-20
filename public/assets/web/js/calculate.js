@@ -297,7 +297,10 @@ function Calculate(data) {
 	  }
 
   	$("#SetRange").keyup(function(event) {
-		noUiSlider.reset();
+  		SetPipsOnSlider(pips, mySlider);
+	    SetPipsOnSlider(pipsMonth, mySliderMonth);
+	    SetPipsOnSlider(pipsYear, mySliderYear);
+	    SetPipsOnSlider(pipsYear, mySliderPercent);
 	});
 }
 
