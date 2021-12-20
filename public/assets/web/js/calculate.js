@@ -154,7 +154,7 @@ function Calculate(data) {
 	      inputFormat.value = values[handle];
 	      SelectedAmount = AmountFormat.from(values[handle]);
 	      mySliderPercent.noUiSlider.updateOptions({
-	      		start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
+	      		start: [parseInt($("#SetRange").val() / 100 * $("#PercetSetRange").val())],
 	      		step: 1,
 			    range: {
 			        'min': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
@@ -167,7 +167,6 @@ function Calculate(data) {
 			        stepped: false,
 			        format: wNumb({
 			          encoder: function (a) {
-	          			console.log(a);
 			            return a / 1;
 			          },
 			          decimals: 0,
@@ -183,15 +182,16 @@ function Calculate(data) {
 	      	SelectedAmount = AmountFormat.from(values[handle]);
 	      	calc();
 	      	mySliderPercent.noUiSlider.updateOptions({
-	      		start: [$("#PercetSetRangeAmount").val()],
+	      		start: [parseInt($("#PercetSetRangeAmount").val())],
 			    range: {
-			        'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
-			        'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
+			        'min': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
+			        'max': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100),
 			    },
 			    pips: {
 			        mode: "values",
 			        density: 100,
-			        values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100],
+			        step: 1,
+			        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100)],
 			        stepped: true,
 			        format: wNumb({
 			          encoder: function (a) {
