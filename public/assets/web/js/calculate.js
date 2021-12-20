@@ -91,11 +91,12 @@ function Calculate(data) {
 		noUiSlider.create(mySliderPercent, {
 	      start: [parseInt($("#PercetSetRangeAmount").val())],
 	      connect: "lower",
-	      step: 10,
+	      step: 1,
 	      range: {
 	        min: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
 	        max: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100),
 	      },
+	      tooltips: true,
 	      format: wNumb({
 	        decimals: 0,
 	        suffix: "",
@@ -160,6 +161,11 @@ function Calculate(data) {
 			        'min': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
 			        'max': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100),
 			    },
+			    tooltips: true,
+		      	format: wNumb({
+		        	decimals: 0,
+		        	suffix: " ",
+		      	}),
 			    pips: {
 			        mode: "values",
 			        density: 100,
@@ -187,6 +193,11 @@ function Calculate(data) {
 			        'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
 			        'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
 			    },
+		      	format: wNumb({
+		        	decimals: 0,
+		        	suffix: " ",
+		      	}),
+		      	tooltips: true,
 			    pips: {
 			        mode: "values",
 			        density: 100,
