@@ -57,10 +57,10 @@
                             <div class="col-md-4">
                                 <div class="social-button text-center">
                                     @if(!empty($parameterItems['facebook_url'][0]))
-                                    <a class="ms-0" href="{{ $parameterItems['facebook_url'][0] }}"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="ms-0" target="_blank" href="{{ $parameterItems['facebook_url'][0] }}"><i class="fab fa-facebook-f"></i></a>
                                     @endif
                                     @if(!empty($parameterItems['instagram_url'][0]))
-                                    <a class="ms-0" href="{{ $parameterItems['instagram_url'][0] }}"><i class="fab fa-instagram"></i></a>
+                                    <a class="ms-0" target="_blank" href="{{ $parameterItems['instagram_url'][0] }}"><i class="fab fa-instagram"></i></a>
                                     @endif
                                 </div>
                             </div>
