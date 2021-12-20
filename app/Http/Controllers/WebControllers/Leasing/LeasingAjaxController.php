@@ -222,7 +222,7 @@ class LeasingAjaxController extends Controller
 
                 if($Request->car_status == 2) {
                     foreach($Request->car_data as $Key => $Value) {
-                        $SendData[$Key] => $Value; 
+                        $SendData[$Key] = $Value; 
                     }
                 }
 
