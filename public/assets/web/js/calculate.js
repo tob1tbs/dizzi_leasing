@@ -91,6 +91,7 @@ function Calculate(data) {
 		noUiSlider.create(mySliderPercent, {
 	      start: [$("#PercetSetRangeAmount").val()],
 	      connect: "lower",
+	      step: 1,
 	      range: {
 	        min: $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
 	        max: $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
@@ -218,10 +219,6 @@ function Calculate(data) {
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
-	    mySliderPercent.noUiSlider.on("keydown", function (values, handle) {
-	    	console.log(123);
-	    });
-
 	    inputFormat.addEventListener("change", function () {
 	      mySlider.noUiSlider.set(this.value);
 	      calc();
@@ -307,7 +304,6 @@ $.ajax({
     success: function(data) {
         if(data['status'] == true) {
             Calculate(data);
-            console.log(data);
             $.ajax({
 			    dataType: 'json',
 			    url: "/ajax/ajaxGetLoanData",
