@@ -295,11 +295,13 @@ function Calculate(data) {
 	      });
 	    });
 	  }
+
+  	$("#SetRange").keyup(function(event) {
+		noUiSlider.reset();
+	});
 }
 
-$("#SetRange").keyup(function(event) {
-	$("#RangeSlider").destroy();
-});
+
 
 
 $.ajax({
