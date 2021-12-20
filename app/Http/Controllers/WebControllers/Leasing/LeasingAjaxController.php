@@ -84,6 +84,7 @@ class LeasingAjaxController extends Controller
                 $CrmController = new CrmController();
                 $CrmResponse = $CrmController->serviceCrmSend($SendData);
                 $CrmResponse = json_decode($CrmResponse);
+                dd($CrmResponse);
                 if($CrmResponse->success == 'true') {
                     $CrmController->serviceCrmSaveLog($SendData, 'send_to_crm', $CrmResponse);
                     $RedirectUrl = route('actionWebLeasingForm', 'phone='.$Request->phone.'&amount='.$Request->amount.'&duration='.$Request->duration.'&advance_payment='.$Request->advance_payment);
@@ -203,11 +204,32 @@ class LeasingAjaxController extends Controller
 
                 $SendData = [
                     'name' => $Request->user_name,
+                    'last_name' => $Request->user_lastname,
+                    'phone' => $Request->user_phone,
+                    'email' => $Request->user_email,
+                    'bday' => $Request->user_bdate,
+                    'personal_number' => $Request->user_personal_number,
+                    'loan_month' => $Request->leasing_month,
+                    'loan_price' => $Request->leasing_price - $Request->leasing_advance_payment,
+                    'loan_percent' => $month_percent * 100,
+                    'fast_review' => $Request->fast_review,
+                    'accept_terms' => $Request->accept_terms,
+                    'leasing_type' => $Request->leasing_type,
+                    'advance_payment' => $Request->leasing_advance_payment,
+                    'promo_code' => '',
                 ];
+
+                if($Request->car_status == 2) {
+                    $SendData['car_data'] = $Request->car_data;
+                }
+
+                if($Request->has('promo_code') && !empty($Request->promo_code)) {
+                    $SendData['promo_code'] = $Request->promo_code;
+                }
                 $CrmController = new CrmController();
                 $CrmResponse = $CrmController->serviceCrmSend($SendData);
                 $CrmResponse = json_decode($CrmResponse);
-                
+
                 if($CrmResponse->success == 'true') {
                     $CrmController->serviceCrmSaveLog($SendData, 'send_to_crm', $CrmResponse);
                     $RedirectUrl = route('actionWebSeccess');
