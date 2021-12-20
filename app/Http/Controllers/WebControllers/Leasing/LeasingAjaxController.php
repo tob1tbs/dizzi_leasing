@@ -31,7 +31,6 @@ class LeasingAjaxController extends Controller
             }
 
             $month_percent = ($LeasingParametersArray['leasing_month_percent'] * 12) / 1200;
-            $month_percent = round($month_percent, 2);
             $loan_month_price = round($month_percent * -$leasing_price * pow((1 + $month_percent), $month_count) / (1 - pow((1 + $month_percent), $month_count)), 2);
 
             $loan_array = [
@@ -57,7 +56,7 @@ class LeasingAjaxController extends Controller
 
     public function ajaxGetLoanData(Request $Request) {
         if($Request->isMethod('GET')) {
-            $leasing_price = $Request->leasing_price - $Request->leasing_advance_payment;
+            $leasing_price = intval($Request->leasing_price) - intval($Request->leasing_advance_payment);
             return $this->ajaxCalculetePmt($Request->leasing_month, $leasing_price);
         }
     }
