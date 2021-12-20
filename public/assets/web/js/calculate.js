@@ -246,6 +246,7 @@ function Calculate(data) {
 
 	      inputMonthFormat.addEventListener("change", function () {
 	        mySliderMonth.noUiSlider.set(this.value);
+	        calc();
 	      });
 	    } else if ($("#yearTab.active").length > 0) {
 	      mySliderYear.noUiSlider.on("update", function (values, handle) {
@@ -261,8 +262,10 @@ function Calculate(data) {
 	    inputMonthFormat.addEventListener("change", function () {
 	      if ($("#monthTab.active").length > 0) {
 	        mySliderMonth.noUiSlider.set(this.value);
+	        calc();
 	      } else if ($("#yearTab.active").length > 0) {
 	        mySliderYear.noUiSlider.set(this.value);
+	        calc();
 	      }
 	    });
 
