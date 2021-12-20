@@ -21,8 +21,6 @@ function Calculate(data) {
 	  var mySliderMonth = document.getElementById("MonthRangeSlider");
 	  var mySliderYear = document.getElementById("YearRangeSlider");
 	  var mySliderPercent = document.getElementById("PercetRangeSlider");
-	  var SliderAmount = document.getElementById("SliderAmount");
-	  var SliderPeriod = document.getElementById("SliderPeriod");
 
 	  function clickOnPip(sliderName, This) {
 	    var value = Number(This.getAttribute("data-value"));
@@ -125,6 +123,7 @@ function Calculate(data) {
 	    //Slider Input Element
 	    var inputMonthFormat = document.getElementById("SetMonthRange");
 	    var inputFormat = document.getElementById("SetRange");
+	    var inputPercentFormat = document.getElementById("PercetSetRange");
 
 	    SetPipsOnSlider(pips, mySlider);
 	    SetPipsOnSlider(pipsMonth, mySliderMonth);
@@ -191,8 +190,8 @@ function Calculate(data) {
 			        mode: "values",
 			        density: 100,
 			        values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100],
-			        stepped: true
-	,		        format: wNumb({
+			        stepped: true,
+			        format: wNumb({
 			          encoder: function (a) {
 			            return a / 1;
 			          },
@@ -209,14 +208,13 @@ function Calculate(data) {
 	    });
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
-	    	console.log('123');
-	      	calc();
+	    	inputPercentFormat.value = values[handle];
 	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
 	    mySliderPercent.noUiSlider.on("update", function (values, handle) {
-	    	console.log('321');
+	    	inputPercentFormat.value = values[handle];
 	      	calc();
 	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
