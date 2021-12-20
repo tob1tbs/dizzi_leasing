@@ -191,8 +191,8 @@ function Calculate(data) {
 			        mode: "values",
 			        density: 100,
 			        values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100],
-			        stepped: true,
-			        format: wNumb({
+			        stepped: true
+	,		        format: wNumb({
 			          encoder: function (a) {
 			            return a / 1;
 			          },
@@ -296,6 +296,11 @@ function Calculate(data) {
 	    });
 	  }
 }
+
+$("#SetRange").keyup(function( event ) {
+	console.log(123)''
+});
+
 
 $.ajax({
     dataType: 'json',
