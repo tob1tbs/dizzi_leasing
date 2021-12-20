@@ -94,7 +94,7 @@
                             <a href="javascript:;" data-modal="#modal2" id="readmore" class="modal__trigger">სტანდარტული ინფორმაცია</a>
                         </div>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-lg-12" style="margin-top: 30px;">
                         <div class="row">
                             <div class="col-sm-12 col-lg-4 col-xl-4">
                                 <img src="{{ url('assets/web/img/banner/leasing_banner.png') }}" class="img-fluid" style="border-radius: 10px;">
