@@ -222,7 +222,6 @@ class LeasingAjaxController extends Controller
                     $SendData['car_data'] = $Request->car_data;
                 }
 
-                dd($SendData);
                 if($Request->has('promo_code') && !empty($Request->promo_code)) {
                 //     // $PromoCode = new PromoCode();
                 //     // $PromoCodeData = $PromoCode::where('code', $Request->promo_code)->first();
