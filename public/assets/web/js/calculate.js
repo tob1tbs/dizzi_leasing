@@ -141,6 +141,7 @@ function Calculate(data) {
 			    	leasing_advance_payment: $("#PercetSetRangeAmount").val(),
 			    },
 			    success: function(data) {
+			    	console.log(data);
 			        if(data['status'] == true) {
 			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
 			        	$("#emiAmount2").html($("#PercetSetRangeAmount").val()+'₾');
