@@ -91,12 +91,11 @@ function Calculate(data) {
 		noUiSlider.create(mySliderPercent, {
 	      start: [parseInt($("#PercetSetRangeAmount").val())],
 	      connect: "lower",
-	      step: (data['LeasingArray']['leasing_avanse_max_percent'] - data['LeasingArray']['leasing_avanse_min_percent']),
+	      step: 1,
 	      range: {
 	        min: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
 	        max: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100),
 	      },
-	      tooltips: true,
 	      format: wNumb({
 	        decimals: 0,
 	        suffix: "",
@@ -145,7 +144,7 @@ function Calculate(data) {
 			    success: function(data) {
 			        if(data['status'] == true) {
 			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
-			        	$("#emiAmount2").html($("#PercetSetRangeAmount").val()+'₾');
+			        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
 			        }
 			    }
 			});
@@ -156,16 +155,11 @@ function Calculate(data) {
 	      SelectedAmount = AmountFormat.from(values[handle]);
 	      mySliderPercent.noUiSlider.updateOptions({
 	      		start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
-	      		step: (data['LeasingArray']['leasing_avanse_max_percent'] - data['LeasingArray']['leasing_avanse_min_percent']),
+	      		step: 1,
 			    range: {
 			        'min': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
 			        'max': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100),
 			    },
-			    tooltips: true,
-		      	format: wNumb({
-		        	decimals: 0,
-		        	suffix: " ",
-		      	}),
 			    pips: {
 			        mode: "values",
 			        density: 100,
@@ -189,16 +183,10 @@ function Calculate(data) {
 	      	calc();
 	      	mySliderPercent.noUiSlider.updateOptions({
 	      		start: [$("#PercetSetRangeAmount").val()],
-	      		step: (data['LeasingArray']['leasing_avanse_max_percent'] - data['LeasingArray']['leasing_avanse_min_percent']),
 			    range: {
 			        'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
 			        'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
 			    },
-		      	format: wNumb({
-		        	decimals: 0,
-		        	suffix: " ",
-		      	}),
-		      	tooltips: true,
 			    pips: {
 			        mode: "values",
 			        density: 100,
@@ -328,7 +316,7 @@ $.ajax({
 			    success: function(data) {
 			        if(data['status'] == true) {
 			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
-			        	$("#emiAmount2").html($("#PercetSetRangeAmount").val()+'₾');
+			        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
 			        }
 			    }
 			});
