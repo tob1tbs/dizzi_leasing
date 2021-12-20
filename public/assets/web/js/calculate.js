@@ -21,6 +21,8 @@ function Calculate(data) {
 	  var mySliderMonth = document.getElementById("MonthRangeSlider");
 	  var mySliderYear = document.getElementById("YearRangeSlider");
 	  var mySliderPercent = document.getElementById("PercetRangeSlider");
+	  var SliderAmount = document.getElementById("SliderAmount");
+	  var SliderPeriod = document.getElementById("SliderPeriod");
 
 	  function clickOnPip(sliderName, This) {
 	    var value = Number(This.getAttribute("data-value"));
@@ -123,7 +125,6 @@ function Calculate(data) {
 	    //Slider Input Element
 	    var inputMonthFormat = document.getElementById("SetMonthRange");
 	    var inputFormat = document.getElementById("SetRange");
-	    var inputPercentFormat = document.getElementById("PercetSetRange");
 
 	    SetPipsOnSlider(pips, mySlider);
 	    SetPipsOnSlider(pipsMonth, mySliderMonth);
@@ -208,25 +209,19 @@ function Calculate(data) {
 	    });
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
-	    	inputPercentFormat.value = values[handle];
 	      	calc();
 	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
 	    mySliderPercent.noUiSlider.on("update", function (values, handle) {
-	    	inputPercentFormat.value = values[handle];
 	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
-	    inputPercentFormat.addEventListener("change", function () {
-	      calc();
-	    });
-
 	    inputFormat.addEventListener("change", function () {
-	      calc();
 	      mySlider.noUiSlider.set(this.value);
+	      calc();
 	    });
 
 	    if ($("#monthTab.active").length > 0) {
@@ -298,11 +293,8 @@ function Calculate(data) {
 	        };
 	      });
 	    });
-  	}
+	  }
 }
-
-
-
 
 $.ajax({
     dataType: 'json',
