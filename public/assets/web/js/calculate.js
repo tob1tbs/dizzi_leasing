@@ -142,7 +142,6 @@ function Calculate(data) {
 			    	leasing_advance_payment: $("#PercetSetRangeAmount").val(),
 			    },
 			    success: function(data) {
-			    	console.log(data);
 			        if(data['status'] == true) {
 			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
 			        	$("#emiAmount2").html($("#PercetSetRangeAmount").val()+'₾');
@@ -210,7 +209,9 @@ function Calculate(data) {
 	    });
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
-	    	console.log(SelectedAmount);
+	    	console.log(values);
+	    	console.log(values[handle]);
+	    	parseInt(values[handle] / SelectedAmount * 100);
 	      	$("#PercetSetRangeAmount").val(values[handle]);
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	      	calc();
