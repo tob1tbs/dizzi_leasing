@@ -181,9 +181,8 @@ class LeasingAjaxController extends Controller
                 'user_name' => 'required|max:255',
                 'user_lastname' => 'required|max:255',
                 'user_bdate' => 'required|max:255',
-                'user_personal_number' => 'required|max:255',
+                'user_personal_number' => 'required|min:11|max:11',
                 'user_phone' => 'required|max:255',
-                'user_email' => 'required|max:255',
             ], $messages);
 
             if ($validator->fails()) {
