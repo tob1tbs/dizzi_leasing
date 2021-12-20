@@ -156,6 +156,7 @@ function Calculate(data) {
 	      SelectedAmount = AmountFormat.from(values[handle]);
 	      mySliderPercent.noUiSlider.updateOptions({
 	      		start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
+	      		step: 1,
 			    range: {
 			        'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
 			        'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
@@ -209,12 +210,14 @@ function Calculate(data) {
 	    });
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
+	    	console.log(values);
 	      	$("#PercetSetRangeAmount").val(values[handle]);
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	      	calc();
 	    });
 
 	    mySliderPercent.noUiSlider.on("update", function (values, handle) {
+	    	console.log(values);
 	      	$("#PercetSetRangeAmount").val(values[handle]);
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
