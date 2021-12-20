@@ -104,7 +104,7 @@ function Calculate(data) {
 	        mode: "values",
 	        density: 100,
 	        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100)],
-	        stepped: true,
+	        stepped: false,
 	        format: wNumb({
 	          encoder: function (a) {
 	            return a / 1;
@@ -165,13 +165,13 @@ function Calculate(data) {
 			        mode: "values",
 			        density: 100,
 			        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100)],
-			        stepped: true,
+			        stepped: false,
 			        format: wNumb({
 			          encoder: function (a) {
 			            return a / 1;
 			          },
 			          decimals: 0,
-			          thousand: ",",
+			          thousand: " ",
 			          prefix: "₾",
 			        }),
 		      	},
