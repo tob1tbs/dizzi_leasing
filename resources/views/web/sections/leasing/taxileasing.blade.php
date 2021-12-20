@@ -9,6 +9,11 @@
 @endphp
 
 @section('content')
+<style type="text/css">
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
 <main>
     <section class="banner-area-2 loan-banner"></section>
     <section class="pb-20 bg_white" style="padding: 30px 0 80px 0">
@@ -28,9 +33,10 @@
                             <p>თუ გსურს, რომ შენი ყოველდღიური შრომით გამოიუმუშავო თანხა და ამისთვის გჭირდება მანქანა, (ან უკვე ფლობ ავტომობილს და გსურს შეცვალო უკეთესით) შეავსე <b>განაცხადი</b> და 10 წუთში მიიღებ პასუხს.&nbsp;</p><br><p>თუ შენი მონაცემები აკმაყოფილებს ჩვენ მოთხოვნებს, წინასწარ დაგიმტკიცებთ შეფასების მინიმუმ 80%-ს.&nbsp;</p><br><p>Შემდეგ მოდი მანქანის მფლობელთან ერთად ჩვენ ნებისმიერ <b>ფილიალში</b> (თან გქონდეს პირადობის მოწმობა, მართვის მოწმობა და მანქანის ტექპასპორტი), რათა შემფასებელმა გადაამოწმოს მანქანის მდგომარეობა.</p><br><p>თუ დამტკიცებული თანხა შენთვის მისაღებია, სულ მოგიწევს 3 რამის გაკეთება:</p><br><p></p><ul><li>აარჩევ სასურველი გადახდის გრაფიკს და ხელს მოაწერ კონტრაქტს</li><li>შემოიტან თანამონაწილეობას (მაგალითად, თუ დაგიმტკიცდა ღირებულების 90% - დარჩენილ 10%-ს), ხოლო ჩვენ სრულ თანხას გადავურიცხავთ მანქანის მეპატრონეს.</li><li>მანქანას გადმოაფორმებ “დიზი” ლიზინგის სახელზე</li></ul><br><p></p><br><p>Მორჩა, ტაქსი ლიზინგი გაკეთებულია და შენ უკვე ახალი შემოსავლის წყარო გაქვს!</p><br>
                         </div>
                     </div>
+                    <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue" style="position: relative; left: 50%; transform: translate(-50%);">განაცხადის შევსება</a>
                 </div>
             </div>
-            <div class="calculator-widget">
+            <div class="calculator-widget" id="form_block" style="margin-top: 35px;">
                 <div class="row  gy-lg-0 gy-3">
                     <div class="col-lg-7">
                         <div class="single-calculator-widget wow fadeInUp" data-wow-delay="0.1s">

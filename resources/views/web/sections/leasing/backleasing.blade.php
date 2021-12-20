@@ -8,6 +8,11 @@
 @php
     $vissible = 0;
 @endphp
+<style type="text/css">
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
 <main>
     <section class="banner-area-2 loan-banner"></section>
     <section class="pb-20 bg_white" style="padding: 30px 0 80px 0">
@@ -27,9 +32,10 @@
                             <p>გამოგვიგზავნე <b>განაცხადი</b> და ჩვენი ქოლ ცენტრი მყისიერად დაგიკავშირდება. ჩაიწერს შენს მონაცემებს, გადაამოწმებს საკრედიტო ისტორიას და 15 წუთში დაგიბრუნებს პასუხს. Თუ საკრედიტო ისტორია აკმაყოფილებს ჩვენს მოთხოვნებს, ჩვენ ონლაინ დაგიმტკიცებთ შეფასების მინიმუმ 80%-ს. Შემდეგ მოდი ჩვენს ნებისმიერ <b>ფილიალში</b> (თან გქონდეს პირადობა, მართვის მოწმობა, მანქანის ტეპასპორტი და რასაკვრიველია - თვითონ მანქანაც), რათა შემფასებელმა გადაამოწმოს მანქანის მდგომარეობა და შეადაროს მოთხოვნილი თანხა რეალურ ღირებულებას. Თუ ავტომობილის მდგომარეობა კარგია, ჩვენ რამოდენიმე წუთში გეტყვით საბოლოო პასუხს - რა თანხა დაგიმტკიცდა.&nbsp;</p><br><p>Თუ დამტკიცებული თანხა შენთვის მისაღებია, სულ მოგიწევს 2 რამის გაკეთება:</p><p></p><ul><li>Აარჩევ სასურველი გადახდის გრაფიკს და ხელს მოაწერ კონტრაქტს</li><br><li>მანქანას გადმოაფორმებ ჩვენ კომპანიაზე</li></ul><p></p><br><p>5-10 წუთში თანხა ანგარიშზე გექნება!</p><br>
                         </div>
                     </div>
+                    <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue" style="position: relative; left: 50%; transform: translate(-50%);">განაცხადის შევსება</a>
                 </div>
             </div>
-            <div class="calculator-widget">
+            <div class="calculator-widget" id="form_block" style="margin-top: 35px;">
                 <div class="row  gy-lg-0 gy-3">
                     <div class="col-lg-7">
                         <div class="single-calculator-widget wow fadeInUp" data-wow-delay="0.1s">
