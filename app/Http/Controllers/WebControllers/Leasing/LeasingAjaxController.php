@@ -264,6 +264,7 @@ class LeasingAjaxController extends Controller
                     $RedirectUrl = route('actionWebSeccess');
                     return response()->json(['status' => true, 'errors' => false, 'message' => $validator->getMessageBag()->toArray(), 'RedirectUrl' => $RedirectUrl], 200);
                 } else {
+                    $CrmController->serviceCrmSaveLog($SendData, 'save_error_log', '0');
                     return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
                 }
             }
