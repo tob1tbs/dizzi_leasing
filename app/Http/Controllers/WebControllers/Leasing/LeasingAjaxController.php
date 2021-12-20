@@ -258,7 +258,7 @@ class LeasingAjaxController extends Controller
                 //     // } else {
                 //     //     return response()->json(['status' => true, 'errors' => true, 'message' => 'პრომოკოდი არარის ვალიდური'], 200);
                 //     // }
-                //     $SendData['promo_code'] = $Request->promo_code;
+                    $SendData['promo_code'] = $Request->promo_code;
                 }
                 $CrmController = new CrmController();
                 $CrmResponse = $CrmController->serviceCrmSend($SendData);
