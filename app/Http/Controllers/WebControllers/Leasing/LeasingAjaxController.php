@@ -210,7 +210,7 @@ class LeasingAjaxController extends Controller
                     'personal_number' => $Request->user_personal_number,
                     'loan_month' => intval($Request->leasing_month),
                     'loan_price' => $Request->leasing_price - $Request->leasing_advance_payment,
-                    'loan_percent' => $LeasingParametersArray['leasing_month_percent'] * 12,
+                    'loan_percent' => $LeasingParametersArray['leasing_month_percent'],
                     'fast_review' => $Request->fast_review,
                     'accept_terms' => $Request->accept_terms,
                     'leasing_type' => $Request->leasing_type,
