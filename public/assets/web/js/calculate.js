@@ -221,13 +221,14 @@ function Calculate(data) {
 	    });
 
 	    inputPercentFormat.addEventListener("change", function () {
-	      mySliderPercent.noUiSlider.set(this.value);
+	    	console.log(this.value);
 	      calc();
+	      mySliderPercent.noUiSlider.set(this.value);
 	    });
 
 	    inputFormat.addEventListener("change", function () {
-	      mySlider.noUiSlider.set(this.value);
 	      calc();
+	      mySlider.noUiSlider.set(this.value);
 	    });
 
 	    if ($("#monthTab.active").length > 0) {
