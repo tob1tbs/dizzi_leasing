@@ -209,12 +209,14 @@ function Calculate(data) {
 	    });
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
+	    	console.log('123');
 	      	calc();
 	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
 	    mySliderPercent.noUiSlider.on("update", function (values, handle) {
+	    	console.log('321');
 	      	calc();
 	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
@@ -294,14 +296,7 @@ function Calculate(data) {
 	        };
 	      });
 	    });
-	  }
-
-  	$("#SetRange").keyup(function(event) {
-  		SetPipsOnSlider(pips, mySlider);
-	    SetPipsOnSlider(pipsMonth, mySliderMonth);
-	    SetPipsOnSlider(pipsYear, mySliderYear);
-	    SetPipsOnSlider(pipsYear, mySliderPercent);
-	});
+  	}
 }
 
 
