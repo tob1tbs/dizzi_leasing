@@ -297,8 +297,34 @@ function Calculate(data) {
 	  }
 }
 
-$("#SetRange").keyup(function( event ) {
-	console.log(123);
+$("#SetRange, #SetMonthRange, #PercetSetRange").keyup(function(event) {
+	$.ajax({
+	    dataType: 'json',
+	    url: "/ajax/ajaxGetLeasingParameters",
+	    type: "GET",
+	    data: {},
+	    success: function(data) {
+	        if(data['status'] == true) {
+	            Calculate(data);
+	            $.ajax({
+				    dataType: 'json',
+				    url: "/ajax/ajaxGetLoanData",
+				    type: "GET",
+				    data: {
+				    	leasing_month: data['LeasingArray']['leasing_month_default'],
+				    	leasing_price: data['LeasingArray']['leasing_price_default'],
+	    				leasing_advance_payment: $("#PercetSetRangeAmount").val(),
+				    },
+				    success: function(data) {
+				        if(data['status'] == true) {
+				        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
+				        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
+				        }
+				    }
+				});
+	        }
+	    }
+	});
 });
 
 
