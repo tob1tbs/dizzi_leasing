@@ -9,6 +9,11 @@
 @endphp
 
 @section('content')
+<style type="text/css">
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
 <main>
     <section class="banner-area-2 loan-banner"></section>
     <section class="pb-20 bg_white" style="padding: 80px 0 80px 0">
@@ -19,8 +24,19 @@
                         <h2 class="wow fadeInUp neue">{{ trans('site.leasing') }}</h2>
                     </div>
                 </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-4 col-xl-4">
+                            <img src="{{ url('assets/web/img/banner/leasing_banner.png') }}" class="img-fluid" style="border-radius: 10px;">
+                        </div>
+                        <div class="col-sm-12 col-lg-8 col-xl-8 helvetica-regular">
+                            <p>გამოგვიგზავნე <b>განაცხადი</b> და ჩვენი ქოლ ცენტრი მყისიერად დაგიკავშირდება. ჩაიწერს შენს მონაცემებს, გადაამოწმებს საკრედიტო ისტორიას და 15 წუთში დაგიბრუნებს პასუხს. თუ საკრედიტო ისტორია აკმაყოფილებს ჩვენს მოთხოვნებს, ჩვენ ონლაინ დაგიმტკიცებთ შეფასების მინიმუმ 80%-ს. Შემდეგ მოდი მანქანის მფლობელთან ერთად ჩვენს <b>ნებისმიერ</b>  (თან გქონდეს პირადობა, მართვის მოწმობა და მანქანის ტეპასპორტი), რათა შემფასებელმა გადაამოწმოს მანქანის მდგომარეობა და შეადაროს მოთხოვნილი თანხა რეალურ ღირებულებას. Თუ ავტომობილის მდგომარეობა კარგია, ჩვენ რამოდენიმე წუთში გეტყვით საბოლოო პასუხს - რა თანხა დაგიმტკიცდა.&nbsp;</p><br><p><b></b></p> <p>Თუ დამტკიცებული თანხა შენთვის მისაღებია, სულ მოგიწევს 3 რამის გაკეთება:</p><br><p></p><ul><li>Აარჩევ სასურველი გადახდის გრაფიკს და ხელს მოაწერ კონტრაქტს</li><li>მანქანას გადმოაფორმებ ჩვენ კომპანიაზე</li><li>შემოიტან თანამონაწილეობას (მაგალითად, თუ დაგიმტკიცდა ღირებულების 80% - დარჩენილ 20%-ს), ხოლო ჩვენ სრულ თანხას გადავურიცხავთ მანქანის მეპატრონეს.&nbsp;</li></ul><br><p></p><p>Მორჩა, ლიზინგი გაკეთებულია და შენ უკვე ახალი მანქანა გყავს!&nbsp;</p><br>
+                        </div>
+                    </div>
+                    <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue">განაცხადის შევსება</a>
+               </div>
             </div>
-            <div class="calculator-widget">
+            <div class="calculator-widget" id="form_block">
                 <div class="row  gy-lg-0 gy-3">
                     <div class="col-lg-7">
                         <div class="single-calculator-widget wow fadeInUp" data-wow-delay="0.1s">
@@ -92,16 +108,6 @@
                             <input type="hidden" name="leasing_type" value="1">
                             <button type="button" onclick="LesingFormSubmit()" class="theme-btn theme-btn-lg mt-40 neue">{{ trans('site.submit_now') }}<i class="arrow_right"></i></button>
                             <a href="javascript:;" data-modal="#modal2" id="readmore" class="modal__trigger">სტანდარტული ინფორმაცია</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12" style="margin-top: 30px;">
-                        <div class="row">
-                            <div class="col-sm-12 col-lg-4 col-xl-4">
-                                <img src="{{ url('assets/web/img/banner/leasing_banner.png') }}" class="img-fluid" style="border-radius: 10px;">
-                            </div>
-                            <div class="col-sm-12 col-lg-8 col-xl-8 helvetica-regular">
-                                <p>გამოგვიგზავნე <b>განაცხადი</b> და ჩვენი ქოლ ცენტრი მყისიერად დაგიკავშირდება. ჩაიწერს შენს მონაცემებს, გადაამოწმებს საკრედიტო ისტორიას და 15 წუთში დაგიბრუნებს პასუხს. თუ საკრედიტო ისტორია აკმაყოფილებს ჩვენს მოთხოვნებს, ჩვენ ონლაინ დაგიმტკიცებთ შეფასების მინიმუმ 80%-ს. Შემდეგ მოდი მანქანის მფლობელთან ერთად ჩვენს <b>ნებისმიერ</b>  (თან გქონდეს პირადობა, მართვის მოწმობა და მანქანის ტეპასპორტი), რათა შემფასებელმა გადაამოწმოს მანქანის მდგომარეობა და შეადაროს მოთხოვნილი თანხა რეალურ ღირებულებას. Თუ ავტომობილის მდგომარეობა კარგია, ჩვენ რამოდენიმე წუთში გეტყვით საბოლოო პასუხს - რა თანხა დაგიმტკიცდა.&nbsp;</p><br><p><b></b></p> <p>Თუ დამტკიცებული თანხა შენთვის მისაღებია, სულ მოგიწევს 3 რამის გაკეთება:</p><br><p></p><ul><li>Აარჩევ სასურველი გადახდის გრაფიკს და ხელს მოაწერ კონტრაქტს</li><li>მანქანას გადმოაფორმებ ჩვენ კომპანიაზე</li><li>შემოიტან თანამონაწილეობას (მაგალითად, თუ დაგიმტკიცდა ღირებულების 80% - დარჩენილ 20%-ს), ხოლო ჩვენ სრულ თანხას გადავურიცხავთ მანქანის მეპატრონეს.&nbsp;</li></ul><br><p></p><p>Მორჩა, ლიზინგი გაკეთებულია და შენ უკვე ახალი მანქანა გყავს!&nbsp;</p><br>
-                            </div>
                         </div>
                     </div>
                 </div>
