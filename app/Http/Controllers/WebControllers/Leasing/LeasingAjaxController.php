@@ -222,7 +222,9 @@ class LeasingAjaxController extends Controller
                 if($Request->has('promo_code') && !empty($Request->promo_code)) {
                     $SendData['promo_code'] = $Request->promo_code;
                 }
+
                 $CrmController = new CrmController();
+                $CrmController->serviceCrmSaveLog($SendData, 'save_log', '0');
                 $CrmResponse = $CrmController->serviceCrmSend($SendData);
                 $CrmResponse = json_decode($CrmResponse);
                 dd($CrmResponse);
