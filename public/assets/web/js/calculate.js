@@ -240,6 +240,7 @@ function Calculate(data) {
 	        calc();
 	      }
 	    });
+	}
 }
 
 $.ajax({
