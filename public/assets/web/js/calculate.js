@@ -93,8 +93,8 @@ function Calculate(data) {
 	      connect: "lower",
 	      step: 1,
 	      range: {
-	        min: $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
-	        max: $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
+	        min: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
+	        max: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100),
 	      },
 	      format: wNumb({
 	        decimals: 0,
@@ -103,7 +103,7 @@ function Calculate(data) {
 	      pips: {
 	        mode: "values",
 	        density: 100,
-	        values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100],
+	        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100)],
 	        stepped: false,
 	        format: wNumb({
 	          encoder: function (a) {
@@ -159,13 +159,13 @@ function Calculate(data) {
 	      		start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
 	      		step: 1,
 			    range: {
-			        min: $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
-	        		max: $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
+			        'min': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
+			        'max': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100),
 			    },
 			    pips: {
 			        mode: "values",
 			        density: 100,
-			        values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100],
+			        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100)],
 			        stepped: false,
 			        format: wNumb({
 			          encoder: function (a) {
@@ -230,6 +230,16 @@ function Calculate(data) {
 		  calc();
 		  mySliderPercent.noUiSlider.set($("#SetRange").val() / 100 * this.value);
 		});
+
+	    inputMonthFormat.addEventListener("change", function () {
+	      if ($("#monthTab.active").length > 0) {
+	        mySliderMonth.noUiSlider.set(this.value);
+	        calc();
+	      } else if ($("#yearTab.active").length > 0) {
+	        mySliderYear.noUiSlider.set(this.value);
+	        calc();
+	      }
+	    });
 }
 
 $.ajax({
