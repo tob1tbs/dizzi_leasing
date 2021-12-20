@@ -208,14 +208,16 @@ class LeasingAjaxController extends Controller
                     'email' => $Request->user_email,
                     'bday' => $Request->user_bdate,
                     'personal_number' => $Request->user_personal_number,
-                    'loan_month' => $Request->leasing_month,
+                    'loan_month' => intval($Request->leasing_month),
                     'loan_price' => $Request->leasing_price - $Request->leasing_advance_payment,
-                    'loan_percent' => $month_percent * 100,
+                    'loan_percent' => $LeasingParametersArray['leasing_month_percent'] * 12,
                     'fast_review' => $Request->fast_review,
                     'accept_terms' => $Request->accept_terms,
                     'leasing_type' => $Request->leasing_type,
-                    'advance_payment' => $Request->leasing_advance_payment,
+                    'advance_payment' => intval($Request->leasing_advance_payment),
                 ];
+
+                dd($SendData);
 
                 if($Request->car_status == 2) {
                     $SendData['car_data'] = $Request->car_data;
