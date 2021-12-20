@@ -124,6 +124,7 @@ function Calculate(data) {
 	    //Slider Input Element
 	    var inputMonthFormat = document.getElementById("SetMonthRange");
 	    var inputFormat = document.getElementById("SetRange");
+	    var inputPercentFormat = document.getElementById("PercetSetRange");
 
 	    SetPipsOnSlider(pips, mySlider);
 	    SetPipsOnSlider(pipsMonth, mySliderMonth);
@@ -143,7 +144,7 @@ function Calculate(data) {
 			    success: function(data) {
 			        if(data['status'] == true) {
 			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
-			        	$("#emiAmount2").html($("#PercetSetRangeAmount").val()+'₾');
+			        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
 			        }
 			    }
 			});
@@ -207,13 +208,13 @@ function Calculate(data) {
 	    });
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
-	      	$("#PercetSetRangeAmount").val(values[handle]);
-	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	      	calc();
+	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
+	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
 	    mySliderPercent.noUiSlider.on("update", function (values, handle) {
-	      	$("#PercetSetRangeAmount").val(values[handle]);
+	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
 	      	$("#PercetSetRange").val((values[handle] / SelectedAmount * 100).toFixed(0));
 	    });
 
@@ -221,6 +222,11 @@ function Calculate(data) {
 	      mySlider.noUiSlider.set(this.value);
 	      calc();
 	    });
+
+	    inputPercentFormat.addEventListener("change", function () {
+		  calc();
+		  mySliderPercent.noUiSlider.set($("#SetRange").val() / 100 * this.value);
+		});
 
 	    if ($("#monthTab.active").length > 0) {
 	      mySliderMonth.noUiSlider.on("update", function (values, handle) {
@@ -314,7 +320,7 @@ $.ajax({
 			    success: function(data) {
 			        if(data['status'] == true) {
 			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
-			        	$("#emiAmount2").html($("#PercetSetRangeAmount").val()+'₾');
+			        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
 			        }
 			    }
 			});

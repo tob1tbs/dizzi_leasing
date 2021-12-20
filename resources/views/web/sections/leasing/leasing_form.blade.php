@@ -586,6 +586,7 @@
             //Slider Input Element
             var inputMonthFormat = document.getElementById("SetMonthRange");
             var inputFormat = document.getElementById("SetRange");
+            var inputPercentFormat = document.getElementById("PercetSetRange");
 
             SetPipsOnSlider(pips, mySlider);
             SetPipsOnSlider(pipsMonth, mySliderMonth);
@@ -692,6 +693,11 @@
             inputFormat.addEventListener("change", function () {
               mySlider.noUiSlider.set(this.value);
               calc();
+            });
+
+            inputPercentFormat.addEventListener("change", function () {
+              calc();
+              mySliderPercent.noUiSlider.set($("#SetRange").val() / 100 * this.value);
             });
 
             if ($("#monthTab.active").length > 0) {
