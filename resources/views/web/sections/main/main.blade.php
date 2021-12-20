@@ -106,7 +106,7 @@
 			                            <hr>
 			                            <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_month') }}</b></span> {{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
 			                            <hr>
-			                            <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.initial_deposit') }}</b></span> {{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent'][0] }}%</li>
+			                            <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.initial_deposit') }}</b></span> {{ $parameterLeasing['leasing_avanse_min_percent'][0] }}%</li>
 			                            <hr>
 			                            <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.credit_history') }}</b></span> {{ trans('site.credit_hostory_value') }}</li>
 			                            <hr>
@@ -178,7 +178,7 @@
                                         <hr>
                                         <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_month') }}</b></span> {{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
                                         <hr>
-                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.initial_deposit') }}</b></span> {{ trans('site.minimum') }}: {{ $parameterLeasing['leasing_avanse_min_percent_taxi'][0] }}%</li>
+                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.initial_deposit') }}</b></span> {{ $parameterLeasing['leasing_avanse_min_percent_taxi'][0] }}%</li>
                                         <hr>
                                         <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.credit_history') }}</b></span> {{ trans('site.credit_hostory_value') }}</li>
                                         <hr>
@@ -207,7 +207,7 @@
                             <br><br>
                             დაგრჩა შეკითხვები? 
                             <br>
-                            <a href="javascript:void(Tawk_API.toggle())" class="underline-text"> მოგვწერე აქ</a>
+                            <!-- <a href="javascript:void(Tawk_API.toggle())" class="underline-text"> მოგვწერე აქ</a> -->
                             <br>
                             ან დაგვირეკე: <a href="tel:+995{{ $parameterItems['phone_number'][0] }}" class="underline-text">+995 {{ $parameterItems['phone_number'][0] }}</a>
                         </p>
