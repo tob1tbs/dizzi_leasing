@@ -259,6 +259,7 @@ class LeasingAjaxController extends Controller
                 $CrmController = new CrmController();
                 $CrmResponse = $CrmController->serviceCrmSend($SendData);
                 $CrmResponse = json_decode($CrmResponse);
+                dd($CrmResponse);
                 if($CrmResponse->success == 'true') {
                     $CrmController->serviceCrmSaveLog($SendData, 'send_to_crm', $CrmResponse);
                     $RedirectUrl = route('actionWebSeccess');
