@@ -3,7 +3,7 @@
 @section('content')
 <main>
 	<section class="banner-area-2 loan-banner"></section>
-    <section class="pb-20 bg_white" style="padding: 80px 0 0 0">
+    <section class="pb-40 bg_white" style="padding: 40px 0 50px 0;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 mx-auto pt-20 pt-lg-50 pb-20">
