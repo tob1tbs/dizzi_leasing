@@ -62,6 +62,9 @@
                                     @if(!empty($parameterItems['instagram_url'][0]))
                                     <a class="ms-0" target="_blank" href="{{ $parameterItems['instagram_url'][0] }}"><i class="fab fa-instagram"></i></a>
                                     @endif
+                                    @if(!empty($parameterItems['linkdin_url'][0]))
+                                    <a class="ms-0" target="_blank" href="{{ $parameterItems['linkdin_url'][0] }}"><i class="fab fa-linkedin-in"></i></a>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -83,6 +86,7 @@
                                     <i class="icon_mail_alt"></i><a
                                         href="mailto:{{ $parameterItems['email'][0] }}">{{ $parameterItems['email'][0] }}</a>
                                 </li>
+
                             </ul>
                         </div>
                     </div>
