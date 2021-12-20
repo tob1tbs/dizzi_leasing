@@ -91,7 +91,7 @@ function Calculate(data) {
 		noUiSlider.create(mySliderPercent, {
 	      start: [parseInt($("#PercetSetRangeAmount").val())],
 	      connect: "lower",
-	      step: 1,
+	      step: (data['LeasingArray']['leasing_avanse_max_percent'] - data['LeasingArray']['leasing_avanse_min_percent']),
 	      range: {
 	        min: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
 	        max: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100),
@@ -156,7 +156,7 @@ function Calculate(data) {
 	      SelectedAmount = AmountFormat.from(values[handle]);
 	      mySliderPercent.noUiSlider.updateOptions({
 	      		start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
-	      		step: 1,
+	      		step: (data['LeasingArray']['leasing_avanse_max_percent'] - data['LeasingArray']['leasing_avanse_min_percent']),
 			    range: {
 			        'min': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100),
 			        'max': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100),
@@ -189,6 +189,7 @@ function Calculate(data) {
 	      	calc();
 	      	mySliderPercent.noUiSlider.updateOptions({
 	      		start: [$("#PercetSetRangeAmount").val()],
+	      		step: (data['LeasingArray']['leasing_avanse_max_percent'] - data['LeasingArray']['leasing_avanse_min_percent']),
 			    range: {
 			        'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent'] / 100,
 			        'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent'] / 100,
