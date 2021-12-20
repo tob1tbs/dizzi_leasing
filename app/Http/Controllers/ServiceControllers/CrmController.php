@@ -15,7 +15,7 @@ class CrmController extends Controller
     }
 
     public function serviceCrmSend($data) {
-        // dd(http_build_query($data));
+        dd(http_build_query($data));
         $curl = curl_init();
         curl_setopt_array($curl, array(
         CURLOPT_URL => 'https://ingeni.app/31/sites/',
