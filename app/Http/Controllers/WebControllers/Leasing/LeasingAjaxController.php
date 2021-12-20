@@ -201,18 +201,6 @@ class LeasingAjaxController extends Controller
 
                 $SendData = [
                     'name' => $Request->user_name,
-                    'last_name' => $Request->user_lastname,
-                    'phone' => $Request->user_phone,
-                    'email' => $Request->user_email,
-                    'bday' => $Request->user_bdate,
-                    'personal_number' => $Request->user_personal_number,
-                    'loan_month' => intval($Request->leasing_month),
-                    'loan_price' => $Request->leasing_price - $Request->leasing_advance_payment,
-                    'loan_percent' => $LeasingParametersArray['leasing_month_percent'],
-                    'fast_review' => $Request->fast_review,
-                    'accept_terms' => $Request->accept_terms,
-                    'leasing_type' => $Request->leasing_type,
-                    'advance_payment' => intval($Request->leasing_advance_payment),
                 ];
                 
                 $CrmController = new CrmController();
