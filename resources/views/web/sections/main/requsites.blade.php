@@ -47,7 +47,7 @@
 
 @media (max-width: 600px) {
 	.requsites-text {
-		font-size: 13px
+		font-size: 13px !important;
 	}
 }
 </style>
