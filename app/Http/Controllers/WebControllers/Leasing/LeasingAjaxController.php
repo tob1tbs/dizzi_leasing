@@ -221,8 +221,9 @@ class LeasingAjaxController extends Controller
 
 
                 if($Request->car_status == 2) {
-                    foreach($Request->car_data as $Key => $Value);
-                    $SendData[$Key] => $Value; 
+                    foreach($Request->car_data as $Key => $Value) {
+                        $SendData[$Key] => $Value; 
+                    }
                 }
 
                 if($Request->has('promo_code') && !empty($Request->promo_code)) {
