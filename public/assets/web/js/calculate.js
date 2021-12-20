@@ -307,6 +307,7 @@ $.ajax({
     success: function(data) {
         if(data['status'] == true) {
             Calculate(data);
+            console.log(data);
             $.ajax({
 			    dataType: 'json',
 			    url: "/ajax/ajaxGetLoanData",
