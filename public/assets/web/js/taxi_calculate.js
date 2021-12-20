@@ -41,8 +41,8 @@ function Calculate(data) {
 	  if (mySlider && mySliderMonth && mySliderYear && mySliderPercent) {
 	    noUiSlider.create(mySlider, {
 	      start: parseInt(data['LeasingArray']['leasing_price_default']),
-	      connect: "lower",
 	      step: 100,
+	      connect: "lower",
 	      range: {
 	        min: parseInt(data['LeasingArray']['leasing_min_price']),
 	        max: parseInt(data['LeasingArray']['leasing_max_price']),
@@ -89,11 +89,12 @@ function Calculate(data) {
 	      },
 	    });
 		noUiSlider.create(mySliderPercent, {
-	      start: [$("#PercetSetRangeAmount").val()],
+	      start: [parseInt($("#PercetSetRangeAmount").val())],
 	      connect: "lower",
+	      step: 1,
 	      range: {
-	        min: $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100,
-	        max: $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100,
+	        min: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100),
+	        max: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100),
 	      },
 	      format: wNumb({
 	        decimals: 0,
@@ -102,8 +103,8 @@ function Calculate(data) {
 	      pips: {
 	        mode: "values",
 	        density: 100,
-	        values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100],
-	        stepped: true,
+	        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100)],
+	        stepped: false,
 	        format: wNumb({
 	          encoder: function (a) {
 	            return a / 1;
@@ -124,7 +125,8 @@ function Calculate(data) {
 	    //Slider Input Element
 	    var inputMonthFormat = document.getElementById("SetMonthRange");
 	    var inputFormat = document.getElementById("SetRange");
-	    var inputPercentFormat = document.getElementById("PercetSetRange");
+		var inputPercentFormat = document.getElementById("PercetSetRange");
+
 
 	    SetPipsOnSlider(pips, mySlider);
 	    SetPipsOnSlider(pipsMonth, mySliderMonth);
@@ -155,21 +157,22 @@ function Calculate(data) {
 	      SelectedAmount = AmountFormat.from(values[handle]);
 	      mySliderPercent.noUiSlider.updateOptions({
 	      		start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
+	      		step: 1,
 			    range: {
-			        'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100,
-			        'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100,
+			        'min': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100),
+			        'max': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100),
 			    },
 			    pips: {
 			        mode: "values",
 			        density: 100,
-			        values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100],
-			        stepped: true,
+			        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100)],
+			        stepped: false,
 			        format: wNumb({
 			          encoder: function (a) {
 			            return a / 1;
 			          },
 			          decimals: 0,
-			          thousand: ",",
+			          thousand: " ",
 			          prefix: "₾",
 			        }),
 		      	},
@@ -223,83 +226,17 @@ function Calculate(data) {
 	      calc();
 	    });
 
-	    inputPercentFormat.addEventListener("change", function () {
-		  calc();
-		  mySliderPercent.noUiSlider.set($("#SetRange").val() / 100 * this.value);
-		});
-
-	    if ($("#monthTab.active").length > 0) {
-	      mySliderMonth.noUiSlider.on("update", function (values, handle) {
-	        inputMonthFormat.value = values[handle];
-	        selectedTime = {
-	          type: "month",
-	          value: TimeFormatMonths.from(values[handle]),
-	        };
-	      });
-
-	      mySliderMonth.noUiSlider.on("change", function (values, handle) {
-	        calc();
-	      });
-
-	      inputMonthFormat.addEventListener("change", function () {
-	        mySliderMonth.noUiSlider.set(this.value);
-	      });
-	    } else if ($("#yearTab.active").length > 0) {
-	      mySliderYear.noUiSlider.on("update", function (values, handle) {
-	        inputMonthFormat.value = values[handle];
-	        selectedTime = {
-	          type: "year",
-	          value: TimeFormatYears.from(values[handle]),
-	        };
-	        
-	      });
-	    }
-
 	    inputMonthFormat.addEventListener("change", function () {
-	      if ($("#monthTab.active").length > 0) {
-	        mySliderMonth.noUiSlider.set(this.value);
-	        calc();
-	      } else if ($("#yearTab.active").length > 0) {
-	        mySliderYear.noUiSlider.set(this.value);
-	        calc();
-	      }
+	      mySliderMonth.noUiSlider.set(this.value);
+	      calc();
 	    });
 
-	    $("#yearTab").on("click", function () {
-	      mySliderMonth.noUiSlider.off("update", function (values, handle) {
-	        inputMonthFormat.value = values[handle];
-	        selectedTime = {
-	          type: "month",
-	          value: TimeFormatMonths.from(values[handle]),
-	        };
-	        
-	      });
-	      mySliderYear.noUiSlider.on("update", function (values, handle) {
-	        inputMonthFormat.value = values[handle];
-	        selectedTime = {
-	          type: "year",
-	          value: TimeFormatYears.from(values[handle]),
-	        };
-	      });
-	    });
-	    $("#monthTab").on("click", function () {
-	      mySliderYear.noUiSlider.off("update", function (values, handle) {
-	        inputMonthFormat.value = values[handle];
-	        selectedTime = {
-	          type: "year",
-	          value: TimeFormatYears.from(values[handle]),
-	        };
-	        
-	      });
-	      mySliderMonth.noUiSlider.on("update", function (values, handle) {
-	        inputMonthFormat.value = values[handle];
-	        selectedTime = {
-	          type: "month",
-	          value: TimeFormatMonths.from(values[handle]),
-	        };
-	      });
-	    });
-	  }
+	    inputPercentFormat.addEventListener("change", function () {
+		  $("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * this.value);
+		  mySliderPercent.noUiSlider.set($("#SetRange").val() / 100 * this.value);
+		  calc();
+		});
+	}
 }
 
 $.ajax({
@@ -330,10 +267,10 @@ $.ajax({
     }
 });
 
-function TaxiLesingFormSubmit() {
+function LesingFormSubmit() {
     $.ajax({
         dataType: 'json',
-        url: "/ajax/ajaxTaxiLesingFormSubmit",
+        url: "/ajax/ajaxLeasingFormSubmit",
         type: "POST",
         data: {
         	amount: $("#SetRange").val(),
