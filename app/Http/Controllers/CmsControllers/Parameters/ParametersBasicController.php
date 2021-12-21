@@ -17,7 +17,7 @@ class ParametersBasicController extends Controller
         if (view()->exists('cms.sections.parameters.parameters_basic_main')) {
 
             $BasicParameter = new BasicParameter();
-            $BasicParameterList = $BasicParameter::where('deleted_at_int', '!=', 0)->orderBy('sortable', 'ASC')->get();
+            $BasicParameterList = $BasicParameter::where('deleted_at_int', '!=', 0)->orderBy('sortable', 'DESC')->get();
 
             $LanguageList = new LanguageList();
             $LanguageListData = $LanguageList::where('deleted_at_int', '!=', 0)->get();

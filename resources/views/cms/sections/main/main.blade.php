@@ -7,7 +7,7 @@
             <div class="nk-content-body">
                 <div class="nk-block">
                     <div class="row g-gs">
-                        <div class="col-xxl-4">
+                        <!-- <div class="col-xxl-4">
                             <div class="card card-bordered h-100">
                                 <div class="card-inner">
                                     <div class="card-title-group align-start gx-3 mb-3">
@@ -128,7 +128,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
