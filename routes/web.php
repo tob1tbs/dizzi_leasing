@@ -29,6 +29,7 @@ Route::group(['prefix' => '/ajax'], function() {
     Route::get('/ajaxCalculetePmt', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxCalculetePmt'])->name('ajaxCalculetePmt');
     Route::get('/ajaxGetLeasingParameters', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxGetLeasingParameters'])->name('ajaxGetLeasingParameters');
     Route::get('/ajaxGetLoanData', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxGetLoanData'])->name('ajaxGetLoanData');
+    Route::get('/ajaxGetBackLoanData', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxGetBackLoanData'])->name('ajaxGetBackLoanData');
     Route::post('/ajaxSaveReview', [App\Http\Controllers\WebControllers\Main\MainAjaxController::class, 'ajaxSaveReview'])->name('ajaxSaveReview');
     Route::post('/ajaxLeasingFormSubmit', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxLeasingFormSubmit'])->name('ajaxLeasingFormSubmit');
     Route::post('/ajaxLeasingSubmit', [App\Http\Controllers\WebControllers\Leasing\LeasingAjaxController::class, 'ajaxLeasingSubmit'])->name('ajaxLeasingSubmit');
