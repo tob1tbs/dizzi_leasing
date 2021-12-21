@@ -132,15 +132,15 @@
 									</div>
 			                        <ul class="service helvetica-regular">
                                         @if(Session::get('locale') == 'ge')
-                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.min_price') }}</b></span> {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.min_price') }}</b></span> {{ number_format($parameterLeasing['back_leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @else
-                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.min_price') }}</b></span> From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.min_price') }}</b></span> From {{ number_format($parameterLeasing['back_leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @endif
                                         <hr>
                                         @if(Session::get('locale') == 'ge')
-                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_price') }}</b></span> {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_price') }}</b></span> {{ number_format($parameterLeasing['back_leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @else
-                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_price') }}</b></span> To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_price') }}</b></span> To {{ number_format($parameterLeasing['back_leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @endif
                                         <hr>
                                         <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_month') }}</b></span> {{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
@@ -165,15 +165,15 @@
                                     </div>
                                     <ul class="service helvetica-regular">
                                         @if(Session::get('locale') == 'ge')
-                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.min_price') }}</b></span> {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.min_price') }}</b></span> {{ number_format($parameterLeasing['taxi_leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @else
-                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.min_price') }}</b></span> From {{ number_format($parameterLeasing['leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.min_price') }}</b></span> From {{ number_format($parameterLeasing['taxi_leasing_min_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @endif
                                         <hr>
                                         @if(Session::get('locale') == 'ge')
-                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_price') }}</b></span> {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_price') }}</b></span> {{ number_format($parameterLeasing['taxi_leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @else
-                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_price') }}</b></span> To {{ number_format($parameterLeasing['leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
+                                        <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_price') }}</b></span> To {{ number_format($parameterLeasing['taxi_leasing_max_price'][0], '0', '.', ',') }} {{ trans('site.to_gel') }} </li>
                                         @endif
                                         <hr>
                                         <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.max_month') }}</b></span> {{ $parameterLeasing['leasing_max_month'][0] }} {{ trans('site.month') }}</li>
