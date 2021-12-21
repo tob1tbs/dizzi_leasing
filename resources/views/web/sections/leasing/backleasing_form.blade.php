@@ -170,7 +170,7 @@
                                         <p style="font-size: 15px">{{ trans('site.month_percent') }}</p>
                                     </div>
                                     <div class="col-lg-6" id="payment">
-                                        <p style="font-size: 15px" class="loan-month-percent">{{ $parameterLeasing['back_leasing_month_percent'][0] }} %</p>
+                                        <p style="font-size: 15px" class="loan-month-percent">{{ $parameterLeasing['leasing_month_percent'][0] }} %</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-12" id="loanwidgetdata3">
@@ -189,7 +189,7 @@
                                                 <div class="single-range">
                                                     <div class="range-header mb-25">
                                                         <h6 class="helvetica-regular" style="width: 100%;">{{ trans('site.leasing_amount') }}</h6>
-                                                        <input type="text" id="SetRange" value="{{ $parameterLeasing['back_leasing_price_default'][0] }}" style="width: 100%;">
+                                                        <input type="text" id="SetRange" value="{{ $parameterLeasing['leasing_price_default'][0] }}" style="width: 100%;">
                                                     </div>
                                                     <div id="RangeSlider"></div>
                                                 </div>
@@ -202,7 +202,7 @@
                                                                 <a class="nav-link active month-tab" id="monthTab" data-bs-toggle="tab" href="#monthTabId" role="tab" aria-controls="monthTabId" aria-selected="true">თვე</a>
                                                             </li>
                                                         </ul>
-                                                        <input type="text" id="SetMonthRange" value="{{ $parameterLeasing['back_leasing_month_default'][0] }}" style="width: 100%;">
+                                                        <input type="text" id="SetMonthRange" value="{{ $parameterLeasing['leasing_month_default'][0] }}" style="width: 100%;">
                                                     </div>
                                                     <div class="tab-content">
                                                         <div class="tab-pane fade show active" id="monthTabId" role="tabpanel" aria-labelledby="monthTab">
@@ -264,7 +264,7 @@
             <p>საპროცენტო განაკვეთი</p>
         </div>
         <div class="col-lg-6" id="ppayment">
-            <p>{{ $parameterLeasing['back_leasing_month_percent'][0] }} %</p>
+            <p>{{ $parameterLeasing['leasing_month_percent'][0] }} %</p>
         </div>
     </div>
     <p>* საკომისიო არის 0 ₾ და ის გადაიხდება თანაბარ ნაწილად სესხის მთლიანი პერიოდის განმავლობაში.</p>
@@ -452,8 +452,8 @@
               connect: "lower",
               step: 100,
               range: {
-                min: parseInt([{{ $parameterLeasing['back_leasing_min_price'][0] }}]),
-                max: parseInt([{{ $parameterLeasing['back_leasing_max_price'][0] }}]),
+                min: parseInt([{{ $parameterLeasing['leasing_min_price'][0] }}]),
+                max: parseInt([{{ $parameterLeasing['leasing_max_price'][0] }}]),
               },
               format: wNumb({
                 decimals: 0,
@@ -463,7 +463,7 @@
               pips: {
                 mode: "values",
                 density: 100,
-                values: [parseInt({{ $parameterLeasing['back_leasing_min_price'][0] }}), parseInt({{ $parameterLeasing['back_leasing_max_price'][0] }})],
+                values: [parseInt({{ $parameterLeasing['leasing_min_price'][0] }}), parseInt({{ $parameterLeasing['leasing_max_price'][0] }})],
                 stepped: false,
                 format: wNumb({
                   encoder: function (a) {
@@ -479,8 +479,8 @@
               start: [parseInt({{ request()->duration }})],
               connect: "lower",
               range: {
-                min: parseInt({{ $parameterLeasing['back_leasing_min_month'][0] }}),
-                max: parseInt({{ $parameterLeasing['back_leasing_max_month'][0] }}),
+                min: parseInt({{ $parameterLeasing['leasing_min_month'][0] }}),
+                max: parseInt({{ $parameterLeasing['leasing_max_month'][0] }}),
               },
               format: wNumb({
                 decimals: 0,
@@ -489,7 +489,7 @@
               pips: {
                 mode: "values",
                 density: 100,
-                values: [parseInt({{ $parameterLeasing['back_leasing_min_month'][0] }}), parseInt({{ $parameterLeasing['back_leasing_max_month'][0] }})],
+                values: [parseInt({{ $parameterLeasing['leasing_min_month'][0] }}), parseInt({{ $parameterLeasing['leasing_max_month'][0] }})],
                 stepped: true,
                 format: wNumb({
                   decimals: 0,
@@ -529,7 +529,7 @@
                             $(".pmonth").html($("#SetMonthRange").val()+ ' {{ trans('site.month') }}');
                             $("#leasing_price").val($("#SetRange").val());
                             $("#leasing_month").val($("#SetMonthRange").val());
-                            $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
+                            $(".loan-month-amount").html(data['back_loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
                         }
                     }
                 });
