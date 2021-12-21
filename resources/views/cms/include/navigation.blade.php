@@ -45,6 +45,11 @@
                             <span class="nk-menu-text">ძირითადი პარამეტრები</span>
                         </a>
                     </li>
+                    <!-- <li class="nk-menu-item">
+                        <a href="{{ route('actionParametersSections') }}" class="nk-menu-link" data-original-title="" title="">
+                            <span class="nk-menu-text">სექციები</span>
+                        </a>
+                    </li> -->
                     <li class="nk-menu-item">
                         <a href="{{ route('actionParametersTranslate') }}" class="nk-menu-link" data-original-title="" title="">
                             <span class="nk-menu-text">თარგმნები</span>

@@ -67,6 +67,7 @@ Route::group(['prefix' => '/cms'], function() {
         Route::group(['prefix' => '/parameters'], function() {
             Route::get('/', [App\Http\Controllers\CmsControllers\Parameters\ParametersBasicController::class, 'actionParametersBasicMain'])->name('actionParametersBasicMain');
             Route::get('/translate', [App\Http\Controllers\CmsControllers\Parameters\ParametersBasicController::class, 'actionParametersTranslate'])->name('actionParametersTranslate');
+            Route::get('/sections', [App\Http\Controllers\CmsControllers\Parameters\ParametersBasicController::class, 'actionParametersSections'])->name('actionParametersSections');
             Route::get('/seo', [App\Http\Controllers\CmsControllers\Parameters\ParametersBasicController::class, 'actionParametersSeo'])->name('actionParametersSeo');
         });
 

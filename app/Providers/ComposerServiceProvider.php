@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 use App\Models\Parameters\BasicParameter;
 use App\Models\Leasing\LeasingParameter;
+use App\Models\Leasing\ParameterSection;
 
 class ComposerServiceProvider extends ServiceProvider
 
@@ -39,6 +40,16 @@ class ComposerServiceProvider extends ServiceProvider
                 $LeasingArray[$LeasingParameterItem->key][] = $LeasingParameterItem->value;
             }
 
+            $ParameterSection = new ParameterSection();
+            $ParameterSection = $ParameterSection::where('deleted_at_int', '!=', 0)->get();
+
+            $SectionArray = [];
+
+            foreach($ParameterSection as $ParameterSectionItem) {
+                $SectionArray[$ParameterSectionItem->key][] = $ParameterSectionItem->status;
+            }
+
+            $view->with('sectionStatus', $SectionArray);
             $view->with('parameterItems', $ParameterArray);
             $view->with('parameterLeasing', $LeasingArray);
         });

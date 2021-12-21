@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Parameters\BasicParameter;
 use App\Models\Parameters\LanguageList;
 use App\Models\Parameters\TranslateParameter;
+use App\Models\Parameters\ParameterSection;
 
 class ParametersBasicController extends Controller
 {
@@ -44,6 +45,18 @@ class ParametersBasicController extends Controller
             ];
 
             return view('cms.sections.parameters.parameters_translate', $data);
+        } else {
+            abort('404');
+        }
+    }
+
+    public function actionParametersSections(Request $Request) {
+        if (view()->exists('cms.sections.parameters.parameters_sections')) {
+
+            $ParameterSection = new ParameterSection();
+            $ParameterSectionList = $ParameterSection::where('deleted_at_int', '!=', 0)->get();
+
+            return view('cms.sections.parameters.parameters_sections', $data);
         } else {
             abort('404');
         }
