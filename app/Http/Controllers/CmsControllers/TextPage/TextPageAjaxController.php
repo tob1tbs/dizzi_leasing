@@ -12,6 +12,15 @@ class TextPageAjaxController extends Controller
     //
 
     public function ajaxTextPageSubmit(Request $Request) {
-        dd($Request->all());
+        if($Request->isMethod('POST')) {
+            $TextPage = new TextPage();
+            $TextPage::find($Request->page_id)->update([
+                'value' => $Request->page_text,
+            ]);
+
+            return response()->json(['status' => true, 'message' => 'კოდი წარმატებით წაიშალა']);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
+        }
     } 
 }
