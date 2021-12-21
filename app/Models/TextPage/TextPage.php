@@ -10,4 +10,6 @@ class TextPage extends Model
     use HasFactory;
 
     protected $table = "cms_text_pages";
+
+    protected $fillable = ['value'];
 }
