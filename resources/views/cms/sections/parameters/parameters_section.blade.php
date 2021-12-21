@@ -1,5 +1,7 @@
 @extends('cms.layout.layout')
 
+
+
 @section('content')
-@dd($parameterLeasing)
+@dd($sectionStatus)
 @endsection
