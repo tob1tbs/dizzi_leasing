@@ -76,7 +76,7 @@ class LeasingAjaxController extends Controller
     public function ajaxGetBackLoanData(Request $Request) {
         if($Request->isMethod('GET')) {
             $back_leasing_price = intval($Request->back_leasing_price) - intval($Request->back_leasing_advance_payment);
-            return $this->ajaxCalculeteBackPmt($Request->back_leasing_month, $lback_easing_price);
+            return $this->ajaxCalculeteBackPmt($Request->back_leasing_month, $back_leasing_price);
         }
     }
 
