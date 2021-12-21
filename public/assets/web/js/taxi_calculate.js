@@ -139,9 +139,9 @@ function Calculate(data) {
 			    url: "/ajax/ajaxGetTaxiLoanData",
 			    type: "GET",
 			    data: {
-			    	back_back_leasing_month: $("#SetMonthRange").val(),
-			    	back_leasing_price: $("#SetRange").val(),
-			    	back_leasing_advance_payment: $("#PercetSetRangeAmount").val(),
+			    	taxi_leasing_month: $("#SetMonthRange").val(),
+			    	taxi_leasing_price: $("#SetRange").val(),
+			    	taxi_leasing_advance_payment: $("#PercetSetRangeAmount").val(),
 			    },
 			    success: function(data) {
 			        if(data['status'] == true) {
@@ -261,9 +261,9 @@ $.ajax({
 			    url: "/ajax/ajaxGetTaxiLoanData",
 			    type: "GET",
 			    data: {
-			    	back_leasing_month: data['LeasingArray']['taxi_leasing_month_default'],
-			    	back_leasing_price: data['LeasingArray']['taxi_leasing_price_default'],
-    				back_leasing_advance_payment: $("#PercetSetRangeAmount").val(),
+			    	taxi_leasing_month: data['LeasingArray']['taxi_leasing_month_default'],
+			    	taxi_leasing_price: data['LeasingArray']['taxi_leasing_price_default'],
+    				taxi_leasing_advance_payment: $("#PercetSetRangeAmount").val(),
 			    },
 			    success: function(data) {
 			        if(data['status'] == true) {
