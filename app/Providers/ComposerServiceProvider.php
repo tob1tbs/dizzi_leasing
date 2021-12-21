@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 use App\Models\Parameters\BasicParameter;
 use App\Models\Leasing\LeasingParameter;
-use App\Models\Leasing\ParameterSection;
+use App\Models\Parameters\ParameterSection;
 
 class ComposerServiceProvider extends ServiceProvider
 
