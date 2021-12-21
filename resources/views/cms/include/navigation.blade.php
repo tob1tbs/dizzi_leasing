@@ -60,11 +60,11 @@
                             <span class="nk-menu-text">ლიზინგის პარამეტრები</span>
                         </a>
                     </li>
-                    <li class="nk-menu-item">
+                    <!-- <li class="nk-menu-item">
                         <a href="{{ route('actionLeasingPromo') }}" class="nk-menu-link" data-original-title="" title="">
                             <span class="nk-menu-text">პრომო</span>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </li><!-- 
             <li class="nk-menu-item has-sub">

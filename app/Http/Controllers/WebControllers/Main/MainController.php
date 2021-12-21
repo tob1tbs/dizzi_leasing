@@ -9,6 +9,7 @@ use App\Models\Parameters\BasicParameter;
 use App\Models\Cars\CarData;
 use App\Models\Blogs\Blog;
 use App\Models\Reviews\Review;
+use App\Models\Reviews\TextPage;
 
 use App\Models\Main\Faq;
 
@@ -100,6 +101,10 @@ class MainController extends Controller
 
     public function actionWebAboutUs(Request $Request) {
         if (view()->exists('web.sections.main.about')) {
+            
+            $TextPage = new TextPage();
+            $TextPage::where('slug', $Request->slug)->firstOrFail();
+
             $data = [
                 
             ];
@@ -110,7 +115,6 @@ class MainController extends Controller
     }
 
     public function actionWebFaq(Request $Request) {
-
         if (view()->exists('web.sections.main.faq')) {
 
             $Faq = new Faq();
