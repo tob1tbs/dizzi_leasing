@@ -210,6 +210,15 @@ function Calculate(data) {
 	      	calc();
 	    });
 
+	    mySliderMonth.noUiSlider.on("change", function (values, handle) {
+	    	inputMonthFormat.value = values[handle];
+	      	calc();
+	    });
+
+	    mySliderMonth.noUiSlider.on("update", function (values, handle) {
+	    	inputMonthFormat.value = values[handle];
+	    });
+
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
 	      	calc();
 	      	$("#PercetSetRangeAmount").val($("#SetRange").val() / 100 * $('#PercetSetRange').val());
