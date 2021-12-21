@@ -116,7 +116,7 @@
 	                            </label>
                             </div>
                             <button type="button" onclick="TaxiLesingFormSubmit()" class="theme-btn theme-btn-lg mt-40 neue">{{ trans('site.submit_now') }}<i class="arrow_right"></i></button>
-                            <a href="javascript:;" data-modal="#modal2" id="readmore" class="modal__trigger">სტანდარტული ინფორმაცია</a>
+                            <!-- <a href="javascript:;" data-modal="#modal2" id="readmore" class="modal__trigger">სტანდარტული ინფორმაცია</a> -->
                         </div>
                     </div>
                 </div>

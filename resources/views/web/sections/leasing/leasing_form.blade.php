@@ -251,8 +251,8 @@
                                 <img src="{{ url('assets/web/img\icon\next.png') }}">
                                 <button data-js="open" type="button" class="popupbutton">კალკულაციის მაგალითი </button>
                                 <br>
-                                <img src="{{ url('assets/web/img\icon\next.png') }}">
-                                <a href="" data-modal="#modal" class="modal__trigger" style="transform: none;">სტანდარტული ინფორმაცია</a>
+                                <!-- <img src="{{ url('assets/web/img\icon\next.png') }}"> -->
+                                <!-- <a href="" data-modal="#modal" class="modal__trigger" style="transform: none;">სტანდარტული ინფორმაცია</a> -->
                             </div>
                             <div class="widget-subscribe" id="promocodewidget">
                                 <h4 class="widget-title mb-15 neue" style="font-size: 16px">{{ trans('site.promo') }}</h4>

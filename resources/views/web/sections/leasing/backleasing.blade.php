@@ -99,7 +99,7 @@
                             </div>
                             <input type="hidden" name="leasing_type" value="1">
                             <button type="button" onclick="BackLesingFormSubmit()" class="theme-btn theme-btn-lg mt-40 neue">{{ trans('site.submit_now') }}<i class="arrow_right"></i></button>
-                            <a href="javascript:;" data-modal="#modal2" id="readmore" class="modal__trigger">სტანდარტული ინფორმაცია</a>
+                            <!-- <a href="javascript:;" data-modal="#modal2" id="readmore" class="modal__trigger">სტანდარტული ინფორმაცია</a> -->
                         </div>
                     </div>
                 </div>
