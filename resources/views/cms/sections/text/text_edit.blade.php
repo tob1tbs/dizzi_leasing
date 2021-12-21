@@ -22,7 +22,7 @@
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="page_text">გვერდის ტექსტი</label>
                                     <textarea id="page_text" name="page_text" rows="4" cols="50">
-                                        {{ $text_page_data->value }
+                                        {{ $text_page_data->value }}
                                     </textarea>
                                 </div>
                             </div>

@@ -276,7 +276,7 @@ $.ajax({
     }
 });
 
-function LesingFormSubmit() {
+function TaxiLesingFormSubmit() {
     $.ajax({
         dataType: 'json',
         url: "/ajax/ajaxLeasingFormSubmit",
