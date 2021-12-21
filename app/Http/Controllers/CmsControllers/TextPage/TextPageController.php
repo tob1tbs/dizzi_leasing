@@ -13,8 +13,11 @@ class TextPageController extends Controller
     public function actionTextPages(Request $Request) {
         if (view()->exists('cms.sections.text.text_main')) {
 
+            $TextPage = new TextPage();
+            $TextPageList = $TextPage::where('deleted_at_int', '!=', 0)->get();
+
             $data = [
-                
+                'page_list' => $TextPageList,  
             ];
 
             return view('cms.sections.text.text_main', $data);

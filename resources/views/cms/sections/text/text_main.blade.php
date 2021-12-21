@@ -22,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($text_page_data as $page_item)
+                @foreach($page_list as $page_item)
                 <tr class="nk-tb-item">
                     <td class="nk-tb-col">
                         <div class="user-card">
