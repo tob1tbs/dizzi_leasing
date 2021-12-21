@@ -26,7 +26,8 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group mt-2">
-                                    <button type="button" class="font-neue btn btn-lg btn-primary" onclick="TextPageSubmit({{ $text_page_data->id }})">შენახვა</button>
+                                    <button type="button" class="font-neue btn btn-lg btn-primary" onclick="TextPageSubmit()">შენახვა</button>
+                                    <input type="hidden" name="page_id" value="{{ $text_page_data->id }}">
                                 </div>
                             </div>
                         </form>
