@@ -31,7 +31,7 @@
                                 <div class="w-100">
                                     <div class="faq-header" id="headingOne">
                                         <h4 class="mb-0 collapsed helvetica-regular" aria-expanded="true">
-                                            თბილისი, გაგარინის ქ. 3/2
+                                            {{ $parameterItems['address_ge'][0] }}
                                             <i class="icon_plus"></i>
                                             <i class="icon_minus-06"></i>
                                         </h4>
@@ -45,7 +45,7 @@
                                 <div class="w-100">
                                     <div class="faq-header" id="headingOne">
                                         <h4 class="mb-0 collapsed helvetica-regular" aria-expanded="true">
-                                            რუსთავი, ავტობაზრობის შესასვლელი, შენობა N8/2
+                                            {{ $parameterItems['address_ge_2'][0] }}
                                             <i class="icon_plus"></i>
                                             <i class="icon_minus-06"></i>
                                         </h4>
