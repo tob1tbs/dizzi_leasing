@@ -22,6 +22,7 @@
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="page_text">გვერდის ტექსტი</label>
                                     <div class="summernote-basic">{{ $text_page_data->value }}</div>
+                                    <textarea class="summernote-basic mt-3 col-span-12 font-helvetica" id="text_ge" name="text_ge"></textarea>
                                 </div>
                             </div>
                             <div class="col-12">
