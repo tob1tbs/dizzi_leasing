@@ -11,13 +11,13 @@
                 <div class="card card-preview">
                     <div class="card-inner">
                         <ul class="nav nav-tabs mt-n3">
-                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tabItem1">ლიზინგი</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tabItem2">უკულიზინგი</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tabItem3">ტაქსილიზინგი</a></li>
+                            <li class="nav-item"><a class="nav-link active font-helvetica-regular" data-toggle="tab" href="#tabItem1">ლიზინგი</a></li>
+                            <li class="nav-item"><a class="nav-link font-helvetica-regular" data-toggle="tab" href="#tabItem2">უკულიზინგი</a></li>
+                            <li class="nav-item"><a class="nav-link font-helvetica-regular" data-toggle="tab" href="#tabItem3">ტაქსილიზინგი</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabItem1">
-                                @foreach($back_leasing_parameters->where('leasing') as $parameter_item)
+                                @foreach($back_leasing_parameters->where('group', 'leasing') as $parameter_item)
                                 @switch($parameter_item->type)
                                 @case('number')
                                 <div class="row g-3 align-center">
@@ -41,7 +41,7 @@
                                 @endforeach
                             </div>
                             <div class="tab-pane" id="tabItem2">
-                                @foreach($back_leasing_parameters->where('back_leasing') as $parameter_item)
+                                @foreach($back_leasing_parameters->where('group', 'back_leasing') as $parameter_item)
                                 @switch($parameter_item->type)
                                 @case('number')
                                 <div class="row g-3 align-center">
@@ -65,7 +65,7 @@
                                 @endforeach
                             </div>
                             <div class="tab-pane" id="tabItem3">
-                                @foreach($back_leasing_parameters->where('taxi_leasing') as $parameter_item)
+                                @foreach($back_leasing_parameters->where('group', 'taxi_leasing') as $parameter_item)
                                 @switch($parameter_item->type)
                                 @case('number')
                                 <div class="row g-3 align-center">
