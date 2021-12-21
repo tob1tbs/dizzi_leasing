@@ -213,7 +213,6 @@ function Calculate(data) {
 
 	    mySliderMonth.noUiSlider.on("update", function (values, handle) {
 	    	inputMonthFormat.value = values[handle];
-	      	calc();
 	    });
 
 	    mySliderPercent.noUiSlider.on("change", function (values, handle) {
