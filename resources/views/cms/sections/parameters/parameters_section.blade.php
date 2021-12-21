@@ -6,7 +6,7 @@
 <div class="nk-block-head">
     <div class="nk-block-between">
         <div class="nk-block-head-content">
-            <h4 class="nk-block-title font-neue">სექციების გვერდების ჩამონათვალი</h4>
+            <h4 class="nk-block-title font-neue">სექციების ჩამონათვალი</h4>
         </div>  
     </div>
 </div>
@@ -16,7 +16,7 @@
             <thead>
                 <tr class="nk-tb-item nk-tb-head font-helvetica-regular">
                     <th class="nk-tb-col"><span class="sub-text">გვერდის დასახელება</span></th>
-                    <th class="nk-tb-col nk-tb-col-tools text-right"></th>
+                    <th class="nk-tb-col nk-tb-col-tools text-right">სტატუსი</th>
                 </tr>
             </thead>
             <tbody>
