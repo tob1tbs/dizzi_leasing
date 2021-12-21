@@ -54,6 +54,10 @@ Route::group(['prefix' => '/cms'], function() {
     Route::group(['middleware' => 'login'], function() {
         Route::get('/', [App\Http\Controllers\CmsControllers\Main\MainController::class, 'actionMain'])->name('actionMain');
 
+        Route::group(['prefix' => 'laravel-filemanager'], function () {
+             \UniSharp\LaravelFilemanager\Lfm::routes();
+         });
+
         // USERS
         Route::group(['prefix' => '/users'], function() {
             Route::get('/', [App\Http\Controllers\CmsControllers\Users\UsersController::class, 'actionUsersMain'])->name('actionUsersMain');
