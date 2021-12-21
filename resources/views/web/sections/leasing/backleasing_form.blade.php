@@ -516,8 +516,8 @@
                     url: "/ajax/ajaxGetBackLoanData",
                     type: "GET",
                     data: {
-                        leasing_month: $("#SetMonthRange").val(),
-                        leasing_price: $("#SetRange").val(),
+                        back_leasing_month: $("#SetMonthRange").val(),
+                        back_leasing_price: $("#SetRange").val(),
                         leasing_advance_payment: $("#PercetSetRangeAmount").val(),
                     },
                     success: function(data) {
