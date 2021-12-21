@@ -9,7 +9,7 @@ use App\Models\Parameters\BasicParameter;
 use App\Models\Cars\CarData;
 use App\Models\Blogs\Blog;
 use App\Models\Reviews\Review;
-use App\Models\Reviews\TextPage;
+use App\Models\TextPage\TextPage;
 
 use App\Models\Main\Faq;
 
