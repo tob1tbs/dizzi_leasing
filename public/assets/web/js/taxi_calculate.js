@@ -40,12 +40,12 @@ function Calculate(data) {
 
 	  if (mySlider && mySliderMonth && mySliderYear && mySliderPercent) {
 	    noUiSlider.create(mySlider, {
-	      start: parseInt(data['LeasingArray']['leasing_price_default']),
+	      start: parseInt(data['LeasingArray']['taxi_leasing_price_default']),
 	      step: 100,
 	      connect: "lower",
 	      range: {
-	        min: parseInt(data['LeasingArray']['leasing_min_price']),
-	        max: parseInt(data['LeasingArray']['leasing_max_price']),
+	        min: parseInt(data['LeasingArray']['taxi_leasing_min_price']),
+	        max: parseInt(data['LeasingArray']['taxi_leasing_max_price']),
 	      },
 	      format: wNumb({
 	        decimals: 0,
@@ -55,7 +55,7 @@ function Calculate(data) {
 	      pips: {
 	        mode: "values",
 	        density: 100,
-	        values: [parseInt(data['LeasingArray']['leasing_min_price']), parseInt(data['LeasingArray']['leasing_max_price'])],
+	        values: [parseInt(data['LeasingArray']['taxi_leasing_min_price']), parseInt(data['LeasingArray']['taxi_leasing_max_price'])],
 	        stepped: false,
 	        format: wNumb({
 	          encoder: function (a) {
@@ -68,11 +68,11 @@ function Calculate(data) {
 	      },
 	    });
 	    noUiSlider.create(mySliderMonth, {
-	      start: [parseInt(data['LeasingArray']['leasing_month_default'])],
+	      start: [parseInt(data['LeasingArray']['taxi_leasing_month_default'])],
 	      connect: "lower",
 	      range: {
-	        min: parseInt(data['LeasingArray']['leasing_min_month']),
-	        max: parseInt(data['LeasingArray']['leasing_max_month']),
+	        min: parseInt(data['LeasingArray']['taxi_leasing_min_month']),
+	        max: parseInt(data['LeasingArray']['taxi_leasing_max_month']),
 	      },
 	      format: wNumb({
 	        decimals: 0,
@@ -81,7 +81,7 @@ function Calculate(data) {
 	      pips: {
 	        mode: "values",
 	        density: 100,
-	        values: [parseInt(data['LeasingArray']['leasing_min_month']), parseInt(data['LeasingArray']['leasing_max_month'])],
+	        values: [parseInt(data['LeasingArray']['taxi_leasing_min_month']), parseInt(data['LeasingArray']['taxi_leasing_max_month'])],
 	        stepped: true,
 	        format: wNumb({
 	          decimals: 0,
@@ -93,8 +93,8 @@ function Calculate(data) {
 	      connect: "lower",
 	      step: 1,
 	      range: {
-	        min: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100),
-	        max: parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100),
+	        min: parseInt($("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_min_percent'] / 100),
+	        max: parseInt($("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_max_percent'] / 100),
 	      },
 	      format: wNumb({
 	        decimals: 0,
@@ -103,7 +103,7 @@ function Calculate(data) {
 	      pips: {
 	        mode: "values",
 	        density: 100,
-	        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100)],
+	        values: [parseInt($("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_min_percent'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_max_percent'] / 100)],
 	        stepped: false,
 	        format: wNumb({
 	          encoder: function (a) {
@@ -136,12 +136,12 @@ function Calculate(data) {
 	    function calc() {
 	    	$.ajax({
 			    dataType: 'json',
-			    url: "/ajax/ajaxGetLoanData",
+			    url: "/ajax/ajaxGetTaxiLoanData",
 			    type: "GET",
 			    data: {
-			    	leasing_month: $("#SetMonthRange").val(),
-			    	leasing_price: $("#SetRange").val(),
-			    	leasing_advance_payment: $("#PercetSetRangeAmount").val(),
+			    	back_back_leasing_month: $("#SetMonthRange").val(),
+			    	back_leasing_price: $("#SetRange").val(),
+			    	back_leasing_advance_payment: $("#PercetSetRangeAmount").val(),
 			    },
 			    success: function(data) {
 			        if(data['status'] == true) {
@@ -159,13 +159,13 @@ function Calculate(data) {
 	      		start: [$("#SetRange").val() / 100 * $("#PercetSetRange").val()],
 	      		step: 1,
 			    range: {
-			        'min': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100),
-			        'max': parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100),
+			        'min': parseInt($("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_min_percent'] / 100),
+			        'max': parseInt($("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_max_percent'] / 100),
 			    },
 			    pips: {
 			        mode: "values",
 			        density: 100,
-			        values: [parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100)],
+			        values: [parseInt($("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_min_percent'] / 100), parseInt($("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_max_percent'] / 100)],
 			        stepped: false,
 			        format: wNumb({
 			          encoder: function (a) {
@@ -186,13 +186,13 @@ function Calculate(data) {
 	      	mySliderPercent.noUiSlider.updateOptions({
 	      		start: [$("#PercetSetRangeAmount").val()],
 			    range: {
-			        'min': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100,
-			        'max': $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100,
+			        'min': $("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_min_percent'] / 100,
+			        'max': $("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_max_percent'] / 100,
 			    },
 			    pips: {
 			        mode: "values",
 			        density: 100,
-			        values: [$("#SetRange").val() * data['LeasingArray']['leasing_avanse_min_percent_taxi'] / 100, $("#SetRange").val() * data['LeasingArray']['leasing_avanse_max_percent_taxi'] / 100],
+			        values: [$("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_min_percent'] / 100, $("#SetRange").val() * data['LeasingArray']['taxi_leasing_avanse_max_percent'] / 100],
 			        stepped: true,
 			        format: wNumb({
 			          encoder: function (a) {
@@ -258,12 +258,12 @@ $.ajax({
             Calculate(data);
             $.ajax({
 			    dataType: 'json',
-			    url: "/ajax/ajaxGetLoanData",
+			    url: "/ajax/ajaxGetTaxiLoanData",
 			    type: "GET",
 			    data: {
-			    	leasing_month: data['LeasingArray']['leasing_month_default'],
-			    	leasing_price: data['LeasingArray']['leasing_price_default'],
-    				leasing_advance_payment: $("#PercetSetRangeAmount").val(),
+			    	back_leasing_month: data['LeasingArray']['taxi_leasing_month_default'],
+			    	back_leasing_price: data['LeasingArray']['taxi_leasing_price_default'],
+    				back_leasing_advance_payment: $("#PercetSetRangeAmount").val(),
 			    },
 			    success: function(data) {
 			        if(data['status'] == true) {

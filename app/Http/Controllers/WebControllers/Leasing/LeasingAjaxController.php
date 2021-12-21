@@ -81,6 +81,33 @@ class LeasingAjaxController extends Controller
     }
 
     // TAXI LEASING
+    public function ajaxCalculeteBackPmt($month_count, $leasing_price) {
+            $LeasingParameter = new LeasingParameter();
+            $LeasingParametersList = $LeasingParameter::where('deleted_at_int', '!=', 0)->get()->toArray();
+
+            $LeasingParametersArray = [];
+
+            foreach($LeasingParametersList as $ParameterItem) {
+                $LeasingParametersArray[$ParameterItem['key']] = $ParameterItem['value'];
+            }
+
+            $month_percent = ($LeasingParametersArray['back_leasing_month_percent'] * 12) / 1200;
+            $loan_month_price = round($month_percent * -$leasing_price * pow((1 + $month_percent), $month_count) / (1 - pow((1 + $month_percent), $month_count)), 2);
+
+            $loan_array = [
+                'back_loan_month_price' => round($loan_month_price, 2),
+                'back_loan_month_percent' => round($month_percent * 100, 2),
+            ];
+
+            return response()->json(['status' => true, 'back_loan_data' => $loan_array]);
+    }
+
+    public function ajaxGetTaxiLoanData(Request $Request) {
+        if($Request->isMethod('GET')) {
+            $taxi_leasing_price = intval($Request->taxi_leasing_price) - intval($Request->taxi_leasing_advance_payment);
+            return $this->ajaxCalculeteBackPmt($Request->taxi_leasing_month, $taxi_leasing_price);
+        }
+    }
 
     public function ajaxGetLeasingParameters() {
         $LeasingParameter = new LeasingParameter();
