@@ -207,7 +207,12 @@ function Calculate(data) {
 	    });
 
 	    mySliderMonth.noUiSlider.on("change", function (values, handle) {
-	    	console.log(values);
+	    	inputMonthFormat.value = values[handle];
+	      	calc();
+	    });
+
+	    mySliderMonth.noUiSlider.on("update", function (values, handle) {
+	    	inputMonthFormat.value = values[handle];
 	      	calc();
 	    });
 
