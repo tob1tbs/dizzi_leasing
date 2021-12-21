@@ -41,4 +41,5 @@
 @section('js')
 <link rel="stylesheet" href="{{ url('assets/cms/css/summernote.css') }}" />
 <script src="{{ url('assets/cms/js/summernote.js') }}"></script>
+<script src="{{ url('assets/cms/js/editors.js') }}"></script>
 @endsection
