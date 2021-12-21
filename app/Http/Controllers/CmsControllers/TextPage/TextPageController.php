@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\TextPage\TextPage;
+use App\Models\Main\Faq;
 
 class TextPageController extends Controller
 {
@@ -37,6 +38,22 @@ class TextPageController extends Controller
             ];
 
             return view('cms.sections.text.text_edit', $data);
+        } else {
+            abort('404');
+        }
+    }
+
+    public function actionTextQuestions(Request $Request) {
+        if (view()->exists('cms.sections.text.text_questions')) {
+
+            $Faq = new Faq();
+            $FaqData = $Faq::where('deleted_at_int', '!=', 0)->get();
+
+            $data = [
+                'faq_list' => $FaqData,
+            ];
+
+            return view('cms.sections.text.text_questions', $data);
         } else {
             abort('404');
         }

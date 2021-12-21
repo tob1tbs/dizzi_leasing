@@ -104,6 +104,11 @@
                         <a href="{{ route('actionTextPages') }}" class="nk-menu-link" data-original-title="" title="">
                             <span class="nk-menu-text">ტექსტური გვერდები</span>
                         </a>
+                    </li>
+                    <li class="nk-menu-item">
+                        <a href="{{ route('actionTextQuestions') }}" class="nk-menu-link" data-original-title="" title="">
+                            <span class="nk-menu-text">კითხვები</span>
+                        </a>
                     </li><!-- 
                     <li class="nk-menu-item">
                         <a href="{{ route('actionReviews') }}" class="nk-menu-link" data-original-title="" title="">

@@ -95,6 +95,7 @@ Route::group(['prefix' => '/cms'], function() {
         Route::group(['prefix' => '/text'], function() {
             Route::get('/', [App\Http\Controllers\CmsControllers\TextPage\TextPageController::class, 'actionTextPages'])->name('actionTextPages');
             Route::get('/edit/{id}', [App\Http\Controllers\CmsControllers\TextPage\TextPageController::class, 'actionTextPagesEdit'])->name('actionTextPagesEdit');
+            Route::get('/questions', [App\Http\Controllers\CmsControllers\TextPage\TextPageController::class, 'actionTextQuestions'])->name('actionTextQuestions');
         });
 
         // TEXT PAGES
