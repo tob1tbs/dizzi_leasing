@@ -363,9 +363,9 @@
         url: "/ajax/ajaxGetBackLoanData",
         type: "GET",
         data: {
-            leasing_month: $("#leasing_month").val(),
-            leasing_price: $("#leasing_price").val(),
-            leasing_advance_payment: $("#leasing_advance_payment").val(),
+            back_leasing_month: $("#leasing_month").val(),
+            back_leasing_price: $("#leasing_price").val(),
+            back_leasing_advance_payment: $("#leasing_advance_payment").val(),
         },
         success: function(data) {
             if(data['status'] == true) {
