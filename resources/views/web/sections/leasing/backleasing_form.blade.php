@@ -369,7 +369,7 @@
         },
         success: function(data) {
             if(data['status'] == true) {
-                $(".loan-month-amount").html(data['loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
+                $(".loan-month-amount").html(data['back_loan_data']['back_loan_month_price']+' {{ trans('site.gel') }}');
                 $(".loan-complicity").html($("#PercetSetRangeAmount").val()+' {{ trans('site.gel') }}');
             }
         }
@@ -513,7 +513,7 @@
             function calc() {
                 $.ajax({
                     dataType: 'json',
-                    url: "/ajax/ajaxGetLoanData",
+                    url: "/ajax/ajaxGetBackLoanData",
                     type: "GET",
                     data: {
                         leasing_month: $("#SetMonthRange").val(),
@@ -529,7 +529,7 @@
                             $(".pmonth").html($("#SetMonthRange").val()+ ' {{ trans('site.month') }}');
                             $("#leasing_price").val($("#SetRange").val());
                             $("#leasing_month").val($("#SetMonthRange").val());
-                            $(".loan-month-amount").html(data['back_loan_data']['loan_month_price']+' {{ trans('site.gel') }}');
+                            $(".loan-month-amount").html(data['back_loan_data']['back_loan_month_price']+' {{ trans('site.gel') }}');
                         }
                     }
                 });
