@@ -12,46 +12,23 @@
                 <div class="card card-preview">
                     <div class="card-inner">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-12">
                                 <div class="form-control-wrap mb-2">
-                                    <label class="form-label" for="photo_main">გვერდის დასახელება (ქართულად)</label>
-                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-control-wrap mb-2">
-                                    <label class="form-label" for="photo_main">გვერდის დასახელება (ინგლისურად)</label>
-                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                    <label class="form-label" for="page_title">გვერდის დასახელებ</label>
+                                    <input type="text" class="form-control font-neue" value="{{ $text_page_data->title }}" disabled>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-control-wrap mb-2">
-                                    <label class="form-label" for="photo_main">გვერდის SLUG (უნიკალური)</label>
-                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
+                                    <label class="form-label" for="page_text">გვერდის ტექსტი</label>
+                                    <textarea id="page_text" name="page_text" rows="4" cols="50">
+                                        {{ $text_page_data->value }
+                                    </textarea>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="form-control-wrap mb-2">
-                                    <label class="form-label" for="photo_main">Meta Description</label>
-                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-control-wrap mb-2">
-                                    <label class="form-label" for="photo_main">Meta Keywords</label>
-                                    <input type="text" class="form-control font-neue" name="photo" id="photo">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-control-wrap mb-2">
-                                    <label class="form-label" for="photo_main">გვერდის ტექსტი (ქართულად)</label>
-                                    <textarea class="form-control"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-control-wrap mb-2">
-                                    <label class="form-label" for="photo_main">გვერდის ტექსტი (ინგლისურად)</label>
-                                    <textarea class="form-control"></textarea>
+                            <div class="col-12">
+                                <div class="form-group mt-2">
+                                    <button type="button" class="font-neue btn btn-lg btn-primary" onclick="TextPageSubmit()">შენახვა</button>
                                 </div>
                             </div>
                         </div>
