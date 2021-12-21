@@ -14,7 +14,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-control-wrap mb-2">
-                                    <label class="form-label" for="page_title">გვერდის დასახელებ</label>
+                                    <label class="form-label" for="page_title">გვერდის დასახელება</label>
                                     <input type="text" class="form-control font-neue" value="{{ $text_page_data->title }}" disabled>
                                 </div>
                             </div>
