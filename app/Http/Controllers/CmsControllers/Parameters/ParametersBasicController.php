@@ -56,6 +56,10 @@ class ParametersBasicController extends Controller
             $ParameterSection = new ParameterSection();
             $ParameterSectionList = $ParameterSection::where('deleted_at_int', '!=', 0)->get();
 
+            $data = [
+                'section_list' => $ParameterSectionList,
+            ];
+
             return view('cms.sections.parameters.parameters_section', $data);
         } else {
             abort('404');
