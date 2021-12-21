@@ -81,7 +81,7 @@ class LeasingAjaxController extends Controller
     }
 
     // TAXI LEASING
-    public function ajaxCalculeteBackPmt($month_count, $leasing_price) {
+    public function ajaxCalculeteTaxiPmt($month_count, $leasing_price) {
             $LeasingParameter = new LeasingParameter();
             $LeasingParametersList = $LeasingParameter::where('deleted_at_int', '!=', 0)->get()->toArray();
 
@@ -105,7 +105,7 @@ class LeasingAjaxController extends Controller
     public function ajaxGetTaxiLoanData(Request $Request) {
         if($Request->isMethod('GET')) {
             $taxi_leasing_price = intval($Request->taxi_leasing_price) - intval($Request->taxi_leasing_advance_payment);
-            return $this->ajaxCalculeteBackPmt($Request->taxi_leasing_month, $taxi_leasing_price);
+            return $this->ajaxCalculeteTaxiPmt($Request->taxi_leasing_month, $taxi_leasing_price);
         }
     }
 
