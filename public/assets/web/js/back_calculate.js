@@ -124,7 +124,7 @@ function Calculate(data) {
 	    function calc() {
 	    	$.ajax({
 			    dataType: 'json',
-			    url: "/ajax/ajaxGetLoanData",
+			    url: "/ajax/ajaxGetBackLoanData",
 			    type: "GET",
 			    data: {
 			    	back_leasing_month: $("#SetMonthRange").val(),
@@ -132,7 +132,7 @@ function Calculate(data) {
 			    },
 			    success: function(data) {
 			        if(data['status'] == true) {
-			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
+			        	$("#emiAmount").html(data['back_loan_data']['back_loan_month_price']+'₾');
 			        }
 			    }
 			});
@@ -298,7 +298,7 @@ $.ajax({
             Calculate(data);
             $.ajax({
 			    dataType: 'json',
-			    url: "/ajax/ajaxGetLoanData",
+			    url: "/ajax/ajaxGetBackLoanData",
 			    type: "GET",
 			    data: {
 			    	back_leasing_month: data['LeasingArray']['back_leasing_month_default'],
@@ -306,7 +306,7 @@ $.ajax({
 			    },
 			    success: function(data) {
 			        if(data['status'] == true) {
-			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
+			        	$("#emiAmount").html(data['back_loan_data']['back_loan_month_price']+'₾');
 			        }
 			    }
 			});
