@@ -103,7 +103,7 @@ class MainController extends Controller
         if (view()->exists('web.sections.main.about')) {
             
             $TextPage = new TextPage();
-            $TextPage::where('slug', $Request->slug)->firstOrFail();
+            $TextPage::where('slug', 'about-us')->firstOrFail();
 
             $data = [
                 
