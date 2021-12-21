@@ -51,12 +51,12 @@ class ParametersBasicController extends Controller
     }
 
     public function actionParametersSections(Request $Request) {
-        if (view()->exists('cms.sections.parameters.parameters_sections')) {
+        if (view()->exists('cms.sections.parameters.parameters_section')) {
 
             $ParameterSection = new ParameterSection();
             $ParameterSectionList = $ParameterSection::where('deleted_at_int', '!=', 0)->get();
 
-            return view('cms.sections.parameters.parameters_sections', $data);
+            return view('cms.sections.parameters.parameters_section', $data);
         } else {
             abort('404');
         }
