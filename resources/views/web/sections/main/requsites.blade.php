@@ -18,7 +18,7 @@
                     <label class="helvetica-regular">{{ $item->{"label_".app()->getLocale()} }}</label>
 					<div class="feature-card-widget wow fadeInUp"  id="bankdetailbg" style="position: relative;">
 						<div class="card-img">
-							<h4 id="value_{{ $item->id }}" class="helvetica-regular requsites-text" style="font-size: 17px; width: 80%;">{{ $item->value }}</h4>
+							<h4 id="value_{{ $item->id }}" class="helvetica-regular requsites-text" style="font-size: 15px; width: 70%;">{{ $item->value }}</h4>
 							<input type="text" id="copy_value_{{ $item->id }}" value="{{ $item->value }}" style="position: absolute; opacity: 0;">
 						</div>
                         <button onclick="copyToClipboard({{ $item->id }})" class="det-btn helvetica-regular" class="clickTheButton helvetica-regular">
