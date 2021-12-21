@@ -207,6 +207,7 @@ function Calculate(data) {
 	    });
 
 	    mySliderMonth.noUiSlider.on("change", function (values, handle) {
+	    	console.log(values);
 	      	calc();
 	    });
 
