@@ -145,7 +145,7 @@ function Calculate(data) {
 			    },
 			    success: function(data) {
 			        if(data['status'] == true) {
-			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
+			        	$("#emiAmount").html(data['taxi_loan_data']['taxi_loan_month_price']+'₾');
 			        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
 			        }
 			    }
@@ -267,7 +267,7 @@ $.ajax({
 			    },
 			    success: function(data) {
 			        if(data['status'] == true) {
-			        	$("#emiAmount").html(data['loan_data']['loan_month_price']+'₾');
+			        	$("#emiAmount").html(data['taxi_loan_data']['taxi_loan_month_price']+'₾');
 			        	$("#emiAmount2").html($("#SetRange").val() / 100 * $('#PercetSetRange').val()+'₾');
 			        }
 			    }
