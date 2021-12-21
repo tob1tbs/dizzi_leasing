@@ -21,7 +21,7 @@
                             <div class="col-12">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="page_text">გვერდის ტექსტი</label>
-                                    <div class="summernote">{{ $text_page_data->value }}</div>
+                                    <div class="summernote-basic">{{ $text_page_data->value }}</div>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -39,9 +39,5 @@
 @endsection
 
 @section('js')
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.summernote').summernote();
-    });
-</script>
+
 @endsection
