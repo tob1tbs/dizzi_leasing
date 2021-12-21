@@ -360,7 +360,7 @@
 
     $.ajax({
         dataType: 'json',
-        url: "/ajax/ajaxGetLoanData",
+        url: "/ajax/ajaxGetBackLoanData",
         type: "GET",
         data: {
             leasing_month: $("#leasing_month").val(),
