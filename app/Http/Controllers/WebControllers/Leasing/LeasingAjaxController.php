@@ -70,7 +70,7 @@ class LeasingAjaxController extends Controller
                 'back_loan_month_percent' => round($month_percent * 100, 2),
             ];
 
-            return response()->json(['status' => true, 'loan_data' => $loan_array]);
+            return response()->json(['status' => true, 'back_loan_data' => $loan_array]);
     }
 
     public function ajaxGetBackLoanData(Request $Request) {
