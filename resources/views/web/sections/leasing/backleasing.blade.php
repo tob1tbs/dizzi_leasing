@@ -50,7 +50,7 @@
                             <div class="single-range">
                                 <div class="range-header d-flex justify-content-between align-items-center mb-25">
                                     <h6 class="helvetica-regular">{{ trans('site.leasing_amount') }}</h6>
-                                    <input type="text" id="SetRange" value="{{ $parameterLeasing['leasing_price_default'][0] }}">
+                                    <input type="text" id="SetRange" value="{{ $parameterLeasing['back_leasing_price_default'][0] }}">
                                 </div>
                                 <div id="RangeSlider"></div>
                             </div>
@@ -63,7 +63,7 @@
                                             <a class="nav-link active month-tab" id="monthTab" data-bs-toggle="tab" href="#monthTabId" role="tab" aria-controls="monthTabId"aria-selected="true">თვე</a>
                                         </li>
                                     </ul>
-                                    <input type="text" id="SetMonthRange" value="{{ $parameterLeasing['leasing_month_default'][0] }}">
+                                    <input type="text" id="SetMonthRange" value="{{ $parameterLeasing['back_leasing_month_default'][0] }}">
                                 </div>
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="monthTabId" role="tabpanel" aria-labelledby="monthTab">

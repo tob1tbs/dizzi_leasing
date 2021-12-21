@@ -39,12 +39,12 @@ function Calculate(data) {
 
 	  if (mySlider && mySliderMonth && mySliderYear) {
 	    noUiSlider.create(mySlider, {
-	      start: parseInt(data['LeasingArray']['leasing_price_default']),
+	      start: parseInt(data['LeasingArray']['back_leasing_price_default']),
 	      connect: "lower",
 	      step: 100,
 	      range: {
-	        min: parseInt(data['LeasingArray']['leasing_min_price']),
-	        max: parseInt(data['LeasingArray']['leasing_max_price']),
+	        min: parseInt(data['LeasingArray']['back_leasing_min_price']),
+	        max: parseInt(data['LeasingArray']['back_leasing_max_price']),
 	      },
 	      format: wNumb({
 	        decimals: 0,
@@ -54,7 +54,7 @@ function Calculate(data) {
 	      pips: {
 	        mode: "values",
 	        density: 100,
-	        values: [parseInt(data['LeasingArray']['leasing_min_price']), parseInt(data['LeasingArray']['leasing_max_price'])],
+	        values: [parseInt(data['LeasingArray']['back_leasing_min_price']), parseInt(data['LeasingArray']['back_leasing_max_price'])],
 	        stepped: false,
 	        format: wNumb({
 	          encoder: function (a) {
@@ -67,11 +67,11 @@ function Calculate(data) {
 	      },
 	    });
 	    noUiSlider.create(mySliderMonth, {
-	      start: [parseInt(data['LeasingArray']['leasing_month_default'])],
+	      start: [parseInt(data['LeasingArray']['back_leasing_month_default'])],
 	      connect: "lower",
 	      range: {
-	        min: parseInt(data['LeasingArray']['leasing_min_month']),
-	        max: parseInt(data['LeasingArray']['leasing_max_month']),
+	        min: parseInt(data['LeasingArray']['back_leasing_min_month']),
+	        max: parseInt(data['LeasingArray']['back_leasing_max_month']),
 	      },
 	      format: wNumb({
 	        decimals: 0,
@@ -80,7 +80,7 @@ function Calculate(data) {
 	      pips: {
 	        mode: "values",
 	        density: 100,
-	        values: [parseInt(data['LeasingArray']['leasing_min_month']), parseInt(data['LeasingArray']['leasing_max_month'])],
+	        values: [parseInt(data['LeasingArray']['back_leasing_min_month']), parseInt(data['LeasingArray']['back_leasing_max_month'])],
 	        stepped: true,
 	        format: wNumb({
 	          decimals: 0,
@@ -127,8 +127,8 @@ function Calculate(data) {
 			    url: "/ajax/ajaxGetLoanData",
 			    type: "GET",
 			    data: {
-			    	leasing_month: $("#SetMonthRange").val(),
-			    	leasing_price: $("#SetRange").val(),
+			    	back_leasing_month: $("#SetMonthRange").val(),
+			    	back_leasing_price: $("#SetRange").val(),
 			    },
 			    success: function(data) {
 			        if(data['status'] == true) {
@@ -301,8 +301,8 @@ $.ajax({
 			    url: "/ajax/ajaxGetLoanData",
 			    type: "GET",
 			    data: {
-			    	leasing_month: data['LeasingArray']['leasing_month_default'],
-			    	leasing_price: data['LeasingArray']['leasing_price_default'],
+			    	back_leasing_month: data['LeasingArray']['back_leasing_month_default'],
+			    	back_leasing_price: data['LeasingArray']['back_leasing_price_default'],
 			    },
 			    success: function(data) {
 			        if(data['status'] == true) {
