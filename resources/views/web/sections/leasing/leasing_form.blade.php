@@ -144,17 +144,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="terms">
-                                            <input type="checkbox" id="fast_review" name="fast_review" value="yes" checked>
-                                            <label for="terms" class="helvetica-regular" style="font-size: 14px;"> მსურს ვისარგებლო სწრაფი განხილვის სერვისით <br>
-                                            <a href="#0" id="readmore">{{ trans('site.read_more') }}</a>
-                                            </label>
-                                        </div>
-                                        <div id="terms">
-                                                <input type="checkbox" id="accept_terms" name="accept_terms" required>
-                                                <label for="terms" class="helvetica-regular" style="font-size: 14px;"> ამით ვადასტურებ, რომ წავიკითხე და მესმის შ.პ.ს "ფინრივა" - ს კონფიდენციალურობის დებულება ნებართვა ასეთი პირადი მონაცემების მიწოდებაზე და რომ შ.პ.ს "ფინრივა" უფლებამოსილია დაამუშაოს ჩემი მონაცემები, , მიიღეთ ჩემი მონაცემები და სხვა ინფორმაცია სესხის ისტორიის მონაცემთა ბაზებიდან<br>
-                                            </label>
-                                        </div>
                                     </div>
                                     <div class="row mt-60">
                                         <div class="col-md-12">
