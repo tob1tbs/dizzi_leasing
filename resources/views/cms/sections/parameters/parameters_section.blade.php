@@ -3,5 +3,5 @@
 
 
 @section('content')
-@dd($sectionStatus)
+@dd($sectionStatus['blog'][0])
 @endsection

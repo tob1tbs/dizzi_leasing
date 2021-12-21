@@ -3,7 +3,7 @@
 @section('content')
 <main>
 	<section class="banner-area-2 loan-banner"></section>
-    <section class="pb-40 bg_white" style="padding: 100px 0 50px 0;">
+    <section class="pb-40 bg_white" style="padding: 40px 0 50px 0;">
         <div class="container">
             <div class="section-title">
                 <h2 class="wow fadeInUp neue">{{ trans('site.faq') }}</h2>

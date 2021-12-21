@@ -371,7 +371,7 @@
         </div>
     </section>
     @endif
-    @if($vissible != 0)
+    @if($sectionStatus['blog'][0] == 1)
     <section class="news-area pb-60">
         <div class="container ">
             <div class="section-title pt-30">
