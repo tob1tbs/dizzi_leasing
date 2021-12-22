@@ -80,9 +80,9 @@
                                             @if($user_item->verify_email == 0)
                                            <li><a href="javascript:;" onclick="UserVerify(2,{{ $user_item->id }})"><em class="icon ni ni-mail-fill"></em><span>ელ-ფოსტის ვერიფიკაცია</span></a></li>
                                             @endif
-                                            @if($user_item->crm_id == 0)
-                                           <li><a href="javascript:;" onclick="UserSendToCrm({{ $user_item->id }})"><em class="icon ni ni-link-alt"></em><span>CRM ში გაგზავნა</span></a></li>
-                                            @endif
+                                            <!-- @if($user_item->crm_id == 0)
+                                            <li><a href="javascript:;" onclick="UserSendToCrm({{ $user_item->id }})"><em class="icon ni ni-link-alt"></em><span>CRM ში გაგზავნა</span></a></li>
+                                            @endif -->
                                             <li><a href="javascript:;" onclick="UserRoleChange({{ $user_item->id }})"><em class="icon ni ni-unlock"></em><span>წვდომა</span></a></li>
                                             <li><a href="javascript:;" class="text-danger" onclick="UserDelete({{ $user_item->id }})"><em class="icon ni ni-trash"></em><span>წაშლა</span></a></li>
                                         </ul>
