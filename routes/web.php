@@ -142,6 +142,7 @@ Route::group(['prefix' => '/cms'], function() {
         Route::post('/ajaxTranslateUpdateSubmit/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxTranslateUpdateSubmit'])->name('ajaxTranslateUpdateSubmit');
         Route::post('/ajaxSectionStatusChange/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxSectionStatusChange'])->name('ajaxSectionStatusChange');
         Route::get('/ajaxUpdateStepPhoto/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxUpdateStepPhoto'])->name('ajaxUpdateStepPhoto');
+        Route::post('/ajaxUpdateStepPhotoSubmit/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxUpdateStepPhotoSubmit'])->name('ajaxUpdateStepPhotoSubmit');
 
         // CARS
         Route::post('/ajaxOptionSubmit/', [App\Http\Controllers\CmsControllers\Cars\CarsAjaxController::class, 'ajaxOptionSubmit'])->name('ajaxOptionSubmit');

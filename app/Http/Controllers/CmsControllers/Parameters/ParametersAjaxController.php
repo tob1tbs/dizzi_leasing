@@ -124,4 +124,25 @@ class ParametersAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
         }
     }
+
+    public function ajaxUpdateStepPhotoSubmit(Request $Request) {
+        if($Request->isMethod('POST')) {
+            if($Request->has('photo_new')) {
+                $MainPhoto = $Request->photo;
+                $MainPhotoName =  md5(Str::random(20).time().$MainPhoto).'.'.$MainPhoto->getClientOriginalExtension();
+                $MainPhoto->move(public_path('uploads/step/'), $MainPhotoName);
+            } else {
+                $MainPhotoName = $Request->photo_hidden;
+            }
+
+            $StepPhoto = new StepPhoto();
+            $StepPhotoData = $StepPhoto::find($Request->photo_id)->update([
+                'photo' => $MainPhotoName
+            ]);
+
+            return response()->json(['status' => true, 'errors' => false, 'message' => 'სურათი წარმატებით განახლდა']);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
+        }
+    }
 }
