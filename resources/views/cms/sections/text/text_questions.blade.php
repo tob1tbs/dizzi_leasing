@@ -53,7 +53,7 @@
                                 <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <ul class="link-list-opt no-bdr" style="width: 300px;">
-                                        <li><a href=""><em class="icon ni ni-edit"></em><span>რედაქტირება</span></a></li>
+                                        <li><a href="javascript:;" onclick="EditQuestion({{ $faq_item->id }})"><em class="icon ni ni-edit"></em><span>რედაქტირება</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
     <div class="modal-dialog modal-dialog-top" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title font-neue">კითხვის დამატება</h5>
+                <h5 class="modal-title font-neue question-heading">კითხვის დამატება</h5>
                 <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                     <em class="icon ni ni-cross"></em>
                 </a>
@@ -139,6 +139,25 @@
             }
         });
 	}
+
+    function EditQuestion(question_id) {
+        $.ajax({
+            dataType: 'json',
+            url: "/cms/ajax/ajaxEditQuestion",
+            type: "POST",
+            data: {
+                question_id: question_id,
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data) {
+                console.log(data);
+                $(".question-heading").html('კითხვის რედაქტირება');
+                $("#QuestionModal").modal('show');
+            }
+        });
+    }
 
     function QuestionSubmit() {
         var form = $('#question_form')[0];

@@ -62,4 +62,15 @@ class TextPageAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
         }
     }
+
+    public function ajaxEditQuestion(Request $Request) {
+        if($Request->isMethod('GET')) {
+            $Faq = new Faq();
+            $FaqData = $Faq::find($Request->question_id);
+
+            return response()->json(['status' => true, 'FaqData' => $FaqData]);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
+        }
+    }
 }

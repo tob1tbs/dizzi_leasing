@@ -170,6 +170,7 @@ Route::group(['prefix' => '/cms'], function() {
         // QUESTIONS
         Route::post('/ajaxQuestionStatusChange/', [App\Http\Controllers\CmsControllers\TextPage\TextPageAjaxController::class, 'ajaxQuestionStatusChange'])->name('ajaxQuestionStatusChange');
         Route::post('/ajaxQuestionSubmit/', [App\Http\Controllers\CmsControllers\TextPage\TextPageAjaxController::class, 'ajaxQuestionSubmit'])->name('ajaxQuestionSubmit');
+        Route::get('/ajaxEditQuestion/', [App\Http\Controllers\CmsControllers\TextPage\TextPageAjaxController::class, 'ajaxEditQuestion'])->name('ajaxEditQuestion');
 
     });
 });
