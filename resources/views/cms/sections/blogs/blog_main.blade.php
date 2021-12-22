@@ -26,9 +26,6 @@
                     <span>ID</span>
                 </div>
                 <div class="nk-tb-col">
-                    <span>სურათი</span>
-                </div>
-                <div class="nk-tb-col">
                     <span>დასახელება</span>
                 </div>
                 <div class="nk-tb-col tb-col-sm">
@@ -45,11 +42,6 @@
                 </div>
                 <div class="nk-tb-col">
                     <div class="align-center">
-                        <div class="user-avatar user-avatar-sm bg-light">
-                            <span>
-                                <img src="{{ url('uploads/blog/'.$blog_item->photo) }}">
-                            </span>
-                        </div>
                         <span class="tb-sub ml-2">{{ json_decode($blog_item->title)->ge }}</span>
                     </div>
                 </div>
