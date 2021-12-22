@@ -71,7 +71,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-xs" style="">
                             <ul class="link-list-plain font-neue">
-                                <li><a href="{{ route('actionCarsEdit', $car_item['id']) }}">რედაქტირება</a></li>
+                                <!-- <li><a href="{{ route('actionCarsEdit', $car_item['id']) }}">რედაქტირება</a></li> -->
                                 <li><a href="javascript:;" class="text-danger" onclick="CarDelete({{ $car_item['id'] }})"><span>წაშლა</span></a></li>
                             </ul>
                         </div>
