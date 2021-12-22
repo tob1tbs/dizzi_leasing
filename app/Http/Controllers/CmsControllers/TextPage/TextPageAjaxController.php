@@ -53,8 +53,7 @@ class TextPageAjaxController extends Controller
                 [
                     'id' => $Request->question_id,
                     'title' => json_encode($title),
-                    'text' => json_encode($text),
-                    'photo' => $MainPhotoName,
+                    'value' => json_encode($text),
                 ]
             );
 
