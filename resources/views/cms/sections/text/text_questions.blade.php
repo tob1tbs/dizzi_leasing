@@ -54,6 +54,7 @@
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <ul class="link-list-opt no-bdr" style="width: 300px;">
                                         <li><a href="javascript:;" onclick="EditQuestion({{ $faq_item->id }})"><em class="icon ni ni-edit"></em><span>რედაქტირება</span></a></li>
+                                        <li><a href="javascript:;" class="text-danger" onclick="QuestionDelete({{ $faq_item->id }})"><span>წაშლა</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -157,6 +158,36 @@
                 $("#QuestionModal").modal('show');
             }
         });
+    }
+
+    function QuestionDelete(question_id) {
+        Swal.fire({
+        title: "ნამდვილად გსურთ კითხვის წაშლა?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: 'წაშლა',
+        cancelButtonText: "გათიშვა",
+        preConfirm: () => {
+            $.ajax({
+                dataType: 'json',
+                url: "/cms/ajax/ajaxQuestionDelete",
+                type: "POST",
+                data: {
+                    user_id: user_id,
+                },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(data) {
+                    Swal.fire({
+                      icon: 'success',
+                      text: data['message'],
+                    })
+                    location.reload();
+                }
+            });
+        }
+    });
     }
 
     function QuestionSubmit() {

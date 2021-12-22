@@ -32,7 +32,7 @@ class TextPageAjaxController extends Controller
                 'status' => $Request->question_status,
             ]);
 
-            return response()->json(['status' => true, 'message' => 'კოდი წარმატებით წაიშალა']);
+            return response()->json(['status' => true]);
         } else {
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
         }
@@ -69,6 +69,19 @@ class TextPageAjaxController extends Controller
             $FaqData = $Faq::find($Request->question_id);
 
             return response()->json(['status' => true, 'FaqData' => $FaqData]);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
+        }
+    }
+
+    public function ajaxQuestionDelete(Request $Request) {
+        if($Request->isMethod('POST')) {
+            $Faq = new Faq();
+            $Faq::find($Request->question_id)->update([
+                'deleted_at_int' => 0,
+            ]);
+
+            return response()->json(['status' => true, 'message' => 'შეკითხვა შეინახა']);
         } else {
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
         }
