@@ -69,7 +69,7 @@ class MainController extends Controller
             $TextPageArray = [];
 
             foreach($TextPageList as $TextKey => $TextValue) {
-                $TextPageArray[$TextValue['slug']] = $TextValue->['value'];
+                $TextPageArray[$TextValue['slug']] = $TextValue['value'];
             }
 
             $data = [
