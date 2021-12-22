@@ -2,13 +2,12 @@
 
 @section('content')
 <main>
-	<section class="banner-area-2 loan-banner pt-145"></section>
-    <section class="pt-50 pb-120 bg_disable" style="padding: 100px 0 50px 0;">
+    <section class="pt-50 pb-120 bg_disable" style="padding: 50px 0 50px 0;">
         <div class="container">
             <div class="row gy-lg-0 gy-4">
                 <div class="col-lg-1 position-relative">
                     <div class="blog-share-widget d-flex d-lg-block align-items-center">
-                        <p>{{ trans('site.share') }}</p>
+                        <p class="helvetica-regular">{{ trans('site.share') }}</p>
                         <div class="social-link">
                             <a href="javascript:;" onclick="share()"><i class="fab fa-facebook-f"></i></a>
                             <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a>
