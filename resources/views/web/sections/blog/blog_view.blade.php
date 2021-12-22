@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="post-details-widget pb-30 position-relative">
-                        <img class="post-img w-100" src="{{ url('assets/web/img/blog/blog-details-img.jpg') }}" alt="post image">
+                        <img class="post-img w-100" src="{{ url('uploads/blog/'.$blog_data['photo']) }}" alt="post image">
                     </div>
                     <div class="blog-title" style="margin-bottom: 30px;">
                     	<b style="font-size: 19px;" class="neue">{{ json_decode($blog_data['title'], true)[app()->getLocale()] }}</b>
