@@ -25,7 +25,7 @@
                                     <select class="form-control font-neue" name="make" id="make" onchange="GetCarModelList()">
                                         <option></option>
                                         @foreach($car_make_list as $make_item)
-                                        <option value="{{ $make_item->id }}" @if($car_data->make == $make_item->id) selected @endif>{{ $make_item->name }}</option>
+                                        <option value="{{ $make_item->id }}">{{ $make_item->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -42,7 +42,6 @@
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="photo_main">მთავარი ფოტო</label>
                                     <input type="file" class="form-control font-neue" name="photo" id="photo">
-                                    <input type="hidden" name="old_photo" value="{{ $car_data->photo }}">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -52,33 +51,17 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="row g-gs">
-                                    @foreach($car_gallery as $gallery_item)
-                                    <div class="col-sm-6 col-lg-3 gallery_item-{{ $gallery_item->id }}">
-                                        <div class="gallery card card-bordered">
-                                            <a class="gallery-image popup-image" href="{{ url('uploads/cars/'.$gallery_item->car_id.'/gallery/'.$gallery_item->photo) }}"><img class="w-100 rounded-top" src="{{ url('uploads/cars/'.$gallery_item->car_id.'/gallery/'.$gallery_item->photo) }}" alt="" /></a>
-                                        </div>
-                                        <div class="gallery-body card-inner align-center justify-between flex-wrap g-2">
-                                            <div class="user-info">
-                                                <span class="lead-text font-neue" style="cursor: pointer;" onclick="DeleteGalleryPhoto({{ $gallery_item->id }})">წაშლა</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                            <div class="col-12">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="description_ge">აღწერა ქართულად</label>
-                                    <textarea class="summernote" name="description_ge">{{ json_decode($car_data->description, true)['ge'] }}</textarea>
+                                    <textarea class="summernote" name="description_ge"></textarea>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <!-- <div class="col-12">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="description_en">აღწერა ინგლისურად</label>
-                                    <textarea class="summernote" name="description_en">{{ json_decode($car_data->description, true)['en'] }}</textarea>
+                                    <textarea class="summernote" name="description_en"></textarea>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -87,17 +70,52 @@
                 <div class="card card-preview">
                     <div class="card-inner">
                         <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="">ფასი</label>
+                                    <input type="text" class="form-control font-neue" name="car_price" id="car_price" value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="">გამოშვების წელი</label>
+                                    <select class="form-control font-neue" name="car_year" id="car_year">
+                                        <option value="0"></option>
+                                        @foreach($car_year as $year_item)
+                                        <option value="{{ $year_item }}">{{ $year_item }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="">გარბენი</label>
+                                    <input type="text" class="form-control font-neue" name="car_millage" id="car_millage" value="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="">ძრავის მოცულობა</label>
+                                    <select class="form-control font-neue" name="car_engine_volume" id="car_engine_volume">
+                                        <option value="0"></option>
+                                        @foreach($car_engine as $engine_item)
+                                        <option value="{{ $engine_item }}">{{ $engine_item }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                             @foreach($option_list as $option_item)
-                            <div class="col-6">
+                            <div class="col-lg-6 col-12">
                                 <div class="form-control-wrap mb-2">
                                     @switch($option_item['type'])
                                     @case('input')
                                     <label class="form-label" for="{{ $option_item['key'] }}">{{ $option_item['name'] }}</label>
-                                    <input type="text" class="form-control font-neue" name="option[{{ $option_item['key'] }}]" id="{{ $option_item['key'] }}" value="{{ $car_parameter_list[$option_item['key']]['value'] }}">
+                                    <input type="text" class="form-control font-neue" name="option[{{ $option_item['key'] }}]" id="{{ $option_item['key'] }}" value="">
                                     @break
                                     @case('select')
                                     <label class="form-label" for="{{ $option_item['key'] }}">{{ $option_item['name'] }}</label>
                                     <select class="form-control font-neue" name="option[{{ $option_item['key'] }}]" id="{{ $option_item['key'] }}">
+                                    <option value="0"></option>
                                     @foreach($option_item['option'] as $item)
                                         <option value="{{ $item['id'] }}">{{ json_decode($item['value'])->ge }}</option>
                                     @endforeach
@@ -105,7 +123,7 @@
                                     @break
                                     @case('date')
                                     <label class="form-label" for="{{ $option_item['key'] }}">{{ $option_item['name'] }}</label>
-                                    <input type="text" class="form-control font-neue date-picker-alt" name="option[{{ $option_item['key'] }}]" id="{{ $option_item['key'] }}" data-date-format="yyyy" value="{{ $car_parameter_list[$option_item['key']]['value'] }}">
+                                    <input type="text" class="form-control font-neue date-picker-alt" name="option[{{ $option_item['key'] }}]" id="{{ $option_item['key'] }}" data-date-format="yyyy">
                                     @break
                                     @endswitch
                                 </div>
@@ -137,37 +155,9 @@
 
     $(document).ready(function() {
         $('.summernote').summernote();
-
         $('#gallery_photo').imageUploader({
             imagesInputName: 'gallery_photo',
             maxFiles: 5,
-        });
-
-        $.ajax({
-            dataType: 'json',
-            url: "/cms/ajax/ajaxCarMake",
-            type: "GET",
-            data: {
-                make_id: $("#make").val(),
-            },
-            success: function(data) {
-                if(data['status'] == true) {
-                    if(data['CarModelList'].length > 0) {
-                        $("#model").html('');
-                        $.each(data['CarModelList'], function(key, value) {
-                            $("#model").append(`<option value='`+value['id']+`'>`+value['name']+`</option>`)
-                        });
-                        $("#model").attr('disabled', false);
-                    } else {
-                        $("#model").attr('disabled', true);
-                    }
-                } else {
-                    Swal.fire({
-                      icon: 'error',
-                      text: data['message'],
-                    })
-                }
-            }
         });
     });
 </script>
