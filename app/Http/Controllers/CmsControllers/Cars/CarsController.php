@@ -151,11 +151,11 @@ class CarsController extends Controller
                 }
             }
 
-            $CarParameter = new CarParameter();
-            $CarParameterList = $CarParameter::where('car_id', $Request->id)->where('deleted_at_int', '!=', 0)->get()->load('carOptionValue')->load('carOptionValueId')->toArray();
-            $CarParameterArray = [];
+            // $CarParameter = new CarParameter();
+            // $CarParameterList = $CarParameter::where('car_id', $Request->id)->where('deleted_at_int', '!=', 0)->get()->load('carOptionValue')->load('carOptionValueId')->toArray();
+            // $CarParameterArray = [];
 
-            dd($CarParameterList);
+            // dd($CarParameterList);
 
             foreach($CarParameterList as $CarParameterItem) {
                 if(!empty($CarParameterItem['car_option_value']) > 0) {
