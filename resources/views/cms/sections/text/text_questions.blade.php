@@ -41,7 +41,7 @@
                 <td class="nk-tb-col tb-col-md">
                 	<div class="form-group">
             			<div class="custom-control custom-switch">
-            				<input type="checkbox" class="custom-control-input" name="reg-public" id="question_{{ $faq_item->id }}" value="1">
+            				<input type="checkbox" class="custom-control-input" name="reg-public" id="question_{{ $faq_item->id }}" value="1" @if($faq_item->status == 1) checked @endif onclick="QuestionStatusChange({{ $faq_item->id}}, this)">
             				<label class="custom-control-label" for="question_{{ $faq_item->id }}"></label>
             			</div>
             		</div>
@@ -69,5 +69,9 @@
 @endsection
 
 @section('js')
-
+<script type="text/javascript">
+	function QuestionStatusChange(question_id, elem) {
+		
+	}
+</script>
 @endsection
