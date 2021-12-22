@@ -10,11 +10,11 @@
 </div>
 <div class="card card-preview">
     <div class="card-inner">
-        <table class="datatable-init nk-tb-list nk-tb-ulist font-helvetica-regular" data-auto-responsive="false">
+        <table class="nk-tb-list nk-tb-ulist font-helvetica-regular">
             <thead>
                 <tr class="nk-tb-item nk-tb-head font-helvetica-regular">
                     <th class="nk-tb-col"><span class="sub-text">გვერდის დასახელება</span></th>
-                    <th class="nk-tb-col nk-tb-col-tools text-right">სტატუსი</th>
+                    <th class="nk-tb-col">სტატუსი</th>
                 </tr>
             </thead>
             <tbody>
