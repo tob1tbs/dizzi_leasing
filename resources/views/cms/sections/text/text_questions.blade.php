@@ -144,12 +144,9 @@
         $.ajax({
             dataType: 'json',
             url: "/cms/ajax/ajaxEditQuestion",
-            type: "POST",
+            type: "GET",
             data: {
                 question_id: question_id,
-            },
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function(data) {
                 console.log(data);
