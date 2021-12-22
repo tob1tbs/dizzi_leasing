@@ -21,9 +21,9 @@ class BlogAjaxController extends Controller
             );
             $validator = Validator::make($Request->all(), [
                 'title_ge' => 'required|max:255',
-                'title_en' => 'required|max:255',
+                // 'title_en' => 'required|max:255',
                 'text_ge' => 'required',
-                'text_en' => 'required',
+                // 'text_en' => 'required',
                 'photo' => 'required',
             ], $messages);
 
