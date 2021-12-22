@@ -59,6 +59,13 @@
         </div>
     </div>
 </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </main>
 <style type="text/css">
     #emiAmount2, #emiAmount {
