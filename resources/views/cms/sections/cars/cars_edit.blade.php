@@ -73,7 +73,7 @@
                             <div class="col-lg-6 col-12">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="">ფასი</label>
-                                    <input type="text" class="form-control font-neue" name="car_price" id="car_price" value="">
+                                    <input type="text" class="form-control font-neue" name="car_price" id="car_price" value="{{ $car_data->price }}">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-12">
@@ -99,7 +99,7 @@
                                     <select class="form-control font-neue" name="car_engine_volume" id="car_engine_volume">
                                         <option value="0"></option>
                                         @foreach($car_engine as $engine_item)
-                                        <option value="{{ $engine_item }}">{{ $engine_item }}</option>
+                                        <option value="{{ $engine_item }}" @if($engine_item == $car_data->engine) selected @endif>{{ $engine_item }}</option>
                                         @endforeach
                                     </select>
                                 </div>
