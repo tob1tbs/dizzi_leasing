@@ -11,5 +11,5 @@ class Faq extends Model
 
     protected $table = "cms_faq";
 
-    protected $fillable = ['status'];
+    protected $fillable = ['title', 'value', 'deleted_at_int', 'status'];
 }
