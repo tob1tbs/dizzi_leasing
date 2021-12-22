@@ -4,7 +4,7 @@
 <div class="nk-block-head">
     <div class="nk-block-between">
         <div class="nk-block-head-content">
-            <h4 class="nk-block-title font-neue">სექციების ჩამონათვალი</h4>
+            <h4 class="nk-block-title font-neue">სხვადასხვა სურათები</h4>
         </div>  
     </div>
 </div>
