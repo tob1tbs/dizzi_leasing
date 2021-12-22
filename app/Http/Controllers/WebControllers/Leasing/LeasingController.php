@@ -9,6 +9,8 @@ use App\Models\Leasing\LeasingParameter;
 use App\Models\Cars\CarData;
 use App\Models\Cars\CarMake;
 
+use App\Models\TextPage\TextPage;
+
 class LeasingController extends Controller
 {
     //
@@ -45,9 +47,20 @@ class LeasingController extends Controller
                 $LeasingArray[$ParameterItem['key']] = $ParameterItem['value'];
             }
 
+
+            $TextPage = new TextPage();
+            $TextPageList = $TextPage::where('deleted_at_int', '!=', 0)->get()->toArray();
+
+            $TextPageArray = [];
+
+            foreach($TextPageList as $TextKey => $TextValue) {
+                $TextPageArray[$TextValue['slug']] = $TextValue['value'];
+            }
+
             $data = [
                 'leasing_data' => $LeasingArray,
                 'car_list' => $CarList,
+                'text_list' => $TextPageArray,
             ];
 
             return view('web.sections.leasing.leasing', $data);
@@ -80,9 +93,20 @@ class LeasingController extends Controller
                 $LeasingArray[$ParameterItem['key']] = $ParameterItem['value'];
             }
 
+
+            $TextPage = new TextPage();
+            $TextPageList = $TextPage::where('deleted_at_int', '!=', 0)->get()->toArray();
+
+            $TextPageArray = [];
+
+            foreach($TextPageList as $TextKey => $TextValue) {
+                $TextPageArray[$TextValue['slug']] = $TextValue['value'];
+            }
+
             $data = [
                 'leasing_data' => $LeasingArray,
                 'car_list' => $CarList,
+                'text_list' => $TextPageArray,
             ];
 
             return view('web.sections.leasing.backleasing', $data);
@@ -173,9 +197,20 @@ class LeasingController extends Controller
                 $LeasingArray[$ParameterItem['key']] = $ParameterItem['value'];
             }
 
+            
+            $TextPage = new TextPage();
+            $TextPageList = $TextPage::where('deleted_at_int', '!=', 0)->get()->toArray();
+
+            $TextPageArray = [];
+
+            foreach($TextPageList as $TextKey => $TextValue) {
+                $TextPageArray[$TextValue['slug']] = $TextValue['value'];
+            }
+
             $data = [
                 'leasing_data' => $LeasingArray,
                 'car_list' => $CarList,
+                'text_list' => $TextPageArray,
             ];
 
             return view('web.sections.leasing.taxileasing', $data);
