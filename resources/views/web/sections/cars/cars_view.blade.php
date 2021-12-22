@@ -6,7 +6,6 @@
 
 @section('content')
 <main>
-    <section class="banner-area-2 loan-banner pt-145"></section>
     <section class="pb-40 bg_white" style="padding: 50px 0 0 0">
     	<section id="details-slider__section col-12">
 	        <div class="details-slider">
