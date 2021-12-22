@@ -146,11 +146,15 @@ class CarsController extends Controller
             $CarMake = new CarMake();
             $CarMakeList = $CarMake::where('deleted_at_int', '!=', 0)->where('status', 1)->get();
 
+            $CarData = new CarData();
+            $CarDataItem = $CarData::find($Request->id);
+
             $data = [
                 'option_list' => $OptionArray, 
                 'car_make_list' => $CarMakeList, 
                 'car_engine' => $this->getEngineVolume(),
                 'car_year' => $this->getYear(),
+                'car_data' => $CarDataItem,
             ];
 
             return view('cms.sections.cars.cars_edit', $data);

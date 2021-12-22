@@ -23,7 +23,7 @@
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="make">ავტომობილის მარკა</label>
                                     <select class="form-control font-neue" name="make" id="make" onchange="GetCarModelList()">
-                                        <option></option>
+                                        <option value="0"></option>
                                         @foreach($car_make_list as $make_item)
                                         <option value="{{ $make_item->id }}">{{ $make_item->name }}</option>
                                         @endforeach
