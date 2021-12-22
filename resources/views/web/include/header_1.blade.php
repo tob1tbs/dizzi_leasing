@@ -54,8 +54,18 @@
                         <li class="nav-item dropdown submenu ">
                             <a href="{{ route('actionWebContact') }}" class="nav-link">{{ trans('site.our_office') }}</a>
                         </li>
+                        @if($sectionStatus['blog'][0] == 1)
                         <li class="nav-item dropdown submenu ">
-                            <a href="{{ route('actionWebRequsites') }}" class="nav-link">{{ trans('site.requisites') }}</a>
+                            <a href="{{ route('actionWebBlog') }}" class="nav-link">{{ trans('site.blog') }}</a>
+                        </li>
+                        @endif
+                        @if($sectionStatus['cars'][0] == 1)
+                        <li class="nav-item dropdown submenu ">
+                            <a href="{{ route('actionWebCars') }}" class="nav-link">{{ trans('site.cars') }}</a>
+                        </li>
+                        @endif
+                        <li class="nav-item dropdown submenu ">
+                            <a href="{{ route('actionWebAboutUs') }}" class="nav-link">{{ trans('site.about_us') }}</a>
                         </li>
                         <li class="nav-item dropdown submenu ">
                             <a href="{{ route('actionWebFaq') }}" class="nav-link">{{ trans('site.faq') }}</a>
