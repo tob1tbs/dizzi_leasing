@@ -54,7 +54,7 @@
                             <div class="form-group">
                                 <label class="form-label" for="full-name">სურათი</label>
                                 <div class="form-control-wrap">
-                                    <input type="text" class="form-control" name="photo_new" id="photo_new">
+                                    <input type="file" class="form-control" name="photo_new" id="photo_new">
                                     <input type="hidden"  name="photo_hidden" id="photo_hidden">
                                 </div>
                             </div>
