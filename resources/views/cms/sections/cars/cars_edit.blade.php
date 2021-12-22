@@ -160,5 +160,32 @@
             maxFiles: 5,
         });
     });
+
+    $.ajax({
+        dataType: 'json',
+        url: "/cms/ajax/ajaxCarMake",
+        type: "GET",
+        data: {
+            make_id: $("#make").val(),
+        },
+        success: function(data) {
+            if(data['status'] == true) {
+                if(data['CarModelList'].length > 0) {
+                    $("#model").html('');
+                    $.each(data['CarModelList'], function(key, value) {
+                        $("#model").append(`<option value='`+value['id']+`'>`+value['name']+`</option>`)
+                    });
+                    $("#model").attr('disabled', false);
+                } else {
+                    $("#model").attr('disabled', true);
+                }
+            } else {
+                Swal.fire({
+                  icon: 'error',
+                  text: data['message'],
+                })
+            }
+        }
+    });
 </script>
 @endsection
