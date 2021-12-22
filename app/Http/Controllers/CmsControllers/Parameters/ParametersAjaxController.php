@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Parameters\TranslateParameter;
 use App\Models\Parameters\BasicParameter;
+use App\Models\Parameters\ParameterSection;
 
 use Validator;
 
@@ -102,7 +103,11 @@ class ParametersAjaxController extends Controller
 
     public function ajaxSectionStatusChange(Request $Request) {
         if($Request->isMethod('POST')) {
-            dd($Request->all());
+            $ParameterSection = new ParameterSection();
+            $ParameterSection::find($Request->section_id)->update([
+                'status' => $Request->section_status
+            ]);
+            return response()->json(['status' => true]);
         } else {
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
         }
