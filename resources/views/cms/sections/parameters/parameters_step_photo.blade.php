@@ -23,7 +23,7 @@
                     <td class="nk-tb-col">
                         <div class="user-card">
                             <div class="user-info">
-                                <img src="{{ url('uploads/steps/'.$step_item->photo) }}">
+                                <div class="nk-activity-media user-avatar bg-success"><img src="{{ url('uploads/step/'.$step_item->photo) }}"></div>
                             </div>
                         </div>
                     </td>
