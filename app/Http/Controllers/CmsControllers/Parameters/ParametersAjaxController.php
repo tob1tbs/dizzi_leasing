@@ -112,4 +112,15 @@ class ParametersAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
         }
     }
+
+    public function ajaxUpdateStepPhoto(Request $Request) {
+        if($Request->isMethod('GET')) {
+            $StepPhoto = new StepPhoto();
+            $StepPhotoData = $StepPhoto::find($Request->photo_id);
+
+            return response()->json(['status' => true, 'StepData' => $StepPhotoData]);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
+        }
+    }
 }

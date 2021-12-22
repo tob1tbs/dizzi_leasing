@@ -14,7 +14,7 @@
             <thead>
                 <tr class="nk-tb-item nk-tb-head font-helvetica-regular">
                     <th class="nk-tb-col"><span class="sub-text">სურათი</span></th>
-                    <th class="nk-tb-col">მოქმედება</th>
+                    <th class="nk-tb-col text-right">მოქმედება</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                     </td>
-                    <td class="nk-tb-col">
+                    <td class="nk-tb-col text-right">
                         <div class="form-group">
                             <span onclick="UpdateStepPhoto({{ $step_item->id }})">სურათის განახლება</span>
                         </div>
@@ -55,7 +55,7 @@
                                 <label class="form-label" for="full-name">სურათი</label>
                                 <div class="form-control-wrap">
                                     <input type="text" class="form-control" name="photo_new" id="photo_new">
-                                    <input type="text" class="form-control" name="photo_hidden" id="photo_hidden">
+                                    <input type="hidden"  name="photo_hidden" id="photo_hidden">
                                 </div>
                             </div>
                         </div>
@@ -76,8 +76,19 @@
 @section('js')
 <script type="text/javascript">
     function UpdateStepPhoto(photo_id) {
-        $('#photo_form')[0].reset();
-        $("#PhotoModal").modal('show');
+        $.ajax({
+            dataType: 'json',
+            url: "/cms/ajax/ajaxUpdateStepPhoto",
+            type: "GET",
+            data: {
+                photo_id: photo_id,
+            },
+            success: function(data) {
+                $("#photo_id").val(data['StepData']['id']);
+                $("#photo_hidden").val(data['StepData']['photo']);
+                $("#PhotoModal").modal('show');
+            }
+        });
     }
 
     function UpdateStepPhotoSubmit() {
