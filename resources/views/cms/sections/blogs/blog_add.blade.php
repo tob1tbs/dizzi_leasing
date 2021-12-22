@@ -33,15 +33,15 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-control-wrap mb-2">
-                                     <div class="input-group">
-   <span class="input-group-btn">
-     <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-       <i class="fa fa-picture-o"></i> Choose
-     </a>
-   </span>
-   <input id="thumbnail" class="form-control" type="text" name="filepath">
- </div>
- <img id="holder" style="margin-top:15px;max-height:100px;">
+                                    <div class="input-group">
+                                        <input id="thumbnail" class="form-control" type="text" name="filepath">
+                                        <span class="input-group-btn">
+                                            <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary" style="color: #ffffff;">
+                                                სურათის არჩევა
+                                            </a>
+                                       </span>
+                                     </div>
+                                     <img id="holder" style="margin-top:15px;max-height:100px;">
                                 </div>
                             </div>
                             <div class="col-6">
