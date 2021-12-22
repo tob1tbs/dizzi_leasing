@@ -78,6 +78,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('.summernote').summernote();
+        $('#lfm').filemanager('image');
     });
 </script>
 @endsection
