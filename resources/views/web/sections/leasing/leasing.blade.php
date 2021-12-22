@@ -27,7 +27,7 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-sm-12 col-lg-4 col-xl-4">
-                            <img src="{{ url('assets/web/img/banner/leasing_banner.png') }}" class="img-fluid" style="border-radius: 10px;">
+                            <img src="{{ url('uploads/other/'.$otherPhotos['3'][0]) }}" class="img-fluid" style="border-radius: 10px;">
                         </div>
                         <div class="col-sm-12 col-lg-8 col-xl-8 helvetica-regular">
                             {!! $text_list['leasing'] !!}

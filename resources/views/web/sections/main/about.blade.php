@@ -11,7 +11,7 @@
             <div class="description-widget">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="{{ url('assets/web/img/banner/about.png') }}">
+                        <img src="{{ url('uploads/other/'.$otherPhotos['2'][0]) }}">
                     </div>
                     <div class="col-md-8">
                         <div class="desc-text pl-lg-10 helvetica-regular">
