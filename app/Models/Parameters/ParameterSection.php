@@ -10,4 +10,6 @@ class ParameterSection extends Model
     use HasFactory;
 
     protected $table = "cms_parameters_sections";
+
+    protected $fillable = ['status'];
 }
