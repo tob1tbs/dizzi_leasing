@@ -25,7 +25,7 @@
                                     <select class="form-control font-neue" name="make" id="make" onchange="GetCarModelList()">
                                         <option value="0"></option>
                                         @foreach($car_make_list as $make_item)
-                                        <option value="{{ $make_item->id }}">{{ $make_item->name }}</option>
+                                        <option value="{{ $make_item->id }}" @if($make_item->id == $car_data->make) selected @endif)>{{ $make_item->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
