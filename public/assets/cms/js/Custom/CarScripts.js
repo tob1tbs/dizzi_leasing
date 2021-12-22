@@ -292,12 +292,21 @@ function CarsAddSubmit() {
         },
         success: function(data) {
             if(data['status'] == true) {
-                Swal.fire({
-                    icon: 'success',
-                    text: data['message'],
-                    timer: 1500,
-                });
-                window.location.href = "/cms/cars/";
+                if(data['errors'] == true) {
+                    $.each(data['message'], function(key, value) {
+                        Swal.fire({
+                          icon: 'error',
+                          text: data['message'],
+                        })
+                    })
+                } else {
+                    Swal.fire({
+                        icon: 'success',
+                        text: data['message'],
+                        timer: 1500,
+                    });
+                    window.location.href = "/cms/cars/";
+                }
             } else {
                 Swal.fire({
                   icon: 'error',
