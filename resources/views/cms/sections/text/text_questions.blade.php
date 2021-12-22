@@ -150,7 +150,7 @@
             },
             success: function(data) {
                 $("#question_id").val(data['FaqData']['id']);
-                $("#question_title_ge").val(parseJSON(data['FaqData']['title'])['ge']);
+                $("#question_title_ge").val(JSON.parse(data['FaqData']['title'])['ge']);
                 $("#question_text_ge").val(data['FaqData']['id']);
                 $(".question-heading").html('კითხვის რედაქტირება');
                 $("#QuestionModal").modal('show');
