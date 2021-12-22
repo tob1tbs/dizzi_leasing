@@ -88,8 +88,8 @@
                 photo_id: photo_id,
             },
             success: function(data) {
-                $("#photo_id").val(data['StepData']['id']);
-                $("#photo_hidden").val(data['StepData']['photo']);
+                $("#photo_id").val(data['OtherData']['id']);
+                $("#photo_hidden").val(data['OtherData']['photo']);
                 $("#PhotoModal").modal('show');
             }
         });
