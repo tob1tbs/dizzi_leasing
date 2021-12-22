@@ -24,7 +24,7 @@ class BlogAjaxController extends Controller
                 // 'title_en' => 'required|max:255',
                 'text_ge' => 'required',
                 // 'text_en' => 'required',
-                'photo' => 'required',
+                // 'photo' => 'required',
             ], $messages);
 
             if ($validator->fails()) {
