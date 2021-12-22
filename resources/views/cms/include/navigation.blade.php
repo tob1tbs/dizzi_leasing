@@ -61,6 +61,11 @@
                             <span class="nk-menu-text">სტეპების სურათები</span>
                         </a>
                     </li>
+                    <!-- <li class="nk-menu-item">
+                        <a href="{{ route('actionOtherPhoto') }}" class="nk-menu-link" data-original-title="" title="">
+                            <span class="nk-menu-text">სხვა სურათები</span>
+                        </a>
+                    </li> -->
                 </ul>
             </li>
             <li class="nk-menu-item has-sub">

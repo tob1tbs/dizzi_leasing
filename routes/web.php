@@ -74,6 +74,7 @@ Route::group(['prefix' => '/cms'], function() {
             Route::get('/sections', [App\Http\Controllers\CmsControllers\Parameters\ParametersBasicController::class, 'actionParametersSections'])->name('actionParametersSections');
             Route::get('/seo', [App\Http\Controllers\CmsControllers\Parameters\ParametersBasicController::class, 'actionParametersSeo'])->name('actionParametersSeo');
             Route::get('/step', [App\Http\Controllers\CmsControllers\Parameters\ParametersBasicController::class, 'actionStepPhoto'])->name('actionStepPhoto');
+            Route::get('/otherPhoto', [App\Http\Controllers\CmsControllers\Parameters\ParametersBasicController::class, 'actionOtherPhoto'])->name('actionOtherPhoto');
         });
 
         // PARAMETERS
@@ -143,6 +144,8 @@ Route::group(['prefix' => '/cms'], function() {
         Route::post('/ajaxSectionStatusChange/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxSectionStatusChange'])->name('ajaxSectionStatusChange');
         Route::get('/ajaxUpdateStepPhoto/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxUpdateStepPhoto'])->name('ajaxUpdateStepPhoto');
         Route::post('/ajaxUpdateStepPhotoSubmit/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxUpdateStepPhotoSubmit'])->name('ajaxUpdateStepPhotoSubmit');
+        Route::get('/ajaxUpdateStepPhoto/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxUpdateStepPhoto'])->name('ajaxUpdateStepPhoto');
+        Route::post('/ajaxUpdateOtherPhotoSubmit/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxUpdateOtherPhotoSubmit'])->name('ajaxUpdateOtherPhotoSubmit');
 
         // CARS
         Route::post('/ajaxOptionSubmit/', [App\Http\Controllers\CmsControllers\Cars\CarsAjaxController::class, 'ajaxOptionSubmit'])->name('ajaxOptionSubmit');

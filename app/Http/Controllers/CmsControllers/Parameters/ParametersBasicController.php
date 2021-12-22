@@ -9,6 +9,7 @@ use App\Models\Parameters\BasicParameter;
 use App\Models\Parameters\LanguageList;
 use App\Models\Parameters\TranslateParameter;
 use App\Models\Parameters\ParameterSection;
+use App\Models\Parameters\OtherPhoto;
 use App\Models\Parameters\StepPhoto;
 
 class ParametersBasicController extends Controller
@@ -78,6 +79,22 @@ class ParametersBasicController extends Controller
             ];
 
             return view('cms.sections.parameters.parameters_step_photo', $data);
+        } else {
+            abort('404');
+        }
+    }
+
+    public function actionOtherPhoto(Request $Request) {
+        if (view()->exists('cms.sections.parameters.parameters_other_photo')) {
+
+            $OtherPhoto = new OtherPhoto();
+            $OtherPhotoList = $OtherPhoto::where('deleted_at_int', '!=', 0)->get();
+
+            $data = [
+                'other_photo_list' => $OtherPhotoList,
+            ];
+
+            return view('cms.sections.parameters.parameters_other_photo', $data);
         } else {
             abort('404');
         }

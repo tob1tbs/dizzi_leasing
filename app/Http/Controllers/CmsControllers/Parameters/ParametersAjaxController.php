@@ -9,6 +9,7 @@ use App\Models\Parameters\TranslateParameter;
 use App\Models\Parameters\BasicParameter;
 use App\Models\Parameters\ParameterSection;
 use App\Models\Parameters\StepPhoto;
+use App\Models\Parameters\OtherPhoto;
 
 use Validator;
 use Str;
@@ -138,6 +139,38 @@ class ParametersAjaxController extends Controller
 
             $StepPhoto = new StepPhoto();
             $StepPhotoData = $StepPhoto::find($Request->photo_id)->update([
+                'photo' => $MainPhotoName
+            ]);
+
+            return response()->json(['status' => true, 'errors' => false, 'message' => 'სურათი წარმატებით განახლდა']);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
+        }
+    }
+
+    public function ajaxUpdateStepPhoto(Request $Request) {
+        if($Request->isMethod('GET')) {
+            $OtherPhoto = new OtherPhoto();
+            $OtherPhotoData = $OtherPhoto::find($Request->photo_id);
+
+            return response()->json(['status' => true, 'OtherData' => $OtherPhotoData]);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
+        }
+    }
+
+    public function ajaxUpdateOtherPhotoSubmit(Request $Request) {
+        if($Request->isMethod('POST')) {
+            if($Request->has('photo_new')) {
+                $MainPhoto = $Request->photo_new;
+                $MainPhotoName =  md5(Str::random(20).time().$MainPhoto).'.'.$MainPhoto->getClientOriginalExtension();
+                $MainPhoto->move(public_path('uploads/other/'), $MainPhotoName);
+            } else {
+                $MainPhotoName = $Request->photo_hidden;
+            }
+
+            $OtherPhoto = new OtherPhoto();
+            $OtherPhotoData = $OtherPhoto::find($Request->photo_id)->update([
                 'photo' => $MainPhotoName
             ]);
 
