@@ -24,7 +24,7 @@
             <thead>
                 <tr class="nk-tb-item nk-tb-head font-helvetica-regular">
                     <th class="nk-tb-col"><span class="sub-text">დასახელება</span></th>
-                    <th class="nk-tb-col nk-tb-col-tools text-right">სტატუსი</th>
+                    <th class="nk-tb-col nk-tb-col-tools">სტატუსი</th>
                     <th class="nk-tb-col nk-tb-col-tools text-right">მოქემდება</th>
                 </tr>
             </thead>
