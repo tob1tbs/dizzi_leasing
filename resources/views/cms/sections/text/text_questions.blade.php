@@ -29,7 +29,31 @@
                 </tr>
             </thead>
             <tbody>
-                
+            @foreach($faq_list as $faq_item)
+            <tr class="nk-tb-item">
+                <td class="nk-tb-col">
+                    <div class="user-card">
+                        <div class="user-info">
+                            <span class="tb-lead"></span>
+                        </div>
+                    </div>
+                </td>
+                <td class="nk-tb-col nk-tb-col-tools">
+                    <ul class="nk-tb-actions gx-1">
+                        <li>
+                            <div class="drodown">
+                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <ul class="link-list-opt no-bdr" style="width: 300px;">
+                                        <li><a href=""><em class="icon ni ni-edit"></em><span>რედაქტირება</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            @endforeach
             </tbody>
         </table>
     </div>
