@@ -35,6 +35,7 @@
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="photo_main">ბლოგის სურათი</label>
                                     <input type="file" class="form-control font-neue" name="photo" id="photo">
+                                    <input type="hidden" class="form-control font-neue" name="photo_old" id="photo_old" value="{{ $blog_data->photo }}">
                                 </div>
                             </div>
                             <div class="col-12">

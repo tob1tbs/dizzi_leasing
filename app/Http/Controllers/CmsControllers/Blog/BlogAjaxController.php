@@ -40,10 +40,12 @@ class BlogAjaxController extends Controller
                     'en' => $Request->text_en,
                 ];
 
-                if($Request->has('photo')) {
+                if($Request->has('photo') && !empty($Request->photo)) {
                     $MainPhoto = $Request->photo;
                     $MainPhotoName =  md5(Str::random(20).time().$MainPhoto).'.'.$MainPhoto->getClientOriginalExtension();
                     $MainPhoto->move(public_path('uploads/blog/'), $MainPhotoName);
+                } else {
+                    $MainPhotoName = $Request->photo_old;
                 }
 
                 $Blog = new Blog();
