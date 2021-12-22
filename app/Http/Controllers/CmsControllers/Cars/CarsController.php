@@ -123,12 +123,6 @@ class CarsController extends Controller
             $CarOption = new CarOption();
             $CarOptionList = $CarOption::where('deleted_at_int', '!=', 0)->orderBy('sortable', 'ASC')->get()->toArray();
 
-            $CarData = new CarData();
-            $CarDataItem = $CarData::find($Request->id);
-
-            $CarGallery = new CarGallery();
-            $CarGalleryList = $CarGallery::where('car_id', $Request->id)->where('deleted_at_int', '!=', 0)->get();
-
             $OptionArray = [];
 
             foreach($CarOptionList as $OptionItem) {
@@ -136,12 +130,10 @@ class CarsController extends Controller
                 $CarOptionValueList = $CarOptionValue::where('option_id', $OptionItem['id'])->where('deleted_at_int', '!=', 0)->get()->toArray();
 
                 $OptionArray[$OptionItem['id']] = [
-                    'id' => $OptionItem['id'],
                     'name' => json_decode($OptionItem['value'])->ge,
                     'type' => $OptionItem['type'],
                     'key' => $OptionItem['key'],
                     'option' => [],
-                    'value' => [],
                 ];
 
                 foreach($CarOptionValueList as $OptionValue) {
@@ -151,36 +143,14 @@ class CarsController extends Controller
                 }
             }
 
-            // $CarParameter = new CarParameter();
-            // $CarParameterList = $CarParameter::where('car_id', $Request->id)->where('deleted_at_int', '!=', 0)->get()->load('carOptionValue')->load('carOptionValueId')->toArray();
-            $CarParameterArray = [];
-
-            // dd($CarParameterList);
-
-            // foreach($CarParameterList as $CarParameterItem) {
-            //     if(!empty($CarParameterItem['car_option_value']) > 0) {
-            //         $CarParameterArray[$CarParameterItem['key']] = [
-            //             'id' => $CarParameterItem['value'],
-            //             'value' => json_decode($CarParameterItem['car_option_value']['value'])->ge,
-            //         ];
-            //     } else {
-            //         $CarParameterArray[$CarParameterItem['key']] = [
-            //             'value' => $CarParameterItem['value'],
-            //         ];
-            //     }
-
-            // }
-
-            // dd($CarParameterArray);
             $CarMake = new CarMake();
             $CarMakeList = $CarMake::where('deleted_at_int', '!=', 0)->where('status', 1)->get();
 
             $data = [
-                'car_data' => $CarDataItem, 
-                'car_parameter_list' => $CarParameterArray, 
-                'car_gallery' => $CarGalleryList, 
                 'option_list' => $OptionArray, 
                 'car_make_list' => $CarMakeList, 
+                'car_engine' => $this->getEngineVolume(),
+                'car_year' => $this->getYear(),
             ];
 
             return view('cms.sections.cars.cars_edit', $data);
