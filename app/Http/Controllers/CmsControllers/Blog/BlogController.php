@@ -38,4 +38,20 @@ class BlogController extends Controller
             abort('404');
         }
     }
+
+    public function actionBlogEdit(Request $Request) {
+        if (view()->exists('cms.sections.blogs.blog_add')) {
+
+            $Blog = new Blog();
+            $BlogData = $Blog::find($Request->id);
+
+            $data = [
+                'blog_data' => $BlogData,
+            ];
+
+            return view('cms.sections.blogs.blog_add', $data);
+        } else {
+            abort('404');
+        }
+    }
 }

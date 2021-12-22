@@ -63,4 +63,17 @@ class BlogAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
         }
     }
+
+    public function ajaxBlogDelete(Request $Request) {
+        if($Request->isMethod('POST')) {
+            $Blog = new Blog();
+            $Blog::find($Request->blog_id)->update([
+                'deleted_at_int' => 0,
+            ]);
+
+            return response()->json(['status' => true, 'message' => 'შეკითხვა შეინახა']);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
+        }
+    }
 }

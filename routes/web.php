@@ -162,6 +162,7 @@ Route::group(['prefix' => '/cms'], function() {
 
         // BLOG
         Route::post('/ajaxBlogSubmit/', [App\Http\Controllers\CmsControllers\Blog\BlogAjaxController::class, 'ajaxBlogSubmit'])->name('ajaxBlogSubmit');
+        Route::post('/ajaxBlogDelete/', [App\Http\Controllers\CmsControllers\Blog\BlogAjaxController::class, 'ajaxBlogDelete'])->name('ajaxBlogDelete');
 
         // REVIEWS
         Route::post('/ajaxReviewDelete/', [App\Http\Controllers\CmsControllers\Reviews\ReviewAjaxController::class, 'ajaxReviewDelete'])->name('ajaxReviewDelete');

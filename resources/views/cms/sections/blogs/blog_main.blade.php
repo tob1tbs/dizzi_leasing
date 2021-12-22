@@ -71,3 +71,37 @@
     </div>
 </div>
 @endsection
+
+@section('js')
+<script type="text/javascript">
+    function BlogDelete(blog_id) {
+        Swal.fire({
+            title: "ნამდვილად გსურთ კითხვის წაშლა?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: 'წაშლა',
+            cancelButtonText: "გათიშვა",
+            preConfirm: () => {
+                $.ajax({
+                    dataType: 'json',
+                    url: "/cms/ajax/ajaxBlogDelete",
+                    type: "POST",
+                    data: {
+                        blog_id: blog_id,
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(data) {
+                        Swal.fire({
+                          icon: 'success',
+                          text: data['message'],
+                        })
+                        location.reload();
+                    }
+                });
+            }
+        });
+    }
+</script>
+@endsection
