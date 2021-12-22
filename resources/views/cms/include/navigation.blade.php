@@ -45,11 +45,11 @@
                             <span class="nk-menu-text">ძირითადი პარამეტრები</span>
                         </a>
                     </li>
-                    <!-- <li class="nk-menu-item">
+                    <li class="nk-menu-item">
                         <a href="{{ route('actionParametersSections') }}" class="nk-menu-link" data-original-title="" title="">
                             <span class="nk-menu-text">სექციები</span>
                         </a>
-                    </li> -->
+                    </li>
                     <li class="nk-menu-item">
                         <a href="{{ route('actionParametersTranslate') }}" class="nk-menu-link" data-original-title="" title="">
                             <span class="nk-menu-text">თარგმნები</span>
@@ -65,13 +65,8 @@
                             <span class="nk-menu-text">ლიზინგის პარამეტრები</span>
                         </a>
                     </li>
-                    <!-- <li class="nk-menu-item">
-                        <a href="{{ route('actionLeasingPromo') }}" class="nk-menu-link" data-original-title="" title="">
-                            <span class="nk-menu-text">პრომო</span>
-                        </a>
-                    </li> -->
                 </ul>
-            </li><!-- 
+            </li>
             <li class="nk-menu-item has-sub">
                 <a href="javascript:;" class="nk-menu-link nk-menu-toggle"><span class="nk-menu-text">ბლოგები</span></a>
                 <ul class="nk-menu-sub" style="min-width: 300px;">
@@ -81,8 +76,8 @@
                         </a>
                     </li>
                 </ul>
-            </li> -->
-            <!-- <li class="nk-menu-item has-sub">
+            </li>
+            <li class="nk-menu-item has-sub">
                 <a href="javascript:;" class="nk-menu-link nk-menu-toggle"><span class="nk-menu-text">ავტომობილები</span></a>
                 <ul class="nk-menu-sub" style="min-width: 300px;">
                     <li class="nk-menu-item">
@@ -96,7 +91,7 @@
                         </a>
                     </li>
                 </ul>
-            </li> -->
+            </li>
             <li class="nk-menu-item has-sub">
                 <a href="javascript:;" class="nk-menu-link nk-menu-toggle"><span class="nk-menu-text">დამატებითი გვერდები</span></a>
                 <ul class="nk-menu-sub" style="min-width: 300px;">
@@ -109,12 +104,12 @@
                         <a href="{{ route('actionTextQuestions') }}" class="nk-menu-link" data-original-title="" title="">
                             <span class="nk-menu-text">კითხვები</span>
                         </a>
-                    </li><!-- 
+                    </li>
                     <li class="nk-menu-item">
                         <a href="{{ route('actionReviews') }}" class="nk-menu-link" data-original-title="" title="">
                             <span class="nk-menu-text">შეფასებები</span>
                         </a>
-                    </li> -->
+                    </li>
                 </ul>
             </li>
         </ul>
