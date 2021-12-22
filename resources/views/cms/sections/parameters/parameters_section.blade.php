@@ -27,8 +27,13 @@
                             </div>
                         </div>
                     </td>
-                    <td class="nk-tb-col nk-tb-col-tools">
-                        
+                    <td class="nk-tb-col tb-col-md">
+                        <div class="form-group">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" name="reg-public" id="site-off" value="1">
+                                <label class="custom-control-label" for="site-off"></label>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 @endforeach
