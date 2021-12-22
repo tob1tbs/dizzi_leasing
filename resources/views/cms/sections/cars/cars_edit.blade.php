@@ -82,7 +82,7 @@
                                     <select class="form-control font-neue" name="car_year" id="car_year">
                                         <option value="0"></option>
                                         @foreach($car_year as $year_item)
-                                        <option value="{{ $year_item }}" @if($year_item == $car_data->car_year) selected @endif>{{ $year_item }}</option>
+                                        <option value="{{ $year_item }}" @if($year_item == $car_data->year) selected @endif>{{ $year_item }}</option>
                                         @endforeach
                                     </select>
                                 </div>
