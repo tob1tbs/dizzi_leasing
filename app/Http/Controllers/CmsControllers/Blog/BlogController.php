@@ -40,7 +40,7 @@ class BlogController extends Controller
     }
 
     public function actionBlogEdit(Request $Request) {
-        if (view()->exists('cms.sections.blogs.blog_add')) {
+        if (view()->exists('cms.sections.blogs.blog_edit')) {
 
             $Blog = new Blog();
             $BlogData = $Blog::find($Request->id);
@@ -49,7 +49,7 @@ class BlogController extends Controller
                 'blog_data' => $BlogData,
             ];
 
-            return view('cms.sections.blogs.blog_add', $data);
+            return view('cms.sections.blogs.blog_edit', $data);
         } else {
             abort('404');
         }

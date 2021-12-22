@@ -22,7 +22,7 @@
                             <div class="col-12">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="photo_main">ბლოგის დასახელება (ქართულად)</label>
-                                    <input type="text" class="form-control font-neue" name="title_ge" id="title_ge">
+                                    <input type="text" class="form-control font-neue" name="title_ge" id="title_ge" value="{{ json_decode($blog_data->title)->ge }}">
                                 </div>
                             </div>
                             <!-- <div class="col-6">
@@ -40,7 +40,7 @@
                             <div class="col-12">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="photo_main">ბლოგის ტექსტი (ქართულად)</label>
-                                    <textarea class="summernote" name="text_ge"></textarea>
+                                    <textarea class="summernote" name="text_ge">{!! json_decode($blog_data->text)->ge !!}</textarea>
                                 </div>
                             </div><!-- 
                             <div class="col-6">
