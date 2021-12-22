@@ -45,11 +45,11 @@
                 </div>
                 <div class="nk-tb-col">
                     <div class="align-center">
-                        <div class="user-avatar user-avatar-sm bg-light">
+                        <!-- <div class="user-avatar user-avatar-sm bg-light">
                             <span>
                                 <img src="{{ url('uploads/cars/main/'.$car_item['data']['photo']) }}">
                             </span>
-                        </div>
+                        </div> -->
                         <span class="tb-sub ml-2">{{ $car_item['make'] }} <span class="d-none d-md-inline">- {{ $car_item['model'] }}</span></span>
                     </div>
                 </div>
