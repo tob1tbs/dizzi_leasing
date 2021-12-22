@@ -129,7 +129,7 @@ class ParametersAjaxController extends Controller
     public function ajaxUpdateStepPhotoSubmit(Request $Request) {
         if($Request->isMethod('POST')) {
             if($Request->has('photo_new')) {
-                $MainPhoto = $Request->photo;
+                $MainPhoto = $Request->photo_new;
                 $MainPhotoName =  md5(Str::random(20).time().$MainPhoto).'.'.$MainPhoto->getClientOriginalExtension();
                 $MainPhoto->move(public_path('uploads/step/'), $MainPhotoName);
             } else {
