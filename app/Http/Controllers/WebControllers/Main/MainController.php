@@ -57,7 +57,7 @@ class MainController extends Controller
             $FaqList = $Faq::where('status', 1)->where('deleted_at_int', '!=', 0)->limit(8)->get()->toArray();
 
             $Blog = new Blog();
-            $BlogList = $Blog::where('deleted_at_int', '!=', 0)->where('status', 1)->get()->load('blogCategory')->toArray();
+            $BlogList = $Blog::where('deleted_at_int', '!=', 0)->where('status', 1)->get()->toArray();
 
             $Review = new Review();
             $ReviewList = $Review::where('deleted_at_int', '!=', 0)->where('approve', '!=', 0)->get()->toArray();
