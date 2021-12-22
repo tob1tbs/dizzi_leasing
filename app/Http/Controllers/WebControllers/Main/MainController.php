@@ -78,7 +78,7 @@ class MainController extends Controller
             $StepPhotoList = $StepPhoto::where('deleted_at_int', '!=', 0)->get()->toArray();
 
             foreach($StepPhotoList as $StepKey => $StepValue) {
-                $StepArray[$StepValue['id']] = $StepValue['photo'];
+                $StepArray[$StepValue['step']] = $StepValue['photo'];
             }
 
             $data = [
