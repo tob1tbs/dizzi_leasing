@@ -37,7 +37,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="nk-menu-item"><a href="/cms/laravel-filemanager" class="nk-menu-link"><span class="nk-menu-text">ფაილმენეჯერი</span></a></li>
+            <!-- <li class="nk-menu-item"><a href="/cms/laravel-filemanager" class="nk-menu-link"><span class="nk-menu-text">ფაილმენეჯერი</span></a></li> -->
             <li class="nk-menu-item has-sub">
                 <a href="javascript:;" class="nk-menu-link nk-menu-toggle"><span class="nk-menu-text">პარამეტრები</span></a>
                 <ul class="nk-menu-sub" style="min-width: 300px;">
