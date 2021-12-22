@@ -99,4 +99,12 @@ class ParametersAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
         }
     }
+
+    public function ajaxSectionStatusChange(Request $Request) {
+        if($Request->isMethod('POST')) {
+            dd($Request->all());
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
+        }
+    }
 }

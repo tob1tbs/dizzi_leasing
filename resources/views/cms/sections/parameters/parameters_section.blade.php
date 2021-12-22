@@ -30,7 +30,7 @@
                     <td class="nk-tb-col">
                         <div class="form-group">
                             <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" name="reg-public" id="section_{{ $section_item->id }}" value="1" @if($section_item->status == 1) checked @endif onclick="SectionStatusChange({{ $section_item->id}}, this)">
+                                <input type="checkbox" class="custom-control-input" name="section_{{ $section_item->id }}" id="section_{{ $section_item->id }}" value="1" @if($section_item->status == 1) checked @endif onclick="SectionStatusChange({{ $section_item->id}}, this)">
                                 <label class="custom-control-label" for="site-off"></label>
                             </div>
                         </div>
@@ -41,4 +41,32 @@
         </table>
     </div>
 </div>
+@endsection
+
+@section('js')
+<script type="text/javascript">
+    function SectionStatusChange(section_id, elem) {
+        if($(elem).is(":checked")) {
+            section_status = 1;
+        } else {
+            section_status = 0
+        }
+
+        $.ajax({
+            dataType: 'json',
+            url: "/cms/ajax/ajaxSectionStatusChange",
+            type: "POST",
+            data: {
+                section_id: section_id,
+                section_status: section_status,
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data) {
+                return;
+            }
+        });
+    }
+</script>
 @endsection

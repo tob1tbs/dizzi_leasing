@@ -139,11 +139,15 @@ Route::group(['prefix' => '/cms'], function() {
         Route::post('/ajaxTranslateSubmit/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxTranslateSubmit'])->name('ajaxTranslateSubmit');
         Route::post('/ajaxDeleteTranslate/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxDeleteTranslate'])->name('ajaxDeleteTranslate');
         Route::post('/ajaxTranslateUpdateSubmit/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxTranslateUpdateSubmit'])->name('ajaxTranslateUpdateSubmit');
+        Route::post('/ajaxSectionStatusChange/', [App\Http\Controllers\CmsControllers\Parameters\ParametersAjaxController::class, 'ajaxSectionStatusChange'])->name('ajaxSectionStatusChange');
+
+        // CARS
         Route::post('/ajaxOptionSubmit/', [App\Http\Controllers\CmsControllers\Cars\CarsAjaxController::class, 'ajaxOptionSubmit'])->name('ajaxOptionSubmit');
         Route::get('/ajaxOptionValueGet/', [App\Http\Controllers\CmsControllers\Cars\CarsAjaxController::class, 'ajaxOptionValueGet'])->name('ajaxOptionValueGet');
         Route::post('/ajaxOptionValueSubmit/', [App\Http\Controllers\CmsControllers\Cars\CarsAjaxController::class, 'ajaxOptionValueSubmit'])->name('ajaxOptionValueSubmit');
         Route::post('/ajaxOptionValueDelete/', [App\Http\Controllers\CmsControllers\Cars\CarsAjaxController::class, 'ajaxOptionValueDelete'])->name('ajaxOptionValueDelete');
         Route::post('/ajaxOptionSort/', [App\Http\Controllers\CmsControllers\Cars\CarsAjaxController::class, 'ajaxOptionSort'])->name('ajaxOptionSort');
+
         
         // CARS
         Route::post('/ajaxCarOptionDelete/', [App\Http\Controllers\CmsControllers\Cars\CarsAjaxController::class, 'ajaxCarOptionDelete'])->name('ajaxCarOptionDelete');
@@ -165,5 +169,6 @@ Route::group(['prefix' => '/cms'], function() {
 
         // PAGE
         Route::post('/ajaxTextPageSubmit/', [App\Http\Controllers\CmsControllers\TextPage\TextPageAjaxController::class, 'ajaxTextPageSubmit'])->name('ajaxTextPageSubmit');
+
     });
 });
