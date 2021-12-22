@@ -14,9 +14,9 @@
 
   $(window).on("load", function () {
     setTimeout(function () {
-      $("#preloader").fadeOut(500, function () {
+      $("#preloader").fadeOut(250, function () {
         $("#preloader").removeClass("loading");
       });
-    }, 500);
+    }, 250);
   });
 })(jQuery);
