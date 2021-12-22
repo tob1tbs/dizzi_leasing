@@ -173,7 +173,7 @@
                 url: "/cms/ajax/ajaxQuestionDelete",
                 type: "POST",
                 data: {
-                    user_id: user_id,
+                    question_id: question_id,
                 },
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
