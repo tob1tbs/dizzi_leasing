@@ -55,7 +55,7 @@
                                     <button class="btn btn-success font-neue" type="button" onclick="BlogAddSubmit()">შენახვა</button>
                                 </div>
                             </div>
-                            <input type="hidden" name="id">
+                            <input type="hidden" name="id" value="{{ request()->id }}">
                         </div>
                     </div>
                 </div>
