@@ -27,7 +27,7 @@
                             </div>
                         </div>
                     </td>
-                    <td class="nk-tb-col tb-col-md">
+                    <td class="nk-tb-col">
                         <div class="form-group">
                             <div class="custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" name="reg-public" id="site-off" value="1">
