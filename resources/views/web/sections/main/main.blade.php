@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 d-none d-lg-block position-relative">
-                    <img class="person-img " src="{{ url('assets/web/img/banner/car.png') }}" alt="" style="top: -450px;">
+                    <img class="person-img " src="{{ url('uploads/other/'.$otherPhotos['1'][0]) }}" alt="" style="top: -450px;">
                 </div>
             </div>
         </div>
