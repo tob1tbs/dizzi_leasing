@@ -59,7 +59,7 @@
                 <div class="nk-tb-col tb-col-sm">
                     <div class="form-group">
                         <div class="custom-control custom-switch checked">
-                            <input type="checkbox" class="custom-control-input" name="reg-public" id="car_{{ $car_item['id'] }" value="1" @if($car_item['data']['status'] == 1) checked @endif onclick="CarStatusChange({{ $car_item['id'] }}, this)">
+                            <input type="checkbox" class="custom-control-input" name="reg-public" id="car_{{ $car_item['id'] }}" value="1" @if($car_item['data']['status'] == 1) checked @endif onclick="CarStatusChange({{ $car_item['id'] }}, this)">
                             <label class="custom-control-label" for="car_{{ $car_item['id'] }"></label>
                         </div>
                     </div>
