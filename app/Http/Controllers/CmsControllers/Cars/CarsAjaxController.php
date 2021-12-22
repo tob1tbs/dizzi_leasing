@@ -161,55 +161,72 @@ class CarsAjaxController extends Controller
 
     public function ajaxCarsAddSubmit(Request $Request) {
         if($Request->isMethod('POST')) {
-            $DescriptionArray = [
-                'ge' => $Request->description_ge,
-                'en' => $Request->description_en,
-            ];
+            $messages = array(
+                'required' => 'გთხოვთ შეავსოთ ყველა აუცილებელი ველი',
+            );
+            $validator = Validator::make($Request->all(), [
+                'make' => 'required|max:255',
+                'model' => 'required|max:255',
+                'car_engine_volume' => 'required|max:255',
+                'car_price' => 'required|max:255',
+                'car_year' => 'required|max:255',
+                'car_millage' => 'required|max:255',
+                'photo' => 'required',
+                'description_ge' => 'required',
+            ], $messages);
 
-            if($Request->has('photo')) {
-                $MainPhoto = $Request->photo;
-                $MainPhotoName =  md5(Str::random(20).time().$MainPhoto).'.'.$MainPhoto->getClientOriginalExtension();
-                $MainPhoto->move(public_path('uploads/cars/main/'), $MainPhotoName);
-            }
+            if ($validator->fails()) {
+                return response()->json(['status' => true, 'errors' => true, 'message' => $validator->getMessageBag()->toArray()], 200);
+            } else {
+                $DescriptionArray = [
+                    'ge' => $Request->description_ge,
+                    'en' => $Request->description_en,
+                ];
 
-            $CarData = new CarData();
-            $CarData->make = $Request->make;
-            $CarData->model = $Request->model;
-            $CarData->engine = $Request->car_engine_volume;
-            $CarData->price = $Request->car_price;
-            $CarData->year = $Request->car_year;
-            $CarData->millage = $Request->car_millage;
-            $CarData->photo = $MainPhotoName;
-            $CarData->description = json_encode($DescriptionArray, JSON_UNESCAPED_UNICODE);
-            $CarData->save();
+                if($Request->has('photo')) {
+                    $MainPhoto = $Request->photo;
+                    $MainPhotoName =  md5(Str::random(20).time().$MainPhoto).'.'.$MainPhoto->getClientOriginalExtension();
+                    $MainPhoto->move(public_path('uploads/cars/main/'), $MainPhotoName);
+                }
 
-            if($Request->has('gallery_photo')) {
-                foreach ($Request->gallery_photo as $GalleryPhotoItem) {
-                    $Photo = $GalleryPhotoItem;
-                    $PhotoName =  md5(Str::random(20).time().$GalleryPhotoItem).'.'.$GalleryPhotoItem->getClientOriginalExtension();
-                    $Photo->move(public_path('uploads/cars/'.$CarData->id.'/gallery/'), $PhotoName);
+                $CarData = new CarData();
+                $CarData->make = $Request->make;
+                $CarData->model = $Request->model;
+                $CarData->engine = $Request->car_engine_volume;
+                $CarData->price = $Request->car_price;
+                $CarData->year = $Request->car_year;
+                $CarData->millage = $Request->car_millage;
+                $CarData->photo = $MainPhotoName;
+                $CarData->description = json_encode($DescriptionArray, JSON_UNESCAPED_UNICODE);
+                $CarData->save();
 
-                    $CarGallery = new CarGallery();
-                    $CarGallery->photo = $PhotoName;
-                    $CarGallery->car_id = $CarData->id;
-                    $CarGallery->save();
+                if($Request->has('gallery_photo')) {
+                    foreach ($Request->gallery_photo as $GalleryPhotoItem) {
+                        $Photo = $GalleryPhotoItem;
+                        $PhotoName =  md5(Str::random(20).time().$GalleryPhotoItem).'.'.$GalleryPhotoItem->getClientOriginalExtension();
+                        $Photo->move(public_path('uploads/cars/'.$CarData->id.'/gallery/'), $PhotoName);
+
+                        $CarGallery = new CarGallery();
+                        $CarGallery->photo = $PhotoName;
+                        $CarGallery->car_id = $CarData->id;
+                        $CarGallery->save();
+                    }
+                }
+
+                foreach ($Request->option as $Key => $Value) {
+                    $CarOptionValue = new CarOptionValue();
+                    $CarOptionData = $CarOptionValue::where('key', $Key)->first();
+
+                    if(!empty($CarOptionData)) {
+                        $CarParameter = new CarParameter();
+                        $CarParameter->key = $Key;
+                        $CarParameter->value = $Value;
+                        $CarParameter->car_id = $CarData->id;
+                        $CarParameter->option_id = $CarOptionData['id'];
+                        $CarParameter->save();
+                    }
                 }
             }
-
-            foreach ($Request->option as $Key => $Value) {
-                $CarOptionValue = new CarOptionValue();
-                $CarOptionData = $CarOptionValue::where('key', $Key)->first();
-
-                if(!empty($CarOptionData)) {
-                    $CarParameter = new CarParameter();
-                    $CarParameter->key = $Key;
-                    $CarParameter->value = $Value;
-                    $CarParameter->car_id = $CarData->id;
-                    $CarParameter->option_id = $CarOptionData['id'];
-                    $CarParameter->save();
-                }
-            }
-
             return response()->json(['status' => true, 'errors' => false, 'message' => 'ავტომობილი წარმატებით დაემატა'], 200);
         } else {
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);

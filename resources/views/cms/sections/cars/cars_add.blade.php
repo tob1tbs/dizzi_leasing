@@ -56,12 +56,12 @@
                                     <textarea class="summernote" name="description_ge"></textarea>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <!-- <div class="col-12">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="description_en">აღწერა ინგლისურად</label>
                                     <textarea class="summernote" name="description_en"></textarea>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
