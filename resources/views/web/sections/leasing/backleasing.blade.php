@@ -29,15 +29,7 @@
                             <img src="{{ url('assets/web/img/banner/backleasing_banner.jpg') }}" class="img-fluid" style="border-radius: 10px;">
                         </div>
                         <div class="col-sm-12 col-lg-8 col-xl-8 helvetica-regular">
-                            <p>
-                                თუ გყავს მანქანა და დაგჭირდა თანხა, გამოგვიგზავნე <a href="#form_block" style="font-weight: bold;">განაცხადი</a> და ჩვენი „ქოლ ცენტრი“ 5 წუთში დაგიკავშირდება. <br>
-                                თუ ავტომობილი და შენი პერსონალური მონაცემები აკმაყოფილებს კომპანიის მოთხოვნებს, ჩვენ ონლაინ დაგიმტკიცებთ შეფასების 90%-ს. <br>
-                                შემდეგ მოდი ჩვენს ნებისმიერ <a href="{{ route('actionWebContact') }}" style="font-weight: bold;" target="_blank">ფილიალში</a> (თან გქონდეს პირადობა ან მართვის მოწმობა, მანქანის ტეპასპორტი და რასაკვრიველია - თვითონ მანქანაც), რათა შემფასებელმა გადაამოწმოს მანქანის მდგომარეობა და შეადაროს მოთხოვნილი თანხა რეალურ ღირებულებას. <br>
-                                თუ დამტკიცებული თანხა შენთვის მისაღებია, სულ მოგიწევს 2 რამის გაკეთება:<br>
-                                •   მოაწერ ხელს კონტრაქტს<br>
-                                •   მანქანას გადმოაფორმებ „დიზი ლიზინგის“ სახელზე<br>
-                                5-10 წუთში თანხა ანგარიშზე გექნება!
-                            </p>
+                            {!! $text_list['backleasing'] !!}
                         </div>
                     </div>
                     <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue" style="position: relative; left: 50%; transform: translate(-50%);">განაცხადის შევსება</a>
