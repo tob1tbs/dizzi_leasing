@@ -11,6 +11,7 @@ use App\Models\Parameters\ParameterSection;
 use App\Models\Parameters\StepPhoto;
 
 use Validator;
+use Str;
 
 class ParametersAjaxController extends Controller
 {
