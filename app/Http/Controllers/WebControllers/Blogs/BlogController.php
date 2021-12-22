@@ -14,7 +14,6 @@ class BlogController extends Controller
     //
 
     public function actionWebBlog(Request $Request) {
-        dd("asdasd");
         if (view()->exists('web.sections.blog.blog_main')) {
 
             $Blog = new Blog();
@@ -24,7 +23,7 @@ class BlogController extends Controller
                 $BlogList->whereJsonContains('title', [Session::get('locale') => $Request->search_query]);
             }
 
-            $BlogList = $BlogList->get()->load('blogCategory')->toArray();
+            $BlogList = $BlogList->get()->toArray();
 
             $data = [
                 'blog_list' => $BlogList
