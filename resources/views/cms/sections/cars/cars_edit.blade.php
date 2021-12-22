@@ -82,7 +82,7 @@
                                     <select class="form-control font-neue" name="car_year" id="car_year">
                                         <option value="0"></option>
                                         @foreach($car_year as $year_item)
-                                        <option value="{{ $year_item }}">{{ $year_item }}</option>
+                                        <option value="{{ $year_item }}" @if($year_item == $car_data->car_year) selected @endif>{{ $year_item }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -90,7 +90,7 @@
                             <div class="col-lg-6 col-12">
                                 <div class="form-control-wrap mb-2">
                                     <label class="form-label" for="">გარბენი</label>
-                                    <input type="text" class="form-control font-neue" name="car_millage" id="car_millage" value="">
+                                    <input type="text" class="form-control font-neue" name="car_millage" id="car_millage" value="{{ $car_data->millage }}">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-12">
