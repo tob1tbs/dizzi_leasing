@@ -113,6 +113,7 @@
 @section('js')
 <script type="text/javascript">
 	function AddQuestion() {
+        $('#question_form')[0].reset();
         $("#QuestionModal").modal('show');
 	}	
 
