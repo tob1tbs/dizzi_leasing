@@ -151,7 +151,7 @@
             success: function(data) {
                 $("#question_id").val(data['FaqData']['id']);
                 $("#question_title_ge").val(JSON.parse(data['FaqData']['title'])['ge']);
-                $("#question_text_ge").val(JSON.parse(data['FaqData']['title'])['en']);
+                $("#question_text_ge").val(JSON.parse(data['FaqData']['value'])['ge']);
                 $(".question-heading").html('კითხვის რედაქტირება');
                 $("#QuestionModal").modal('show');
             }
