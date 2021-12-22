@@ -148,7 +148,7 @@ class ParametersAjaxController extends Controller
         }
     }
 
-    public function ajaxUpdateStepPhoto(Request $Request) {
+    public function ajaxUpdateOtherPhoto(Request $Request) {
         if($Request->isMethod('GET')) {
             $OtherPhoto = new OtherPhoto();
             $OtherPhotoData = $OtherPhoto::find($Request->photo_id);
