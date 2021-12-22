@@ -12,9 +12,6 @@ use Session;
 class BlogController extends Controller
 {
     //
-    public function __construct() {
-        abort('404');
-    }
 
     public function actionWebBlog(Request $Request) {
         if (view()->exists('web.sections.blog.blog_main')) {
@@ -26,7 +23,7 @@ class BlogController extends Controller
                 $BlogList->whereJsonContains('title', [Session::get('locale') => $Request->search_query]);
             }
 
-            $BlogList = $BlogList->orderBy('id', 'DESC')->paginate(10);
+            $BlogList = $BlogList->get()->load('blogCategory')->toArray();
 
             $data = [
                 'blog_list' => $BlogList
