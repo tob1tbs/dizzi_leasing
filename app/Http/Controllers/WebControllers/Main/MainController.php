@@ -87,7 +87,7 @@ class MainController extends Controller
                 'blog_list' => $BlogList,
                 'review_list' => $ReviewList,
                 'text_list' => $TextPageArray,
-                'step_list' => $StepPhotoList,
+                'step_list' => $StepArray,
             ];
             return view('web.sections.main.main', $data);
         } else {
