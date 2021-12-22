@@ -45,10 +45,11 @@
                         <span class="tb-sub ml-2">{{ json_decode($blog_item->title)->ge }}</span>
                     </div>
                 </div>
-                <div class="nk-tb-col tb-col-sm">
+                <div class="nk-tb-col tb-col-md">
                     <div class="form-group">
-                        <div class="custom-control custom-switch checked">
-                            
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" name="reg-public" id="question_{{ $blog_item->id }}" value="1" @if($blog_item->status == 1) checked @endif onclick="BlogStatusChange({{ $blog_item->id}}, this)">
+                            <label class="custom-control-label" for="question_{{ $blog_item->id }}"></label>
                         </div>
                     </div>
                 </div>
@@ -100,6 +101,30 @@
                         location.reload();
                     }
                 });
+            }
+        });
+    }
+
+    function BlogStatusChange(blog_id, elem) {
+        if($(elem).is(":checked")) {
+            blog_status = 1;
+        } else {
+            blog_status = 0
+        }
+
+        $.ajax({
+            dataType: 'json',
+            url: "/cms/ajax/ajaxBlogStatusChange",
+            type: "POST",
+            data: {
+                blog_id: blog_id,
+                blog_status: blog_status,
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data) {
+                return;
             }
         });
     }

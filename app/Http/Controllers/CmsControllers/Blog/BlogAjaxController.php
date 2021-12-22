@@ -78,4 +78,17 @@ class BlogAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
         }
     }
+
+    public function ajaxBlogStatusChange(Request $Request) {
+        if($Request->isMethod('POST')) {
+            $Blog = new Blog();
+            $Blog::find($Request->blog_id)->update([
+                'status' => $Request->blog_status,
+            ]);
+
+            return response()->json(['status' => true, 'message' => 'შეკითხვა შეინახა']);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
+        }
+    }
 }
