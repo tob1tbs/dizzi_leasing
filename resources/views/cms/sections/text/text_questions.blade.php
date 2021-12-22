@@ -34,7 +34,7 @@
                 <td class="nk-tb-col">
                     <div class="user-card">
                         <div class="user-info">
-                            <span class="tb-lead"></span>
+                            <span class="tb-lead">{{ json_decode($faq_item->title)->ge }}</span>
                         </div>
                     </div>
                 </td>
