@@ -153,25 +153,25 @@ class CarsController extends Controller
 
             // $CarParameter = new CarParameter();
             // $CarParameterList = $CarParameter::where('car_id', $Request->id)->where('deleted_at_int', '!=', 0)->get()->load('carOptionValue')->load('carOptionValueId')->toArray();
-            // $CarParameterArray = [];
+            $CarParameterArray = [];
 
             // dd($CarParameterList);
 
-            foreach($CarParameterList as $CarParameterItem) {
-                if(!empty($CarParameterItem['car_option_value']) > 0) {
-                    $CarParameterArray[$CarParameterItem['key']] = [
-                        'id' => $CarParameterItem['value'],
-                        'value' => json_decode($CarParameterItem['car_option_value']['value'])->ge,
-                    ];
-                } else {
-                    $CarParameterArray[$CarParameterItem['key']] = [
-                        'value' => $CarParameterItem['value'],
-                    ];
-                }
+            // foreach($CarParameterList as $CarParameterItem) {
+            //     if(!empty($CarParameterItem['car_option_value']) > 0) {
+            //         $CarParameterArray[$CarParameterItem['key']] = [
+            //             'id' => $CarParameterItem['value'],
+            //             'value' => json_decode($CarParameterItem['car_option_value']['value'])->ge,
+            //         ];
+            //     } else {
+            //         $CarParameterArray[$CarParameterItem['key']] = [
+            //             'value' => $CarParameterItem['value'],
+            //         ];
+            //     }
 
-            }
+            // }
 
-            dd($CarParameterArray);
+            // dd($CarParameterArray);
             $CarMake = new CarMake();
             $CarMakeList = $CarMake::where('deleted_at_int', '!=', 0)->where('status', 1)->get();
 
