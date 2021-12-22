@@ -37,4 +37,30 @@ class TextPageAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
         }
     }
+
+    public function ajaxQuestionSubmit(Request $Request) {
+        if($Request->isMethod('POST')) {
+            $title = [
+                'ge' => $Request->question_title_ge,
+            ];
+
+            $text = [
+                'ge' => $Request->question_text_ge,
+            ];
+            $Faq = new Faq();
+            $Faq::updateOrCreate(
+                ['id' => $Request->question_id],
+                [
+                    'id' => $Request->question_id,
+                    'title' => json_encode($title),
+                    'text' => json_encode($text),
+                    'photo' => $MainPhotoName,
+                ]
+            );
+
+            return response()->json(['status' => true, 'message' => 'შეკითხვა შეინახა']);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
+        }
+    }
 }

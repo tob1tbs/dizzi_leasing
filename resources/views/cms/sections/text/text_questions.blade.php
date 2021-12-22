@@ -66,12 +66,54 @@
         </table>
     </div>
 </div>
+<div class="modal fade" id="QuestionModal" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-top" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-neue">კითხვის დამატება</h5>
+                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                    <em class="icon ni ni-cross"></em>
+                </a>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-validate is-alter" id="question_form">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 mb-3">
+                            <div class="form-group">
+                                <label class="form-label" for="full-name">კითხვის დასახელება</label>
+                                <div class="form-control-wrap">
+                                    <input type="text" class="form-control user-input" name="question_title_ge" id="question_title_ge">
+                                    <span class="text-danger font-helvetica-regular font-italic error-text error-question_title_ge"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-sm-12 mb-3">
+                            <div class="form-group">
+                                <label class="form-label" for="full-name">კითხვის აღწერა</label>
+                                <div class="form-control-wrap">
+                                    <input type="text" class="form-control user-input" name="question_text_ge" id="question_text_ge">
+                                    <span class="text-danger font-helvetica-regular font-italic error-text error-question_text_ge"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="question_id" id="question_id">
+                        <div class="col-lg-12 mb-3">
+                            <div class="form-group">
+                                <button type="button" onclick="QuestionSubmit()" class="btn btn-lg btn-primary font-helvetica-regular">შენახვა</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('js')
 <script type="text/javascript">
 	function AddQuestion() {
-
+        $("#QuestionModal").modal('show');
 	}	
 
 	function QuestionStatusChange(question_id, elem) {
@@ -97,5 +139,47 @@
             }
         });
 	}
+
+    function QuestionSubmit() {
+        var form = $('#question_form')[0];
+        var data = new FormData(form);
+
+        $.ajax({
+            dataType: 'json',
+            url: "/cms/ajax/ajaxQuestionSubmit",
+            type: "POST",
+            data: data,
+            enctype: 'multipart/form-data',
+            processData: false,
+            contentType: false,
+            cache: false,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data) {
+                if(data['status'] == true) {
+                    if(data['errors'] == true) {
+                       Swal.fire({
+                            icon: 'success',
+                            text: data['message'],
+                            timer: 1500,
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'success',
+                            text: data['message'],
+                            timer: 1500,
+                        });
+                        window.location.reload();
+                    }
+                } else {
+                    Swal.fire({
+                      icon: 'error',
+                      text: data['message'],
+                    })
+                }
+            }
+        });
+    }
 </script>
 @endsection
