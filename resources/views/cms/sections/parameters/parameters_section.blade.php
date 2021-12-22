@@ -31,7 +31,7 @@
                         <div class="form-group">
                             <div class="custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" name="section_{{ $section_item->id }}" id="section_{{ $section_item->id }}" value="1" @if($section_item->status == 1) checked @endif onclick="SectionStatusChange({{ $section_item->id}}, this)">
-                                <label class="custom-control-label" for="site-off"></label>
+                                <label class="custom-control-label" for="section_{{ $section_item->id }}"></label>
                             </div>
                         </div>
                     </td>
