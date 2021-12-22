@@ -4,7 +4,7 @@
 <div class="nk-block-head">
     <div class="nk-block-between">
         <div class="nk-block-head-content">
-            <h4 class="nk-block-title font-neue">სექციების ჩამონათვალი</h4>
+            <h4 class="nk-block-title font-neue">ხშირად დასმული კითხვების ჩამონათვალი</h4>
         </div> 
         <div class="nk-block-head-content">
             <ul class="nk-block-tools g-3">
@@ -70,8 +70,32 @@
 
 @section('js')
 <script type="text/javascript">
+	function AddQuestion() {
+
+	}	
+
 	function QuestionStatusChange(question_id, elem) {
-		
+		if($(elem).is(":checked")) {
+            question_status = 1;
+        } else {
+            question_status = 0
+        }
+
+        $.ajax({
+            dataType: 'json',
+            url: "/cms/ajax/ajaxQuestionStatusChange",
+            type: "POST",
+            data: {
+                question_id: question_id,
+                question_status: question_status,
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data) {
+                return;
+            }
+        });
 	}
 </script>
 @endsection

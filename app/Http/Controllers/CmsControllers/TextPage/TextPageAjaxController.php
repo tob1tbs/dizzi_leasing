@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\TextPage\TextPage;
+use App\Models\Main\Faq;
 
 class TextPageAjaxController extends Controller
 {
@@ -23,4 +24,17 @@ class TextPageAjaxController extends Controller
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
         }
     } 
+
+    public function ajaxQuestionStatusChange(Request $Request) {
+        if($Request->isMethod('POST')) {
+            $Faq = new Faq();
+            $Faq::find($Request->question_id)->update([
+                'status' => $Request->question_status,
+            ]);
+
+            return response()->json(['status' => true, 'message' => 'კოდი წარმატებით წაიშალა']);
+        } else {
+            return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა, გთხოვთ სცადოთ თავიდან !!!']);
+        }
+    }
 }
