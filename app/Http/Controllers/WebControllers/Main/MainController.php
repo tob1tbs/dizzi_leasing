@@ -64,7 +64,7 @@ class MainController extends Controller
 
 
             $TextPage = new TextPage();
-            $TextPageList = $TextPageL::where('deleted_at_int', '!=', 0)->get()->toArray();
+            $TextPageList = $TextPage::where('deleted_at_int', '!=', 0)->get()->toArray();
 
             $TextPageArray = [];
 
