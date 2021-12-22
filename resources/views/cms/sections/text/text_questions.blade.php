@@ -5,7 +5,17 @@
     <div class="nk-block-between">
         <div class="nk-block-head-content">
             <h4 class="nk-block-title font-neue">სექციების ჩამონათვალი</h4>
-        </div>  
+        </div> 
+        <div class="nk-block-head-content">
+            <ul class="nk-block-tools g-3">
+                <li>
+                    <a href="javascript:;" onclick="AddQuestion()" class="btn btn-white btn-outline-light">
+                        <em class="icon ni ni-plus"></em>
+                        <span class="font-helvetica-regular">ახალი კითხვის დამატება</span>
+                    </a>
+                </li>
+            </ul>
+        </div> 
     </div>
 </div>
 <div class="card card-preview">

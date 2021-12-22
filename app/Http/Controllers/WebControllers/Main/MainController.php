@@ -62,11 +62,22 @@ class MainController extends Controller
             $Review = new Review();
             $ReviewList = $Review::where('deleted_at_int', '!=', 0)->where('approve', '!=', 0)->get()->toArray();
 
+
+            $TextPage = new TextPage();
+            $TextPageList = $TextPageL::where('deleted_at_int', '!=', 0)->get()->toArray();
+
+            $TextPageArray = [];
+
+            foreach($TextPageList as $TextKey => $TextValue) {
+                $TextPageArray[$TextKey] = $TextValue->value;
+            }
+
             $data = [
                 'car_list' => $CarArray,
                 'faq_list' => $FaqList,
                 'blog_list' => $BlogList,
                 'review_list' => $ReviewList,
+                'text_list' => $TextPageArray,
             ];
             return view('web.sections.main.main', $data);
         } else {

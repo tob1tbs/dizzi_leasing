@@ -1,7 +1,5 @@
 @extends('cms.layout.layout')
 
-
-
 @section('content')
 <div class="nk-block-head">
     <div class="nk-block-between">
