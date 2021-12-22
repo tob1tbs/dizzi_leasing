@@ -33,8 +33,15 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-control-wrap mb-2">
-                                    <label class="form-label" for="photo_main">ბლოგის სურათი</label>
-                                    <input type="file" class="form-control font-neue" name="photo" id="photo">
+                                     <div class="input-group">
+   <span class="input-group-btn">
+     <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+       <i class="fa fa-picture-o"></i> Choose
+     </a>
+   </span>
+   <input id="thumbnail" class="form-control" type="text" name="filepath">
+ </div>
+ <img id="holder" style="margin-top:15px;max-height:100px;">
                                 </div>
                             </div>
                             <div class="col-6">
@@ -67,6 +74,7 @@
 <script src="{{ url('assets/cms/js/Custom/BlogScripts.js') }}"></script>
 <script src="{{ url('assets/cms/js/summernote.js') }}"></script>
 <script src="{{ url('assets/cms/js/editors.js') }}"></script>
+<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $('.summernote').summernote();
