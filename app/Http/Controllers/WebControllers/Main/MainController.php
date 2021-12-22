@@ -10,7 +10,7 @@ use App\Models\Cars\CarData;
 use App\Models\Blogs\Blog;
 use App\Models\Reviews\Review;
 use App\Models\TextPage\TextPage;
-
+use App\Models\Parameters\StepPhoto;
 use App\Models\Main\Faq;
 
 use Session;
@@ -72,12 +72,22 @@ class MainController extends Controller
                 $TextPageArray[$TextValue['slug']] = $TextValue['value'];
             }
 
+            $StepArray = [];
+
+            $StepPhoto = new StepPhoto();
+            $StepPhotoList = $StepPhoto::where('deleted_at_int', '!=', 0)->get()->toArray();
+
+            foreach($StepPhotoList as $StepKey => $StepValue) {
+                $StepArray[$StepValue['id']] = $StepValue['photo'];
+            }
+
             $data = [
                 'car_list' => $CarArray,
                 'faq_list' => $FaqList,
                 'blog_list' => $BlogList,
                 'review_list' => $ReviewList,
                 'text_list' => $TextPageArray,
+                'step_list' => $StepPhotoList,
             ];
             return view('web.sections.main.main', $data);
         } else {

@@ -222,7 +222,7 @@
                 <div class="col-lg-6 col-sm-12 col-md-12 order-lg-1 order-2">
                     <div class="feature-card-widget-6 wow fadeInUp mt-sm-0 mt-5" data-wow-delay="0.1s" style="max-height: 140px;">
                         <div class="icon mr-20">
-                            <img src="{{ url('assets/web/img/icon/1.png') }}" alt="icon">
+                            <img src="{{ url($step_list['1']) }}" alt="icon">
                         </div>
                         <div class="card-content">
                             <h6 class="neue">{{ trans('site.step_1_heading') }}</h6>
