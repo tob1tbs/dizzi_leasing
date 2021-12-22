@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Parameters\TranslateParameter;
 use App\Models\Parameters\BasicParameter;
 use App\Models\Parameters\ParameterSection;
+use App\Models\Parameters\StepPhoto;
 
 use Validator;
 
