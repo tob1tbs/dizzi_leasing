@@ -14,6 +14,7 @@ class BlogController extends Controller
     //
 
     public function actionWebBlog(Request $Request) {
+        dd("asdasd");
         if (view()->exists('web.sections.blog.blog_main')) {
 
             $Blog = new Blog();
