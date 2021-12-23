@@ -99,6 +99,7 @@ class ParametersAjaxController extends Controller
                     $BasicParameter = new BasicParameter();
                     $BasicParameter::where('key', $Key)->update(['value' => $Input]);
                 } else {
+                    dd($Request->document_file);
                     if($Request->has('document_file')) {
                         $Document = $Request->document_file;
                         $DocumentName =  md5(Str::random(20).time().$Document).'.'.$Document->getClientOriginalExtension();
