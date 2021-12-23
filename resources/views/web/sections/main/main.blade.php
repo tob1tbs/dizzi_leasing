@@ -116,7 +116,9 @@
 			                            <hr>
 			                            <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.documents') }}</b></span> {{ trans('site.documents_value') }}</li>
 			                        </ul>
+                                    @if($sectionStatus['leasing'][0] == 1)
 			                        <a href="{{ route('actionWebLeasing') }}" class="theme-btn theme-btn-rounded neue" style="width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
+                                    @endif
 								</div>
 							</div>
                             <style type="text/css">
@@ -155,7 +157,9 @@
                                         <hr>
                                         <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.documents') }}</b></span> {{ trans('site.documents_value') }}</li>
                                     </ul>
+                                    @if($sectionStatus['backleasing'][0] == 1)
 			                        <a href="{{ route('actionWebBackLeasing') }}" class="theme-btn theme-btn-rounded neue" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
+                                    @endif
 								</div>
 							</div>
                             <div class="col-lg-3 col-md-4 col-sm-12">
@@ -188,7 +192,9 @@
                                         <hr>
                                         <li><span class="d-block d-xxl-none d-xl-none"><b>{{ trans('site.documents') }}</b></span> {{ trans('site.documents_value') }}</li>
                                     </ul>
+                                    @if($sectionStatus['taxi_leasing'][0] == 1)
                                     <a href="{{ route('actionWebTaxiLeasing') }}" class="theme-btn theme-btn-rounded neue" style=" width: 100%; font-size: 16px; border-radius: 6px;"> {{ trans('site.complete_now') }} <i class="arrow_right"></i> </a>
+                                    @endif
                                 </div>
                             </div>
 						</div>
@@ -395,7 +401,7 @@
                             </div>
                             <div class="circle-shape"></div>
                         </div>
-                        <img class="main-img" src="{{ url('assets/web/img/banner/faq.png') }}" alt="advisor">
+                        <img class="main-img" src="{{ url('uploads/other/'.$otherPhotos['7'][0]) }}" alt="advisor">
                         <div class="work-time" style="right: 50%; transform: translate(50%);">
                             <div class="circle-shape"></div>
                             <span>{{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}</span>
@@ -440,7 +446,8 @@
         </div>
     </section>
 </main>
-<!-- <div class="modal fade" id="ReviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 5000000;">
+@if($sectionStatus['reviews'][0] == 1)
+<div class="modal fade" id="ReviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 5000000;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -474,7 +481,8 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
+@endif
 @endsection
 
 @section('js')
