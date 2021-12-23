@@ -98,6 +98,23 @@
                     </div>
                 </div>
                 @break
+                @case('file')
+                <div class="row g-3 align-center">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-label" for="{{ $parameter_item->key }}">{{ $parameter_item->label_ge }}</label>
+                            <span class="form-note font-helvetica-regular">{{ $parameter_item->snippet }}</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <div class="form-control-wrap">
+                                <input type="time" class="form-control font-neue" id="{{ $parameter_item->key }}" name="{{ $parameter_item->key }}" value="{{ $parameter_item->value }}" @if($parameter_item->disabled == 1) disabled @endif>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @break
                 @endswitch
                 @endforeach
                 <div class="form-group mt-2">
