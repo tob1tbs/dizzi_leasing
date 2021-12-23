@@ -81,12 +81,15 @@
                             <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
                                 data-bs-toggle="dropdown"></i>
                             <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="{{ route('actionWebLeasing') }}">{{ trans('site.leasing') }}</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="{{ route('actionWebBackLeasing') }}">{{ trans('site.backleasing') }}</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="{{ route('actionWebTaxiLeasing') }}">{{ trans('site.taxileasing') }}</a>
-                                </li>
+                                @if($sectionStatus['leasing'][0] == 1)
+                                <li class="nav-item"><a class="nav-link" href="{{ route('actionWebLeasing') }}">{{ trans('site.leasing') }}</a></li>
+                                @endif
+                                @if($sectionStatus['backleasing'][0] == 1)
+                                <li class="nav-item"><a class="nav-link" href="{{ route('actionWebBackLeasing') }}">{{ trans('site.backleasing') }}</a></li>
+                                @endif
+                                @if($sectionStatus['taxi_leasing'][0] == 1)
+                                <li class="nav-item"><a class="nav-link" href="{{ route('actionWebTaxiLeasing') }}">{{ trans('site.taxileasing') }}</a></li>
+                                @endif
                             </ul>
                         </li>
                     </ul>
@@ -99,9 +102,15 @@
                 <div class="d-xl-flex d-lg-flex d-md-flex justify-content-between">
                     <div>
                         <div class="helvetica-regular sm-content-center">
+                            @if($sectionStatus['leasing'][0] == 1)
                             <a href="{{ route('actionWebLeasing') }}"  class="toptext">{{ trans('site.leasing') }}</a>
+                            @endif
+                            @if($sectionStatus['backleasing'][0] == 1)
                             <a href="{{ route('actionWebBackLeasing') }}"  class="toptext">{{ trans('site.backleasing') }}</a>
+                            @endif
+                            @if($sectionStatus['taxi_leasing'][0] == 1)
                             <a href="{{ route('actionWebTaxiLeasing') }}"  class="toptext">{{ trans('site.taxileasing') }}</a>
+                            @endif
                         </div>
                     </div>
                 </div>

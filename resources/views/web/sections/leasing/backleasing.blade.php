@@ -87,11 +87,11 @@
 	                            <label for="terms" class="helvetica-regular" style="font-size: 14px; float: left; width: 100%; margin-left: 15px;"> {{ trans('site.accept_marketing') }}
 	                            	<br>
 	                                <a href="javascript:;" data-modal="#modal" id="readmore" class="modal__trigger" style="font-size: 16px; text-decoration: underline; color: #f0c019;">{{ trans('site.read_more') }}</a>
+                                    <a href="javascript:;" data-modal="#modal" id="readmore" class="modal__trigger" style="font-size: 16px; text-decoration: underline; color: #f0c019;">{{ trans('site.information') }}</a>
 	                            </label>
                             </div>
                             <input type="hidden" name="leasing_type" value="1">
                             <button type="button" onclick="BackLesingFormSubmit()" class="theme-btn theme-btn-lg mt-40 neue">{{ trans('site.submit_now') }}<i class="arrow_right"></i></button>
-                            <a href="javascript:;" data-modal="#modal2" id="readmore" class="modal__trigger">სტანდარტული ინფორმაცია</a>
                         </div>
                     </div>
                 </div>
