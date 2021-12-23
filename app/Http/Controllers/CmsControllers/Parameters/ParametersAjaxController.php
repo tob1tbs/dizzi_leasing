@@ -98,6 +98,13 @@ class ParametersAjaxController extends Controller
                 if($Key != 'document_file' && $Key != 'document_file_old') {
                     $BasicParameter = new BasicParameter();
                     $BasicParameter::where('key', $Key)->update(['value' => $Input]);
+                } else {
+                    if($Request->hasFile('document_file')) {
+
+                    } else {
+                        $BasicParameter = new BasicParameter();
+                        $BasicParameter::where('key', 'document_file')->update(['value' => $Request->document_file_old]);
+                    }
                 }
             }
             return response()->json(['status' => true, 'errors' => false, 'message' => 'პარამტრები წარმატებით განახლდა']);
