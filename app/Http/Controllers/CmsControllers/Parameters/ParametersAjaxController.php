@@ -101,15 +101,15 @@ class ParametersAjaxController extends Controller
                 } else {
                     if($Request->hasFile('document_file')) {
                         $Document = $Request->document_file;
-                        $DocumentName =  md5(Str::random(20).time().$Request->document_file).'.'.$Request->file('document_file')->getClientOriginalExtension();
+                        $DocumentName =  md5(Str::random(20).time().$Document).'.'.$Document->getClientOriginalExtension();
                         $Document->move(public_path('uploads/documents/'), $DocumentName);
 
-                        $BasicParameter = new BasicParameter();
-                        $BasicParameter::where('key', 'document_file')->update(['value' => $DocumentName]);
                     } else {
-                        $BasicParameter = new BasicParameter();
-                        $BasicParameter::where('key', 'document_file')->update(['value' => $Request->document_file_old]);
+                        $DocumentName = $Request->document_file_old;
                     }
+
+                    $BasicParameter = new BasicParameter();
+                    $BasicParameter::where('key', 'document_file')->update(['value' => $DocumentName]);
                 }
             }
             return response()->json(['status' => true, 'errors' => false, 'message' => 'პარამტრები წარმატებით განახლდა']);
