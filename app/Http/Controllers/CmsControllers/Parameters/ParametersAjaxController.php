@@ -94,7 +94,7 @@ class ParametersAjaxController extends Controller
 
     public function ajaxBasicParameterSubmit(Request $Request) {
         if($Request->isMethod('POST')) {
-            if($Request->has('document_file') && !empty() OR $Request->has('document_file_old') && !empty()) {
+            if($Request->has('document_file') OR $Request->has('document_file_old')) {
                 if($Request->has('document_file')) {
                     $Document = $Request->document_file;
                     $DocumentName =  md5(Str::random(20).time().$Document).'.'.$Document->getClientOriginalExtension();
