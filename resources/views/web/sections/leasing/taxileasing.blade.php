@@ -103,6 +103,7 @@
 	                            <label for="terms" class="helvetica-regular" style="font-size: 14px; float: left; width: 100%; margin-left: 15px;"> {{ trans('site.accept_marketing') }}
 	                            	<br>
 	                                <a href="javascript:;" data-modal="#modal" id="readmore" class="modal__trigger" style="font-size: 16px; text-decoration: underline; color: #f0c019;">{{ trans('site.read_more') }}</a>
+                                    <br><a href="javascript:;" style="font-size: 16px; text-decoration: underline; color: #f0c019;">{{ trans('site.information') }}</a>
 	                            </label>
                             </div>
                             <button type="button" onclick="TaxiLesingFormSubmit()" class="theme-btn theme-btn-lg mt-40 neue">{{ trans('site.submit_now') }}<i class="arrow_right"></i></button>

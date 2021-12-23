@@ -221,7 +221,7 @@
                                 <button data-js="open" type="button" class="popupbutton">კალკულაციის მაგალითი </button>
                                 <br>
                                 <img src="{{ url('assets/web/img\icon\next.png') }}">
-                                <a href="" data-modal="#modal" class="modal__trigger" style="transform: none;">სტანდარტული ინფორმაცია</a>
+                                <a href="javascript:;" style="font-size: 16px; text-decoration: underline; color: #f0c019;">{{ trans('site.information') }}</a>
                             </div>
                             <div class="widget-subscribe" id="promocodewidget">
                                 <h4 class="widget-title mb-15 neue" style="font-size: 16px">{{ trans('site.promo') }}</h4>
