@@ -401,7 +401,7 @@
                             </div>
                             <div class="circle-shape"></div>
                         </div>
-                        <img class="main-img" src="{{ url('uploads/other/'.$otherPhotos['7'][0]) }}" alt="advisor">
+                        <img class="main-img" src="{{ url('uploads/other/'.$otherPhotos['6'][0]) }}" alt="advisor">
                         <div class="work-time" style="right: 50%; transform: translate(50%);">
                             <div class="circle-shape"></div>
                             <span>{{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}</span>
