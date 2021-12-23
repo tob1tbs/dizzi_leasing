@@ -101,7 +101,7 @@ class ParametersAjaxController extends Controller
                 } else {
                     if($Request->hasFile('document_file')) {
                         $Document = $Request->file('document_file');
-                        $DocumentName =  md5(Str::random(20).time().$Request->document_file).'.'.$Request->file($Request->document_file)->getClientOriginalExtension();
+                        $DocumentName =  md5(Str::random(20).time().$Request->document_file).'.'.$Request->file('document_file')->getClientOriginalExtension();
                         $Document->move(public_path('uploads/documents/'), $DocumentName);
 
                         $BasicParameter = new BasicParameter();
