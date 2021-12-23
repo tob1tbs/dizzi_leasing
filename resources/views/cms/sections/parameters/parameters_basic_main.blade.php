@@ -109,7 +109,7 @@
                     <div class="col-lg-8">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <input type="time" class="form-control font-neue" id="{{ $parameter_item->key }}" name="{{ $parameter_item->key }}" value="{{ $parameter_item->value }}" @if($parameter_item->disabled == 1) disabled @endif>
+                                <input type="file" class="form-control font-neue" id="{{ $parameter_item->key }}" name="{{ $parameter_item->key }}" value="{{ $parameter_item->value }}" @if($parameter_item->disabled == 1) disabled @endif>
                             </div>
                         </div>
                     </div>
