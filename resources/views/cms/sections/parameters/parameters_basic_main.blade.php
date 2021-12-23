@@ -109,7 +109,8 @@
                     <div class="col-lg-8">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <input type="file" class="form-control font-neue" id="{{ $parameter_item->key }}" name="{{ $parameter_item->key }}" value="{{ $parameter_item->value }}" @if($parameter_item->disabled == 1) disabled @endif>
+                                <input type="file" class="form-control font-neue" id="{{ $parameter_item->key }}" name="{{ $parameter_item->key }}" value="" @if($parameter_item->disabled == 1) disabled @endif>
+                                <input type="hidden" name="document_file_old" value="{{ $parameter_item->value }}">
                             </div>
                         </div>
                     </div>

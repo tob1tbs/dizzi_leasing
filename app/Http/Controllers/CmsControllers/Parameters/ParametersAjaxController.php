@@ -95,8 +95,10 @@ class ParametersAjaxController extends Controller
     public function ajaxBasicParameterSubmit(Request $Request) {
         if($Request->isMethod('POST')) {
             foreach($Request->all() as $Key => $Input) {
-                $BasicParameter = new BasicParameter();
-                $BasicParameter::where('key', $Key)->update(['value' => $Input]);
+                if($Key != 'document_file' && $Key != 'document_file_old') {
+                    $BasicParameter = new BasicParameter();
+                    $BasicParameter::where('key', $Key)->update(['value' => $Input]);
+                }
             }
             return response()->json(['status' => true, 'errors' => false, 'message' => 'პარამტრები წარმატებით განახლდა']);
         } else {
