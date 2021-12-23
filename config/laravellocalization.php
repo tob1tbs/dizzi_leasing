@@ -7,7 +7,7 @@ return [
     // Regional languages are sorted by their base language, so "British English" sorts as "English, British"
     'supportedLocales' => [
         'en'          => ['name' => 'English',                'script' => 'Latn', 'native' => 'English', 'regional' => 'en_GB'],
-        'ge'          => ['name' => 'Georgian',               'script' => 'Geor', 'native' => 'ქართული', 'regional' => 'ka_GE'],
+        // 'ge'          => ['name' => 'Georgian',               'script' => 'Geor', 'native' => 'ქართული', 'regional' => 'ka_GE'],
     ],
 
     // Requires middleware `LaravelSessionRedirect.php`.
