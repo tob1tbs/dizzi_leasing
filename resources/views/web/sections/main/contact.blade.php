@@ -7,7 +7,7 @@
 @section('content')
 <main>
 	<section class="banner-area-2 loan-banner"></section>
-    <section class="pb-40 bg_white" style="padding: 40px 0 50px 0;">
+    <section class="pb-40 bg_white" style="padding: 40px 0 70px 0;">
     <div class="section-title">
         <h1 class="wow neue fadeInUp" style="font-size: 30px;">{{ trans('site.servis_centers') }}</h1>
     </div>
@@ -32,8 +32,8 @@
                                     <div class="faq-header" id="headingOne">
                                         <h4 class="mb-0 collapsed helvetica-regular" aria-expanded="true">
                                             {{ $parameterItems['address_ge'][0] }}
-                                            <i class="icon_plus"></i>
-                                            <i class="icon_minus-06"></i>
+                                            <!-- <i class="icon_plus"></i>
+                                            <i class="icon_minus-06"></i> -->
                                         </h4>
                                     </div>
                                 </div>
@@ -46,8 +46,8 @@
                                     <div class="faq-header" id="headingOne">
                                         <h4 class="mb-0 collapsed helvetica-regular" aria-expanded="true">
                                             {{ $parameterItems['address_ge_2'][0] }}
-                                            <i class="icon_plus"></i>
-                                            <i class="icon_minus-06"></i>
+                                            <!-- <i class="icon_plus"></i>
+                                            <i class="icon_minus-06"></i> -->
                                         </h4>
                                     </div>
                                 </div>
@@ -59,13 +59,6 @@
         </div>
     </div>
 </section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 </main>
 <style type="text/css">
     #emiAmount2, #emiAmount {
