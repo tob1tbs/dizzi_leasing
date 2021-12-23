@@ -100,7 +100,7 @@ class ParametersAjaxController extends Controller
                     $BasicParameter::where('key', $Key)->update(['value' => $Input]);
                 } else {
                     if($Request->has('document_file')) {
-                        $MainPhoto = $Request->photo_new;
+                        $MainPhoto = $Request->document_file;
                         $MainPhotoName =  md5(Str::random(20).time().$MainPhoto).'.'.$MainPhoto->getClientOriginalExtension();
                         $MainPhoto->move(public_path('uploads/step/'), $MainPhotoName);
                     } else {
@@ -108,7 +108,7 @@ class ParametersAjaxController extends Controller
                     }
 
                     // $BasicParameter = new BasicParameter();
-                    // $BasicParameter::where('key', 'document_file')->update(['value' => $DocumentName]);
+                    $BasicParameter::where('key', 'document_file')->update(['value' => $DocumentName]);
                 }
             }
             return response()->json(['status' => true, 'errors' => false, 'message' => 'პარამტრები წარმატებით განახლდა']);
