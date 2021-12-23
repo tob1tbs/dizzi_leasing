@@ -108,7 +108,7 @@ class ParametersAjaxController extends Controller
                     }
 
                     // $BasicParameter = new BasicParameter();
-                    $BasicParameter::where('key', 'document_file')->update(['value' => $DocumentName]);
+                    // $BasicParameter::where('key', 'document_file')->update(['value' => $DocumentName]);
                 }
             }
             return response()->json(['status' => true, 'errors' => false, 'message' => 'პარამტრები წარმატებით განახლდა']);
