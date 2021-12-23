@@ -15,7 +15,7 @@
 </style>
 <main>
     <section class="banner-area-2 loan-banner"></section>
-    <section class="pb-20 bg_white" style="padding: 30px 0 80px 0">
+    <section class="pb-20 bg_white" style="padding: 70px 0 110px 0">
         <div class="container">
             <div class="row ">
                 <div class="col-lg-6 mx-auto">
