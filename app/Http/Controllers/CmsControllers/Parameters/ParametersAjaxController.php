@@ -107,6 +107,7 @@ class ParametersAjaxController extends Controller
                 $BasicParameter::where('key', 'document_file')->update(['value' => $DocumentName]);
             } else {
                 foreach($Request->all() as $Key => $Input) {
+                    dd($Input);
                     if($Key != 'document_file' && $Key != 'document_file_old') {
                         $BasicParameter = new BasicParameter();
                         $BasicParameter::where('key', $Key)->update(['value' => $Input]);
