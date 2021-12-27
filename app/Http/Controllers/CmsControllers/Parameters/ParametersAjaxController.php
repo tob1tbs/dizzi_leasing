@@ -94,6 +94,7 @@ class ParametersAjaxController extends Controller
 
     public function ajaxBasicParameterSubmit(Request $Request) {
         if($Request->isMethod('POST')) {
+            dd($Request->all());
             if($Request->has('document_file') OR $Request->has('document_file_old')) {
                 if($Request->has('document_file')) {
                     $Document = $Request->document_file;
@@ -114,7 +115,6 @@ class ParametersAjaxController extends Controller
                     }
                 }
             }
-
             return response()->json(['status' => true, 'errors' => false, 'message' => 'პარამტრები წარმატებით განახლდა']);
         } else {
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
