@@ -182,7 +182,7 @@ class MainController extends Controller
         if (view()->exists('web.sections.main.contact')) {
 
             $SeoData = [
-                'title_ge' => 'ხშირად დასმული კითხვები',
+                'title_ge' => 'კონტაქტი',
                 'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
                 'keywords_ge' => 'kwd',
             ];
