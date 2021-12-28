@@ -118,8 +118,15 @@ class MainController extends Controller
 
             $RequsitesList = $RequsitesList->where('deleted_at_int', '!=', 0)->orderBy('sortable', 'ASC')->get();
 
+            $SeoData = [
+                'title_ge' => 'რეკვიზიტები',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
                 'requsites' => $RequsitesList,
+                'seo_data' => $SeoData,
             ];
             return view('web.sections.main.requsites', $data);
         } else {
@@ -133,8 +140,15 @@ class MainController extends Controller
             $TextPage = new TextPage();
             $TextPageData = $TextPage::where('slug', 'about-us')->firstOrFail();
 
+            $SeoData = [
+                'title_ge' => 'ჩვენ შესახებ',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
                 'page_data' => $TextPageData,
+                'seo_data' => $SeoData,
             ];
             return view('web.sections.main.about', $data);
         } else {
@@ -148,8 +162,15 @@ class MainController extends Controller
             $Faq = new Faq();
             $FaqList = $Faq::where('status', 1)->where('deleted_at_int', '!=', 0)->get()->toArray();
 
+            $SeoData = [
+                'title_ge' => 'ხშირად დასმული კითხვები',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
                 'faq_list' => $FaqList,
+                'seo_data' => $SeoData,
             ];
             return view('web.sections.main.faq', $data);
         } else {
@@ -160,7 +181,14 @@ class MainController extends Controller
     public function actionWebContact() {
         if (view()->exists('web.sections.main.contact')) {
 
+            $SeoData = [
+                'title_ge' => 'ხშირად დასმული კითხვები',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
+                'seo_data' => $SeoData,
             ];
             return view('web.sections.main.contact', $data);
         } else {

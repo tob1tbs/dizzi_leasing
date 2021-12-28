@@ -57,10 +57,17 @@ class LeasingController extends Controller
                 $TextPageArray[$TextValue['slug']] = $TextValue['value'];
             }
 
+            $SeoData = [
+                'title_ge' => 'ავტო ლიზინგი',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
                 'leasing_data' => $LeasingArray,
                 'car_list' => $CarList,
                 'text_list' => $TextPageArray,
+                'seo_data' => $SeoData,
             ];
 
             return view('web.sections.leasing.leasing', $data);
@@ -103,10 +110,17 @@ class LeasingController extends Controller
                 $TextPageArray[$TextValue['slug']] = $TextValue['value'];
             }
 
+            $SeoData = [
+                'title_ge' => 'უკულიზინგი',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
                 'leasing_data' => $LeasingArray,
                 'car_list' => $CarList,
                 'text_list' => $TextPageArray,
+                'seo_data' => $SeoData,
             ];
 
             return view('web.sections.leasing.backleasing', $data);
@@ -128,6 +142,12 @@ class LeasingController extends Controller
             $CarMake = new CarMake();
             $CarMakeList = $CarMake::where('deleted_at_int', '!=', 0)->where('status', 1)->get();
 
+            $SeoData = [
+                'title_ge' => 'ავტო ლიზინგი',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
                 'steering_wheel' => $steering_wheel,
                 'fuel_type' => $fuel_type,
@@ -136,6 +156,7 @@ class LeasingController extends Controller
                 'year_list' => $year_list,
                 'engine_volume' => $engine_volume,
                 'car_make' => $CarMakeList,
+                'seo_data' => $SeoData,
             ];
 
             return view('web.sections.leasing.leasing_form', $data);
@@ -157,6 +178,12 @@ class LeasingController extends Controller
             $CarMake = new CarMake();
             $CarMakeList = $CarMake::where('deleted_at_int', '!=', 0)->where('status', 1)->get();
 
+            $SeoData = [
+                'title_ge' => 'უკულიზინგი',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
                 'steering_wheel' => $steering_wheel,
                 'fuel_type' => $fuel_type,
@@ -165,6 +192,7 @@ class LeasingController extends Controller
                 'year_list' => $year_list,
                 'engine_volume' => $engine_volume,
                 'car_make' => $CarMakeList,
+                'seo_data' => $SeoData,
             ];
 
             return view('web.sections.leasing.backleasing_form', $data);
@@ -207,10 +235,17 @@ class LeasingController extends Controller
                 $TextPageArray[$TextValue['slug']] = $TextValue['value'];
             }
 
+            $SeoData = [
+                'title_ge' => 'ტაქსი ლიზინგი',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
                 'leasing_data' => $LeasingArray,
                 'car_list' => $CarList,
                 'text_list' => $TextPageArray,
+                'seo_data' => $SeoData,
             ];
 
             return view('web.sections.leasing.taxileasing', $data);
@@ -232,6 +267,12 @@ class LeasingController extends Controller
             $CarMake = new CarMake();
             $CarMakeList = $CarMake::where('deleted_at_int', '!=', 0)->where('status', 1)->get();
 
+            $SeoData = [
+                'title_ge' => 'ტაქსი ლიზინგი',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
                 'steering_wheel' => $steering_wheel,
                 'fuel_type' => $fuel_type,
@@ -240,6 +281,7 @@ class LeasingController extends Controller
                 'year_list' => $year_list,
                 'engine_volume' => $engine_volume,
                 'car_make' => $CarMakeList,
+                'seo_data' => $SeoData,
             ];
 
             return view('web.sections.leasing.taxileasing_form', $data);
