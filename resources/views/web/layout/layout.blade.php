@@ -38,7 +38,7 @@
             <div class="round_spinner">
                 <div class="spinner"></div>
                 <div class="text">
-                    <img src="{{ url('/assets/web/img/logo/logo.svg') }}" alt="">
+                    <img src="{{ url('/assets/web/img/logo/logo.svg') }}" alt="avtolizingi-logo">
                 </div>
             </div>
             <h2 class="head neue">დიზი ლიზინგი</h2>
@@ -53,7 +53,7 @@
                     <div class="col-xl-8">
                         <div class="row align-items-center gy-lg-0 gy-3 gx-0">
                             <div class="col-md-2  text-md-start text-center" >
-                                <a href=""><img src="{{ url('assets/web/img/logo/Logo_2.svg') }}" alt="logo" id="footerlogo" style="position: relative; left: -35px;"></a>
+                                <a href=""><img src="{{ url('assets/web/img/logo/Logo_2.svg') }}" alt="avtolizingi-logo" id="footerlogo" style="position: relative; left: -35px;"></a>
                             </div>
                             <div class="col-md-4">
                                 <div class="social-button text-center">
