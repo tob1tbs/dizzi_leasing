@@ -94,7 +94,7 @@ class MainController extends Controller
                 'review_list' => $ReviewList,
                 'text_list' => $TextPageArray,
                 'step_list' => $StepArray,
-                'seodata' => $SeoData,
+                'seo_data' => $SeoData,
             ];
             return view('web.sections.main.main', $data);
         } else {
