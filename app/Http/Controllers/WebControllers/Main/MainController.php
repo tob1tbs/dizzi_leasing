@@ -81,6 +81,12 @@ class MainController extends Controller
                 $StepArray[$StepValue['step']] = $StepValue['photo'];
             }
 
+            $SeoData = [
+                'title_ge' => 'მთავარი',
+                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'keywords_ge' => 'kwd',
+            ];
+
             $data = [
                 'car_list' => $CarArray,
                 'faq_list' => $FaqList,
@@ -88,6 +94,7 @@ class MainController extends Controller
                 'review_list' => $ReviewList,
                 'text_list' => $TextPageArray,
                 'step_list' => $StepArray,
+                'seodata' => $SeoData,
             ];
             return view('web.sections.main.main', $data);
         } else {

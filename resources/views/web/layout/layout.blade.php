@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-    <title>@if(!empty($seo_data['title_ge'])) @else {{ $parameterItems['title_ge'][0] }} @endif</title>
+    <title>@if(!empty($seo_data['title_ge'])) {{ $seo_data['title_ge'] }} @else {{ $parameterItems['title_ge'][0] }} @endif</title>
     
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,8 +9,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="facebook-domain-verification" content="f35co0iz84xewjylp4gw1a7du8fb5k" />
 
-    <meta name="keywords" content="@if(!empty($seo_data['keywords_ge'])) @else {{ $parameterItems['keywords_ge'][0] }} @endif">
-    <meta name="descrition" content="@if(!empty($seo_data['description_ge'])) @else {{ $parameterItems['description_ge'][0] }} @endif">
+    <meta name="keywords" content="@if(!empty($seo_data['keywords_ge'])) {{ $seo_data['keywords_ge'] }} @else {{ $parameterItems['keywords_ge'][0] }} @endif">
+    <meta name="descrition" content="@if(!empty($seo_data['description_ge'])) {{ $seo_data['description_ge'] }} @else {{ $parameterItems['description_ge'][0] }} @endif">
     
     <link rel="shortcut icon" href="{{ url('assets/web/favicon.png') }}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{ url('assets/web/css/bootstrap.min.css') }}" media="all" />
