@@ -107,7 +107,7 @@ class MainController extends Controller
 
             $BasicParameter = new BasicParameter();
             $RequsitesList = $BasicParameter::where('deleted_at_int', '!=', 0)
-            ->orWwhere('key', 'company_code')
+            ->orWhere('key', 'company_code')
             ->orWhere('key', 'tbc_account_number')
             ->orWhere('key', 'bog_account_number')
             ->orderBy('sortable', 'ASC')->get();
