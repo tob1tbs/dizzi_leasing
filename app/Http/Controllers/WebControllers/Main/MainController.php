@@ -107,9 +107,10 @@ class MainController extends Controller
 
             $BasicParameter = new BasicParameter();
             $RequsitesList = $BasicParameter::where('key', 'company_code')
+            ->where('deleted_at_int', '!=', 0)
             ->orWhere('key', 'tbc_account_number')
             ->orWhere('key', 'bog_account_number')
-            ->where('deleted_at_int', '!=', 0)->orderBy('sortable', 'ASC')->get();
+            ->orderBy('sortable', 'ASC')->get();
 
             $SeoData = [
                 'title_ge' => 'რეკვიზიტები',
