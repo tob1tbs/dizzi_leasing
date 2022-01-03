@@ -108,15 +108,9 @@ class MainController extends Controller
             $BasicParameter = new BasicParameter();
             $RequsitesList = $BasicParameter::where('key', 'company_code')
             ->orWhere('key', 'tbc_account_number')
-            ->orWhere('key', 'bog_account_number');
-
-            if(Session::get('locale') == 'ge') {
-                $RequsitesList->orWhere('key', 'address_ge')->orWhere('key', 'company_name_ge');
-            } else {
-                $RequsitesList->orWhere('key', 'address_en')->orWhere('key', 'company_name_en');
-            }
-
-            $RequsitesList = $RequsitesList->where('deleted_at_int', '!=', 0)->orderBy('sortable', 'ASC')->get();
+            ->orWhere('key', 'bog_account_number')
+            ->orWhere('key', 'company_name_ge')
+            ->where('deleted_at_int', '!=', 0)->orderBy('sortable', 'ASC')->get();
 
             $SeoData = [
                 'title_ge' => 'რეკვიზიტები',
