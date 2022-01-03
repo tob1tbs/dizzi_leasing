@@ -106,10 +106,10 @@ class MainController extends Controller
         if (view()->exists('web.sections.main.requsites')) {
 
             $BasicParameter = new BasicParameter();
-            $RequsitesList = $BasicParameter::where('deleted_at_int', '!=', 0)
-            ->orWhere('key', 'company_code')
+            $RequsitesList = $BasicParameter::where('key', 'company_code')
             ->orWhere('key', 'tbc_account_number')
             ->orWhere('key', 'bog_account_number')
+            ->where('deleted_at_int', '!=', 0)
             ->orderBy('sortable', 'ASC')->get();
 
             $SeoData = [
