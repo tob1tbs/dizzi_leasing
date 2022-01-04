@@ -10,9 +10,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['we
     Route::get('/faq', [App\Http\Controllers\WebControllers\Main\MainController::class, 'actionWebFaq'])->name('actionWebFaq');
     //LEASING
     Route::get('/lizingi', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebLeasing'])->name('actionWebLeasing');
-    Route::get('/avtoganvadeba', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebBackLeasing'])->name('actionWebBackLeasing');
+    Route::get('/avtolombardi', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebBackLeasing'])->name('actionWebBackLeasing');
     Route::get('/lizingi/form', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebLeasingForm'])->name('actionWebLeasingForm');
-    Route::get('/avtoganvadeba/form', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebBackLeasingForm'])->name('actionWebBackLeasingForm');
+    Route::get('/avtolombardi/form', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebBackLeasingForm'])->name('actionWebBackLeasingForm');
     Route::get('/taxi-lizingi', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebTaxiLeasing'])->name('actionWebTaxiLeasing');
     Route::get('/taxi-lizingi/form', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebTaxiLeasingForm'])->name('actionWebTaxiLeasingForm');
     Route::get('/success', [App\Http\Controllers\WebControllers\Leasing\LeasingController::class, 'actionWebSeccess'])->name('actionWebSeccess');
