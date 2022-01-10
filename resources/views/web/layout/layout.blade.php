@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="ka">
 <head>
     <title>@if(!empty($seo_data['title_ge'])) {{ $seo_data['title_ge'] }} @else {{ $parameterItems['title_ge'][0] }} @endif</title>
     
