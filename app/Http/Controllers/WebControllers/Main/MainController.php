@@ -82,9 +82,9 @@ class MainController extends Controller
             }
 
             $SeoData = [
-                'title_ge' => 'მთავარი',
-                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
-                'keywords_ge' => 'kwd',
+                'title_ge' => 'Leave request for leasing',
+                'description_ge' => 'Leasing in Georgia',
+                'keywords_ge' => 'Leasing, request',
             ];
 
             $data = [
