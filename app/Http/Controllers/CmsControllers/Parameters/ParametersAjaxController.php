@@ -94,17 +94,12 @@ class ParametersAjaxController extends Controller
 
     public function ajaxBasicParameterSubmit(Request $Request) {
         if($Request->isMethod('POST')) {
-            if($Request->has('document_file') OR $Request->has('document_file_old')) {
-                foreach($Request->all() as $Key => $Input) {
-                    if($Key == 'document_file') {
-                        $Document = $Request->document_file;
-                        $DocumentName =  md5(Str::random(20).time().$Document).'.'.$Document->getClientOriginalExtension();
-                        $Document->move(public_path('uploads/documents/'), $DocumentName);
-                    } else {
-                        $DocumentName = $Request->document_file_old;
-                    }
-                }
+            
+            foreach($Request->except(['document_file', 'document_file_old']) as $Key => $Input) {
+                $BasicParameter = new BasicParameter();
+                $BasicParameter::where('key', $Key)->update(['value' => $Input]);
             }
+
             return response()->json(['status' => true, 'errors' => false, 'message' => 'პარამტრები წარმატებით განახლდა']);
         } else {
             return response()->json(['status' => false, 'message' => 'დაფიქსირდა შეცდომა გთხოვთ სცადოთ თავიდან !!!'], 200);
