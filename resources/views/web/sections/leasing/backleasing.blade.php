@@ -400,27 +400,27 @@ function popupOpenClose(popup) {
 }
 </script>
 
-<script> 
-jQuery(document).on("click", 'div.calculator-result-widget button[type="button"]', function() {  
- var m = jQuery(this).closest('form');  
- var phone = m.find('input#inputPhoneNumber').val();  
- var ct_site_id = '48885'; 
- var sub = 'Заявка с ' + location.hostname; 
- var ct_data = {              
-  phoneNumber: phone, 
-  subject: sub, 
-  requestUrl: location.href, 
-  sessionId: window.call_value 
- }; 
- var ct_valid = !!phone; 
- console.log(ct_data,ct_valid); 
- if (ct_valid && !window.ct_snd_flag){ 
-  window.ct_snd_flag = 1; setTimeout(function(){ window.ct_snd_flag = 0; }, 20000); 
-  jQuery.ajax({   
-    url: 'https://api.calltouch.ru/calls-service/RestAPI/requests/'+ct_site_id+'/register/',  
-    dataType: 'json', type: 'POST', data: ct_data, async: false 
-  });  
- } 
-}); 
+<script>  
+jQuery(document).on("click", 'div.calculator-result-widget button[type="button"]', function() {   
+ var m = jQuery(this).closest('div.calculator-result-widget');   
+ var phone = m.find('input#inputPhoneNumber').val();   
+ var ct_site_id = '48885';  
+ var sub = 'Заявка с ' + location.hostname;  
+ var ct_data = {               
+  phoneNumber: phone,  
+  subject: sub,  
+  requestUrl: location.href,  
+  sessionId: window.call_value  
+ };  
+ var ct_valid = !!phone;  
+ console.log(ct_data,ct_valid);  
+ if (ct_valid && !window.ct_snd_flag){  
+  window.ct_snd_flag = 1; setTimeout(function(){ window.ct_snd_flag = 0; }, 20000);  
+  jQuery.ajax({    
+    url: 'https://api.calltouch.ru/calls-service/RestAPI/requests/'+ct_site_id+'/register/',   
+    dataType: 'json', type: 'POST', data: ct_data, async: false  
+  });   
+ }  
+});  
 </script>
 @endsection
