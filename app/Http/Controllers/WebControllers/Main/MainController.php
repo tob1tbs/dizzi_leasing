@@ -84,7 +84,7 @@ class MainController extends Controller
             $SeoData = [
                 'title_ge' => 'ავტოლიზინგი | dizi.ge',
                 'description_ge' => 'მიიღე 30000 ლარამდე დაფინანსება დღესვე',
-                'keywords_ge' => 'kwd',
+                'keywords_ge' => 'ავტოლიზინგი, ლიზინგი, ავტომობილი, სესხი, დიზი, dizi',
             ];
 
             $data = [
@@ -115,7 +115,7 @@ class MainController extends Controller
             $SeoData = [
                 'title_ge' => 'რეკვიზიტები',
                 'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
-                'keywords_ge' => 'kwd',
+                'keywords_ge' => 'ავტოლიზინგი, ლიზინგი, ავტომობილი, სესხი, დიზი, dizi',
             ];
 
             $data = [
@@ -137,7 +137,7 @@ class MainController extends Controller
             $SeoData = [
                 'title_ge' => 'ჩვენ შესახებ',
                 'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
-                'keywords_ge' => 'kwd',
+                'keywords_ge' => 'ავტოლიზინგი, ლიზინგი, ავტომობილი, სესხი, დიზი, dizi',
             ];
 
             $data = [
@@ -159,7 +159,7 @@ class MainController extends Controller
             $SeoData = [
                 'title_ge' => 'ხშირად დასმული კითხვები',
                 'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
-                'keywords_ge' => 'kwd',
+                'keywords_ge' => 'ავტოლიზინგი, ლიზინგი, ავტომობილი, სესხი, დიზი, dizi',
             ];
 
             $data = [
@@ -178,7 +178,7 @@ class MainController extends Controller
             $SeoData = [
                 'title_ge' => 'კონტაქტი',
                 'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
-                'keywords_ge' => 'kwd',
+                'keywords_ge' => 'ავტოლიზინგი, ლიზინგი, ავტომობილი, სესხი, დიზი, dizi',
             ];
 
             $data = [

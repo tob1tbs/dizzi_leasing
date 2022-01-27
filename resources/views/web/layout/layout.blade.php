@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="facebook-domain-verification" content="f35co0iz84xewjylp4gw1a7du8fb5k" />
-    <meta data-n-head="ssr" data-hid="keywords" name="keywords" content="ავტოლიზინგი, ლიზინგი, ავტომობილი, სესხი, დიზი, dizi">
 
     <meta name="keywords" content="@if(!empty($seo_data['keywords_ge'])) {{ $seo_data['keywords_ge'] }} @else {{ $parameterItems['keywords_ge'][0] }} @endif">
     <meta name="descrition" content="@if(!empty($seo_data['description_ge'])) {{ $seo_data['description_ge'] }} @else {{ $parameterItems['description_ge'][0] }} @endif">
