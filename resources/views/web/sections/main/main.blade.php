@@ -30,12 +30,12 @@
                             data-wow-delay="0.3s" style="font-size: 16px; padding: 0 25px;">{{ trans('site.leasing') }}
                             <i class="arrow_right"></i></a>
 
-                            <a href="{{ route('actionWebBackLeasing') }}""
+                            <a href="{{ route('actionWebBackLeasing') }}"
                             class="leas-btn wow fadeInUp mt-30 theme-btn theme-btn-rounded-2 theme-btn-lg theme-btn-alt neue"
                             data-wow-delay="0.3s" style="font-size: 16px; padding: 0 25px;">{{ trans('site.backleasing') }}
                             <i class="arrow_right"></i></a>
 
-                            <a href="{{ route('actionWebTaxiLeasing') }}""
+                            <a href="{{ route('actionWebTaxiLeasing') }}"
                             class="leas-btn wow fadeInUp mt-30 theme-btn theme-btn-rounded-2 theme-btn-lg theme-btn-alt neue"
                             data-wow-delay="0.3s" style="font-size: 16px; padding: 0 25px;">{{ trans('site.taxileasing') }}
                             <i class="arrow_right"></i></a>

@@ -1,2 +1,3 @@
+Sitemap: https://dizi.ge/sitemap.xml
 User-agent: *
 Disallow:
