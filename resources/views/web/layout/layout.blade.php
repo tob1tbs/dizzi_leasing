@@ -4,6 +4,8 @@
     <title>@if(!empty($seo_data['title_ge'])) {{ $seo_data['title_ge'] }} @else {{ $parameterItems['title_ge'][0] }} @endif</title>
     
     <meta charset="UTF-8">
+    <meta href="https://dizi.ge/ge" rel="canonical">
+    <meta href="https://dizi.ge/ge" rel="home">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
