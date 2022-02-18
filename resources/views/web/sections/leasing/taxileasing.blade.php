@@ -116,7 +116,7 @@
     <div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
         <div class="modal__dialog">
             <div class="modal__content">
-                <p>თქვენ მიიღებთ დიზის მიმდინარე აქციების შესახებ ინფორმაციას.</p>
+                <p>You will get info about Dizi Promotions</p>
                 
                 <!-- modal close button -->
                 <a href="" class="modal__close demo-close">
@@ -129,9 +129,9 @@
     <div id="modal2" class="modal modal__bg" role="dialog" aria-hidden="true">
         <div class="modal__dialog">
             <div class="modal__content">
-                <h2 style="margin-top: 2rem;">ლიზინგის ხელშეკრულება</h2>
+                <h2 style="margin-top: 2rem;">Leasing Contract</h2>
                 <hr>
-                <a href="#0" id="readmore">სრულად ნახვა</a>
+                <a href="#0" id="readmore">See moreა</a>
                 
                 <!-- modal close button -->
                 <a href="" class="modal__close demo-close">
