@@ -33,7 +33,7 @@
                             {!! $text_list['taxileasing'] !!}
                         </div>
                     </div>
-                    <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue" style="position: relative; left: 50%; transform: translate(-50%);">განაცხადის შევსება</a>
+                    <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue" style="position: relative; left: 50%; transform: translate(-50%);">{{ trans('site.apply_now') }}</a>
                 </div>
             </div>
             <div class="calculator-widget" id="form_block" style="margin-top: 35px;">

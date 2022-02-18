@@ -236,8 +236,8 @@ class LeasingController extends Controller
             }
 
             $SeoData = [
-                'title_ge' => 'ტაქსი ლიზინგი',
-                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
+                'title_ge' => 'Taxi Leasing',
+                'description_ge' => 'If you want to make money with your daily work and you need a car',
                 'keywords_ge' => 'kwd',
             ];
 

@@ -15,20 +15,6 @@
     <meta name="keywords" content="@if(!empty($seo_data['keywords_ge'])) {{ $seo_data['keywords_ge'] }} @else {{ $parameterItems['keywords_ge'][0] }} @endif">
     <meta name="descrition" content="@if(!empty($seo_data['description_ge'])) {{ $seo_data['description_ge'] }} @else {{ $parameterItems['description_ge'][0] }} @endif">
 
-    <meta property="og:url" content="https://dizi.ge/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="ავტოლიზინგი | dizi.ge">
-    <meta property="og:description" content="მიიღე 30000 ლარამდე დაფინანსება დღესვე">
-    <meta property="og:image" content="{{ url('assets/web/og.jpg') }}">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="dizi.ge">
-    <meta property="twitter:url" content="https://dizi.ge/">
-    <meta name="twitter:title" content="ავტოლიზინგი | dizi.ge">
-    <meta name="twitter:description" content="მიიღე 30000 ლარამდე დაფინანსება დღესვე">
-    <meta name="twitter:image" content="{{ url('assets/web/og.jpg') }}">
-
-    
     <link rel="shortcut icon" href="{{ url('assets/web/favicon.png') }}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{ url('assets/web/css/bootstrap.min.css') }}" media="all" />
     <link rel="stylesheet" type="text/css" href="{{ url('assets/web/css/elegant-icons.min.css') }}" media="all" />
@@ -64,7 +50,7 @@
                     <img src="{{ url('/assets/web/img/logo/logo.svg') }}" alt="avtolizingi-logo">
                 </div>
             </div>
-            <h2 class="head neue">დიზი ლიზინგი</h2>
+            <h2 class="head neue"></h2>
         </div>
     </div>
     @include('web.include.header_1')
