@@ -32,7 +32,7 @@
                             {!! $text_list['backleasing'] !!}
                         </div>
                     </div>
-                    <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue" style="position: relative; left: 50%; transform: translate(-50%);">განაცხადის შევსება</a>
+                    <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue" style="position: relative; left: 50%; transform: translate(-50%);">{{ trans('site.apply_now') }}</a>
                 </div>
             </div>
             <div class="calculator-widget" id="form_block" style="margin-top: 35px;">
@@ -52,7 +52,7 @@
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                                         <li><span class="active_bar"></span></li>
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link active month-tab" id="monthTab" data-bs-toggle="tab" href="#monthTabId" role="tab" aria-controls="monthTabId"aria-selected="true">თვე</a>
+                                            <a class="nav-link active month-tab" id="monthTab" data-bs-toggle="tab" href="#monthTabId" role="tab" aria-controls="monthTabId"aria-selected="true">Month</a>
                                         </li>
                                     </ul>
                                     <input type="text" id="SetMonthRange" value="{{ $parameterLeasing['back_leasing_month_default'][0] }}">
@@ -148,7 +148,7 @@
 <div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
     <div class="modal__dialog">
         <div class="modal__content">
-            <p>თქვენ მიიღებთ დიზის მიმდინარე აქციების შესახებ ინფორმაციას.</p>
+            <p>You will get info about Dizi Promotions</p>
             
             <!-- modal close button -->
             <a href="" class="modal__close demo-close">
@@ -161,9 +161,9 @@
 <div id="modal2" class="modal modal__bg" role="dialog" aria-hidden="true">
     <div class="modal__dialog">
         <div class="modal__content">
-            <h2 style="margin-top: 2rem;">ლიზინგის ხელშეკრულება</h2>
+            <h2 style="margin-top: 2rem;">Leasing Contract</h2>
             <hr>
-            <a href="#0" id="readmore">სრულად ნახვა</a>
+            <a href="#0" id="readmore">See more</a>
             
             <!-- modal close button -->
             <a href="" class="modal__close demo-close">

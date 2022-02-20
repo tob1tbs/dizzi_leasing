@@ -53,7 +53,7 @@
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                                         <li><span class="active_bar"></span></li>
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link active month-tab" id="monthTab" data-bs-toggle="tab" href="#monthTabId" role="tab" aria-controls="monthTabId" aria-selected="true">თვე</a>
+                                            <a class="nav-link active month-tab" id="monthTab" data-bs-toggle="tab" href="#monthTabId" role="tab" aria-controls="monthTabId" aria-selected="true">Month</a>
                                         </li>
                                     </ul>
                                     <input type="text" id="SetMonthRange" value="{{ $parameterLeasing['leasing_month_default'][0] }}">
