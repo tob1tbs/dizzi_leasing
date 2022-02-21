@@ -24,7 +24,7 @@ class LeasingController extends Controller
     }
 
     public function actionWebLeasing(Request $Request) {
-        if (view()->exists('web.sections.leasing.backleasing')) {
+        if (view()->exists('web.sections.leasing.taxileasing')) {
 
             $CarData = new CarData();
             $CarList = $CarData::where('deleted_at_int', '!=', 0)
@@ -47,7 +47,7 @@ class LeasingController extends Controller
                 $LeasingArray[$ParameterItem['key']] = $ParameterItem['value'];
             }
 
-
+            
             $TextPage = new TextPage();
             $TextPageList = $TextPage::where('deleted_at_int', '!=', 0)->get()->toArray();
 
@@ -58,8 +58,8 @@ class LeasingController extends Controller
             }
 
             $SeoData = [
-                'title_ge' => 'Leaseback',
-                'description_ge' => 'The fastest leasing service in town',
+                'title_ge' => 'Taxi Leasing',
+                'description_ge' => 'If you want to make money with your daily work and you need a car',
                 'keywords_ge' => 'kwd',
             ];
 
@@ -70,10 +70,8 @@ class LeasingController extends Controller
                 'seo_data' => $SeoData,
             ];
 
-            return view('web.sections.leasing.backleasing', $data);
+            return view('web.sections.leasing.taxileasing', $data);
         }
-
-
         exit();
         if (view()->exists('web.sections.leasing.leasing')) {
 
