@@ -71,7 +71,8 @@ class LeasingController extends Controller
             ];
 
             return view('web.sections.leasing.backleasing', $data);
-        
+        }
+
 
         exit();
         if (view()->exists('web.sections.leasing.leasing')) {
