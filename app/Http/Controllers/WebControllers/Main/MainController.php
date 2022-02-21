@@ -24,59 +24,6 @@ class MainController extends Controller
     }
 
     public function actionWebMain(Request $Request) {
-        if (view()->exists('web.sections.leasing.taxileasing')) {
-
-            $CarData = new CarData();
-            $CarList = $CarData::where('deleted_at_int', '!=', 0)
-                                                                ->where('status', 1)
-                                                                ->limit(4)
-                                                                ->get()
-                                                                ->load('carMake')
-                                                                ->load('carModel')
-                                                                ->load('carParameter')
-                                                                ->toArray();
-            $CarData = new CarData();
-            $CarList = $CarData::where('deleted_at_int', '!=', 0)->where('status', 1)->get();
-
-            $LeasingParameter = new LeasingParameter();
-            $LeasingParametersList = $LeasingParameter::where('deleted_at_int', '!=', 0)->get();
-            
-            $LeasingArray = [];
-
-            foreach($LeasingParametersList as $ParameterItem) {
-                $LeasingArray[$ParameterItem['key']] = $ParameterItem['value'];
-            }
-
-            
-            $TextPage = new TextPage();
-            $TextPageList = $TextPage::where('deleted_at_int', '!=', 0)->get()->toArray();
-
-            $TextPageArray = [];
-
-            foreach($TextPageList as $TextKey => $TextValue) {
-                $TextPageArray[$TextValue['slug']] = $TextValue['value'];
-            }
-
-            $SeoData = [
-                'title_ge' => 'Taxi Leasing',
-                'description_ge' => 'If you want to make money with your daily work and you need a car',
-                'keywords_ge' => 'kwd',
-            ];
-
-            $data = [
-                'leasing_data' => $LeasingArray,
-                'car_list' => $CarList,
-                'text_list' => $TextPageArray,
-                'seo_data' => $SeoData,
-            ];
-
-            return view('web.sections.leasing.taxileasing', $data);
-        } else {
-            abort('404');
-        }
-
-
-        exit();
         if (view()->exists('web.sections.main.main')) {
 
             $CarData = new CarData();
