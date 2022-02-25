@@ -42,7 +42,7 @@
 
 </head>
 <body data-spy="scroll" data-offset="70">
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="ctn-preloader" class="ctn-preloader">
             <div class="round_spinner">
                 <div class="spinner"></div>
@@ -52,7 +52,7 @@
             </div>
             <h2 class="head neue"></h2>
         </div>
-    </div>
+    </div> -->
     @include('web.include.header_1')
     @yield('content')
     <footer class="footer footer-2 pt-lg-50 pt-50 pb-50 pb-lg-50" style="background-image: url({{ url('assets/web/img/footer/footer-bg-2.png') }});">

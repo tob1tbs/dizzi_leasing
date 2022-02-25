@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="header-info-left">
-                        <div class="timestamp helvetica-regular"> <i class="icon_clock_alt"></i> {{ trans('site.start_off_work_day') }} - {{ trans('site.end_off_work_day') }} {{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }}
+                        <div class="timestamp helvetica-regular"> <i class="icon_clock_alt"></i> {{ trans('site.start_off_work_day') }} - {{ trans('site.end_off_work_day') }} {{ $parameterItems['work_start'][0] }}-{{ $parameterItems['work_end'][0] }} / {{ trans('site.satar') }} - 16:00
                         </div>
                     </div>
                 </div>
