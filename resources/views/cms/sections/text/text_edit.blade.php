@@ -18,10 +18,40 @@
                                     <input type="text" class="form-control font-neue" value="{{ $text_page_data->title }}" disabled>
                                 </div>
                             </div>
+                            <div class="col-6">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="keywords_ge">Meta Keywords (ქართულად)</label>
+                                    <input type="text" class="form-control font-neue" value="{{ $text_page_data->keywords_en }}" id="keywords_ge" id="keywords_ge">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="keywords_en">Meta Keywords (ინგლისურად)</label>
+                                    <input type="text" class="form-control font-neue" value="{{ $text_page_data->keywords_en }}" id="keywords_en" id="keywords_en">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="description_ge">Meta Description (ქართულად)</label>
+                                    <input type="text" class="form-control font-neue" value="{{ $text_page_data->description_ge }}" id="description_ge" id="description_ge">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="description_en">Meta Description (ინგლისურად)</label>
+                                    <input type="text" class="form-control font-neue" value="{{ $text_page_data->description_en }}" id="description_en" id="description_en">
+                                </div>
+                            </div>
                             <div class="col-12">
                                 <div class="form-control-wrap mb-2">
-                                    <label class="form-label" for="page_text">გვერდის ტექსტი</label>
-                                    <textarea class="summernote-basic mt-3 col-span-12 font-helvetica" id="page_text" name="page_text">{{ $text_page_data->value }}</textarea>
+                                    <label class="form-label" for="page_text_ge">გვერდის ტექსტი (ქართულად) *</label>
+                                    <textarea class="summernote-basic mt-3 col-span-12 font-helvetica" id="page_text_ge" name="page_text_ge">{{ $text_page_data->value }}</textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-control-wrap mb-2">
+                                    <label class="form-label" for="page_text_en">გვერდის ტექსტი (ინგლისურად) *</label>
+                                    <textarea class="summernote-basic mt-3 col-span-12 font-helvetica" id="page_text_en" name="page_text_en">{{ $text_page_data->value }}</textarea>
                                 </div>
                             </div>
                             <div class="col-12">
