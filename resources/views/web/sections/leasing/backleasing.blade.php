@@ -29,7 +29,7 @@
                             <img src="{{ url('uploads/other/'.$otherPhotos['4'][0]) }}" class="img-fluid" style="border-radius: 10px;">
                         </div>
                         <div class="col-sm-12 col-lg-8 col-xl-8 helvetica-regular">
-                            {!! $text_list['backleasing'] !!}
+                            {!! json_decode($text_list['leasing'])->{$parameterItems['locale'][0]} !!}
                         </div>
                     </div>
                     <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue" style="position: relative; left: 50%; transform: translate(-50%);">{{ trans('site.apply_now') }}</a>
@@ -148,9 +148,7 @@
 <div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
     <div class="modal__dialog">
         <div class="modal__content">
-            <p>You will get info about Dizi Promotions</p>
-            
-            <!-- modal close button -->
+            <p>{{ trans('site.get_from_dizi') }}</p>
             <a href="" class="modal__close demo-close">
                 <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
             </a>
@@ -161,11 +159,9 @@
 <div id="modal2" class="modal modal__bg" role="dialog" aria-hidden="true">
     <div class="modal__dialog">
         <div class="modal__content">
-            <h2 style="margin-top: 2rem;">Leasing Contract</h2>
+            <h2 style="margin-top: 2rem;">{{ trans('leasing_contract') }}</h2>
             <hr>
-            <a href="#0" id="readmore">See more</a>
-            
-            <!-- modal close button -->
+            <a href="#0" id="readmore">{{ trans('site.read_more') }}</a>
             <a href="" class="modal__close demo-close">
                 <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
             </a>

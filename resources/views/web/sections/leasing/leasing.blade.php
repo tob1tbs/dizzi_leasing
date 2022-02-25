@@ -30,10 +30,10 @@
                             <img src="{{ url('uploads/other/'.$otherPhotos['3'][0]) }}" class="img-fluid" style="border-radius: 10px;">
                         </div>
                         <div class="col-sm-12 col-lg-8 col-xl-8 helvetica-regular">
-                            {!! $text_list['leasing'] !!}
+                            {!! json_decode($text_list['leasing'])->{$parameterItems['locale'][0]} !!}
                         </div>
                     </div>
-                    <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue" style="position: relative; left: 50%; transform: translate(-50%);">განაცხადის შევსება</a>
+                    <a href="#form_block" class="theme-btn theme-btn-lg mt-40 neue" style="position: relative; left: 50%; transform: translate(-50%);">{{ trans('site.apply_now') }}</a>
                </div>
             </div>
             <div class="calculator-widget" id="form_block" style="margin-top: 35px;">
@@ -117,7 +117,7 @@
     <div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
         <div class="modal__dialog">
             <div class="modal__content">
-                <p>თქვენ მიიღებთ დიზის მიმდინარე აქციების შესახებ ინფორმაციას.</p>
+                <p>{{ trans('site.get_from_dizi') }}</p>
                 
                 <!-- modal close button -->
                 <a href="" class="modal__close demo-close">
@@ -130,9 +130,9 @@
     <div id="modal2" class="modal modal__bg" role="dialog" aria-hidden="true">
         <div class="modal__dialog">
             <div class="modal__content">
-                <h2 style="margin-top: 2rem;">ლიზინგის ხელშეკრულება</h2>
+                <h2 style="margin-top: 2rem;">{{ trans('leasing_contract') }}</h2>
                 <hr>
-                <a href="#0" id="readmore">სრულად ნახვა</a>
+                <a href="#0" id="readmore">{{ trans('site.read_more') }}</a>
                 
                 <!-- modal close button -->
                 <a href="" class="modal__close demo-close">

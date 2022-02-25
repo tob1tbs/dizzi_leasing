@@ -13,10 +13,35 @@ class TextPageAjaxController extends Controller
     //
 
     public function ajaxTextPageSubmit(Request $Request) {
-        if($Request->isMethod('POST')) {
+        if($Request->isMethod('POST')) {    
+
+            $arr = [
+                'ge' => $Request->page_text_ge,
+                'en' => $Request->page_text_en,
+            ];
+
+            $meta_arr = [
+                'ge' => $Request->description_ge,
+                'en' => $Request->description_en,
+            ];
+
+            $kwd_arr = [
+                'ge' => $Request->keywords_ge,
+                'en' => $Request->keywords_en,
+            ];
+
+
+            $title = [
+                'ge' => $Request->title_ge,
+                'en' => $Request->title_en,
+            ];
+
             $TextPage = new TextPage();
             $TextPage::find($Request->page_id)->update([
-                'value' => $Request->page_text,
+                'title' => json_encode($title),
+                'value' => json_encode($arr),
+                'description' => json_encode($meta_arr),
+                'keywords' => json_encode($kwd_arr),
             ]);
 
             return response()->json(['status' => true, 'message' => 'კოდი წარმატებით წაიშალა']);
@@ -42,10 +67,12 @@ class TextPageAjaxController extends Controller
         if($Request->isMethod('POST')) {
             $title = [
                 'ge' => $Request->question_title_ge,
+                'en' => $Request->question_title_en,
             ];
 
             $text = [
                 'ge' => $Request->question_text_ge,
+                'en' => $Request->question_text_en,
             ];
             $Faq = new Faq();
             $Faq::updateOrCreate(

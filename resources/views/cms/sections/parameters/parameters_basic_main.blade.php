@@ -87,9 +87,9 @@
                         <div class="form-group">
                             <div class="form-control-wrap">
                                 <select class="form-control font-neue" id="{{ $parameter_item->key }}" name="{{ $parameter_item->key }}">
-                                @if($parameter_item->key == 'default_language')
-                                    @foreach($language_list as $language_item)
-                                        <option value="{{ $language_item->key }}">{{ $language_item->value }}</option>
+                                @if($parameter_item->key == 'locale')
+                                    @foreach($locale_list as $locale_item)
+                                        <option value="{{ $locale_item }}" @if($parameter_item->value == $locale_item) selected @endif>{{ $locale_item }}</option>
                                     @endforeach
                                 @endif
                                 </select>

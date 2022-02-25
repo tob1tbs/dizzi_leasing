@@ -20,13 +20,13 @@
                                 <div class="w-100">
                                     <div class="faq-header" id="headingFour{{ $faq_item['id'] }}">
                                         <h4 class="mb-0 collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour{{ $faq_item['id'] }}" aria-expanded="true" aria-controls="collapseFour{{ $faq_item['id'] }}">
-                                            {{ json_decode($faq_item['title'])->{app()->getLocale()} }}
+                                            {{ json_decode($faq_item['title'])->{$parameterItems['locale'][0]} }}
                                             <i class="icon_plus"></i><i class="icon_minus-06"></i>
                                         </h4>
                                     </div>
                                     <div id="collapseFour{{ $faq_item['id'] }}" class="collapse" aria-labelledby="headingFour{{ $faq_item['id'] }}" data-bs-parent="#accordionExample">
                                         <div class="faq-body pr-lg-130">
-                                            {!! json_decode($faq_item['value'])->{app()->getLocale()} !!}
+                                            {{ json_decode($faq_item['value'])->{$parameterItems['locale'][0]} }}
                                         </div>
                                     </div>
                                 </div>

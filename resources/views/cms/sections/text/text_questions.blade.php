@@ -34,7 +34,7 @@
                 <td class="nk-tb-col">
                     <div class="user-card">
                         <div class="user-info">
-                            <span class="tb-lead">{{ json_decode($faq_item->title)->ge }}</span>
+                            <span class="tb-lead">{{ json_decode($faq_item->title)->ge }} / {{ json_decode($faq_item->title)->en }}</span>
                         </div>
                     </div>
                 </td>
@@ -97,6 +97,24 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-12 col-sm-12 mb-3">
+                            <div class="form-group">
+                                <label class="form-label" for="full-name">კითხვის დასახელება (ინგლისურად)</label>
+                                <div class="form-control-wrap">
+                                    <input type="text" class="form-control user-input" name="question_title_en" id="question_title_en">
+                                    <span class="text-danger font-helvetica-regular font-italic error-text error-question_title_en"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-sm-12 mb-3">
+                            <div class="form-group">
+                                <label class="form-label" for="full-name">კითხვის აღწერა (ინგლისურად)</label>
+                                <div class="form-control-wrap">
+                                    <input type="text" class="form-control user-input" name="question_text_en" id="question_text_en">
+                                    <span class="text-danger font-helvetica-regular font-italic error-text error-question_text_en"></span>
+                                </div>
+                            </div>
+                        </div>
                         <input type="hidden" name="question_id" id="question_id">
                         <div class="col-lg-12 mb-3">
                             <div class="form-group">
@@ -154,6 +172,8 @@
                 $("#question_id").val(data['FaqData']['id']);
                 $("#question_title_ge").val(JSON.parse(data['FaqData']['title'])['ge']);
                 $("#question_text_ge").val(JSON.parse(data['FaqData']['value'])['ge']);
+                $("#question_title_en").val(JSON.parse(data['FaqData']['title'])['en']);
+                $("#question_text_en").val(JSON.parse(data['FaqData']['value'])['en']);
                 $(".question-heading").html('კითხვის რედაქტირება');
                 $("#QuestionModal").modal('show');
             }

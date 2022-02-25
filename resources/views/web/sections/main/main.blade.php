@@ -201,10 +201,10 @@
 					</div>
 					<div class="feature-card-widget wow fadeInUp" data-wow-delay="0.6s" id="about" style="margin-top: 35px; padding: 30px;">
 						<div class="card-img" >
-							<h4 class="neue">რა არის ლიზინგი?</h4>
+							<h4 class="neue">{{ trans('site.what_is_leasing') }}</h4>
 						</div>
 						<p id="abouttext" class="helvetica-regular">
-                            {!! $text_list['whatisleasing'] !!}
+                            {!! json_decode($text_list['whatisleasing'])->{$parameterItems['locale'][0]} !!}
                         </p>
 					</div>
 				</div>
@@ -378,7 +378,7 @@
                 <div class="blog-widget-1 wow fadeInUp">
                     <img class="w-sm-auto w-100" src="{{ url('assets/web/img/blog/news-3.png') }}" alt="news image">
                     <div class="blog-content pr-20 pl-20">
-                        <h4 class="neue" style="font-size: 16px"><a href="{{ route('actionWebBlogView', $blog_item['id']) }}">{{ json_decode($blog_item['title'])->{app()->getLocale()} }}</a></h4>
+                        <h4 class="neue" style="font-size: 16px"><a href="{{ route('actionWebBlogView', $blog_item['id']) }}">{{ json_decode($blog_item['title'])->{$parameterItems['locale'][0]} }}</a></h4>
                         <a class="read-more helvetica-regular" href="{{ route('actionWebBlogView', $blog_item['id']) }}">{{ trans('site.more') }} <i class="arrow_right"></i></a>
                     </div>
                 </div>
@@ -427,14 +427,14 @@
                                 <div class="faq-header" id="headingTwo{{ $faq_item['id'] }}">
                                     <h6 class="mb-0 collapsed neue" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ $faq_item['id'] }}"
                                         aria-expanded="true" aria-controls="collapseTwo{{ $faq_item['id'] }}">
-                                        {{ json_decode($faq_item['title'])->{app()->getLocale()} }}
+                                        {{ json_decode($faq_item['title'])->{$parameterItems['locale'][0]} }}
                                         <i class="icon_plus"></i>
                                         <i class="icon_close"></i>
                                     </h6>
                                 </div>
                                 <div id="collapseTwo{{ $faq_item['id'] }}" class="collapse" aria-labelledby="headingTwo{{ $faq_item['id'] }}" data-bs-parent="#accordionExample">
                                     <div class="faq-body helvetica-regular">
-                                        {!! json_decode($faq_item['value'])->{app()->getLocale()} !!}
+                                        {!! json_decode($faq_item['value'])->{$parameterItems['locale'][0]} !!}
                                     </div>
                                 </div>
                             </div>

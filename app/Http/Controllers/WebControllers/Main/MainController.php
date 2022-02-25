@@ -67,6 +67,9 @@ class MainController extends Controller
             $TextPage = new TextPage();
             $TextPageList = $TextPage::where('deleted_at_int', '!=', 0)->get()->toArray();
 
+            $BasicParameter = new BasicParameter();
+            $BasicParameterLocale = $BasicParameter::where('key', 'locale')->first();
+
             $TextPageArray = [];
 
             foreach($TextPageList as $TextKey => $TextValue) {
@@ -83,9 +86,9 @@ class MainController extends Controller
             }
 
             $SeoData = [
-                'title_ge' => 'ავტოლიზინგი | dizi.ge',
-                'description_ge' => 'მიიღე 30000 ლარამდე დაფინანსება დღესვე',
-                'keywords_ge' => 'ავტოლიზინგი, ლიზინგი, ავტომობილი, სესხი, დიზი, dizi',
+                'title_ge' => json_decode($TextPageList[1]['title'])->{$BasicParameterLocale->value},
+                'description_ge' => json_decode($TextPageList[1]['description'])->{$BasicParameterLocale->value},
+                'keywords_ge' => json_decode($TextPageList[1]['keywords'])->{$BasicParameterLocale->value},
             ];
 
             $data = [

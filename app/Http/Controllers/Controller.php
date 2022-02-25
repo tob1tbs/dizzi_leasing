@@ -7,11 +7,23 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
+use App\Models\Parameters\BasicParameter;
+
 use Carbon\Carbon;
+use Session;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function __construct() {
+        
+    }
+
+    public function localeList() {
+        $locale_list = ['ge', 'en'];
+        return $locale_list;
+    }
 
     public function getMonthList() {
         $month_list = [

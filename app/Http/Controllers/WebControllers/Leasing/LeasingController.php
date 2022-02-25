@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Leasing\LeasingParameter;
 use App\Models\Cars\CarData;
 use App\Models\Cars\CarMake;
+use App\Models\Parameters\BasicParameter;
 
 use App\Models\TextPage\TextPage;
 
@@ -47,20 +48,32 @@ class LeasingController extends Controller
                 $LeasingArray[$ParameterItem['key']] = $ParameterItem['value'];
             }
 
+            $BasicParameter = new BasicParameter();
+            $BasicParameterLocale = $BasicParameter::where('key', 'locale')->first();
 
             $TextPage = new TextPage();
             $TextPageList = $TextPage::where('deleted_at_int', '!=', 0)->get()->toArray();
 
             $TextPageArray = [];
-
             foreach($TextPageList as $TextKey => $TextValue) {
                 $TextPageArray[$TextValue['slug']] = $TextValue['value'];
             }
 
+
+            $SeoArray = [];
+
+            foreach($TextPageList as $TextKey => $TextValue) {
+                $SeoArray[$TextValue['slug']] = [
+                    'title' => json_decode($TextValue['title'])->{$BasicParameterLocale->value},
+                    'description_ge' => json_decode($TextValue['description'])->{$BasicParameterLocale->value},
+                    'keywords_ge' => json_decode($TextValue['keywords'])->{$BasicParameterLocale->value},
+                ];
+            }
+
             $SeoData = [
-                'title_ge' => 'ავტო ლიზინგი',
-                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
-                'keywords_ge' => 'kwd',
+                'title_ge' => $SeoArray['leasing']['title'],
+                'description_ge' => $SeoArray['leasing']['description_ge'],
+                'keywords_ge' => $SeoArray['leasing']['keywords_ge'],
             ];
 
             $data = [
@@ -93,6 +106,9 @@ class LeasingController extends Controller
 
             $LeasingParameter = new LeasingParameter();
             $LeasingParametersList = $LeasingParameter::where('deleted_at_int', '!=', 0)->get();
+
+            $BasicParameter = new BasicParameter();
+            $BasicParameterLocale = $BasicParameter::where('key', 'locale')->first();
             
             $LeasingArray = [];
 
@@ -110,10 +126,20 @@ class LeasingController extends Controller
                 $TextPageArray[$TextValue['slug']] = $TextValue['value'];
             }
 
+            $SeoArray = [];
+
+            foreach($TextPageList as $TextKey => $TextValue) {
+                $SeoArray[$TextValue['slug']] = [
+                    'title' => json_decode($TextValue['title'])->{$BasicParameterLocale->value},
+                    'description_ge' => json_decode($TextValue['description'])->{$BasicParameterLocale->value},
+                    'keywords_ge' => json_decode($TextValue['keywords'])->{$BasicParameterLocale->value},
+                ];
+            }
+
             $SeoData = [
-                'title_ge' => 'Leaseback',
-                'description_ge' => 'The fastest leasing service in town',
-                'keywords_ge' => 'kwd',
+                'title_ge' => $SeoArray['leasing']['title'],
+                'description_ge' => $SeoArray['leasing']['description_ge'],
+                'keywords_ge' => $SeoArray['leasing']['keywords_ge'],
             ];
 
             $data = [
@@ -139,13 +165,26 @@ class LeasingController extends Controller
             $year_list = $this->getYear();
             $engine_volume = $this->getEngineVolume();
 
+            $BasicParameter = new BasicParameter();
+            $BasicParameterLocale = $BasicParameter::where('key', 'locale')->first();
+
             $CarMake = new CarMake();
             $CarMakeList = $CarMake::where('deleted_at_int', '!=', 0)->where('status', 1)->get();
 
+            $SeoArray = [];
+
+            foreach($TextPageList as $TextKey => $TextValue) {
+                $SeoArray[$TextValue['slug']] = [
+                    'title' => json_decode($TextValue['title'])->{$BasicParameterLocale->value},
+                    'description_ge' => json_decode($TextValue['description'])->{$BasicParameterLocale->value},
+                    'keywords_ge' => json_decode($TextValue['keywords'])->{$BasicParameterLocale->value},
+                ];
+            }
+
             $SeoData = [
-                'title_ge' => 'ავტო ლიზინგი',
-                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
-                'keywords_ge' => 'kwd',
+                'title_ge' => $SeoArray['leasing']['title'],
+                'description_ge' => $SeoArray['leasing']['description_ge'],
+                'keywords_ge' => $SeoArray['leasing']['keywords_ge'],
             ];
 
             $data = [
@@ -178,10 +217,20 @@ class LeasingController extends Controller
             $CarMake = new CarMake();
             $CarMakeList = $CarMake::where('deleted_at_int', '!=', 0)->where('status', 1)->get();
 
+            $SeoArray = [];
+
+            foreach($TextPageList as $TextKey => $TextValue) {
+                $SeoArray[$TextValue['slug']] = [
+                    'title' => json_decode($TextValue['title'])->{$BasicParameterLocale->value},
+                    'description_ge' => json_decode($TextValue['description'])->{$BasicParameterLocale->value},
+                    'keywords_ge' => json_decode($TextValue['keywords'])->{$BasicParameterLocale->value},
+                ];
+            }
+
             $SeoData = [
-                'title_ge' => 'უკულიზინგი',
-                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
-                'keywords_ge' => 'kwd',
+                'title_ge' => $SeoArray['leasing']['title'],
+                'description_ge' => $SeoArray['leasing']['description_ge'],
+                'keywords_ge' => $SeoArray['leasing']['keywords_ge'],
             ];
 
             $data = [
@@ -231,16 +280,29 @@ class LeasingController extends Controller
 
             $TextPageArray = [];
 
+            $BasicParameter = new BasicParameter();
+            $BasicParameterLocale = $BasicParameter::where('key', 'locale')->first();
+
             foreach($TextPageList as $TextKey => $TextValue) {
                 $TextPageArray[$TextValue['slug']] = $TextValue['value'];
             }
 
-            $SeoData = [
-                'title_ge' => 'Taxi Leasing',
-                'description_ge' => 'If you want to make money with your daily work and you need a car',
-                'keywords_ge' => 'kwd',
-            ];
+            $SeoArray = [];
 
+            foreach($TextPageList as $TextKey => $TextValue) {
+                $SeoArray[$TextValue['slug']] = [
+                    'title' => json_decode($TextValue['title'])->{$BasicParameterLocale->value},
+                    'description_ge' => json_decode($TextValue['description'])->{$BasicParameterLocale->value},
+                    'keywords_ge' => json_decode($TextValue['keywords'])->{$BasicParameterLocale->value},
+                ];
+            }
+
+            $SeoData = [
+                'title_ge' => $SeoArray['leasing']['title'],
+                'description_ge' => $SeoArray['leasing']['description_ge'],
+                'keywords_ge' => $SeoArray['leasing']['keywords_ge'],
+            ];
+            
             $data = [
                 'leasing_data' => $LeasingArray,
                 'car_list' => $CarList,
@@ -267,10 +329,23 @@ class LeasingController extends Controller
             $CarMake = new CarMake();
             $CarMakeList = $CarMake::where('deleted_at_int', '!=', 0)->where('status', 1)->get();
 
+            $BasicParameter = new BasicParameter();
+            $BasicParameterLocale = $BasicParameter::where('key', 'locale')->first();
+
+            $SeoArray = [];
+
+            foreach($TextPageList as $TextKey => $TextValue) {
+                $SeoArray[$TextValue['slug']] = [
+                    'title' => json_decode($TextValue['title'])->{$BasicParameterLocale->value},
+                    'description_ge' => json_decode($TextValue['description'])->{$BasicParameterLocale->value},
+                    'keywords_ge' => json_decode($TextValue['keywords'])->{$BasicParameterLocale->value},
+                ];
+            }
+
             $SeoData = [
-                'title_ge' => 'ტაქსი ლიზინგი',
-                'description_ge' => 'სწრაფი და მარტივი ავტო ლიზინგი',
-                'keywords_ge' => 'kwd',
+                'title_ge' => $SeoArray['leasing']['title'],
+                'description_ge' => $SeoArray['leasing']['description_ge'],
+                'keywords_ge' => $SeoArray['leasing']['keywords_ge'],
             ];
 
             $data = [

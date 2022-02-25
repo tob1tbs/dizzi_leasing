@@ -28,6 +28,7 @@ class ParametersBasicController extends Controller
             $data = [
                 'parameters_list' => $BasicParameterList,
                 'language_list' => $LanguageListData,
+                'locale_list' => $this->localeList(),
             ];
 
             return view('cms.sections.parameters.parameters_basic_main', $data);

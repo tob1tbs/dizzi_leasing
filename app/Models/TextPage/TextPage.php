@@ -11,5 +11,5 @@ class TextPage extends Model
 
     protected $table = "cms_text_pages";
 
-    protected $fillable = ['value'];
+    protected $fillable = ['title', 'value', 'description', 'keywords'];
 }
