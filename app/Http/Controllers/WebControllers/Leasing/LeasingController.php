@@ -28,8 +28,7 @@ class LeasingController extends Controller
         if (view()->exists('web.sections.leasing.leasing')) {
 
             $CarData = new CarData();
-            $CarList = $CarData::where('deleted_at_int', '!=', 0)
-                                                                ->where('status', 1)
+            $CarList = $CarData::where('deleted_at_int', '!=', 0)->where('status', 1)
                                                                 ->limit(4)
                                                                 ->get()
                                                                 ->load('carMake')
@@ -55,6 +54,7 @@ class LeasingController extends Controller
             $TextPageList = $TextPage::where('deleted_at_int', '!=', 0)->get()->toArray();
 
             $TextPageArray = [];
+
             foreach($TextPageList as $TextKey => $TextValue) {
                 $TextPageArray[$TextValue['slug']] = $TextValue['value'];
             }
@@ -302,7 +302,7 @@ class LeasingController extends Controller
                 'description_ge' => $SeoArray['leasing']['description_ge'],
                 'keywords_ge' => $SeoArray['leasing']['keywords_ge'],
             ];
-            
+
             $data = [
                 'leasing_data' => $LeasingArray,
                 'car_list' => $CarList,
